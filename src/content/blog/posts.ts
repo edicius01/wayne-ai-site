@@ -1,5 +1,6 @@
 import plumberChatWidget from './the-tool-plumbers-use-to-book-jobs-while-they-sleep.html?raw';
 import hvacToolToBookMoreServiceCalls from './hvac-tool-to-book-more-service-calls.html?raw';
+import rooferToolToCaptureStormLeads from './roofer-tool-to-capture-storm-leads.html?raw';
 
 export interface BlogPost {
   slug: string;
@@ -35,5 +36,15 @@ export const posts: BlogPost[] = [
     tags: ["HVAC","lead generation","automation"],
     featuredImage: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1200&auto=format&fit=crop&q=80',
     content: hvacToolToBookMoreServiceCalls,
+  },
+  {
+    slug: 'roofer-tool-to-capture-storm-leads',
+    title: "The Tool Roofers Are Using to Capture Storm Leads Before the Competition Gets There",
+    description: "When a storm rolls through, every roofer in town is chasing the same leads. Discover how smart roofing companies are using AI to respond first, book inspections automatically, and close more jobs during peak season.",
+    metaTitle: "The Tool Roofers Use to Capture Storm Leads First | Wayne AI",
+    author: "Wayne AI",
+    date: '2026-04-02',
+    tags: ["roofing","lead generation","automation"],
+    content: rooferToolToCaptureStormLeads,
   },
 ];
