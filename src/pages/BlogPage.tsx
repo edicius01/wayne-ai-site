@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { Navigation } from '../components/Navigation';
 import { Footer } from '../components/Footer';
 import { posts } from '../content/blog/posts';
@@ -6,6 +7,13 @@ import { posts } from '../content/blog/posts';
 export function BlogPage() {
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Blog | Wayne AI — AI Automation for Local Service Businesses</title>
+        <meta name="description" content="Practical guides for local service businesses on AI, automation, and getting more leads. Plumbing, HVAC, restaurants, and more." />
+        <meta property="og:title" content="Blog | Wayne AI" />
+        <meta property="og:description" content="Practical guides for local service businesses on AI, automation, and getting more leads." />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <Navigation />
 
       {/* Header */}

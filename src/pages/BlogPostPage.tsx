@@ -1,4 +1,5 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { Navigation } from '../components/Navigation';
 import { Footer } from '../components/Footer';
 import { posts } from '../content/blog/posts';
@@ -13,6 +14,18 @@ export function BlogPostPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>{post.metaTitle || `${post.title} | Wayne AI`}</title>
+        <meta name="description" content={post.description} />
+        <meta property="og:title" content={post.metaTitle || post.title} />
+        <meta property="og:description" content={post.description} />
+        {post.featuredImage && <meta property="og:image" content={post.featuredImage} />}
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={post.metaTitle || post.title} />
+        <meta name="twitter:description" content={post.description} />
+        {post.featuredImage && <meta name="twitter:image" content={post.featuredImage} />}
+      </Helmet>
       <Navigation />
 
       {/* Header */}
