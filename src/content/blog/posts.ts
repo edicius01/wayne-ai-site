@@ -1,6 +1,7 @@
 import plumberChatWidget from './the-tool-plumbers-use-to-book-jobs-while-they-sleep.html?raw';
 import hvacToolToBookMoreServiceCalls from './hvac-tool-to-book-more-service-calls.html?raw';
 import rooferToolToCaptureStormLeads from './roofer-tool-to-capture-storm-leads.html?raw';
+import electricianToolToBookMoreJobs from './electrician-tool-to-book-more-jobs.html?raw';
 
 export interface BlogPost {
   slug: string;
@@ -46,5 +47,15 @@ export const posts: BlogPost[] = [
     date: '2026-04-02',
     tags: ["roofing","lead generation","automation"],
     content: rooferToolToCaptureStormLeads,
+  },
+  {
+    slug: 'electrician-tool-to-book-more-jobs',
+    title: "The Tool Electricians Are Using to Book More Jobs Without Playing Phone Tag All Day",
+    description: "Every missed call is a job that went to another electrician. Discover how busy electrical contractors are using AI to respond instantly, book service calls automatically, and stop losing work to whoever picks up faster.",
+    metaTitle: "The Tool Electricians Use to Book More Jobs | Wayne AI",
+    author: "Wayne AI",
+    date: '2026-04-02',
+    tags: ["electrician","lead generation","automation"],
+    content: electricianToolToBookMoreJobs,
   },
 ];
