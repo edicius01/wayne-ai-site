@@ -242,7 +242,7 @@ export const posts: BlogPost[] = [
     author: "Wayne AI",
     date: '2026-04-02',
     tags: ["pressure washing", "AI automation", "missed calls", "seasonal"],
-    featuredImage: "https://images.unsplash.com/photo-1563453392212-326f5e854473?w=1200&auto=format&fit=crop&q=80",
+    featuredImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&auto=format&fit=crop&q=80",
     content: pressureWashingAiToolToBookMoreJobs,
   },
   {
