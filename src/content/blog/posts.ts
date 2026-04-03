@@ -17,6 +17,10 @@ import locksmithAiToolToBookMoreJobs from './locksmith-ai-tool-to-book-more-jobs
 import cleaningServiceAiToolToBookMoreClients from './cleaning-service-ai-tool-to-book-more-clients.html?raw';
 import aiVsHiringReceptionistServiceBusiness from './ai-vs-hiring-receptionist-service-business.html?raw';
 import googleBusinessProfileMoreImportantThanWebsite from './google-business-profile-more-important-than-website.html?raw';
+import pressureWashingAiToolToBookMoreJobs from './pressure-washing-ai-tool-to-book-more-jobs.html?raw';
+import howToRespondToNegativeGoogleReviewsServiceBusiness from './how-to-respond-to-negative-google-reviews-service-business.html?raw';
+import howServiceBusinessesStayBusyInSlowSeason from './how-service-businesses-stay-busy-in-slow-season.html?raw';
+import howMuchShouldServiceBusinessSpendOnMarketing from './how-much-should-service-business-spend-on-marketing.html?raw';
 
 export interface BlogPost {
   slug: string;
@@ -229,5 +233,49 @@ export const posts: BlogPost[] = [
     tags: ["Google Business Profile", "local SEO", "service business", "Google Maps"],
     featuredImage: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=1200&auto=format&fit=crop&q=80",
     content: googleBusinessProfileMoreImportantThanWebsite,
+  },
+  {
+    slug: 'pressure-washing-ai-tool-to-book-more-jobs',
+    title: "How Pressure Washing Companies Are Booking More Jobs Without Playing Phone Tag",
+    description: "Spring is the make-or-break season for pressure washing companies. Learn how AI-powered missed call text-back and lead automation help owner-operators capture more jobs without stopping work to answer the phone.",
+    metaTitle: "How Pressure Washing Companies Book More Jobs With AI Automation | Wayne AI",
+    author: "Wayne AI",
+    date: '2026-04-02',
+    tags: ["pressure washing", "AI automation", "missed calls", "seasonal"],
+    featuredImage: "https://images.unsplash.com/photo-1563453392212-326f5e854473?w=1200&auto=format&fit=crop&q=80",
+    content: pressureWashingAiToolToBookMoreJobs,
+  },
+  {
+    slug: 'how-to-respond-to-negative-google-reviews-service-business',
+    title: "How to Respond to Negative Google Reviews (Without Making It Worse)",
+    description: "A 1-star review just landed on your Google profile. Here's exactly how local service businesses should respond — with templates, rules, and the long-game strategy that actually protects your reputation.",
+    metaTitle: "How to Respond to Negative Google Reviews (Service Business Guide) | Wayne AI",
+    author: "Wayne AI",
+    date: '2026-04-02',
+    tags: ["Google reviews", "reputation management", "service business", "customer service"],
+    featuredImage: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&auto=format&fit=crop&q=80",
+    content: howToRespondToNegativeGoogleReviewsServiceBusiness,
+  },
+  {
+    slug: 'how-service-businesses-stay-busy-in-slow-season',
+    title: "How to Keep Your Service Business Busy When the Slow Season Hits",
+    description: "The slow season is real — but the businesses that stay busiest aren't just luckier. They built systems during the peak. Here are five tactics local service businesses can use right now to fill the calendar back up.",
+    metaTitle: "How to Keep Your Service Business Busy in the Slow Season | Wayne AI",
+    author: "Wayne AI",
+    date: '2026-04-02',
+    tags: ["slow season", "service business", "marketing", "customer reactivation"],
+    featuredImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&auto=format&fit=crop&q=80",
+    content: howServiceBusinessesStayBusyInSlowSeason,
+  },
+  {
+    slug: 'how-much-should-service-business-spend-on-marketing',
+    title: "How Much Should a Local Service Business Spend on Marketing?",
+    description: "Real numbers, honest benchmarks, and a practical breakdown of how local service businesses should allocate their marketing budget — from $1,500/month to $5,000/month.",
+    metaTitle: "How Much Should a Local Service Business Spend on Marketing? | Wayne AI",
+    author: "Wayne AI",
+    date: '2026-04-02',
+    tags: ["marketing budget", "service business", "local marketing", "ROI"],
+    featuredImage: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&auto=format&fit=crop&q=80",
+    content: howMuchShouldServiceBusinessSpendOnMarketing,
   },
 ];
