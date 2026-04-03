@@ -38,7 +38,7 @@ export function Navigation() {
             <img
               src="/og-image-1200x630_upscayl_4x_upscayl-standard-4x.png"
               alt="Wayne AI"
-              className="w-[160px] md:w-[200px] h-auto"
+              className={`w-[160px] md:w-[200px] h-auto transition-all duration-300 ${!isScrolled && isHomePage ? 'brightness-0 invert' : ''}`}
             />
           </Link>
 
@@ -46,17 +46,17 @@ export function Navigation() {
           <div className="hidden md:flex items-center gap-8">
             {isHomePage ? (
               <>
-                <button onClick={() => scrollToSection('features')} className="text-[#334155] hover:text-[#f97316] font-medium transition-colors">How It Works</button>
-                <button onClick={() => scrollToSection('pricing')} className="text-[#334155] hover:text-[#f97316] font-medium transition-colors">Pricing</button>
+                <button onClick={() => scrollToSection('features')} className={`font-medium transition-colors hover:text-[#f97316] ${!isScrolled ? 'text-white/80' : 'text-[#334155]'}`}>How It Works</button>
+                <button onClick={() => scrollToSection('pricing')} className={`font-medium transition-colors hover:text-[#f97316] ${!isScrolled ? 'text-white/80' : 'text-[#334155]'}`}>Pricing</button>
               </>
             ) : (
               <>
                 <Link to="/" className="text-[#334155] hover:text-[#f97316] font-medium transition-colors">Home</Link>
               </>
             )}
-            <Link to="/demo" className="text-[#334155] hover:text-[#f97316] font-medium transition-colors">Demo</Link>
-            <Link to="/about" className="text-[#334155] hover:text-[#f97316] font-medium transition-colors">About</Link>
-            <Link to="/blog" className="text-[#334155] hover:text-[#f97316] font-medium transition-colors">Blog</Link>
+            <Link to="/demo" className={`font-medium transition-colors hover:text-[#f97316] ${!isScrolled && isHomePage ? 'text-white/80' : 'text-[#334155]'}`}>Demo</Link>
+            <Link to="/about" className={`font-medium transition-colors hover:text-[#f97316] ${!isScrolled && isHomePage ? 'text-white/80' : 'text-[#334155]'}`}>About</Link>
+            <Link to="/blog" className={`font-medium transition-colors hover:text-[#f97316] ${!isScrolled && isHomePage ? 'text-white/80' : 'text-[#334155]'}`}>Blog</Link>
           </div>
 
           {/* 3. CTA BUTTON (Desktop) */}
@@ -73,7 +73,7 @@ export function Navigation() {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            <svg className="w-6 h-6 text-[#0f172a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className={`w-6 h-6 transition-colors ${!isScrolled && isHomePage ? 'text-white' : 'text-[#0f172a]'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isMobileMenuOpen ? (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               ) : (
