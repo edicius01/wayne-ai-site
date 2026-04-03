@@ -54,7 +54,7 @@ export function Hero() {
           </a>
         </div>
 
-        <p className="text-sm text-[#64748b] animate-fade-in-up animation-delay-300">
+        <p className="text-sm text-[#64748b] mt-4 animate-fade-in-up animation-delay-300">
           Serving plumbers, HVAC, electricians, roofers, restaurants & more
         </p>
 

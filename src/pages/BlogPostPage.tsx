@@ -15,17 +15,17 @@ export function BlogPostPage() {
     <div className="min-h-screen bg-white">
       <Navigation />
 
-      {/* Hero */}
-      <section className="bg-[#0f172a] pt-32 pb-16">
+      {/* Header */}
+      <div className="pt-32 pb-10 bg-[#f8fafc]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap gap-2 mb-6">
+          <div className="flex flex-wrap gap-2 mb-5">
             {post.tags.map((tag) => (
-              <span key={tag} className="text-xs font-medium bg-[#f97316]/15 text-[#f97316] px-3 py-1 rounded-full">
+              <span key={tag} className="text-xs font-medium bg-[#f97316]/10 text-[#f97316] px-3 py-1 rounded-full">
                 {tag}
               </span>
             ))}
           </div>
-          <h1 className="text-3xl sm:text-4xl font-black text-white mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-4xl font-black text-[#0f172a] mb-5 leading-tight">
             {post.title}
           </h1>
           <div className="flex items-center gap-4 text-[#64748b] text-sm">
@@ -34,21 +34,21 @@ export function BlogPostPage() {
             <span>{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Featured image */}
       {post.featuredImage && (
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <img
             src={post.featuredImage}
             alt={post.title}
-            className="w-full rounded-2xl shadow-xl"
+            className="w-full rounded-2xl shadow-lg"
           />
         </div>
       )}
 
       {/* Content */}
-      <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <div
           className="prose prose-lg max-w-none prose-headings:text-[#0f172a] prose-headings:font-bold prose-p:text-[#374151] prose-a:text-[#f97316] prose-strong:text-[#0f172a] prose-blockquote:border-[#f97316] prose-blockquote:text-[#374151] prose-li:text-[#374151]"
           dangerouslySetInnerHTML={{ __html: post.content }}
