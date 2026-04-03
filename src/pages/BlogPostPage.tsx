@@ -72,11 +72,12 @@ export function BlogPostPage() {
         {/* CTA */}
         <div className="mt-16 bg-[#0f172a] rounded-2xl p-8 text-center">
           <h3 className="text-2xl font-bold text-white mb-3">
-            Want to see this in action for your business?
+            See it work with your actual phone number
           </h3>
-          <p className="text-[#94a3b8] mb-6">
-            Book a free 15-minute demo — no pitch, just a live walkthrough.
+          <p className="text-[#94a3b8] mb-2">
+            15-minute live demo — we call your number, "miss" it, and you watch the automated response happen in real time.
           </p>
+          <p className="text-[#64748b] text-sm mb-6">No pitch. No contract. Just proof it works.</p>
           <a
             href="https://book.wayneai.net"
             className="inline-flex items-center gap-2 bg-[#f97316] hover:bg-[#ea580c] text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 hover:shadow-xl hover:shadow-[#f97316]/25"
