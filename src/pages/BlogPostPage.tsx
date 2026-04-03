@@ -12,6 +12,8 @@ export function BlogPostPage() {
     return <Navigate to="/blog" replace />;
   }
 
+  const relatedPosts = posts.filter((p) => p.slug !== slug).slice(0, 3);
+
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
@@ -85,6 +87,35 @@ export function BlogPostPage() {
             </svg>
           </a>
         </div>
+
+        {/* Related posts */}
+        {relatedPosts.length > 0 && (
+          <div className="mt-16">
+            <h3 className="text-xl font-bold text-[#0f172a] mb-6">More from Wayne AI</h3>
+            <div className="grid sm:grid-cols-3 gap-4">
+              {relatedPosts.map((related) => (
+                <Link
+                  key={related.slug}
+                  to={`/blog/${related.slug}`}
+                  className="group block bg-[#f8fafc] rounded-xl overflow-hidden hover:shadow-md transition-shadow"
+                >
+                  {related.featuredImage && (
+                    <img
+                      src={related.featuredImage.replace('w=1200', 'w=400')}
+                      alt={related.title}
+                      className="w-full h-32 object-cover"
+                    />
+                  )}
+                  <div className="p-4">
+                    <p className="text-sm font-semibold text-[#0f172a] group-hover:text-[#f97316] transition-colors leading-snug line-clamp-3">
+                      {related.title}
+                    </p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
 
         <div className="mt-10">
           <Link to="/blog" className="inline-flex items-center gap-2 text-[#64748b] hover:text-[#f97316] transition-colors text-sm">
