@@ -13,6 +13,10 @@ import howToGetMoreGoogleReviewsServiceBusiness from './how-to-get-more-google-r
 import whatToTextCustomerAfterJobToGet5StarReview from './what-to-text-customer-after-job-to-get-5-star-review.html?raw';
 import whyCustomersDontLeaveVoicemailsAnymore from './why-customers-dont-leave-voicemails-anymore.html?raw';
 import completeGuideAiAutomationLocalServiceBusinesses from './complete-guide-ai-automation-local-service-businesses.html?raw';
+import locksmithAiToolToBookMoreJobs from './locksmith-ai-tool-to-book-more-jobs.html?raw';
+import cleaningServiceAiToolToBookMoreClients from './cleaning-service-ai-tool-to-book-more-clients.html?raw';
+import aiVsHiringReceptionistServiceBusiness from './ai-vs-hiring-receptionist-service-business.html?raw';
+import googleBusinessProfileMoreImportantThanWebsite from './google-business-profile-more-important-than-website.html?raw';
 
 export interface BlogPost {
   slug: string;
@@ -181,5 +185,49 @@ export const posts: BlogPost[] = [
     date: '2026-04-02',
     tags: ["AI automation","local service business","lead generation","guide"],
     content: completeGuideAiAutomationLocalServiceBusinesses,
+  },
+  {
+    slug: 'locksmith-ai-tool-to-book-more-jobs',
+    title: "The Tool Locksmiths Are Using to Book More Emergency Jobs Without Answering Every Call",
+    description: "Locksmiths lose emergency jobs every day to a single missed call. Here's how automated text-back and lead response tools are helping independent locksmiths capture after-hours revenue without hiring more staff.",
+    metaTitle: "AI Tool Locksmiths Use to Book More Emergency Jobs | Wayne AI",
+    author: "Wayne AI",
+    date: '2026-04-02',
+    tags: ["locksmith", "AI automation", "missed calls", "lead response"],
+    featuredImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&auto=format&fit=crop&q=80",
+    content: locksmithAiToolToBookMoreJobs,
+  },
+  {
+    slug: 'cleaning-service-ai-tool-to-book-more-clients',
+    title: "How Cleaning Services Are Filling Their Schedules Faster With AI Lead Response",
+    description: "If your cleaning business isn't responding to leads within minutes, you're losing recurring clients worth thousands of dollars a year. Here's how AI-powered lead response is changing the game for small cleaning companies.",
+    metaTitle: "How Cleaning Services Fill Their Schedules Faster With AI Lead Response | Wayne AI",
+    author: "Wayne AI",
+    date: '2026-04-02',
+    tags: ["cleaning service", "AI automation", "lead response", "recurring revenue"],
+    featuredImage: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&auto=format&fit=crop&q=80",
+    content: cleaningServiceAiToolToBookMoreClients,
+  },
+  {
+    slug: 'ai-vs-hiring-receptionist-service-business',
+    title: "AI vs. Hiring a Receptionist: What Actually Makes Sense for a Service Business",
+    description: "Thinking about hiring a receptionist for your service business? Before you post that job listing, run the real numbers — and see where AI automation outperforms a full-time hire, and where it doesn't.",
+    metaTitle: "AI vs. Hiring a Receptionist for a Service Business | Wayne AI",
+    author: "Wayne AI",
+    date: '2026-04-02',
+    tags: ["AI automation", "receptionist", "service business", "cost comparison"],
+    featuredImage: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&auto=format&fit=crop&q=80",
+    content: aiVsHiringReceptionistServiceBusiness,
+  },
+  {
+    slug: 'google-business-profile-more-important-than-website',
+    title: "Why Your Google Business Profile Matters More Than Your Website",
+    description: "Most local service business owners are pouring money into websites while ignoring the one thing that actually drives calls — their Google Business Profile. Here's why GBP matters more, and what to do about it.",
+    metaTitle: "Why Your Google Business Profile Matters More Than Your Website | Wayne AI",
+    author: "Wayne AI",
+    date: '2026-04-02',
+    tags: ["Google Business Profile", "local SEO", "service business", "Google Maps"],
+    featuredImage: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=1200&auto=format&fit=crop&q=80",
+    content: googleBusinessProfileMoreImportantThanWebsite,
   },
 ];
