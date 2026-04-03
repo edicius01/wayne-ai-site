@@ -14,7 +14,7 @@ export function Footer() {
               <span className="font-bold text-xl text-white">Wayne AI</span>
             </div>
             <p className="text-[#9CA3AF] text-sm">
-              Automated booking and communication for home service businesses.
+              AI automation for local service businesses — capture leads, book jobs, and grow on autopilot.
             </p>
           </div>
 
@@ -41,10 +41,6 @@ export function Footer() {
                 Evansville, IN
               </div>
             </div>
-            <p className="text-[#9CA3AF] text-sm mt-4">
-              <span className="font-medium">Service Areas:</span><br />
-              Evansville • Henderson • Owensboro
-            </p>
           </div>
 
           <div>

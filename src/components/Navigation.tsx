@@ -56,6 +56,7 @@ export function Navigation() {
             )}
             <Link to="/demo" className="text-[#334155] hover:text-[#f97316] font-medium transition-colors">Demo</Link>
             <Link to="/about" className="text-[#334155] hover:text-[#f97316] font-medium transition-colors">About</Link>
+            <Link to="/blog" className="text-[#334155] hover:text-[#f97316] font-medium transition-colors">Blog</Link>
           </div>
 
           {/* 3. CTA BUTTON (Desktop) */}
@@ -97,6 +98,7 @@ export function Navigation() {
             )}
             <Link to="/demo" className="text-left text-[#334155] font-medium py-2" onClick={() => setIsMobileMenuOpen(false)}>Demo</Link>
             <Link to="/about" className="text-left text-[#334155] font-medium py-2" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
+            <Link to="/blog" className="text-left text-[#334155] font-medium py-2" onClick={() => setIsMobileMenuOpen(false)}>Blog</Link>
             
             <a
               href="https://book.wayneai.net/home"

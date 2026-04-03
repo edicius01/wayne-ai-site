@@ -5,14 +5,14 @@ function StatCard({ value, label, icon, isVisible }: { value: number; label: str
   const count = useCountUp(value, 2000, isVisible);
 
   return (
-    <div className="bg-white rounded-xl p-6 shadow-lg text-center">
-      <div className="w-12 h-12 bg-[#f97316]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+    <div className="text-center px-6 py-8">
+      <div className="w-12 h-12 bg-[#f97316]/15 rounded-full flex items-center justify-center mx-auto mb-4">
         {icon}
       </div>
-      <div className="text-4xl font-bold text-[#0f172a] mb-2">
-        {value === 62 ? `${count}%` : value === 5 ? `${count} minutes` : `$${count.toLocaleString()}s`}
+      <div className="text-4xl font-black text-[#f97316] mb-2">
+        {value === 62 ? `${count}%` : value === 5 ? `${count} min` : `$${count.toLocaleString()}s`}
       </div>
-      <p className="text-[#374151]">{label}</p>
+      <p className="text-[#94a3b8] text-sm">{label}</p>
     </div>
   );
 }
@@ -65,21 +65,24 @@ export function Problem() {
   ];
 
   return (
-    <section ref={ref} className="py-20 bg-[#F8F9FA]">
+    <section ref={ref} className="py-20 bg-[#f8fafc]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-3xl sm:text-4xl font-bold text-[#0f172a] mb-4">
             If you miss the call, you usually lose the job
           </h2>
           <p className="text-lg text-[#1f2937] max-w-2xl mx-auto">
-            <span className="font-bold text-[#f97316]">62% of calls</span> to home service businesses go unanswered. When customers hit voicemail or don't hear back in minutes, they move on to your competitor.
+            <span className="font-bold text-[#f97316]">62% of calls</span> to local service businesses go unanswered. When customers hit voicemail or don't hear back in minutes, they move on to your competitor.
           </p>
         </div>
 
-        <div className={`grid md:grid-cols-3 gap-6 mb-16 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          {stats.map((stat, index) => (
-            <StatCard key={index} {...stat} isVisible={isVisible} />
-          ))}
+        {/* Dark stats band */}
+        <div className={`bg-[#0f172a] rounded-2xl mb-16 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/10">
+            {stats.map((stat, index) => (
+              <StatCard key={index} {...stat} isVisible={isVisible} />
+            ))}
+          </div>
         </div>
 
         <div className={`grid md:grid-cols-2 gap-8 transition-all duration-700 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>

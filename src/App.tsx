@@ -4,6 +4,8 @@ import { PrivacyPage } from './pages/PrivacyPage';
 import { BookingPage } from './pages/BookingPage';
 import { DemoPage } from './pages/DemoPage';
 import { AboutPage } from './pages/AboutPage';
+import { BlogPage } from './pages/BlogPage';
+import { BlogPostPage } from './pages/BlogPostPage';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         <Route path="/booking" element={<BookingPage />} />
         <Route path="/demo" element={<DemoPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blog/:slug" element={<BlogPostPage />} />
       </Routes>
     </Router>
   );
