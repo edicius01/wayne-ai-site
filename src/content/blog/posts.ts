@@ -12,6 +12,7 @@ import autoRepairShopToolToBookMoreJobs from './auto-repair-shop-tool-to-book-mo
 import howToGetMoreGoogleReviewsServiceBusiness from './how-to-get-more-google-reviews-service-business.html?raw';
 import whatToTextCustomerAfterJobToGet5StarReview from './what-to-text-customer-after-job-to-get-5-star-review.html?raw';
 import whyCustomersDontLeaveVoicemailsAnymore from './why-customers-dont-leave-voicemails-anymore.html?raw';
+import completeGuideAiAutomationLocalServiceBusinesses from './complete-guide-ai-automation-local-service-businesses.html?raw';
 
 export interface BlogPost {
   slug: string;
@@ -170,5 +171,15 @@ export const posts: BlogPost[] = [
     date: '2026-04-02',
     tags: ["lead generation","missed calls","customer behavior"],
     content: whyCustomersDontLeaveVoicemailsAnymore,
+  },
+  {
+    slug: 'complete-guide-ai-automation-local-service-businesses',
+    title: "The Complete Guide to AI Automation for Local Service Businesses",
+    description: "A comprehensive guide to AI automation for local service businesses — covering missed call recovery, instant lead response, appointment reminders, and review generation. Learn how plumbers, HVAC techs, roofers, electricians, and more are using simple automation to book more jobs without hiring more staff.",
+    metaTitle: "The Complete Guide to AI Automation for Local Service Businesses | Wayne AI",
+    author: "Wayne AI",
+    date: '2026-04-02',
+    tags: ["AI automation","local service business","lead generation","guide"],
+    content: completeGuideAiAutomationLocalServiceBusinesses,
   },
 ];
