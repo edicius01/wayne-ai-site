@@ -47,6 +47,7 @@ export const posts: BlogPost[] = [
     author: "Wayne AI",
     date: '2026-04-02',
     tags: ["roofing","lead generation","automation"],
+    featuredImage: 'https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=1200&auto=format&fit=crop&q=80',
     content: rooferToolToCaptureStormLeads,
   },
   {
@@ -57,6 +58,7 @@ export const posts: BlogPost[] = [
     author: "Wayne AI",
     date: '2026-04-02',
     tags: ["electrician","lead generation","automation"],
+    featuredImage: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1200&auto=format&fit=crop&q=80',
     content: electricianToolToBookMoreJobs,
   },
   {
@@ -67,6 +69,7 @@ export const posts: BlogPost[] = [
     author: "Wayne AI",
     date: '2026-04-02',
     tags: ["restaurant","loyalty","automation"],
+    featuredImage: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&auto=format&fit=crop&q=80',
     content: restaurantQrCodeLoyaltySystem,
   },
 ];
