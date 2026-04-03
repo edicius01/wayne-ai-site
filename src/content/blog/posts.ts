@@ -3,6 +3,11 @@ import hvacToolToBookMoreServiceCalls from './hvac-tool-to-book-more-service-cal
 import rooferToolToCaptureStormLeads from './roofer-tool-to-capture-storm-leads.html?raw';
 import electricianToolToBookMoreJobs from './electrician-tool-to-book-more-jobs.html?raw';
 import restaurantQrCodeLoyaltySystem from './restaurant-qr-code-loyalty-system.html?raw';
+import pestControlToolToBookMoreJobs from './pest-control-tool-to-book-more-jobs.html?raw';
+import lawnCareToolToBookMoreCustomers from './lawn-care-tool-to-book-more-customers.html?raw';
+import garageDoorRepairToolToBookMoreJobs from './garage-door-repair-tool-to-book-more-jobs.html?raw';
+import howMuchMissedCallsCostServiceBusiness from './how-much-missed-calls-cost-service-business.html?raw';
+import leadResponseTimeWhySpeedWinsTheJob from './lead-response-time-why-speed-wins-the-job.html?raw';
 
 export interface BlogPost {
   slug: string;
@@ -71,5 +76,55 @@ export const posts: BlogPost[] = [
     tags: ["restaurant","loyalty","automation"],
     featuredImage: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&auto=format&fit=crop&q=80',
     content: restaurantQrCodeLoyaltySystem,
+  },
+  {
+    slug: 'pest-control-tool-to-book-more-jobs',
+    title: "The Tool Pest Control Companies Are Using to Book More Jobs Without Losing Customers to the First Company That Responds",
+    description: "When bugs show up, homeowners call every pest control company they can find and go with whoever responds first. Discover how smart pest control companies are using AI to respond instantly, book repeat service plans automatically, and stop losing seasonal spikes to competitors who simply pick up faster.",
+    metaTitle: "The Tool Pest Control Companies Use to Book More Jobs | Wayne AI",
+    author: "Wayne AI",
+    date: '2026-04-02',
+    tags: ["pest control","lead generation","automation"],
+    content: pestControlToolToBookMoreJobs,
+  },
+  {
+    slug: 'lawn-care-tool-to-book-more-customers',
+    title: "The Tool Lawn Care Companies Are Using to Book More Customers Without Losing the Spring Rush",
+    description: "Every spring, 50 homeowners call in one week and the companies that respond first fill their routes. Discover how smart lawn care businesses are using AI to capture every lead, lock in recurring customers, and stop losing jobs to whoever picks up faster.",
+    metaTitle: "The Tool Lawn Care Companies Use to Book More Customers | Wayne AI",
+    author: "Wayne AI",
+    date: '2026-04-02',
+    tags: ["lawn care","lead generation","automation"],
+    content: lawnCareToolToBookMoreCustomers,
+  },
+  {
+    slug: 'garage-door-repair-tool-to-book-more-jobs',
+    title: "The Tool Garage Door Companies Are Using to Book More Jobs Without Missing a Single Urgent Call",
+    description: "Broken springs don't wait for business hours. See how garage door repair companies are capturing every urgent call — even at 6am — and booking more high-ticket jobs automatically.",
+    metaTitle: "The Tool Garage Door Companies Are Using to Book More Jobs | Wayne AI",
+    author: "Wayne AI",
+    date: '2026-04-02',
+    tags: ["garage door","lead generation","automation"],
+    content: garageDoorRepairToolToBookMoreJobs,
+  },
+  {
+    slug: 'how-much-missed-calls-cost-service-business',
+    title: "How Much Are Missed Calls Actually Costing Your Service Business?",
+    description: "Most service business owners think missed calls are a minor inconvenience. The math says otherwise. Here's what unanswered phones are really costing you.",
+    metaTitle: "How Much Do Missed Calls Cost a Service Business? | Wayne AI",
+    author: "Wayne AI",
+    date: '2026-04-02',
+    tags: ["lead generation","missed calls","revenue"],
+    content: howMuchMissedCallsCostServiceBusiness,
+  },
+  {
+    slug: 'lead-response-time-why-speed-wins-the-job',
+    title: "The 5-Minute Lead Response Rule: Why Speed Wins or Loses the Job",
+    description: "Leads contacted within 5 minutes are 9x more likely to convert. Here's why response speed is the single biggest factor in whether local service businesses win or lose jobs — and what to do about it.",
+    metaTitle: "The 5-Minute Lead Response Rule: Why Speed Wins or Loses the Job | Wayne AI",
+    author: "Wayne AI",
+    date: '2026-04-02',
+    tags: ["lead generation","response time","automation"],
+    content: leadResponseTimeWhySpeedWinsTheJob,
   },
 ];
