@@ -2,6 +2,7 @@ import plumberChatWidget from './the-tool-plumbers-use-to-book-jobs-while-they-s
 import hvacToolToBookMoreServiceCalls from './hvac-tool-to-book-more-service-calls.html?raw';
 import rooferToolToCaptureStormLeads from './roofer-tool-to-capture-storm-leads.html?raw';
 import electricianToolToBookMoreJobs from './electrician-tool-to-book-more-jobs.html?raw';
+import restaurantQrCodeLoyaltySystem from './restaurant-qr-code-loyalty-system.html?raw';
 
 export interface BlogPost {
   slug: string;
@@ -57,5 +58,15 @@ export const posts: BlogPost[] = [
     date: '2026-04-02',
     tags: ["electrician","lead generation","automation"],
     content: electricianToolToBookMoreJobs,
+  },
+  {
+    slug: 'restaurant-qr-code-loyalty-system',
+    title: "The QR Code Trick Restaurants Are Using to Turn One-Time Diners Into Regulars",
+    description: "A QR code on the table, a free dessert offer, and suddenly your restaurant has a direct line to every customer who ever sat down. Here's how smart restaurants are using AI to turn one-time diners into loyal regulars.",
+    metaTitle: "The QR Code Trick Restaurants Use to Build Loyal Regulars | Wayne AI",
+    author: "Wayne AI",
+    date: '2026-04-02',
+    tags: ["restaurant","loyalty","automation"],
+    content: restaurantQrCodeLoyaltySystem,
   },
 ];
