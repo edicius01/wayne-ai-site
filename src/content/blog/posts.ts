@@ -30,6 +30,11 @@ import handymanAiToolToBookMoreJobs from './handyman-ai-tool-to-book-more-jobs.h
 import paintingContractorAiToolToBookMoreJobs from './painting-contractor-ai-tool-to-book-more-jobs.html?raw';
 import howToPriceHomeServiceBusiness from './how-to-price-home-service-business.html?raw';
 import whatIsCrmServiceBusiness from './what-is-crm-service-business.html?raw';
+import windowCleaningAiToolToBookMoreJobs from './window-cleaning-ai-tool-to-book-more-jobs.html?raw';
+import flooringContractorAiToolToBookMoreJobs from './flooring-contractor-ai-tool-to-book-more-jobs.html?raw';
+import hvacTuneUpSeasonLeads from './hvac-tune-up-season-leads.html?raw';
+import howToGetRepeatCustomersServiceBusiness from './how-to-get-repeat-customers-service-business.html?raw';
+import howToDifferentiateYourServiceBusiness from './how-to-differentiate-your-service-business.html?raw';
 
 export interface BlogPost {
   slug: string;
@@ -385,5 +390,60 @@ export const posts: BlogPost[] = [
     tags: ['CRM', 'service business', 'lead management', 'automation'],
     featuredImage: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&auto=format&fit=crop&q=80',
     content: whatIsCrmServiceBusiness,
+  },
+  {
+    slug: 'window-cleaning-ai-tool-to-book-more-jobs',
+    title: 'How Window Cleaning Companies Fill Their Schedule Every Spring Without Missing a Call',
+    description: 'Missing calls during spring rush costs window cleaning companies real jobs. Here\'s how automated follow-up fills your schedule without adding staff.',
+    metaTitle: 'How Window Cleaners Book More Jobs This Spring',
+    author: 'Wayne AI',
+    date: '2026-04-03',
+    tags: ['window cleaning', 'AI automation', 'missed calls', 'spring season'],
+    featuredImage: 'https://images.unsplash.com/photo-1563453392212-326f5e854473?w=1200&auto=format&fit=crop&q=80',
+    content: windowCleaningAiToolToBookMoreJobs,
+  },
+  {
+    slug: 'flooring-contractor-ai-tool-to-book-more-jobs',
+    title: 'How Flooring Contractors Win More Estimates Before the Competition Calls Back',
+    description: 'Flooring contractors lose jobs to faster competitors every day. Learn how automated follow-up helps you capture leads before anyone else calls back.',
+    metaTitle: 'How Flooring Contractors Win More Estimates & Jobs',
+    author: 'Wayne AI',
+    date: '2026-04-03',
+    tags: ['flooring contractor', 'AI automation', 'lead response', 'estimates'],
+    featuredImage: 'https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=1200&auto=format&fit=crop&q=80',
+    content: flooringContractorAiToolToBookMoreJobs,
+  },
+  {
+    slug: 'hvac-tune-up-season-leads',
+    title: 'Why HVAC Companies Lose Tune-Up Season Leads (And the Fix That Runs Itself)',
+    description: 'Spring tune-up season floods your phone lines. Learn why HVAC companies miss so many leads and how automated follow-up captures every one.',
+    metaTitle: 'Why HVAC Companies Lose Tune-Up Season Leads',
+    author: 'Wayne AI',
+    date: '2026-04-03',
+    tags: ['HVAC', 'seasonal', 'AI automation', 'missed calls', 'tune-up'],
+    featuredImage: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1200&auto=format&fit=crop&q=80',
+    content: hvacTuneUpSeasonLeads,
+  },
+  {
+    slug: 'how-to-get-repeat-customers-service-business',
+    title: 'The Easiest Way to Get More Repeat Business From Customers You Already Have',
+    description: 'Your best new customer is one you already have. Learn simple tactics and automation to win repeat business from customers who already trust you.',
+    metaTitle: 'Get More Repeat Customers for Your Service Business',
+    author: 'Wayne AI',
+    date: '2026-04-03',
+    tags: ['repeat customers', 'customer retention', 'service business', 'automation'],
+    featuredImage: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&auto=format&fit=crop&q=80',
+    content: howToGetRepeatCustomersServiceBusiness,
+  },
+  {
+    slug: 'how-to-differentiate-your-service-business',
+    title: 'How to Explain What Makes Your Business Different (Without Sounding Like Everyone Else)',
+    description: 'Every competitor claims "licensed, insured, 5-star service." Learn how to find and communicate what actually makes your service business different.',
+    metaTitle: 'How to Make Your Service Business Stand Out',
+    author: 'Wayne AI',
+    date: '2026-04-03',
+    tags: ['marketing', 'differentiation', 'service business', 'positioning'],
+    featuredImage: 'https://images.unsplash.com/photo-1664575602276-acd073f104c1?w=1200&auto=format&fit=crop&q=80',
+    content: howToDifferentiateYourServiceBusiness,
   },
 ];
