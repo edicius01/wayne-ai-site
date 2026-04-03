@@ -8,6 +8,10 @@ import lawnCareToolToBookMoreCustomers from './lawn-care-tool-to-book-more-custo
 import garageDoorRepairToolToBookMoreJobs from './garage-door-repair-tool-to-book-more-jobs.html?raw';
 import howMuchMissedCallsCostServiceBusiness from './how-much-missed-calls-cost-service-business.html?raw';
 import leadResponseTimeWhySpeedWinsTheJob from './lead-response-time-why-speed-wins-the-job.html?raw';
+import autoRepairShopToolToBookMoreJobs from './auto-repair-shop-tool-to-book-more-jobs.html?raw';
+import howToGetMoreGoogleReviewsServiceBusiness from './how-to-get-more-google-reviews-service-business.html?raw';
+import whatToTextCustomerAfterJobToGet5StarReview from './what-to-text-customer-after-job-to-get-5-star-review.html?raw';
+import whyCustomersDontLeaveVoicemailsAnymore from './why-customers-dont-leave-voicemails-anymore.html?raw';
 
 export interface BlogPost {
   slug: string;
@@ -126,5 +130,45 @@ export const posts: BlogPost[] = [
     date: '2026-04-02',
     tags: ["lead generation","response time","automation"],
     content: leadResponseTimeWhySpeedWinsTheJob,
+  },
+  {
+    slug: 'auto-repair-shop-tool-to-book-more-jobs',
+    title: "Why Auto Repair Shops Lose Jobs Every Time They Miss a Call",
+    description: "Independent auto repair shops lose hundreds of dollars in revenue every time a call goes unanswered. Here's how AI-powered instant text response fills your bays without hiring more staff.",
+    metaTitle: "Auto Repair Shop Tool to Book More Jobs | Wayne AI",
+    author: "Wayne AI",
+    date: '2026-04-02',
+    tags: ["auto repair","lead generation","automation"],
+    content: autoRepairShopToolToBookMoreJobs,
+  },
+  {
+    slug: 'how-to-get-more-google-reviews-service-business',
+    title: "How to Get More Google Reviews for Your Service Business (Without Begging)",
+    description: "Most satisfied customers never leave reviews — they just move on. Here's the exact system local service businesses use to collect more Google reviews automatically, every time.",
+    metaTitle: "How to Get More Google Reviews for Your Service Business | Wayne AI",
+    author: "Wayne AI",
+    date: '2026-04-02',
+    tags: ["google reviews","reputation","local SEO"],
+    content: howToGetMoreGoogleReviewsServiceBusiness,
+  },
+  {
+    slug: 'what-to-text-customer-after-job-to-get-5-star-review',
+    title: "What to Text a Customer After a Job to Get a 5-Star Review",
+    description: "Most service businesses leave reviews on the table because no one follows up. Here are 3 real text templates you can send today — plus how to automate the whole thing so you never forget.",
+    metaTitle: "What to Text a Customer After a Job to Get a 5-Star Review | Wayne AI",
+    author: "Wayne AI",
+    date: '2026-04-02',
+    tags: ["google reviews","reputation","customer follow-up"],
+    content: whatToTextCustomerAfterJobToGet5StarReview,
+  },
+  {
+    slug: 'why-customers-dont-leave-voicemails-anymore',
+    title: "Why Customers Don't Leave Voicemails Anymore (And What That's Costing You)",
+    description: "If you're counting on voicemail to catch the leads you miss, you're losing jobs every day. Here's the hard truth about how customer behavior has changed — and what actually works now.",
+    metaTitle: "Why Customers Don't Leave Voicemails Anymore | Wayne AI",
+    author: "Wayne AI",
+    date: '2026-04-02',
+    tags: ["lead generation","missed calls","customer behavior"],
+    content: whyCustomersDontLeaveVoicemailsAnymore,
   },
 ];
