@@ -1,4 +1,5 @@
 import plumberChatWidget from './the-tool-plumbers-use-to-book-jobs-while-they-sleep.html?raw';
+import hvacToolToBookMoreServiceCalls from './hvac-tool-to-book-more-service-calls.html?raw';
 
 export interface BlogPost {
   slug: string;
@@ -23,5 +24,16 @@ export const posts: BlogPost[] = [
     tags: ['plumbing', 'lead generation', 'automation'],
     featuredImage: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=1200&auto=format&fit=crop&q=80',
     content: plumberChatWidget,
+  },
+  {
+    slug: 'hvac-tool-to-book-more-service-calls',
+    title: "The Tool HVAC Companies Are Using to Book More Service Calls Without Answering Every Phone",
+    description: "Discover how smart HVAC companies are using AI to respond to leads instantly, book service calls automatically, and stop losing jobs to competitors who pick up faster.",
+    metaTitle: "The Tool HVAC Companies Use to Book More Service Calls | Wayne AI",
+    author: "Wayne AI",
+    date: '2026-04-03',
+    tags: ["HVAC","lead generation","automation"],
+    featuredImage: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1200&auto=format&fit=crop&q=80',
+    content: hvacToolToBookMoreServiceCalls,
   },
 ];
