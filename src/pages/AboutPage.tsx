@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { Navigation } from '../components/Navigation';
 import { Footer } from '../components/Footer';
 import { ChatWidget } from '../components/ChatWidget';
@@ -6,6 +7,10 @@ import { BackToTop } from '../components/BackToTop';
 export function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>About Wayne AI — AI Automation for Local Service Businesses</title>
+        <meta name="description" content="Wayne AI helps local service businesses stop losing revenue to missed calls and slow follow-up — with AI automation that works 24/7." />
+      </Helmet>
       <Navigation />
       
       <div className="pt-32 pb-20">
@@ -25,7 +30,7 @@ export function AboutPage() {
               <h2 className="text-2xl font-bold text-[#0f172a] mb-6">The Problem I Saw</h2>
               <div className="space-y-4 text-[#374151]">
                 <p>
-                  I've spent years working with home service businesses - plumbers, HVAC techs, electricians - helping them automate and grow. 
+                  I've spent years working with local service businesses — plumbers, HVAC techs, electricians, restaurants — helping them automate and grow.
                   And I kept seeing the same problem over and over:
                 </p>
                 <p className="text-lg font-semibold text-[#f97316]">
@@ -84,20 +89,18 @@ export function AboutPage() {
               </div>
             </div>
 
-            {/* Local Focus */}
+            {/* Personal touch */}
             <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 border-2 border-gray-200">
-              <h2 className="text-2xl font-bold text-[#0f172a] mb-6">Why Local Matters</h2>
+              <h2 className="text-2xl font-bold text-[#0f172a] mb-6">Why Work With Me</h2>
               <div className="space-y-4 text-[#374151]">
                 <p>
-                  I'm based in <span className="font-semibold text-[#0f172a]">Evansville, Indiana</span>, and I built Wayne AI specifically for home service businesses in the{' '}
-                  <span className="font-semibold text-[#0f172a]">Evansville, Henderson, and Owensboro</span> area.
+                  I'm <span className="font-semibold text-[#0f172a]">Wayne Dewig</span>, based in Evansville, Indiana. I started Wayne AI because I got tired of watching good businesses lose jobs to competitors who were just faster to respond.
                 </p>
                 <p>
-                  Why does that matter? Because I'm not some national call center that doesn't know your market. 
-                  I know your customers. I know your competition. I know what works here.
+                  I'm not a software company with a support ticket system. I'm one person who builds, manages, and stands behind every system I set up — for businesses across the country.
                 </p>
                 <p className="text-lg font-semibold text-[#f97316]">
-                  And if something breaks? You're not calling a 1-800 number in another country. You're texting me.
+                  If something breaks or needs adjusting, you text me. Not a 1-800 number.
                 </p>
               </div>
             </div>
@@ -154,7 +157,7 @@ export function AboutPage() {
             <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 border-2 border-[#f97316]">
               <h2 className="text-2xl font-bold text-[#0f172a] mb-6 text-center">My Mission</h2>
               <p className="text-xl text-center text-[#374151] mb-6">
-                Help local home service businesses stop losing revenue to missed calls - 
+                Help local service businesses stop losing revenue to missed calls and slow follow-up —
                 so they can focus on the work they're actually good at.
               </p>
               <p className="text-center text-[#374151]">
