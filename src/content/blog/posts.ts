@@ -25,6 +25,11 @@ import whyServiceBusinessLeadsGoCold from './why-service-business-leads-go-cold.
 import treeServiceBusinessStopLosingLeads from './tree-service-business-stop-losing-leads.html?raw';
 import aboutPageThatConvertsServiceBusiness from './about-page-that-converts-service-business.html?raw';
 import howToGetMoreReferralsServiceBusiness from './how-to-get-more-referrals-service-business.html?raw';
+import poolServiceAiToolToBookMoreJobs from './pool-service-ai-tool-to-book-more-jobs.html?raw';
+import handymanAiToolToBookMoreJobs from './handyman-ai-tool-to-book-more-jobs.html?raw';
+import paintingContractorAiToolToBookMoreJobs from './painting-contractor-ai-tool-to-book-more-jobs.html?raw';
+import howToPriceHomeServiceBusiness from './how-to-price-home-service-business.html?raw';
+import whatIsCrmServiceBusiness from './what-is-crm-service-business.html?raw';
 
 export interface BlogPost {
   slug: string;
@@ -325,5 +330,60 @@ export const posts: BlogPost[] = [
     tags: ["referrals", "service business", "customer retention", "word of mouth"],
     featuredImage: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&auto=format&fit=crop&q=80",
     content: howToGetMoreReferralsServiceBusiness,
+  },
+  {
+    slug: 'pool-service-ai-tool-to-book-more-jobs',
+    title: 'Why Pool Service Companies Lose Leads After Hours (And How to Fix It)',
+    description: 'Pool service companies miss most of their leads after hours. Here\'s why it happens and how AI automation helps you capture and book those jobs automatically.',
+    metaTitle: 'Why Pool Service Companies Lose After-Hours Leads',
+    author: 'Wayne AI',
+    date: '2026-04-03',
+    tags: ['pool service', 'AI automation', 'lead response', 'after hours'],
+    featuredImage: 'https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=1200&auto=format&fit=crop&q=80',
+    content: poolServiceAiToolToBookMoreJobs,
+  },
+  {
+    slug: 'handyman-ai-tool-to-book-more-jobs',
+    title: 'How Handyman Businesses Book More Jobs Without Answering Every Call',
+    description: 'Missed calls cost handyman businesses real jobs. Learn how AI automation handles lead capture, follow-up, and booking so you never lose work to voicemail again.',
+    metaTitle: 'How Handyman Businesses Book More Jobs Without Every Call',
+    author: 'Wayne AI',
+    date: '2026-04-03',
+    tags: ['handyman', 'AI automation', 'missed calls', 'lead response'],
+    featuredImage: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1200&auto=format&fit=crop&q=80',
+    content: handymanAiToolToBookMoreJobs,
+  },
+  {
+    slug: 'painting-contractor-ai-tool-to-book-more-jobs',
+    title: 'How Painting Contractors Stop Losing Bids to Faster Competitors',
+    description: 'Painting contractors lose jobs every week to faster-responding competitors. Learn how AI automation closes that gap and keeps your calendar full.',
+    metaTitle: 'How Painting Contractors Stop Losing Bids to Faster Rivals',
+    author: 'Wayne AI',
+    date: '2026-04-03',
+    tags: ['painting contractor', 'AI automation', 'lead response', 'estimate booking'],
+    featuredImage: 'https://images.unsplash.com/photo-1562259929-b4e1fd3aef09?w=1200&auto=format&fit=crop&q=80',
+    content: paintingContractorAiToolToBookMoreJobs,
+  },
+  {
+    slug: 'how-to-price-home-service-business',
+    title: 'How to Price Your Home Service Business (Without Losing Jobs or Leaving Money on the Table)',
+    description: 'Stop guessing at your prices. Learn the exact framework to calculate costs, research your market, and charge what you\'re worth without losing jobs.',
+    metaTitle: 'How to Price Your Home Service Business Right',
+    author: 'Wayne AI',
+    date: '2026-04-03',
+    tags: ['pricing', 'service business', 'profit margin', 'business advice'],
+    featuredImage: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&auto=format&fit=crop&q=80',
+    content: howToPriceHomeServiceBusiness,
+  },
+  {
+    slug: 'what-is-crm-service-business',
+    title: 'What Is a CRM and Does Your Service Business Actually Need One?',
+    description: 'CRM stands for Customer Relationship Manager — but what does that mean for a plumber or HVAC tech? Here\'s what it does, and whether your business needs one.',
+    metaTitle: 'What Is a CRM? Do Service Businesses Actually Need One?',
+    author: 'Wayne AI',
+    date: '2026-04-03',
+    tags: ['CRM', 'service business', 'lead management', 'automation'],
+    featuredImage: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&auto=format&fit=crop&q=80',
+    content: whatIsCrmServiceBusiness,
   },
 ];
