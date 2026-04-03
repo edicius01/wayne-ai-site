@@ -21,7 +21,7 @@ export const posts: BlogPost[] = [
     author: 'Wayne AI',
     date: '2025-03-15',
     tags: ['plumbing', 'lead generation', 'automation'],
-    featuredImage: 'https://assets.cdn.filesafe.space/qn3C6gimURSVaujVaKiz/media/6d888242-568e-45a7-9e9c-1f93971e97c2.png',
+    featuredImage: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=1200&auto=format&fit=crop&q=80',
     content: plumberChatWidget,
   },
 ];
