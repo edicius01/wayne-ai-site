@@ -21,6 +21,10 @@ import pressureWashingAiToolToBookMoreJobs from './pressure-washing-ai-tool-to-b
 import howToRespondToNegativeGoogleReviewsServiceBusiness from './how-to-respond-to-negative-google-reviews-service-business.html?raw';
 import howServiceBusinessesStayBusyInSlowSeason from './how-service-businesses-stay-busy-in-slow-season.html?raw';
 import howMuchShouldServiceBusinessSpendOnMarketing from './how-much-should-service-business-spend-on-marketing.html?raw';
+import whyServiceBusinessLeadsGoCold from './why-service-business-leads-go-cold.html?raw';
+import treeServiceBusinessStopLosingLeads from './tree-service-business-stop-losing-leads.html?raw';
+import aboutPageThatConvertsServiceBusiness from './about-page-that-converts-service-business.html?raw';
+import howToGetMoreReferralsServiceBusiness from './how-to-get-more-referrals-service-business.html?raw';
 
 export interface BlogPost {
   slug: string;
@@ -277,5 +281,49 @@ export const posts: BlogPost[] = [
     tags: ["marketing budget", "service business", "local marketing", "ROI"],
     featuredImage: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&auto=format&fit=crop&q=80",
     content: howMuchShouldServiceBusinessSpendOnMarketing,
+  },
+  {
+    slug: 'why-service-business-leads-go-cold',
+    title: 'The 3-Day Window: Why Most Service Business Leads Go Cold and Never Come Back',
+    description: 'Most service business leads die within 24 hours — not because the customer lost interest, but because no one followed up fast enough. Here\'s exactly what happens and how to fix it.',
+    metaTitle: 'Why Service Business Leads Go Cold (And How to Fix It) | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-02',
+    tags: ['lead follow-up', 'service business', 'lead response', 'conversion'],
+    featuredImage: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200&auto=format&fit=crop&q=80',
+    content: whyServiceBusinessLeadsGoCold,
+  },
+  {
+    slug: 'tree-service-business-stop-losing-leads',
+    title: "Why Tree Service Companies Lose Jobs Before They Even Know Someone Called",
+    description: "Tree service companies lose high-value jobs every day — not because they're bad at the work, but because they can't answer the phone mid-job. Here's how AI automation fixes the missed call problem before it costs you another $1,500 removal.",
+    metaTitle: "Why Tree Service Companies Lose Jobs Before They Even Know Someone Called | Wayne AI",
+    author: "Wayne AI",
+    date: '2026-04-03',
+    tags: ["tree service", "AI automation", "missed calls", "lead response"],
+    featuredImage: "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?w=1200&auto=format&fit=crop&q=80",
+    content: treeServiceBusinessStopLosingLeads,
+  },
+  {
+    slug: 'about-page-that-converts-service-business',
+    title: 'Your "About Us" Page Is Losing You Customers. Here\'s How to Fix It.',
+    description: "Most service business About pages are generic placeholders that kill trust instead of building it. Here's what to put on yours — and what to cut.",
+    metaTitle: "How to Write an About Page That Converts | Service Business Website Tips",
+    author: "Wayne AI",
+    date: '2026-04-03',
+    tags: ["website", "conversion", "service business", "about page"],
+    featuredImage: "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=1200&auto=format&fit=crop&q=80",
+    content: aboutPageThatConvertsServiceBusiness,
+  },
+  {
+    slug: 'how-to-get-more-referrals-service-business',
+    title: "The Simplest Way to Get More Referrals From Customers Who Already Love You",
+    description: "Referrals are the best leads you'll ever get — but they don't happen on their own. Here's how local service businesses can build a simple system to turn happy customers into a steady stream of warm referrals.",
+    metaTitle: "How to Get More Referrals for Your Service Business | Wayne AI",
+    author: "Wayne AI",
+    date: '2026-04-03',
+    tags: ["referrals", "service business", "customer retention", "word of mouth"],
+    featuredImage: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&auto=format&fit=crop&q=80",
+    content: howToGetMoreReferralsServiceBusiness,
   },
 ];
