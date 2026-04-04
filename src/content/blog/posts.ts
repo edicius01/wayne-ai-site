@@ -45,6 +45,11 @@ import howToBuildReferralProgramServiceBusiness from './how-to-build-referral-pr
 import howToWriteServiceGuarantee from './how-to-write-service-guarantee.html?raw';
 import howToTrackLeadsServiceBusiness from './how-to-track-leads-service-business.html?raw';
 import howToHandlePriceObjections from './how-to-handle-price-objections.html?raw';
+import howAiBooksAppointmentsServiceBusiness from './how-ai-books-appointments-service-business.html?raw';
+import whatYouNeedToBuildAnAiReceptionistServiceBusiness from './what-you-need-to-build-an-ai-receptionist-service-business.html?raw';
+import doYouNeedACrmServiceBusiness from './do-you-need-a-crm-service-business.html?raw';
+import howToReactivateOldCustomers from './how-to-reactivate-old-customers.html?raw';
+import whatYourWebsiteNeedsBeforeYouRunAds from './what-your-website-needs-before-you-run-ads.html?raw';
 
 export interface BlogPost {
   slug: string;
@@ -565,5 +570,60 @@ export const posts: BlogPost[] = [
     tags: ['sales', 'pricing', 'objections', 'how-to'],
     featuredImage: 'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=1200&auto=format&fit=crop&q=80',
     content: howToHandlePriceObjections,
+  },
+  {
+    slug: 'how-ai-books-appointments-service-business',
+    title: 'How AI Books Appointments for Service Businesses (Without a Human on the Phone)',
+    description: 'Most service businesses lose jobs not because of bad work, but slow response. Here\'s exactly how AI appointment booking works, what it handles well, and what it takes to set up.',
+    metaTitle: 'How AI Books Appointments for Service Businesses | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-03',
+    tags: ['AI', 'automation', 'appointment booking', 'how-to'],
+    featuredImage: 'https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=1200&auto=format&fit=crop&q=80',
+    content: howAiBooksAppointmentsServiceBusiness,
+  },
+  {
+    slug: 'what-you-need-to-build-an-ai-receptionist-service-business',
+    title: 'What You Actually Need to Build an AI Receptionist for Your Service Business',
+    description: 'An AI receptionist is not a single product — it\'s a stack of five specific components. Here\'s what each one does, what it costs, and how to decide whether to build it or hire it out.',
+    metaTitle: 'What You Need to Build an AI Receptionist | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-03',
+    tags: ['AI', 'automation', 'receptionist', 'how-to'],
+    featuredImage: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&auto=format&fit=crop&q=80',
+    content: whatYouNeedToBuildAnAiReceptionistServiceBusiness,
+  },
+  {
+    slug: 'do-you-need-a-crm-service-business',
+    title: 'Do You Actually Need a CRM? An Honest Answer for Service Business Owners',
+    description: 'Most service businesses either have no CRM or one they never use. Here\'s an honest breakdown of when a CRM actually helps, when it\'s overkill, and what to look for if you need one.',
+    metaTitle: 'Do You Need a CRM? An Honest Answer for Service Businesses | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-03',
+    tags: ['CRM', 'automation', 'software', 'how-to'],
+    featuredImage: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop&q=80',
+    content: doYouNeedACrmServiceBusiness,
+  },
+  {
+    slug: 'how-to-reactivate-old-customers',
+    title: 'How to Reactivate Old Customers (And Why It\'s Easier Than Getting New Ones)',
+    description: 'Past customers already trust you. Here\'s a simple system to bring them back — who to target, what to send, when to send it, and how to automate the whole thing.',
+    metaTitle: 'How to Reactivate Old Customers | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-03',
+    tags: ['customer reactivation', 'marketing', 'automation', 'how-to'],
+    featuredImage: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&auto=format&fit=crop&q=80',
+    content: howToReactivateOldCustomers,
+  },
+  {
+    slug: 'what-your-website-needs-before-you-run-ads',
+    title: 'What Your Website Needs Before You Run Ads (A Checklist for Service Businesses)',
+    description: 'Running ads into a broken website is like turning on a faucet over a broken bucket. Here\'s the complete checklist of what needs to be in place before you spend a dollar on paid traffic.',
+    metaTitle: 'What Your Website Needs Before You Run Ads | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-03',
+    tags: ['website', 'ads', 'conversion', 'how-to'],
+    featuredImage: 'https://images.unsplash.com/photo-1432888622747-4eb9a8f5f989?w=1200&auto=format&fit=crop&q=80',
+    content: whatYourWebsiteNeedsBeforeYouRunAds,
   },
 ];
