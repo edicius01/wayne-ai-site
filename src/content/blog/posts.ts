@@ -40,6 +40,11 @@ import howToAutomateGoogleReviewRequests from './how-to-automate-google-review-r
 import howToBuildLeadFollowUpSequence from './how-to-build-lead-follow-up-sequence.html?raw';
 import howToAddOnlineBookingServiceBusiness from './how-to-add-online-booking-service-business.html?raw';
 import howToSetUpAppointmentReminders from './how-to-set-up-appointment-reminders.html?raw';
+import howToFollowUpAfterEstimate from './how-to-follow-up-after-estimate.html?raw';
+import howToBuildReferralProgramServiceBusiness from './how-to-build-referral-program-service-business.html?raw';
+import howToWriteServiceGuarantee from './how-to-write-service-guarantee.html?raw';
+import howToTrackLeadsServiceBusiness from './how-to-track-leads-service-business.html?raw';
+import howToHandlePriceObjections from './how-to-handle-price-objections.html?raw';
 
 export interface BlogPost {
   slug: string;
@@ -505,5 +510,60 @@ export const posts: BlogPost[] = [
     tags: ['automation', 'appointments', 'no-shows', 'how-to'],
     featuredImage: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200&auto=format&fit=crop&q=80',
     content: howToSetUpAppointmentReminders,
+  },
+  {
+    slug: 'how-to-follow-up-after-estimate',
+    title: 'How to Write a Follow-Up After Giving an Estimate (With Templates)',
+    description: 'Most estimates don\'t get rejected — they get forgotten. Here\'s how to follow up after sending a quote, what to say at each touch, and real templates you can copy today.',
+    metaTitle: 'How to Follow Up After Giving an Estimate | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-03',
+    tags: ['sales', 'estimates', 'follow-up', 'how-to'],
+    featuredImage: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&auto=format&fit=crop&q=80',
+    content: howToFollowUpAfterEstimate,
+  },
+  {
+    slug: 'how-to-build-referral-program-service-business',
+    title: 'How to Build a Simple Referral Program for Your Service Business (Without Software)',
+    description: 'Referrals are your best leads — but most service businesses treat them as a happy accident. Here\'s how to build a simple referral program that runs on a clear ask, a good incentive, and one follow-up habit.',
+    metaTitle: 'How to Build a Referral Program for Your Service Business | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-03',
+    tags: ['referrals', 'marketing', 'growth', 'how-to'],
+    featuredImage: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&auto=format&fit=crop&q=80',
+    content: howToBuildReferralProgramServiceBusiness,
+  },
+  {
+    slug: 'how-to-write-service-guarantee',
+    title: 'How to Write a Service Guarantee That Wins Jobs (And What to Avoid)',
+    description: '"Satisfaction guaranteed" means nothing. Here\'s how to write a specific, credible guarantee that actually builds trust with skeptical customers — and what to leave out.',
+    metaTitle: 'How to Write a Service Guarantee That Wins Jobs | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-03',
+    tags: ['trust', 'marketing', 'conversion', 'how-to'],
+    featuredImage: 'https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=1200&auto=format&fit=crop&q=80',
+    content: howToWriteServiceGuarantee,
+  },
+  {
+    slug: 'how-to-track-leads-service-business',
+    title: 'How to Track Where Your Leads Are Coming From (Without a Marketing Degree)',
+    description: 'Most service business owners spend money on marketing and have no idea which channel is actually sending jobs. Here\'s a simple system to find out — no analytics degree required.',
+    metaTitle: 'How to Track Where Your Leads Come From | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-03',
+    tags: ['marketing', 'lead tracking', 'analytics', 'how-to'],
+    featuredImage: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200&auto=format&fit=crop&q=80',
+    content: howToTrackLeadsServiceBusiness,
+  },
+  {
+    slug: 'how-to-handle-price-objections',
+    title: 'How to Handle a Price Objection Without Lowering Your Price',
+    description: '"I got a cheaper quote" doesn\'t have to mean you lose the job. Here\'s how to understand what customers are really saying when they push back on price — and how to respond without folding.',
+    metaTitle: 'How to Handle Price Objections Without Lowering Your Price | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-03',
+    tags: ['sales', 'pricing', 'objections', 'how-to'],
+    featuredImage: 'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=1200&auto=format&fit=crop&q=80',
+    content: howToHandlePriceObjections,
   },
 ];
