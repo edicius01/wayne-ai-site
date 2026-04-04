@@ -35,6 +35,11 @@ import flooringContractorAiToolToBookMoreJobs from './flooring-contractor-ai-too
 import hvacTuneUpSeasonLeads from './hvac-tune-up-season-leads.html?raw';
 import howToGetRepeatCustomersServiceBusiness from './how-to-get-repeat-customers-service-business.html?raw';
 import howToDifferentiateYourServiceBusiness from './how-to-differentiate-your-service-business.html?raw';
+import howToSetUpMissedCallTextBack from './how-to-set-up-missed-call-text-back.html?raw';
+import howToAutomateGoogleReviewRequests from './how-to-automate-google-review-requests.html?raw';
+import howToBuildLeadFollowUpSequence from './how-to-build-lead-follow-up-sequence.html?raw';
+import howToAddOnlineBookingServiceBusiness from './how-to-add-online-booking-service-business.html?raw';
+import howToSetUpAppointmentReminders from './how-to-set-up-appointment-reminders.html?raw';
 
 export interface BlogPost {
   slug: string;
@@ -445,5 +450,60 @@ export const posts: BlogPost[] = [
     tags: ['marketing', 'differentiation', 'service business', 'positioning'],
     featuredImage: 'https://images.unsplash.com/photo-1664575602276-acd073f104c1?w=1200&auto=format&fit=crop&q=80',
     content: howToDifferentiateYourServiceBusiness,
+  },
+  {
+    slug: 'how-to-set-up-missed-call-text-back',
+    title: 'How to Set Up a Missed-Call Text-Back for Your Service Business (Step by Step)',
+    description: 'A missed call doesn\'t have to mean a lost lead. Here\'s how to set up an automated text-back that responds in seconds — so you keep the conversation alive while you\'re on the job.',
+    metaTitle: 'How to Set Up a Missed-Call Text-Back for Your Service Business | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-03',
+    tags: ['automation', 'lead generation', 'missed calls', 'how-to'],
+    featuredImage: 'https://images.unsplash.com/photo-1534536281715-e28d76689b4d?w=1200&auto=format&fit=crop&q=80',
+    content: howToSetUpMissedCallTextBack,
+  },
+  {
+    slug: 'how-to-automate-google-review-requests',
+    title: 'How to Automate Google Review Requests After Every Job (Without Asking Awkwardly in Person)',
+    description: 'Stop relying on your techs to remember to ask. Here\'s how to build an automated review request that goes out at exactly the right moment — every time, without anyone lifting a finger.',
+    metaTitle: 'How to Automate Google Review Requests for Your Service Business | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-03',
+    tags: ['reviews', 'automation', 'google', 'how-to'],
+    featuredImage: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&auto=format&fit=crop&q=80',
+    content: howToAutomateGoogleReviewRequests,
+  },
+  {
+    slug: 'how-to-build-lead-follow-up-sequence',
+    title: 'How to Build a Lead Follow-Up Sequence That Books Jobs While You\'re on the Job',
+    description: 'Most service business leads go cold because nobody followed up. Here\'s how to build a 5-touch automated sequence that stays on leads for a week — without you remembering to do a thing.',
+    metaTitle: 'How to Build a Lead Follow-Up Sequence for Your Service Business | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-03',
+    tags: ['automation', 'lead generation', 'follow-up', 'how-to'],
+    featuredImage: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop&q=80',
+    content: howToBuildLeadFollowUpSequence,
+  },
+  {
+    slug: 'how-to-add-online-booking-service-business',
+    title: 'How to Add Online Booking to Your Service Business Website (Without Hiring a Developer)',
+    description: 'If customers can\'t book when they\'re ready, they\'ll find someone who lets them. Here\'s how to set up online booking for your service business — step by step, no developer needed.',
+    metaTitle: 'How to Add Online Booking to Your Service Business Website | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-03',
+    tags: ['booking', 'automation', 'website', 'how-to'],
+    featuredImage: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&auto=format&fit=crop&q=80',
+    content: howToAddOnlineBookingServiceBusiness,
+  },
+  {
+    slug: 'how-to-set-up-appointment-reminders',
+    title: 'How to Set Up Automated Appointment Reminders That Cut No-Shows (Step by Step)',
+    description: 'No-shows cost you time, money, and a slot that could have been filled. Here\'s how to build an automated reminder sequence that confirms appointments and catches cancellations before your tech drives out.',
+    metaTitle: 'How to Set Up Automated Appointment Reminders for Your Service Business | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-03',
+    tags: ['automation', 'appointments', 'no-shows', 'how-to'],
+    featuredImage: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200&auto=format&fit=crop&q=80',
+    content: howToSetUpAppointmentReminders,
   },
 ];
