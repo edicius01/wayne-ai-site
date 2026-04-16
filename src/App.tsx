@@ -7,6 +7,7 @@ import { DemoPage } from './pages/DemoPage';
 import { AboutPage } from './pages/AboutPage';
 import { BlogPage } from './pages/BlogPage';
 import { BlogPostPage } from './pages/BlogPostPage';
+import { ChiropractorReactivationPage } from './pages/lp/ChiropractorReactivationPage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -26,6 +27,7 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:slug" element={<BlogPostPage />} />
+        <Route path="/lp/chiropractor-reactivation" element={<ChiropractorReactivationPage />} />
       </Routes>
     </Router>
   );

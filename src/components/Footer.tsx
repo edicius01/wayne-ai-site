@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer className="bg-[#0F172A] py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+        <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
               <svg className="w-8 h-8 text-[#f97316]" viewBox="0 0 24 24" fill="currentColor">
@@ -40,6 +40,15 @@ export function Footer() {
                 </svg>
                 Evansville, IN
               </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-white mb-4">Solutions</h3>
+            <div className="space-y-2 text-sm">
+              <Link to="/lp/chiropractor-reactivation" className="block text-[#9CA3AF] hover:text-[#f97316] transition-colors">
+                Chiropractic Patient Reactivation
+              </Link>
             </div>
           </div>
 
