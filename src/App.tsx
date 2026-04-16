@@ -8,6 +8,9 @@ import { AboutPage } from './pages/AboutPage';
 import { BlogPage } from './pages/BlogPage';
 import { BlogPostPage } from './pages/BlogPostPage';
 import { ChiropractorReactivationPage } from './pages/lp/ChiropractorReactivationPage';
+import { MedSpaReactivationPage } from './pages/lp/MedSpaReactivationPage';
+import { DentalReactivationPage } from './pages/lp/DentalReactivationPage';
+import { PhysicalTherapyReactivationPage } from './pages/lp/PhysicalTherapyReactivationPage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -28,6 +31,9 @@ function App() {
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:slug" element={<BlogPostPage />} />
         <Route path="/lp/chiropractor-reactivation" element={<ChiropractorReactivationPage />} />
+        <Route path="/lp/med-spa-reactivation" element={<MedSpaReactivationPage />} />
+        <Route path="/lp/dental-reactivation" element={<DentalReactivationPage />} />
+        <Route path="/lp/physical-therapy-reactivation" element={<PhysicalTherapyReactivationPage />} />
       </Routes>
     </Router>
   );
