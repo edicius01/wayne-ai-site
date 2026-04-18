@@ -4,6 +4,7 @@ import hvacToolToBookMoreServiceCalls from './hvac-tool-to-book-more-service-cal
 import rooferToolToCaptureStormLeads from './roofer-tool-to-capture-storm-leads.html?raw';
 import howRoofingCompaniesStayBusyBetweenStorms from './how-roofing-companies-stay-busy-between-storms.html?raw';
 import electricianToolToBookMoreJobs from './electrician-tool-to-book-more-jobs.html?raw';
+import howElectriciansWinPanelUpgradeEvChargerJobs from './how-electricians-win-panel-upgrade-ev-charger-jobs.html?raw';
 import restaurantQrCodeLoyaltySystem from './restaurant-qr-code-loyalty-system.html?raw';
 import pestControlToolToBookMoreJobs from './pest-control-tool-to-book-more-jobs.html?raw';
 import lawnCareToolToBookMoreCustomers from './lawn-care-tool-to-book-more-customers.html?raw';
@@ -136,6 +137,17 @@ export const posts: BlogPost[] = [
     tags: ["electrician","lead generation","automation"],
     featuredImage: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1200&auto=format&fit=crop&q=80',
     content: electricianToolToBookMoreJobs,
+  },
+  {
+    slug: 'how-electricians-win-panel-upgrade-ev-charger-jobs',
+    title: "How Electricians Are Winning More Panel Upgrades and EV Charger Jobs",
+    description: "Panel upgrades and EV charger installs are high-ticket electrical jobs — and most contractors lose them before ever having a conversation. Here's how fast lead response changes that.",
+    metaTitle: "How Electricians Win More Panel Upgrade & EV Charger Jobs | Wayne AI",
+    author: "Wayne AI",
+    date: '2026-04-18',
+    tags: ["electrician","lead generation","EV charger","panel upgrade"],
+    featuredImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&auto=format&fit=crop&q=80',
+    content: howElectriciansWinPanelUpgradeEvChargerJobs,
   },
   {
     slug: 'restaurant-qr-code-loyalty-system',
