@@ -2,6 +2,7 @@ import plumberChatWidget from './the-tool-plumbers-use-to-book-jobs-while-they-s
 import whyPlumbersLoseJobsMidCall from './why-plumbers-lose-jobs-mid-call.html?raw';
 import hvacToolToBookMoreServiceCalls from './hvac-tool-to-book-more-service-calls.html?raw';
 import rooferToolToCaptureStormLeads from './roofer-tool-to-capture-storm-leads.html?raw';
+import howRoofingCompaniesStayBusyBetweenStorms from './how-roofing-companies-stay-busy-between-storms.html?raw';
 import electricianToolToBookMoreJobs from './electrician-tool-to-book-more-jobs.html?raw';
 import restaurantQrCodeLoyaltySystem from './restaurant-qr-code-loyalty-system.html?raw';
 import pestControlToolToBookMoreJobs from './pest-control-tool-to-book-more-jobs.html?raw';
@@ -113,6 +114,17 @@ export const posts: BlogPost[] = [
     tags: ["roofing","lead generation","automation"],
     featuredImage: 'https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=1200&auto=format&fit=crop&q=80',
     content: rooferToolToCaptureStormLeads,
+  },
+  {
+    slug: 'how-roofing-companies-stay-busy-between-storms',
+    title: "How Roofing Companies Stay Busy Between Storms (Without Waiting for the Next One)",
+    description: "Storm season fills the calendar fast. The other 48 weeks don't have to be a grind. Here's how the busiest roofing companies generate work year-round using reactivation, follow-up, and always-on lead capture.",
+    metaTitle: "How Roofing Companies Stay Busy Between Storms | Wayne AI",
+    author: "Wayne AI",
+    date: '2026-04-18',
+    tags: ["roofing", "slow season", "lead generation", "automation"],
+    featuredImage: 'https://images.unsplash.com/photo-1632823471565-1ecdf5c6da2e?w=1200&auto=format&fit=crop&q=80',
+    content: howRoofingCompaniesStayBusyBetweenStorms,
   },
   {
     slug: 'electrician-tool-to-book-more-jobs',
