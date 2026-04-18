@@ -50,6 +50,11 @@ import whatYouNeedToBuildAnAiReceptionistServiceBusiness from './what-you-need-t
 import doYouNeedACrmServiceBusiness from './do-you-need-a-crm-service-business.html?raw';
 import howToReactivateOldCustomers from './how-to-reactivate-old-customers.html?raw';
 import whatYourWebsiteNeedsBeforeYouRunAds from './what-your-website-needs-before-you-run-ads.html?raw';
+import fenceInstallationBusinessBookMoreJobs from './fence-installation-business-book-more-jobs.html?raw';
+import gutterCleaningBusinessBookMoreJobs from './gutter-cleaning-business-book-more-jobs.html?raw';
+import applianceRepairShopBookMoreJobs from './appliance-repair-shop-book-more-jobs.html?raw';
+import howToTurnOneTimeCustomersIntoRecurringRevenue from './how-to-turn-one-time-customers-into-recurring-revenue.html?raw';
+import whatToSayWhenCustomerSaysIllThinkAboutIt from './what-to-say-when-customer-says-ill-think-about-it.html?raw';
 
 export interface BlogPost {
   slug: string;
@@ -616,6 +621,17 @@ export const posts: BlogPost[] = [
     content: howToReactivateOldCustomers,
   },
   {
+    slug: 'fence-installation-business-book-more-jobs',
+    title: 'How Fence Companies Stop Losing Installs to the Competitor Who Calls Back First',
+    description: 'Fence installation jobs are high-ticket and highly competitive. Here\'s how the busiest fence companies are capturing every lead — even when the crew is in the ground — and winning more installs without running more ads.',
+    metaTitle: 'How Fence Companies Stop Losing Installs to the Competitor Who Calls Back First | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-17',
+    tags: ['fence installation', 'AI automation', 'lead response', 'missed calls'],
+    featuredImage: 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=1200&auto=format&fit=crop&q=80',
+    content: fenceInstallationBusinessBookMoreJobs,
+  },
+  {
     slug: 'what-your-website-needs-before-you-run-ads',
     title: 'What Your Website Needs Before You Run Ads (A Checklist for Service Businesses)',
     description: 'Running ads into a broken website is like turning on a faucet over a broken bucket. Here\'s the complete checklist of what needs to be in place before you spend a dollar on paid traffic.',
@@ -625,5 +641,49 @@ export const posts: BlogPost[] = [
     tags: ['website', 'ads', 'conversion', 'how-to'],
     featuredImage: 'https://images.unsplash.com/photo-1432888622747-4eb9a8f5f989?w=1200&auto=format&fit=crop&q=80',
     content: whatYourWebsiteNeedsBeforeYouRunAds,
+  },
+  {
+    slug: 'gutter-cleaning-business-book-more-jobs',
+    title: 'Why Gutter Cleaning Companies Lose Their Best Leads During the Fall and Spring Rush',
+    description: 'Gutter cleaning is seasonal, competitive, and booked on impulse. Here\'s how the busiest gutter companies capture every lead during peak season — even when the crew is on a roof and can\'t pick up.',
+    metaTitle: 'Why Gutter Cleaning Companies Lose Their Best Leads During the Fall and Spring Rush | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-17',
+    tags: ['gutter cleaning', 'AI automation', 'seasonal', 'missed calls'],
+    featuredImage: 'https://images.unsplash.com/photo-1508873699-8b57b2d4f6b7?w=1200&auto=format&fit=crop&q=80',
+    content: gutterCleaningBusinessBookMoreJobs,
+  },
+  {
+    slug: 'appliance-repair-shop-book-more-jobs',
+    title: 'Why Appliance Repair Shops Lose Jobs Before the Phone Stops Ringing',
+    description: 'When a refrigerator dies or a washer quits mid-cycle, homeowners call two or three shops and book whoever answers first. Here\'s how independent appliance repair businesses are capturing every urgent call — and filling their schedules without hiring more staff.',
+    metaTitle: 'Why Appliance Repair Shops Lose Jobs Before the Phone Stops Ringing | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-17',
+    tags: ['appliance repair', 'AI automation', 'missed calls', 'lead response'],
+    featuredImage: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&auto=format&fit=crop&q=80',
+    content: applianceRepairShopBookMoreJobs,
+  },
+  {
+    slug: 'how-to-turn-one-time-customers-into-recurring-revenue',
+    title: 'How to Turn One-Time Service Calls Into Predictable, Recurring Revenue',
+    description: 'Most service businesses trade time for money — one job, one payment, done. Here\'s how to build simple follow-up systems that bring customers back automatically and turn a job-by-job business into one with predictable monthly income.',
+    metaTitle: 'How to Turn One-Time Customers Into Recurring Revenue | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-17',
+    tags: ['recurring revenue', 'customer retention', 'automation', 'how-to'],
+    featuredImage: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&auto=format&fit=crop&q=80',
+    content: howToTurnOneTimeCustomersIntoRecurringRevenue,
+  },
+  {
+    slug: 'what-to-say-when-customer-says-ill-think-about-it',
+    title: 'What to Say When a Customer Says "I\'ll Think About It" (Without Being Pushy)',
+    description: '"I\'ll think about it" is the most common reason service business owners lose jobs they should have won. Here\'s what it actually means, what to say in the moment, and how to follow up without feeling like a salesperson.',
+    metaTitle: 'What to Say When a Customer Says "I\'ll Think About It" | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-17',
+    tags: ['sales', 'objections', 'service business', 'how-to'],
+    featuredImage: 'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=1200&auto=format&fit=crop&q=80',
+    content: whatToSayWhenCustomerSaysIllThinkAboutIt,
   },
 ];
