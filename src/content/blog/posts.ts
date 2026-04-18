@@ -59,9 +59,13 @@ import applianceRepairShopBookMoreJobs from './appliance-repair-shop-book-more-j
 import howToTurnOneTimeCustomersIntoRecurringRevenue from './how-to-turn-one-time-customers-into-recurring-revenue.html?raw';
 import whatToSayWhenCustomerSaysIllThinkAboutIt from './what-to-say-when-customer-says-ill-think-about-it.html?raw';
 import howToReactivateLapsedChiropracticPatients from './how-to-reactivate-lapsed-chiropractic-patients.html?raw';
+import howChiropractorsStopMissingNewPatientCalls from './how-chiropractors-stop-missing-new-patient-calls.html?raw';
 import howToReactivateLapsedDentalPatients from './how-to-reactivate-lapsed-dental-patients.html?raw';
+import dentalAppointmentRemindersReduceNoShows from './dental-appointment-reminders-reduce-no-shows.html?raw';
 import howToReactivateLapsedMedSpaClients from './how-to-reactivate-lapsed-med-spa-clients.html?raw';
+import medSpaConsultationFollowUpSequence from './med-spa-consultation-follow-up-sequence.html?raw';
 import howToReactivateLapsedPhysicalTherapyPatients from './how-to-reactivate-lapsed-physical-therapy-patients.html?raw';
+import howPhysicalTherapyPracticesImprovePatientAdherence from './how-physical-therapy-practices-improve-patient-adherence.html?raw';
 
 export interface BlogPost {
   slug: string;
@@ -738,6 +742,17 @@ export const posts: BlogPost[] = [
     content: howToReactivateLapsedChiropracticPatients,
   },
   {
+    slug: 'how-chiropractors-stop-missing-new-patient-calls',
+    title: 'How Chiropractors Stop Losing New Patients to Unanswered Calls',
+    description: 'A new patient who calls and gets voicemail doesn\'t leave a message — they call the next practice. Here\'s how automated missed-call follow-up keeps new patient leads alive and gets them booked.',
+    metaTitle: 'How Chiropractors Stop Missing New Patient Calls | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-18',
+    tags: ['chiropractic', 'missed calls', 'healthcare', 'automation', 'lead generation'],
+    featuredImage: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1200&auto=format&fit=crop&q=80',
+    content: howChiropractorsStopMissingNewPatientCalls,
+  },
+  {
     slug: 'how-to-reactivate-lapsed-dental-patients',
     title: 'How Dental Practices Are Filling Schedules With Patients They Already Have',
     description: 'Dental practices lose 20–30% of active patients to silent attrition every year. Here\'s why generic recall postcards fail, what personalized text-based reactivation looks like, and how to run it automatically.',
@@ -747,6 +762,17 @@ export const posts: BlogPost[] = [
     tags: ['dental', 'patient reactivation', 'healthcare', 'automation'],
     featuredImage: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=1200&auto=format&fit=crop&q=80',
     content: howToReactivateLapsedDentalPatients,
+  },
+  {
+    slug: 'dental-appointment-reminders-reduce-no-shows',
+    title: 'How Dental Practices Cut No-Shows With Automated Appointment Reminders',
+    description: 'Dental no-shows cost practices $30,000–$80,000 a year. Here\'s how a multi-touch automated reminder sequence — text, email, and reschedule flow — dramatically reduces empty chairs without adding work for your front desk.',
+    metaTitle: 'How to Reduce Dental No-Shows With Automated Reminders | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-18',
+    tags: ['dental', 'no-shows', 'healthcare', 'automation', 'appointment reminders'],
+    featuredImage: 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=1200&auto=format&fit=crop&q=80',
+    content: dentalAppointmentRemindersReduceNoShows,
   },
   {
     slug: 'how-to-reactivate-lapsed-med-spa-clients',
@@ -760,6 +786,17 @@ export const posts: BlogPost[] = [
     content: howToReactivateLapsedMedSpaClients,
   },
   {
+    slug: 'med-spa-consultation-follow-up-sequence',
+    title: 'Why Most Med Spa Consultations Don\'t Convert — and What to Do About It',
+    description: 'Most med spa consultations end with "I\'ll think about it." The practices that convert 50–60% of consults aren\'t doing better consultations — they\'re doing better follow-up. Here\'s what that looks like.',
+    metaTitle: 'How Med Spas Convert More Consultations Into Bookings | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-18',
+    tags: ['med spa', 'consultation conversion', 'healthcare', 'automation', 'follow-up'],
+    featuredImage: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200&auto=format&fit=crop&q=80',
+    content: medSpaConsultationFollowUpSequence,
+  },
+  {
     slug: 'how-to-reactivate-lapsed-physical-therapy-patients',
     title: 'How Physical Therapy Practices Win Back Patients Who Discharged Early',
     description: 'PT practices lose revenue twice — from early discharge and from former patients who don\'t return when their condition recurs. Here\'s how a simple 30/60/90-day automated check-in changes that.',
@@ -769,5 +806,16 @@ export const posts: BlogPost[] = [
     tags: ['physical therapy', 'patient reactivation', 'healthcare', 'automation'],
     featuredImage: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&auto=format&fit=crop&q=80',
     content: howToReactivateLapsedPhysicalTherapyPatients,
+  },
+  {
+    slug: 'how-physical-therapy-practices-improve-patient-adherence',
+    title: 'How Physical Therapy Practices Stop Losing Patients Mid Plan-of-Care',
+    description: 'PT patients drop off at visit five of a twelve-visit plan because nobody stays in contact between sessions. Here\'s how automated check-ins and home exercise reminders reduce drop-off and recover tens of thousands in annual revenue.',
+    metaTitle: 'How Physical Therapy Practices Improve Patient Adherence | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-18',
+    tags: ['physical therapy', 'patient adherence', 'healthcare', 'automation'],
+    featuredImage: 'https://images.unsplash.com/photo-1573879541250-58ae8b322b40?w=1200&auto=format&fit=crop&q=80',
+    content: howPhysicalTherapyPracticesImprovePatientAdherence,
   },
 ];
