@@ -58,6 +58,10 @@ import gutterCleaningBusinessBookMoreJobs from './gutter-cleaning-business-book-
 import applianceRepairShopBookMoreJobs from './appliance-repair-shop-book-more-jobs.html?raw';
 import howToTurnOneTimeCustomersIntoRecurringRevenue from './how-to-turn-one-time-customers-into-recurring-revenue.html?raw';
 import whatToSayWhenCustomerSaysIllThinkAboutIt from './what-to-say-when-customer-says-ill-think-about-it.html?raw';
+import howToReactivateLapsedChiropracticPatients from './how-to-reactivate-lapsed-chiropractic-patients.html?raw';
+import howToReactivateLapsedDentalPatients from './how-to-reactivate-lapsed-dental-patients.html?raw';
+import howToReactivateLapsedMedSpaClients from './how-to-reactivate-lapsed-med-spa-clients.html?raw';
+import howToReactivateLapsedPhysicalTherapyPatients from './how-to-reactivate-lapsed-physical-therapy-patients.html?raw';
 
 export interface BlogPost {
   slug: string;
@@ -721,5 +725,49 @@ export const posts: BlogPost[] = [
     tags: ['sales', 'objections', 'service business', 'how-to'],
     featuredImage: 'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=1200&auto=format&fit=crop&q=80',
     content: whatToSayWhenCustomerSaysIllThinkAboutIt,
+  },
+  {
+    slug: 'how-to-reactivate-lapsed-chiropractic-patients',
+    title: 'How to Reactivate Lapsed Chiropractic Patients (Without Awkward Outreach)',
+    description: 'Most chiropractic practices have hundreds of lapsed patients worth more than new ones. Here\'s the math on reactivation vs. new patient acquisition — and how automated sequences bring them back without manual effort.',
+    metaTitle: 'How to Reactivate Lapsed Chiropractic Patients | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-18',
+    tags: ['chiropractic', 'patient reactivation', 'healthcare', 'automation'],
+    featuredImage: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&auto=format&fit=crop&q=80',
+    content: howToReactivateLapsedChiropracticPatients,
+  },
+  {
+    slug: 'how-to-reactivate-lapsed-dental-patients',
+    title: 'How Dental Practices Are Filling Schedules With Patients They Already Have',
+    description: 'Dental practices lose 20–30% of active patients to silent attrition every year. Here\'s why generic recall postcards fail, what personalized text-based reactivation looks like, and how to run it automatically.',
+    metaTitle: 'How to Reactivate Lapsed Dental Patients | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-18',
+    tags: ['dental', 'patient reactivation', 'healthcare', 'automation'],
+    featuredImage: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=1200&auto=format&fit=crop&q=80',
+    content: howToReactivateLapsedDentalPatients,
+  },
+  {
+    slug: 'how-to-reactivate-lapsed-med-spa-clients',
+    title: 'How Med Spas Are Bringing Back Clients Who Stopped Booking',
+    description: 'Med spa clients lapse because of inertia, not dissatisfaction. Here\'s how treatment-timed automated outreach wins back Botox and filler clients — without discounts or marketing blasts.',
+    metaTitle: 'How to Reactivate Lapsed Med Spa Clients | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-18',
+    tags: ['med spa', 'client reactivation', 'healthcare', 'automation'],
+    featuredImage: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=1200&auto=format&fit=crop&q=80',
+    content: howToReactivateLapsedMedSpaClients,
+  },
+  {
+    slug: 'how-to-reactivate-lapsed-physical-therapy-patients',
+    title: 'How Physical Therapy Practices Win Back Patients Who Discharged Early',
+    description: 'PT practices lose revenue twice — from early discharge and from former patients who don\'t return when their condition recurs. Here\'s how a simple 30/60/90-day automated check-in changes that.',
+    metaTitle: 'How to Reactivate Lapsed Physical Therapy Patients | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-18',
+    tags: ['physical therapy', 'patient reactivation', 'healthcare', 'automation'],
+    featuredImage: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&auto=format&fit=crop&q=80',
+    content: howToReactivateLapsedPhysicalTherapyPatients,
   },
 ];
