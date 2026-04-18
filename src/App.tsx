@@ -14,6 +14,7 @@ import { ChiropractorReactivationPage } from './pages/lp/ChiropractorReactivatio
 import { MedSpaReactivationPage } from './pages/lp/MedSpaReactivationPage';
 import { DentalReactivationPage } from './pages/lp/DentalReactivationPage';
 import { PhysicalTherapyReactivationPage } from './pages/lp/PhysicalTherapyReactivationPage';
+import { ElectricianAutomationPage } from './pages/lp/ElectricianAutomationPage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -40,6 +41,7 @@ function App() {
         <Route path="/lp/med-spa-reactivation" element={<MedSpaReactivationPage />} />
         <Route path="/lp/dental-reactivation" element={<DentalReactivationPage />} />
         <Route path="/lp/physical-therapy-reactivation" element={<PhysicalTherapyReactivationPage />} />
+        <Route path="/lp/electrician-automation" element={<ElectricianAutomationPage />} />
       </Routes>
     </Router>
   );

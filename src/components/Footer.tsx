@@ -46,6 +46,9 @@ export function Footer() {
           <div>
             <h3 className="font-semibold text-white mb-4">Solutions</h3>
             <div className="space-y-2 text-sm">
+              <Link to="/lp/electrician-automation" className="block text-[#9CA3AF] hover:text-[#f97316] transition-colors">
+                Electrician Automation
+              </Link>
               <Link to="/lp/chiropractor-reactivation" className="block text-[#9CA3AF] hover:text-[#f97316] transition-colors">
                 Chiropractic Reactivation
               </Link>
