@@ -8,6 +8,7 @@ import { AboutPage } from './pages/AboutPage';
 import { BlogPage } from './pages/BlogPage';
 import { BlogPostPage } from './pages/BlogPostPage';
 import { HvacAutomationPage } from './pages/lp/HvacAutomationPage';
+import { PlumbingAutomationPage } from './pages/lp/PlumbingAutomationPage';
 import { ChiropractorReactivationPage } from './pages/lp/ChiropractorReactivationPage';
 import { MedSpaReactivationPage } from './pages/lp/MedSpaReactivationPage';
 import { DentalReactivationPage } from './pages/lp/DentalReactivationPage';
@@ -32,6 +33,7 @@ function App() {
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:slug" element={<BlogPostPage />} />
         <Route path="/lp/hvac-automation" element={<HvacAutomationPage />} />
+        <Route path="/lp/plumbing-automation" element={<PlumbingAutomationPage />} />
         <Route path="/lp/chiropractor-reactivation" element={<ChiropractorReactivationPage />} />
         <Route path="/lp/med-spa-reactivation" element={<MedSpaReactivationPage />} />
         <Route path="/lp/dental-reactivation" element={<DentalReactivationPage />} />
