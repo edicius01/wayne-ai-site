@@ -1,4 +1,5 @@
 import plumberChatWidget from './the-tool-plumbers-use-to-book-jobs-while-they-sleep.html?raw';
+import whyPlumbersLoseJobsMidCall from './why-plumbers-lose-jobs-mid-call.html?raw';
 import hvacToolToBookMoreServiceCalls from './hvac-tool-to-book-more-service-calls.html?raw';
 import rooferToolToCaptureStormLeads from './roofer-tool-to-capture-storm-leads.html?raw';
 import electricianToolToBookMoreJobs from './electrician-tool-to-book-more-jobs.html?raw';
@@ -79,6 +80,17 @@ export const posts: BlogPost[] = [
     tags: ['plumbing', 'lead generation', 'automation'],
     featuredImage: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=1200&auto=format&fit=crop&q=80',
     content: plumberChatWidget,
+  },
+  {
+    slug: 'why-plumbers-lose-jobs-mid-call',
+    title: 'Why Plumbers Lose Jobs While They\'re on a Job (And the Fix That Runs Itself)',
+    description: 'Most plumbers miss 5+ calls a week without realizing it — because they\'re physically unable to answer mid-repair. Here\'s what those missed calls are actually costing you and how a simple text-back fixes it.',
+    metaTitle: 'Why Plumbers Lose Jobs Mid-Call (And How to Fix It) | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-18',
+    tags: ['plumbing', 'missed calls', 'lead response', 'automation'],
+    featuredImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&auto=format&fit=crop&q=80',
+    content: whyPlumbersLoseJobsMidCall,
   },
   {
     slug: 'hvac-tool-to-book-more-service-calls',
