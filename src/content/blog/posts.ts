@@ -1,10 +1,14 @@
 import plumberChatWidget from './the-tool-plumbers-use-to-book-jobs-while-they-sleep.html?raw';
 import whyPlumbersLoseJobsMidCall from './why-plumbers-lose-jobs-mid-call.html?raw';
+import plumbingEstimateFollowUpAutomation from './plumbing-estimate-follow-up-automation.html?raw';
 import hvacToolToBookMoreServiceCalls from './hvac-tool-to-book-more-service-calls.html?raw';
+import hvacWinterEmergencyCallsAutomatedResponse from './hvac-winter-emergency-calls-automated-response.html?raw';
 import rooferToolToCaptureStormLeads from './roofer-tool-to-capture-storm-leads.html?raw';
 import howRoofingCompaniesStayBusyBetweenStorms from './how-roofing-companies-stay-busy-between-storms.html?raw';
+import roofingReferralsGoogleReviewsAutomatedFollowUp from './roofing-referrals-google-reviews-automated-follow-up.html?raw';
 import electricianToolToBookMoreJobs from './electrician-tool-to-book-more-jobs.html?raw';
 import howElectriciansWinPanelUpgradeEvChargerJobs from './how-electricians-win-panel-upgrade-ev-charger-jobs.html?raw';
+import electricianRepeatCustomersAutomatedFollowUp from './electrician-repeat-customers-automated-follow-up.html?raw';
 import restaurantQrCodeLoyaltySystem from './restaurant-qr-code-loyalty-system.html?raw';
 import pestControlToolToBookMoreJobs from './pest-control-tool-to-book-more-jobs.html?raw';
 import lawnCareToolToBookMoreCustomers from './lawn-care-tool-to-book-more-customers.html?raw';
@@ -103,6 +107,17 @@ export const posts: BlogPost[] = [
     content: whyPlumbersLoseJobsMidCall,
   },
   {
+    slug: 'plumbing-estimate-follow-up-automation',
+    title: 'Why Your Plumbing Estimates Go Cold — And How Automated Follow-Up Fixes It',
+    description: "Most plumbing revenue doesn't walk out the front door — it leaks out through estimates that never got a second follow-up. Here's why homeowners go silent after getting a quote and how an automated sequence closes more jobs without adding to your workload.",
+    metaTitle: 'Why Plumbing Estimates Go Cold — And How to Fix It | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-18',
+    tags: ['plumbing', 'estimate follow-up', 'lead nurture', 'automation'],
+    featuredImage: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&auto=format&fit=crop&q=80',
+    content: plumbingEstimateFollowUpAutomation,
+  },
+  {
     slug: 'hvac-tool-to-book-more-service-calls',
     title: "The Tool HVAC Companies Are Using to Book More Service Calls Without Answering Every Phone",
     description: "Discover how smart HVAC companies are using AI to respond to leads instantly, book service calls automatically, and stop losing jobs to competitors who pick up faster.",
@@ -136,6 +151,17 @@ export const posts: BlogPost[] = [
     content: howRoofingCompaniesStayBusyBetweenStorms,
   },
   {
+    slug: 'roofing-referrals-google-reviews-automated-follow-up',
+    title: 'How Roofing Companies Build a Self-Sustaining Lead Engine With Referrals and Reviews',
+    description: 'Most roofers wait for the next storm to bring new business. The ones with full pipelines year-round have built a referral and review engine — and the whole system runs on autopilot after each job closes.',
+    metaTitle: 'How Roofing Companies Build Referrals and Reviews on Autopilot | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-18',
+    tags: ['roofing', 'referrals', 'google reviews', 'automation', 'follow-up'],
+    featuredImage: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&auto=format&fit=crop&q=80',
+    content: roofingReferralsGoogleReviewsAutomatedFollowUp,
+  },
+  {
     slug: 'electrician-tool-to-book-more-jobs',
     title: "The Tool Electricians Are Using to Book More Jobs Without Playing Phone Tag All Day",
     description: "Every missed call is a job that went to another electrician. Discover how busy electrical contractors are using AI to respond instantly, book service calls automatically, and stop losing work to whoever picks up faster.",
@@ -156,6 +182,17 @@ export const posts: BlogPost[] = [
     tags: ["electrician","lead generation","EV charger","panel upgrade"],
     featuredImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&auto=format&fit=crop&q=80',
     content: howElectriciansWinPanelUpgradeEvChargerJobs,
+  },
+  {
+    slug: 'electrician-repeat-customers-automated-follow-up',
+    title: 'Why Electricians Lose Repeat Business (And How Automated Follow-Up Fixes It)',
+    description: 'Most electricians complete a job and never contact that customer again — leaving repeat work and referrals on the table. Here\'s how automated follow-up sequences keep you top of mind and turn past customers into your most reliable source of new bookings.',
+    metaTitle: 'How Electricians Get More Repeat Business With Automated Follow-Up | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-18',
+    tags: ['electrician', 'repeat customers', 'follow-up', 'automation', 'referrals'],
+    featuredImage: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1200&auto=format&fit=crop&q=80',
+    content: electricianRepeatCustomersAutomatedFollowUp,
   },
   {
     slug: 'restaurant-qr-code-loyalty-system',
@@ -487,6 +524,17 @@ export const posts: BlogPost[] = [
     tags: ['HVAC', 'seasonal', 'AI automation', 'missed calls', 'tune-up'],
     featuredImage: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1200&auto=format&fit=crop&q=80',
     content: hvacTuneUpSeasonLeads,
+  },
+  {
+    slug: 'hvac-winter-emergency-calls-automated-response',
+    title: 'No Heat at Midnight: How HVAC Companies Can Capture Winter Emergency Calls Without Being on Call 24/7',
+    description: 'Winter no-heat emergencies are the highest-stakes lead in the HVAC business — homeowners won\'t wait until morning, and the first company to respond wins the job. Here\'s how automated intake handles emergency triage and booking so your team doesn\'t have to be awake all night to compete.',
+    metaTitle: 'How HVAC Companies Capture Winter Emergency Calls Automatically | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-18',
+    tags: ['HVAC', 'winter', 'emergency calls', 'automation', 'no-heat'],
+    featuredImage: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1200&auto=format&fit=crop&q=80',
+    content: hvacWinterEmergencyCallsAutomatedResponse,
   },
   {
     slug: 'how-to-get-repeat-customers-service-business',
