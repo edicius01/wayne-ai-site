@@ -23,6 +23,8 @@ export function BlogPostPage() {
         <meta property="og:description" content={post.description} />
         {post.featuredImage && <meta property="og:image" content={post.featuredImage} />}
         <meta property="og:type" content="article" />
+        <meta property="og:url" content={`https://wayneai.net/blog/${post.slug}`} />
+        <link rel="canonical" href={`https://wayneai.net/blog/${post.slug}`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={post.metaTitle || post.title} />
         <meta name="twitter:description" content={post.description} />

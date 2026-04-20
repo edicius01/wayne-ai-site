@@ -70,6 +70,10 @@ import howToReactivateLapsedMedSpaClients from './how-to-reactivate-lapsed-med-s
 import medSpaConsultationFollowUpSequence from './med-spa-consultation-follow-up-sequence.html?raw';
 import howToReactivateLapsedPhysicalTherapyPatients from './how-to-reactivate-lapsed-physical-therapy-patients.html?raw';
 import howPhysicalTherapyPracticesImprovePatientAdherence from './how-physical-therapy-practices-improve-patient-adherence.html?raw';
+import howChiropractorsGetMoreGoogleReviews from './how-chiropractors-get-more-google-reviews.html?raw';
+import howDentalPracticesCaptureMoreNewPatientLeads from './how-dental-practices-capture-more-new-patient-leads.html?raw';
+import howMedSpasGetMoreGoogleReviews from './how-med-spas-get-more-google-reviews.html?raw';
+import howPhysicalTherapyPracticesCaptureNewPatientCalls from './how-physical-therapy-practices-capture-new-patient-calls.html?raw';
 
 export interface BlogPost {
   slug: string;
@@ -865,5 +869,49 @@ export const posts: BlogPost[] = [
     tags: ['physical therapy', 'patient adherence', 'healthcare', 'automation'],
     featuredImage: 'https://images.unsplash.com/photo-1573879541250-58ae8b322b40?w=1200&auto=format&fit=crop&q=80',
     content: howPhysicalTherapyPracticesImprovePatientAdherence,
+  },
+  {
+    slug: 'how-chiropractors-get-more-google-reviews',
+    title: 'How Chiropractors Build a Google Review Presence That Wins New Patients',
+    description: 'Most chiropractic practices have a gap between the quality of care they deliver and the number of reviews they have. Here\'s how automated review generation closes that gap — and why timing is everything.',
+    metaTitle: 'How Chiropractors Get More Google Reviews | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-19',
+    tags: ['chiropractic', 'google reviews', 'reputation management', 'healthcare', 'automation'],
+    featuredImage: 'https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=1200&auto=format&fit=crop&q=80',
+    content: howChiropractorsGetMoreGoogleReviews,
+  },
+  {
+    slug: 'how-dental-practices-capture-more-new-patient-leads',
+    title: 'How Dental Practices Stop Losing New Patient Leads to Unanswered Calls',
+    description: 'Dental practices spend real money driving new patient inquiries — and then lose a significant share to missed calls and slow follow-up. Here\'s how automated lead capture changes those odds.',
+    metaTitle: 'How Dental Practices Capture More New Patient Leads | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-19',
+    tags: ['dental', 'missed calls', 'lead generation', 'healthcare', 'automation'],
+    featuredImage: 'https://images.unsplash.com/photo-1609207807107-5c9d96cacc08?w=1200&auto=format&fit=crop&q=80',
+    content: howDentalPracticesCaptureMoreNewPatientLeads,
+  },
+  {
+    slug: 'how-med-spas-get-more-google-reviews',
+    title: 'How Med Spas Build a Review Presence That Converts Prospective Clients',
+    description: 'Med spa clients often love their results but never write a review. Here\'s why timing and automation are the only things standing between your satisfied clients and a dominant local reputation.',
+    metaTitle: 'How Med Spas Get More Google Reviews | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-19',
+    tags: ['med spa', 'google reviews', 'reputation management', 'healthcare', 'automation'],
+    featuredImage: 'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=1200&auto=format&fit=crop&q=80',
+    content: howMedSpasGetMoreGoogleReviews,
+  },
+  {
+    slug: 'how-physical-therapy-practices-capture-new-patient-calls',
+    title: 'How Physical Therapy Practices Stop Losing New Patients to Unanswered Calls',
+    description: 'Direct-access PT patients are self-directed and impatient — if they call and get voicemail, they\'re booking somewhere else within minutes. Here\'s how automated missed-call follow-up changes that.',
+    metaTitle: 'How Physical Therapy Practices Capture New Patient Calls | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-19',
+    tags: ['physical therapy', 'missed calls', 'lead generation', 'healthcare', 'automation'],
+    featuredImage: 'https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=1200&auto=format&fit=crop&q=80',
+    content: howPhysicalTherapyPracticesCaptureNewPatientCalls,
   },
 ];

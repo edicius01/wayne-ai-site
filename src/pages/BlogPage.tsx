@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Navigation } from '../components/Navigation';
 import { Footer } from '../components/Footer';
@@ -38,19 +37,21 @@ function matchesCategory(post: BlogPost, category: Category): boolean {
 }
 
 export function BlogPage() {
-  const [activeCategory, setActiveCategory] = useState('All');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const activeCategory = searchParams.get('category') ?? 'All';
 
-  const activeConfig = CATEGORIES.find(c => c.label === activeCategory)!;
+  const activeConfig = CATEGORIES.find(c => c.label === activeCategory) ?? CATEGORIES[0];
   const filteredPosts = posts.filter(p => matchesCategory(p, activeConfig));
 
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Blog | Wayne AI — AI Automation for Local Service Businesses</title>
-        <meta name="description" content="Practical guides for local service businesses on AI, automation, and getting more leads. Plumbing, HVAC, restaurants, and more." />
-        <meta property="og:title" content="Blog | Wayne AI" />
+        <title>{activeCategory === 'All' ? 'Blog | Wayne AI — AI Automation for Local Service Businesses' : `${activeCategory} Articles | Wayne AI Blog`}</title>
+        <meta name="description" content={activeCategory === 'All' ? 'Practical guides for local service businesses on AI, automation, and getting more leads. Plumbing, HVAC, restaurants, and more.' : `Practical AI automation guides for ${activeCategory} businesses — missed calls, lead gen, reviews, and more.`} />
+        <meta property="og:title" content={activeCategory === 'All' ? 'Blog | Wayne AI' : `${activeCategory} | Wayne AI Blog`} />
         <meta property="og:description" content="Practical guides for local service businesses on AI, automation, and getting more leads." />
         <meta property="og:type" content="website" />
+        {activeCategory !== 'All' && <link rel="canonical" href={`https://wayneai.net/blog?category=${encodeURIComponent(activeCategory)}`} />}
       </Helmet>
       <Navigation />
 
@@ -76,7 +77,13 @@ export function BlogPage() {
               return (
                 <button
                   key={cat.label}
-                  onClick={() => setActiveCategory(cat.label)}
+                  onClick={() => {
+                    if (cat.label === 'All') {
+                      setSearchParams({});
+                    } else {
+                      setSearchParams({ category: cat.label });
+                    }
+                  }}
                   className={`whitespace-nowrap px-4 py-2 rounded-full text-sm font-semibold transition-all shrink-0 ${
                     isActive
                       ? 'bg-[#f97316] text-white shadow-sm'

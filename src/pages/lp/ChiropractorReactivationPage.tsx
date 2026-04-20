@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { useEffect } from 'react';
 
 function scrollToForm() {
@@ -7,6 +7,22 @@ function scrollToForm() {
 }
 
 export function ChiropractorReactivationPage() {
+  const [searchParams] = useSearchParams();
+
+  const utmSource = searchParams.get('utm_source') ?? '';
+  const utmMedium = searchParams.get('utm_medium') ?? '';
+  const utmCampaign = searchParams.get('utm_campaign') ?? '';
+  const utmContent = searchParams.get('utm_content') ?? '';
+
+  const utmQuery = new URLSearchParams(
+    Object.fromEntries(
+      Object.entries({ utm_source: utmSource, utm_medium: utmMedium, utm_campaign: utmCampaign, utm_content: utmContent })
+        .filter(([, v]) => v !== '')
+    )
+  ).toString();
+
+  const formSrc = `https://links.wayneai.net/widget/form/mmDnjub0Cj9Hw1YZOrIc${utmQuery ? `?${utmQuery}` : ''}`;
+
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://links.wayneai.net/js/form_embed.js';
@@ -14,6 +30,19 @@ export function ChiropractorReactivationPage() {
     document.body.appendChild(script);
     return () => { document.body.removeChild(script); };
   }, []);
+
+  useEffect(() => {
+    if (utmSource || utmCampaign) {
+      (window as any).dataLayer = (window as any).dataLayer ?? [];
+      (window as any).dataLayer.push({
+        event: 'utm_captured',
+        utm_source: utmSource,
+        utm_medium: utmMedium,
+        utm_campaign: utmCampaign,
+        utm_content: utmContent,
+      });
+    }
+  }, [utmSource, utmMedium, utmCampaign, utmContent]);
 
   return (
     <>
@@ -180,7 +209,7 @@ export function ChiropractorReactivationPage() {
 
             <div className="bg-white rounded-2xl p-2 shadow-2xl">
               <iframe
-                src="https://links.wayneai.net/widget/form/mmDnjub0Cj9Hw1YZOrIc"
+                src={formSrc}
                 style={{ width: '100%', height: '480px', border: 'none', borderRadius: '12px' }}
                 id="inline-mmDnjub0Cj9Hw1YZOrIc"
                 data-layout="{'id':'INLINE'}"
