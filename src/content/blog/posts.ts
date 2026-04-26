@@ -74,6 +74,10 @@ import howChiropractorsGetMoreGoogleReviews from './how-chiropractors-get-more-g
 import howDentalPracticesCaptureMoreNewPatientLeads from './how-dental-practices-capture-more-new-patient-leads.html?raw';
 import howMedSpasGetMoreGoogleReviews from './how-med-spas-get-more-google-reviews.html?raw';
 import howPhysicalTherapyPracticesCaptureNewPatientCalls from './how-physical-therapy-practices-capture-new-patient-calls.html?raw';
+import howDentalPracticesFillHygieneScheduleGaps from './how-dental-practices-fill-hygiene-schedule-gaps.html?raw';
+import howMedSpasCaptureAfterHoursLeads from './how-med-spas-capture-after-hours-leads.html?raw';
+import howChiropracticPracticesReduceCancellations from './how-chiropractic-practices-reduce-cancellations.html?raw';
+import howPhysicalTherapyPracticesIncreasePhysicianReferrals from './how-physical-therapy-practices-increase-physician-referrals.html?raw';
 
 export interface BlogPost {
   slug: string;
@@ -913,5 +917,49 @@ export const posts: BlogPost[] = [
     tags: ['physical therapy', 'missed calls', 'lead generation', 'healthcare', 'automation'],
     featuredImage: 'https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=1200&auto=format&fit=crop&q=80',
     content: howPhysicalTherapyPracticesCaptureNewPatientCalls,
+  },
+  {
+    slug: 'how-dental-practices-fill-hygiene-schedule-gaps',
+    title: 'How Dental Practices Fill Hygiene Schedule Gaps With Automated Recall',
+    description: 'Every dental practice has a backlog of overdue hygiene patients who never rebooked. Here\'s how automated recall sequences convert that list into filled appointments — without adding work for the front desk.',
+    metaTitle: 'How Dental Practices Fill Hygiene Schedule Gaps | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-25',
+    tags: ['dental', 'patient recall', 'hygiene schedule', 'healthcare', 'automation'],
+    featuredImage: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1200&auto=format&fit=crop&q=80',
+    content: howDentalPracticesFillHygieneScheduleGaps,
+  },
+  {
+    slug: 'how-med-spas-capture-after-hours-leads',
+    title: 'How Med Spas Capture After-Hours Leads Before Competitors Do',
+    description: 'Most med spa inquiries come in after 7 PM when nobody is monitoring the inbox. Here\'s why after-hours lead response is the highest-leverage system a practice can put in place — and what it looks like in practice.',
+    metaTitle: 'How Med Spas Capture After-Hours Leads | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-25',
+    tags: ['med spa', 'lead generation', 'after-hours', 'healthcare', 'automation'],
+    featuredImage: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200&auto=format&fit=crop&q=80',
+    content: howMedSpasCaptureAfterHoursLeads,
+  },
+  {
+    slug: 'how-chiropractic-practices-reduce-cancellations',
+    title: 'How Chiropractic Practices Reduce Cancellations and No-Shows With Automated Reminders',
+    description: 'Cancellations and no-shows are a revenue problem and a retention problem. Here\'s how automated appointment reminders and post-cancellation follow-up sequences keep patients on plan and chairs filled.',
+    metaTitle: 'How Chiropractic Practices Reduce Cancellations and No-Shows | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-25',
+    tags: ['chiropractic', 'cancellations', 'no-shows', 'healthcare', 'automation'],
+    featuredImage: 'https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=1200&auto=format&fit=crop&q=80',
+    content: howChiropracticPracticesReduceCancellations,
+  },
+  {
+    slug: 'how-physical-therapy-practices-increase-physician-referrals',
+    title: 'How Physical Therapy Practices Increase Physician Referrals Through Better Communication',
+    description: 'Physicians refer consistently to the PT practices that keep them informed. Here\'s how systematized progress notes, milestone updates, and discharge summaries build referral relationships that compound over time.',
+    metaTitle: 'How Physical Therapy Practices Increase Physician Referrals | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-04-25',
+    tags: ['physical therapy', 'physician referrals', 'healthcare', 'automation', 'communication'],
+    featuredImage: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&auto=format&fit=crop&q=80',
+    content: howPhysicalTherapyPracticesIncreasePhysicianReferrals,
   },
 ];
