@@ -25,9 +25,6 @@ export function HomePage() {
       <Helmet>
         <title>Wayne AI | Never Miss Another Lead Again</title>
         <meta name="description" content="Wayne AI — AI automation for local service businesses. Capture leads 24/7, book jobs automatically, and never miss another call." />
-        <link rel="icon" href="/favicon.ico?v=3" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=3" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png?v=3" />
         <link rel="canonical" href="https://wayneai.net" />
         <meta property="og:url" content="https://wayneai.net" />
       </Helmet>
