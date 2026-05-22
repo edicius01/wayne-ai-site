@@ -21,7 +21,7 @@ export function ChiropractorReactivationPage() {
     )
   ).toString();
 
-  const formSrc = `https://links.wayneai.net/widget/form/mmDnjub0Cj9Hw1YZOrIc${utmQuery ? `?${utmQuery}` : ''}`;
+  const formSrc = `https://links.wayneai.net/widget/booking/oCbAHBErrW9HMYFe91aT${utmQuery ? `?${utmQuery}` : ''}`;
 
   useEffect(() => {
     const script = document.createElement('script');
@@ -184,13 +184,26 @@ export function ChiropractorReactivationPage() {
               A warm reactivation list typically converts at 10–20%. For a practice with 300
               lapsed patients, that's 30–60 booked appointments from a list you already have.
             </p>
-            <blockquote className="bg-[#fff7ed] border-l-4 border-[#f97316] rounded-r-xl px-8 py-6 text-left max-w-2xl mx-auto">
-              <p className="text-[#1e293b] text-lg italic leading-relaxed mb-4">
-                "We had 400 patients who hadn't been in over a year. We ran one reactivation
-                campaign and filled two weeks of appointments. I didn't touch it after setup."
-              </p>
-              <p className="text-[#64748b] text-sm font-semibold">— Chiropractic office, Midwest</p>
-            </blockquote>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
+              <div className="bg-[#fff7ed] border border-[#f97316]/30 rounded-xl px-6 py-6 text-left">
+                <p className="text-4xl font-bold text-[#f97316] mb-2">35%</p>
+                <p className="text-[#1e293b] font-semibold mb-1">Reactivation rate</p>
+                <p className="text-[#475569] text-sm">
+                  Personalized, multi-touch campaigns reactivate up to 35% of lapsed patients
+                  — vs. 1–3% from a single call.
+                </p>
+                <p className="text-[#94a3b8] text-xs mt-3">Source: TrackStat.org</p>
+              </div>
+              <div className="bg-[#fff7ed] border border-[#f97316]/30 rounded-xl px-6 py-6 text-left">
+                <p className="text-4xl font-bold text-[#f97316] mb-2">10×</p>
+                <p className="text-[#1e293b] font-semibold mb-1">More responses</p>
+                <p className="text-[#475569] text-sm">
+                  Multi-touch follow-up sequences generate 10x the response rate of a
+                  one-time outreach — run automatically after setup.
+                </p>
+                <p className="text-[#94a3b8] text-xs mt-3">Source: GetBreakthrough.com</p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -202,28 +215,17 @@ export function ChiropractorReactivationPage() {
                 Ready to reactivate your patient list?
               </h2>
               <p className="text-[#94a3b8] text-lg">
-                Tell us a bit about your practice and we'll show you exactly how it works — free,
-                no commitment.
+                Pick a time and we'll walk you through it live — free, no commitment.
               </p>
             </div>
 
             <div className="bg-white rounded-2xl p-2 shadow-2xl">
               <iframe
                 src={formSrc}
-                style={{ width: '100%', height: '480px', border: 'none', borderRadius: '12px' }}
-                id="inline-mmDnjub0Cj9Hw1YZOrIc"
-                data-layout="{'id':'INLINE'}"
-                data-trigger-type="alwaysShow"
-                data-trigger-value=""
-                data-activation-type="alwaysActivated"
-                data-activation-value=""
-                data-deactivation-type="neverDeactivate"
-                data-deactivation-value=""
-                data-form-name="Chiro Reactivation LP"
-                data-height="480"
-                data-layout-iframe-id="inline-mmDnjub0Cj9Hw1YZOrIc"
-                data-form-id="mmDnjub0Cj9Hw1YZOrIc"
-                title="Chiro Reactivation LP"
+                style={{ width: '100%', height: '700px', border: 'none', borderRadius: '12px', overflow: 'hidden' }}
+                scrolling="no"
+                id="oCbAHBErrW9HMYFe91aT_1779408797999"
+                title="Book a Call — Wayne AI"
               />
             </div>
 
@@ -237,10 +239,6 @@ export function ChiropractorReactivationPage() {
             &copy; 2026 Wayne AI.{' '}
             <Link to="/privacy" className="hover:text-[#f97316] transition-colors">
               Privacy Policy
-            </Link>
-            {' · '}
-            <Link to="/" className="hover:text-[#f97316] transition-colors">
-              Back to wayneai.net
             </Link>
           </p>
         </footer>
