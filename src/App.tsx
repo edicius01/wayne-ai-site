@@ -1,20 +1,21 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
-import { HomePage } from './pages/HomePage';
-import { PrivacyPage } from './pages/PrivacyPage';
-import { BookingPage } from './pages/BookingPage';
-import { DemoPage } from './pages/DemoPage';
-import { AboutPage } from './pages/AboutPage';
-import { BlogPage } from './pages/BlogPage';
-import { BlogPostPage } from './pages/BlogPostPage';
-import { HvacAutomationPage } from './pages/lp/HvacAutomationPage';
-import { PlumbingAutomationPage } from './pages/lp/PlumbingAutomationPage';
-import { RoofingAutomationPage } from './pages/lp/RoofingAutomationPage';
-import { ChiropractorReactivationPage } from './pages/lp/ChiropractorReactivationPage';
-import { MedSpaReactivationPage } from './pages/lp/MedSpaReactivationPage';
-import { DentalReactivationPage } from './pages/lp/DentalReactivationPage';
-import { PhysicalTherapyReactivationPage } from './pages/lp/PhysicalTherapyReactivationPage';
-import { ElectricianAutomationPage } from './pages/lp/ElectricianAutomationPage';
+import { useEffect, lazy, Suspense } from 'react';
+
+const HomePage = lazy(() => import('./pages/HomePage').then(m => ({ default: m.HomePage })));
+const PrivacyPage = lazy(() => import('./pages/PrivacyPage').then(m => ({ default: m.PrivacyPage })));
+const BookingPage = lazy(() => import('./pages/BookingPage').then(m => ({ default: m.BookingPage })));
+const DemoPage = lazy(() => import('./pages/DemoPage').then(m => ({ default: m.DemoPage })));
+const AboutPage = lazy(() => import('./pages/AboutPage').then(m => ({ default: m.AboutPage })));
+const BlogPage = lazy(() => import('./pages/BlogPage').then(m => ({ default: m.BlogPage })));
+const BlogPostPage = lazy(() => import('./pages/BlogPostPage').then(m => ({ default: m.BlogPostPage })));
+const HvacAutomationPage = lazy(() => import('./pages/lp/HvacAutomationPage').then(m => ({ default: m.HvacAutomationPage })));
+const PlumbingAutomationPage = lazy(() => import('./pages/lp/PlumbingAutomationPage').then(m => ({ default: m.PlumbingAutomationPage })));
+const RoofingAutomationPage = lazy(() => import('./pages/lp/RoofingAutomationPage').then(m => ({ default: m.RoofingAutomationPage })));
+const ChiropractorReactivationPage = lazy(() => import('./pages/lp/ChiropractorReactivationPage').then(m => ({ default: m.ChiropractorReactivationPage })));
+const MedSpaReactivationPage = lazy(() => import('./pages/lp/MedSpaReactivationPage').then(m => ({ default: m.MedSpaReactivationPage })));
+const DentalReactivationPage = lazy(() => import('./pages/lp/DentalReactivationPage').then(m => ({ default: m.DentalReactivationPage })));
+const PhysicalTherapyReactivationPage = lazy(() => import('./pages/lp/PhysicalTherapyReactivationPage').then(m => ({ default: m.PhysicalTherapyReactivationPage })));
+const ElectricianAutomationPage = lazy(() => import('./pages/lp/ElectricianAutomationPage').then(m => ({ default: m.ElectricianAutomationPage })));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -26,6 +27,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
+      <Suspense fallback={null}>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
@@ -43,6 +45,7 @@ function App() {
         <Route path="/lp/physical-therapy-reactivation" element={<PhysicalTherapyReactivationPage />} />
         <Route path="/lp/electrician-automation" element={<ElectricianAutomationPage />} />
       </Routes>
+      </Suspense>
     </Router>
   );
 }
