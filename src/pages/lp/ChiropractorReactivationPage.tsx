@@ -44,6 +44,33 @@ export function ChiropractorReactivationPage() {
     }
   }, [utmSource, utmMedium, utmCampaign, utmContent]);
 
+  // Listen for booking confirmation postMessage from GHL widget iframe
+  useEffect(() => {
+    function handleGhlMessage(event: MessageEvent) {
+      const allowed = ['wayneai.net', 'msgsndr.com', 'gohighlevel.com', 'leadconnectorhq.com'];
+      if (!allowed.some(d => event.origin.includes(d))) return;
+
+      const data = event.data;
+      if (!data) return;
+
+      const booked =
+        data?.type === 'APPOINTMENT_BOOKED' ||
+        data?.type === 'booking_confirmed' ||
+        data?.type === 'form_submitted' ||
+        data?.event === 'appointmentBooked' ||
+        data?.event === 'formSubmitted' ||
+        data?.action === 'booking_confirmed' ||
+        (typeof data === 'string' && /appoint|book|confirm/i.test(data));
+
+      if (booked && typeof (window as any).fbq === 'function') {
+        (window as any).fbq('track', 'Schedule');
+      }
+    }
+
+    window.addEventListener('message', handleGhlMessage);
+    return () => window.removeEventListener('message', handleGhlMessage);
+  }, []);
+
   return (
     <>
       <Helmet>
