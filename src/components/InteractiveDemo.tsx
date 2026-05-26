@@ -1,148 +1,304 @@
+import { useEffect, useMemo, useState } from 'react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
-import { useState, useEffect } from 'react';
 
-const messages = [
-  { type: 'system', text: 'Missed call from (812) 555-0123' },
-  { type: 'ai', text: "Hi! Thanks for calling. We're on another job right now. Can I help you schedule a visit? Reply with YES and I'll get you booked!" },
-  { type: 'customer', text: 'Yes' },
-  { type: 'ai', text: 'Perfect! What day works best? We have openings Tuesday-Friday this week.' },
-  { type: 'customer', text: 'Tuesday' },
-  { type: 'ai', text: 'Great! I have 10am, 2pm, or 4pm available Tuesday. Which time?' },
-  { type: 'customer', text: '2pm' },
-  { type: 'ai', text: "You're all set for Tuesday at 2pm! You'll get a reminder 24 hours before. See you then!" },
-  { type: 'confirmation', text: 'Appointment Confirmed' },
+type ScenarioKey = 'plumbing' | 'hvac' | 'dental';
+type MessageType = 'system' | 'ai' | 'customer' | 'confirmation';
+
+interface DemoMessage {
+  type: MessageType;
+  text: string;
+}
+
+const scenarios: Record<ScenarioKey, {
+  label: string;
+  caller: string;
+  missedAt: string;
+  job: string;
+  value: string;
+  booked: string;
+  messages: DemoMessage[];
+}> = {
+  plumbing: {
+    label: 'Plumbing',
+    caller: 'Sarah J.',
+    missedAt: '2:47 PM',
+    job: 'Kitchen sink will not drain',
+    value: '$650 est. job value',
+    booked: 'Thursday at 2:00 PM',
+    messages: [
+      { type: 'system', text: 'Missed call from Sarah J. at 2:47 PM' },
+      { type: 'ai', text: "Hi Sarah, this is Wayne AI for River City Plumbing. We missed your call, but I can help get you scheduled. What is going on?" },
+      { type: 'customer', text: "My kitchen sink won't drain and I need someone this week." },
+      { type: 'ai', text: 'We can help with that. Is water backing up badly, or is it draining slowly?' },
+      { type: 'customer', text: 'Draining slowly. Thursday would be best.' },
+      { type: 'ai', text: 'I have Thursday at 10:00 AM or 2:00 PM. Which one works better?' },
+      { type: 'customer', text: '2 works.' },
+      { type: 'confirmation', text: 'Booked Thursday at 2:00 PM. Reminder scheduled.' },
+    ],
+  },
+  hvac: {
+    label: 'HVAC',
+    caller: 'Mark T.',
+    missedAt: '7:18 PM',
+    job: 'AC not cooling upstairs',
+    value: '$850 est. job value',
+    booked: 'Tomorrow at 11:30 AM',
+    messages: [
+      { type: 'system', text: 'After-hours missed call from Mark T. at 7:18 PM' },
+      { type: 'ai', text: 'Hi Mark, this is Wayne AI for Summit Heating & Air. We missed your call. Is this an emergency, or can I help schedule service?' },
+      { type: 'customer', text: 'Not an emergency, but the upstairs is not cooling.' },
+      { type: 'ai', text: 'Got it. Is the system running but blowing warm air, or not turning on at all?' },
+      { type: 'customer', text: 'Running, just warm air.' },
+      { type: 'ai', text: 'Thanks. We have tomorrow at 11:30 AM or 3:00 PM. Which works?' },
+      { type: 'customer', text: '11:30 please.' },
+      { type: 'confirmation', text: 'Booked tomorrow at 11:30 AM. Tech notes saved.' },
+    ],
+  },
+  dental: {
+    label: 'Dental',
+    caller: 'Emily R.',
+    missedAt: '12:06 PM',
+    job: 'New patient cleaning',
+    value: '$300 first visit value',
+    booked: 'Tuesday at 9:00 AM',
+    messages: [
+      { type: 'system', text: 'Missed call from Emily R. at 12:06 PM' },
+      { type: 'ai', text: 'Hi Emily, this is Wayne AI for Oak Street Dental. We missed your call. Are you looking to schedule an appointment?' },
+      { type: 'customer', text: 'Yes, new patient cleaning if possible.' },
+      { type: 'ai', text: 'Happy to help. Do mornings or afternoons usually work better for you?' },
+      { type: 'customer', text: 'Mornings.' },
+      { type: 'ai', text: 'We have Tuesday at 9:00 AM or Wednesday at 10:30 AM for a new patient visit.' },
+      { type: 'customer', text: 'Tuesday at 9.' },
+      { type: 'confirmation', text: 'Booked Tuesday at 9:00 AM. Intake link sent.' },
+    ],
+  },
+};
+
+const automationSteps = [
+  'Instant reply sent',
+  'Lead qualified',
+  'Calendar checked',
+  'Appointment booked',
+  'Reminder queued',
 ];
 
-const features = [
-  'Responds in under 30 seconds',
-  'Natural conversation flow',
-  'Direct calendar booking',
-  'Automatic reminders sent',
-  'Works 24/7, even after hours',
-];
+function PhoneMessage({ message }: { message: DemoMessage }) {
+  if (message.type === 'system') {
+    return (
+      <div className="text-center">
+        <span className="inline-flex rounded-full bg-[#e2e8f0] px-3 py-1.5 text-[11px] font-medium text-[#475569]">
+          {message.text}
+        </span>
+      </div>
+    );
+  }
+
+  if (message.type === 'confirmation') {
+    return (
+      <div className="flex justify-center">
+        <div className="inline-flex max-w-[88%] items-center gap-2 rounded-full bg-green-100 px-3 py-2 text-xs font-bold text-green-800">
+          <svg className="h-4 w-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+          </svg>
+          {message.text}
+        </div>
+      </div>
+    );
+  }
+
+  const isCustomer = message.type === 'customer';
+
+  return (
+    <div className={`flex ${isCustomer ? 'justify-end' : 'justify-start'}`}>
+      <div
+        className={`max-w-[86%] rounded-2xl px-3.5 py-2.5 text-sm leading-5 shadow-sm ${
+          isCustomer
+            ? 'rounded-br-sm bg-[#f97316] text-white'
+            : 'rounded-bl-sm bg-[#f1f5f9] text-[#0f172a]'
+        }`}
+      >
+        {message.text}
+      </div>
+    </div>
+  );
+}
 
 export function InteractiveDemo() {
   const { ref, isVisible } = useScrollAnimation(0.2);
-  const [visibleMessages, setVisibleMessages] = useState(0);
+  const [activeScenario, setActiveScenario] = useState<ScenarioKey>('plumbing');
+  const [visibleMessages, setVisibleMessages] = useState(1);
+
+  const scenario = scenarios[activeScenario];
+  const visibleConversation = useMemo(
+    () => scenario.messages.slice(0, visibleMessages),
+    [scenario.messages, visibleMessages],
+  );
+
+  useEffect(() => {
+    setVisibleMessages(1);
+  }, [activeScenario]);
 
   useEffect(() => {
     if (!isVisible) return;
 
-    const interval = setInterval(() => {
-      setVisibleMessages((prev) => {
-        if (prev >= messages.length) {
-          clearInterval(interval);
-          return prev;
+    const timer = window.setInterval(() => {
+      setVisibleMessages((current) => {
+        if (current >= scenario.messages.length) {
+          window.clearInterval(timer);
+          return current;
         }
-        return prev + 1;
+        return current + 1;
       });
-    }, 800);
+    }, 1150);
 
-    return () => clearInterval(interval);
-  }, [isVisible]);
+    return () => window.clearInterval(timer);
+  }, [isVisible, scenario.messages.length, activeScenario]);
+
+  const completedSteps = Math.min(
+    automationSteps.length,
+    Math.max(1, Math.ceil((visibleMessages / scenario.messages.length) * automationSteps.length)),
+  );
 
   return (
-    <section id="demo" ref={ref} className="py-20 bg-[#F8F9FA]">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`text-center mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#0f172a] mb-4">
-            Here's exactly what your customers see when you miss a call
+    <section id="demo" ref={ref} className="bg-[#f8fafc] py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className={`mx-auto mb-10 max-w-3xl text-center transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+          <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-[#f97316]">Missed call text-back</p>
+          <h2 className="mb-4 text-3xl font-bold text-[#0f172a] sm:text-4xl">
+            Watch a missed call turn into a booked appointment
           </h2>
+          <p className="text-lg text-[#475569]">
+            This is the product promise in miniature: respond fast, ask the right questions, and move the lead onto the calendar before they call a competitor.
+          </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div className={`transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
-            <div className="relative mx-auto" style={{ width: 'min(320px, 80vw)', aspectRatio: '9 / 19.5' }}>
-              <div className="absolute inset-0 bg-[#1A1A1A] rounded-[2.5rem] sm:rounded-[3rem] p-2 sm:p-3 shadow-2xl">
-                <div className="relative h-full bg-[#1A1A1A] rounded-[2rem] sm:rounded-[2.5rem] p-0.5 sm:p-1">
-                  <div className="absolute top-2 sm:top-3 left-1/2 -translate-x-1/2 w-16 sm:w-24 h-5 sm:h-7 bg-[#1A1A1A] rounded-full z-10 flex items-center justify-center">
-                    <div className="w-2 h-2 sm:w-3 sm:h-3 bg-[#2a2a2a] rounded-full" />
+        <div className="mb-10 flex flex-wrap justify-center gap-3">
+          {(Object.keys(scenarios) as ScenarioKey[]).map((key) => (
+            <button
+              key={key}
+              type="button"
+              onClick={() => setActiveScenario(key)}
+              className={`rounded-lg border px-5 py-2.5 text-sm font-bold transition ${
+                activeScenario === key
+                  ? 'border-[#f97316] bg-[#f97316] text-white shadow-lg shadow-[#f97316]/20'
+                  : 'border-gray-200 bg-white text-[#0f172a] hover:border-[#f97316] hover:text-[#f97316]'
+              }`}
+            >
+              {scenarios[key].label}
+            </button>
+          ))}
+        </div>
+
+        <div className="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className={`transition-all delay-150 duration-700 ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-8 opacity-0'}`}>
+            <div className="mx-auto w-full max-w-[350px]">
+              <div className="rounded-[2.7rem] bg-[#111827] p-3 shadow-2xl">
+                <div className="overflow-hidden rounded-[2.1rem] bg-white">
+                  <div className="bg-[#0f172a] px-5 pb-4 pt-7 text-white">
+                    <div className="mx-auto mb-5 h-1.5 w-20 rounded-full bg-white/25" />
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#f97316] font-black">
+                        W
+                      </div>
+                      <div>
+                        <div className="text-sm font-bold">Wayne AI Assistant</div>
+                        <div className="text-xs text-[#cbd5e1]">Responding now</div>
+                      </div>
+                    </div>
                   </div>
 
-                  <div className="h-full bg-white rounded-[1.75rem] sm:rounded-[2.25rem] overflow-hidden flex flex-col">
-                    <div className="bg-[#f97316] text-white text-center py-3 sm:py-4 px-4 pt-8 sm:pt-10">
-                      <p className="text-sm sm:text-base font-medium">Messages</p>
-                    </div>
+                  <div className="h-[470px] space-y-3 overflow-hidden bg-white p-4">
+                    {visibleConversation.map((message, index) => (
+                      <div key={`${activeScenario}-${index}`} className="animate-typing">
+                        <PhoneMessage message={message} />
+                      </div>
+                    ))}
 
-                    <div className="flex-1 overflow-y-auto p-3 sm:p-4 space-y-2.5 sm:space-y-3">
-                      {messages.slice(0, visibleMessages).map((message, index) => (
-                        <div
-                          key={index}
-                          className={`animate-typing ${
-                            message.type === 'system'
-                              ? 'text-center'
-                              : message.type === 'customer'
-                              ? 'flex justify-end'
-                              : message.type === 'confirmation'
-                              ? 'flex justify-center'
-                              : 'flex justify-start'
-                          }`}
-                          style={{ animationDelay: `${index * 0.1}s` }}
-                        >
-                          {message.type === 'system' && (
-                            <div className="bg-gray-100 text-[#374151] text-[10px] sm:text-xs px-3 sm:px-4 py-1.5 sm:py-2 rounded-full inline-block">
-                              {message.text}
-                            </div>
-                          )}
-                          {message.type === 'ai' && (
-                            <div className="bg-gray-100 text-[#1f2937] text-xs sm:text-sm px-3 sm:px-4 py-2 sm:py-3 rounded-2xl rounded-bl-sm max-w-[88%]">
-                              {message.text}
-                            </div>
-                          )}
-                          {message.type === 'customer' && (
-                            <div className="bg-[#f97316] text-white text-xs sm:text-sm px-3 sm:px-4 py-2 sm:py-3 rounded-2xl rounded-br-sm max-w-[88%]">
-                              {message.text}
-                            </div>
-                          )}
-                          {message.type === 'confirmation' && (
-                            <div className="bg-green-100 text-green-700 text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full flex items-center gap-1.5 sm:gap-2 animate-pulse-custom">
-                              <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                              </svg>
-                              {message.text}
-                            </div>
-                          )}
-                        </div>
-                      ))}
-
-                      {visibleMessages < messages.length && visibleMessages > 0 && (
-                        <div className="flex justify-start">
-                          <div className="bg-gray-100 px-3 sm:px-4 py-2 sm:py-3 rounded-2xl">
-                            <div className="flex gap-1">
-                              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
-                              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
-                              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
-                            </div>
+                    {visibleMessages < scenario.messages.length && (
+                      <div className="flex justify-start">
+                        <div className="rounded-2xl rounded-bl-sm bg-[#f1f5f9] px-4 py-3">
+                          <div className="flex gap-1">
+                            <span className="h-2 w-2 animate-bounce rounded-full bg-[#94a3b8]" />
+                            <span className="h-2 w-2 animate-bounce rounded-full bg-[#94a3b8] [animation-delay:150ms]" />
+                            <span className="h-2 w-2 animate-bounce rounded-full bg-[#94a3b8] [animation-delay:300ms]" />
                           </div>
                         </div>
-                      )}
-                    </div>
+                      </div>
+                    )}
+                  </div>
 
-                    <div className="h-6 sm:h-8 bg-white flex items-center justify-center">
-                      <div className="w-24 sm:w-32 h-1 bg-[#1A1A1A] rounded-full" />
-                    </div>
+                  <div className="flex h-9 items-center justify-center bg-white">
+                    <div className="h-1 w-28 rounded-full bg-[#111827]" />
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className={`transition-all duration-700 delay-400 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
-            <div className="space-y-5 sm:space-y-6">
-              {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="flex items-center gap-3 sm:gap-4"
-                  style={{ transitionDelay: `${(index + 3) * 100}ms` }}
-                >
-                  <div className="w-7 h-7 sm:w-8 sm:h-8 bg-[#f97316] rounded-full flex items-center justify-center flex-shrink-0">
-                    <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <span className="text-base sm:text-lg text-[#0f172a]">{feature}</span>
+          <div className={`space-y-6 transition-all delay-300 duration-700 ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}>
+            <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-xl sm:p-8">
+              <div className="mb-6 flex flex-col gap-4 border-b border-gray-100 pb-6 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <div className="text-sm font-bold uppercase tracking-[0.16em] text-[#f97316]">Lead captured</div>
+                  <h3 className="mt-2 text-2xl font-black text-[#0f172a]">{scenario.caller}</h3>
                 </div>
-              ))}
+                <div className="rounded-lg bg-[#0f172a] px-4 py-3 text-white">
+                  <div className="text-xs text-[#cbd5e1]">Missed at</div>
+                  <div className="text-lg font-bold">{scenario.missedAt}</div>
+                </div>
+              </div>
+
+              <div className="grid gap-4 sm:grid-cols-3">
+                <div className="rounded-xl bg-[#f8fafc] p-4">
+                  <div className="text-xs font-semibold uppercase tracking-wide text-[#64748b]">Need</div>
+                  <div className="mt-2 text-sm font-bold text-[#0f172a]">{scenario.job}</div>
+                </div>
+                <div className="rounded-xl bg-[#f8fafc] p-4">
+                  <div className="text-xs font-semibold uppercase tracking-wide text-[#64748b]">Potential value</div>
+                  <div className="mt-2 text-sm font-bold text-[#0f172a]">{scenario.value}</div>
+                </div>
+                <div className="rounded-xl bg-[#fff7ed] p-4">
+                  <div className="text-xs font-semibold uppercase tracking-wide text-[#c2410c]">Outcome</div>
+                  <div className="mt-2 text-sm font-bold text-[#9a3412]">{scenario.booked}</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-lg sm:p-8">
+              <h3 className="mb-5 text-xl font-bold text-[#0f172a]">What happened automatically</h3>
+              <div className="space-y-4">
+                {automationSteps.map((step, index) => {
+                  const complete = index < completedSteps;
+                  return (
+                    <div key={step} className="flex items-center gap-4">
+                      <div className={`flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border-2 ${
+                        complete ? 'border-[#f97316] bg-[#f97316] text-white' : 'border-gray-200 bg-white text-[#94a3b8]'
+                      }`}>
+                        {complete ? (
+                          <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                          </svg>
+                        ) : (
+                          <span className="text-sm font-bold">{index + 1}</span>
+                        )}
+                      </div>
+                      <div className="flex-1">
+                        <div className={`font-semibold ${complete ? 'text-[#0f172a]' : 'text-[#94a3b8]'}`}>{step}</div>
+                        <div className="mt-1 h-1.5 overflow-hidden rounded-full bg-gray-100">
+                          <div className={`h-full rounded-full bg-[#f97316] transition-all duration-500 ${complete ? 'w-full' : 'w-0'}`} />
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div className="rounded-2xl bg-[#0f172a] p-6 text-white shadow-xl">
+              <div className="text-sm font-semibold uppercase tracking-[0.16em] text-[#fdba74]">Why this wins</div>
+              <p className="mt-3 text-lg leading-7 text-[#e2e8f0]">
+                The prospect gets a useful answer while intent is still high. Your business gets the details, the appointment, and the reminder without adding another front-desk task.
+              </p>
             </div>
           </div>
         </div>
