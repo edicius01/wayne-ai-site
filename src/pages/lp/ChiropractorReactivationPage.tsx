@@ -141,61 +141,6 @@ export function ChiropractorReactivationPage() {
           </div>
         </section>
 
-        {/* Form section — moved directly below hero */}
-        <section id="lp-form" className="bg-[#0f172a] py-12 px-6 border-t border-white/10">
-          <div className="max-w-xl mx-auto">
-            <div className="text-center mb-8">
-              <h2 className="text-2xl md:text-3xl font-extrabold text-white mb-3">
-                See it live in 20 minutes — free
-              </h2>
-              <p className="text-[#94a3b8]">
-                Pick a time and we'll show you exactly how it works for your practice.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl p-2 shadow-2xl">
-              <iframe
-                src={formSrc}
-                style={{ width: '100%', height: '700px', border: 'none', borderRadius: '12px', overflow: 'hidden' }}
-                scrolling="no"
-                id="oCbAHBErrW9HMYFe91aT_1779408797999"
-                title="Book a Call — Wayne AI"
-              />
-            </div>
-
-            <p className="text-[#475569] text-sm text-center mt-4">No commitment. No sales pressure.</p>
-          </div>
-        </section>
-
-        {/* Social proof */}
-        <section className="py-16 px-6 bg-white">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl font-bold text-[#0f172a] mb-10">
-              The numbers behind patient reactivation
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
-              <div className="bg-[#fff7ed] border border-[#f97316]/30 rounded-xl px-6 py-6 text-left">
-                <p className="text-4xl font-bold text-[#f97316] mb-2">35%</p>
-                <p className="text-[#1e293b] font-semibold mb-1">Reactivation rate</p>
-                <p className="text-[#475569] text-sm">
-                  Personalized, multi-touch campaigns reactivate up to 35% of lapsed patients
-                  — vs. 1–3% from a single call.
-                </p>
-                <p className="text-[#94a3b8] text-xs mt-3">Source: TrackStat.org</p>
-              </div>
-              <div className="bg-[#fff7ed] border border-[#f97316]/30 rounded-xl px-6 py-6 text-left">
-                <p className="text-4xl font-bold text-[#f97316] mb-2">10×</p>
-                <p className="text-[#1e293b] font-semibold mb-1">More responses</p>
-                <p className="text-[#475569] text-sm">
-                  Multi-touch follow-up sequences generate 10x the response rate of a
-                  one-time outreach — run automatically after setup.
-                </p>
-                <p className="text-[#94a3b8] text-xs mt-3">Source: GetBreakthrough.com</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* How it works */}
         <section className="py-16 px-6 bg-[#f8fafc]">
           <div className="max-w-3xl mx-auto">
@@ -207,7 +152,7 @@ export function ChiropractorReactivationPage() {
                 {
                   step: '01',
                   title: 'We identify your lapsed patients',
-                  body: "Wayne AI connects to your patient records and flags anyone who hasn't booked in 3, 6, or 12 months — whatever threshold makes sense for your practice.",
+                  body: "You share a simple export of your patient list — names, last visit date, contact info. Wayne AI flags anyone who hasn't been in for 3, 6, or 12 months, whatever threshold fits your practice.",
                 },
                 {
                   step: '02',
@@ -247,6 +192,59 @@ export function ChiropractorReactivationPage() {
               </button>
               <p className="text-[#94a3b8] text-sm mt-3">20 minutes. No commitment.</p>
             </div>
+          </div>
+        </section>
+
+        {/* Social proof */}
+        <section className="py-16 px-6 bg-white">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-2xl font-bold text-[#0f172a] mb-10">
+              The numbers behind patient reactivation
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
+              <div className="bg-[#fff7ed] border border-[#f97316]/30 rounded-xl px-6 py-6 text-left">
+                <p className="text-4xl font-bold text-[#f97316] mb-2">35%</p>
+                <p className="text-[#1e293b] font-semibold mb-1">Reactivation rate</p>
+                <p className="text-[#475569] text-sm">
+                  Personalized, multi-touch campaigns reactivate up to 35% of lapsed patients
+                  — vs. 1–3% from a single call.
+                </p>
+              </div>
+              <div className="bg-[#fff7ed] border border-[#f97316]/30 rounded-xl px-6 py-6 text-left">
+                <p className="text-4xl font-bold text-[#f97316] mb-2">10×</p>
+                <p className="text-[#1e293b] font-semibold mb-1">More responses</p>
+                <p className="text-[#475569] text-sm">
+                  Multi-touch follow-up sequences generate 10x the response rate of a
+                  one-time outreach — run automatically after setup.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Form section */}
+        <section id="lp-form" className="bg-[#0f172a] py-12 px-6 border-t border-white/10">
+          <div className="max-w-xl mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl md:text-3xl font-extrabold text-white mb-3">
+                See it live in 20 minutes — free
+              </h2>
+              <p className="text-[#94a3b8]">
+                Pick a time and we'll show you exactly how it works for your practice.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-2 shadow-2xl">
+              <iframe
+                src={formSrc}
+                style={{ width: '100%', height: '700px', border: 'none', borderRadius: '12px', overflow: 'hidden' }}
+                scrolling="no"
+                id="oCbAHBErrW9HMYFe91aT_1779408797999"
+                title="Book a Call — Wayne AI"
+              />
+            </div>
+
+            <p className="text-[#475569] text-sm text-center mt-4">No commitment. No sales pressure.</p>
           </div>
         </section>
 
