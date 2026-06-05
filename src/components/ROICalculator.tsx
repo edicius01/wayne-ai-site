@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const formatter = new Intl.NumberFormat('en-US', {
@@ -76,6 +76,7 @@ export function ROICalculator() {
   const [missedCalls, setMissedCalls] = useState(8);
   const [closeRate, setCloseRate] = useState(45);
   const [monthlyCost, setMonthlyCost] = useState(897);
+  const [showForm, setShowForm] = useState(false);
 
   const results = useMemo(() => {
     const monthlyMissedCalls = missedCalls * 4.33;
@@ -94,6 +95,25 @@ export function ROICalculator() {
       breakEvenJobs,
     };
   }, [closeRate, jobValue, missedCalls, monthlyCost]);
+
+  // GHL's embed script handles iframe resizing; load it only once the user opts in.
+  useEffect(() => {
+    if (!showForm) return;
+    if (document.querySelector('script[src="https://links.wayneai.net/js/form_embed.js"]')) return;
+    const script = document.createElement('script');
+    script.src = 'https://links.wayneai.net/js/form_embed.js';
+    script.async = true;
+    document.body.appendChild(script);
+  }, [showForm]);
+
+  const formSrc =
+    'https://links.wayneai.net/widget/form/mmDnjub0Cj9Hw1YZOrIc' +
+    `?recovered_revenue=${Math.round(results.recoveredRevenue)}` +
+    `&net_gain=${Math.round(results.netGain)}` +
+    `&job_value=${jobValue}` +
+    `&missed_leads_week=${missedCalls}` +
+    `&close_rate=${closeRate}` +
+    `&monthly_cost=${monthlyCost}`;
 
   return (
     <section ref={ref} className="border-t border-[#fed7aa] bg-white py-20">
@@ -186,6 +206,41 @@ export function ROICalculator() {
                 </p>
               </div>
             </div>
+          </div>
+
+          <div className="mx-auto mt-10 max-w-xl text-center">
+            {!showForm ? (
+              <>
+                <h3 className="text-2xl font-bold text-[#0f172a]">
+                  Want this breakdown for your actual business?
+                </h3>
+                <p className="mt-2 text-[#475569]">
+                  We'll send a personalized version and show you exactly where your follow-up is leaking jobs — free, no pitch.
+                </p>
+                <button
+                  type="button"
+                  onClick={() => setShowForm(true)}
+                  className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#f97316] px-8 py-4 font-semibold text-white transition-all duration-200 hover:bg-[#ea580c] hover:shadow-xl hover:shadow-[#f97316]/25"
+                >
+                  Email me my ROI breakdown
+                  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </>
+            ) : (
+              <div className="rounded-2xl bg-white p-2 shadow-2xl">
+                <iframe
+                  src={formSrc}
+                  style={{ width: '100%', height: '480px', border: 'none', borderRadius: '12px' }}
+                  id="inline-roi-mmDnjub0Cj9Hw1YZOrIc"
+                  data-layout="{'id':'INLINE'}"
+                  data-form-id="mmDnjub0Cj9Hw1YZOrIc"
+                  data-form-name="ROI Calculator"
+                  title="Email me my ROI breakdown"
+                />
+              </div>
+            )}
           </div>
         </div>
       </div>
