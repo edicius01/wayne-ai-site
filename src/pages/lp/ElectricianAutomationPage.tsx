@@ -18,6 +18,7 @@ export function ElectricianAutomationPage() {
   return (
     <>
       <Helmet>
+        <meta name="robots" content="noindex, follow" />
         <title>AI Lead Response for Electricians | Wayne AI</title>
         <meta
           name="description"

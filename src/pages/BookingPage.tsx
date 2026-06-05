@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { Navigation } from '../components/Navigation';
 import { Footer } from '../components/Footer';
 import { ChatWidget } from '../components/ChatWidget';
@@ -6,6 +7,11 @@ import { BackToTop } from '../components/BackToTop';
 export function BookingPage() {
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Book a 15-Minute Strategy Call | Wayne AI</title>
+        <meta name="description" content="Book a free 15-minute call. We'll show you live how Wayne AI turns your missed calls into booked revenue — no pitch, no contract." />
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
       <Navigation />
       
       <div className="pt-32 pb-20 bg-gradient-to-b from-[#F8F9FA] to-white">

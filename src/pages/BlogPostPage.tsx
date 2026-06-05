@@ -2,6 +2,7 @@ import { useParams, Link, Navigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Navigation } from '../components/Navigation';
 import { Footer } from '../components/Footer';
+import { JsonLd } from '../components/JsonLd';
 import { posts } from '../content/blog/posts';
 
 export function BlogPostPage() {
@@ -13,6 +14,34 @@ export function BlogPostPage() {
   }
 
   const relatedPosts = posts.filter((p) => p.slug !== slug).slice(0, 3);
+  const postUrl = `https://wayneai.net/blog/${post.slug}`;
+
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.description,
+    ...(post.featuredImage ? { image: post.featuredImage } : {}),
+    datePublished: post.date,
+    dateModified: post.date,
+    author: { '@type': 'Organization', name: post.author },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Wayne AI',
+      logo: { '@type': 'ImageObject', url: 'https://wayneai.net/og-image-1200x630.png' },
+    },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': postUrl },
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://wayneai.net' },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://wayneai.net/blog' },
+      { '@type': 'ListItem', position: 3, name: post.title, item: postUrl },
+    ],
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -30,6 +59,8 @@ export function BlogPostPage() {
         <meta name="twitter:description" content={post.description} />
         {post.featuredImage && <meta name="twitter:image" content={post.featuredImage} />}
       </Helmet>
+      <JsonLd data={articleSchema} />
+      <JsonLd data={breadcrumbSchema} />
       <Navigation />
 
       {/* Header */}

@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Navigation } from '../components/Navigation';
 import { Footer } from '../components/Footer';
 import { ChatWidget } from '../components/ChatWidget';
@@ -11,6 +12,11 @@ export function PrivacyPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Privacy Policy | Wayne AI</title>
+        <meta name="description" content="How Wayne AI collects, uses, and protects your information across our AI receptionist and communication services." />
+        <link rel="canonical" href="https://wayneai.net/privacy" />
+      </Helmet>
       <Navigation />
       
       <div className="pt-32 pb-20 bg-gradient-to-b from-[#F8F9FA] to-white">

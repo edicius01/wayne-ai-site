@@ -18,6 +18,7 @@ export function PlumbingAutomationPage() {
   return (
     <>
       <Helmet>
+        <meta name="robots" content="noindex, follow" />
         <title>AI Lead Response for Plumbers | Wayne AI</title>
         <meta
           name="description"

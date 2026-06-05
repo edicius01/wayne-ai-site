@@ -18,6 +18,7 @@ export function MedSpaReactivationPage() {
   return (
     <>
       <Helmet>
+        <meta name="robots" content="noindex, follow" />
         <title>Med Spa Client Reactivation | Wayne AI</title>
         <meta
           name="description"

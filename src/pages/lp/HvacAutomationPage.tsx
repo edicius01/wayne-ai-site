@@ -18,6 +18,7 @@ export function HvacAutomationPage() {
   return (
     <>
       <Helmet>
+        <meta name="robots" content="noindex, follow" />
         <title>AI Lead Response for HVAC Companies | Wayne AI</title>
         <meta
           name="description"

@@ -74,6 +74,7 @@ export function ChiropractorReactivationPage() {
   return (
     <>
       <Helmet>
+        <meta name="robots" content="noindex, follow" />
         <title>Chiropractic Patient Reactivation | Wayne AI</title>
         <meta
           name="description"

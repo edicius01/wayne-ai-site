@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { Navigation } from '../components/Navigation';
 import { Footer } from '../components/Footer';
 import { ChatWidget } from '../components/ChatWidget';
@@ -10,6 +11,15 @@ export function DemoPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>See Wayne AI in Action | Live Demos</title>
+        <meta name="description" content="Watch Wayne AI handle missed calls, web leads, and phone calls automatically — text-back, follow-up, and AI voice answering in real time." />
+        <link rel="canonical" href="https://wayneai.net/demo" />
+        <meta property="og:title" content="See Wayne AI in Action | Live Demos" />
+        <meta property="og:description" content="Watch Wayne AI handle missed calls, web leads, and phone calls automatically — in real time." />
+        <meta property="og:url" content="https://wayneai.net/demo" />
+        <meta property="og:image" content="https://wayneai.net/og-image-1200x630.png" />
+      </Helmet>
       <Navigation />
       
       <div className="pt-32 pb-20">

@@ -18,6 +18,7 @@ export function DentalReactivationPage() {
   return (
     <>
       <Helmet>
+        <meta name="robots" content="noindex, follow" />
         <title>Dental Patient Reactivation | Wayne AI</title>
         <meta
           name="description"

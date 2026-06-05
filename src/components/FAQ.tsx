@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
-const faqs = [
+export const faqs = [
   {
     question: 'Do I need a new phone number?',
     answer: 'No! Wayne AI works with your existing phone number. When you miss a call, we automatically send a text from your number within seconds.',

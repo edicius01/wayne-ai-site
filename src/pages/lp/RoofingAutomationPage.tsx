@@ -18,6 +18,7 @@ export function RoofingAutomationPage() {
   return (
     <>
       <Helmet>
+        <meta name="robots" content="noindex, follow" />
         <title>AI Lead Response for Roofing Companies | Wayne AI</title>
         <meta
           name="description"

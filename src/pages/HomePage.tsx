@@ -12,12 +12,33 @@ import { WhoThisIsFor } from '../components/WhoThisIsFor';
 import { Tier3Callout } from '../components/Tier3Callout';
 import { ObjectionCrusher } from '../components/ObjectionCrusher';
 import { Process } from '../components/Process';
-import { FAQ } from '../components/FAQ';
+import { FAQ, faqs } from '../components/FAQ';
 import { FinalCTA } from '../components/FinalCTA';
 import { Footer } from '../components/Footer';
 import { ChatWidget } from '../components/ChatWidget';
 import { MobileStickyCTA } from '../components/MobileStickyCTA';
 import { BackToTop } from '../components/BackToTop';
+import { JsonLd } from '../components/JsonLd';
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Wayne AI',
+  url: 'https://wayneai.net',
+  logo: 'https://wayneai.net/og-image-1200x630.png',
+  description:
+    'AI automation for local service businesses. Capture leads 24/7, book jobs automatically, and never miss another call.',
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+  })),
+};
 
 export function HomePage() {
   return (
@@ -25,9 +46,14 @@ export function HomePage() {
       <Helmet>
         <title>Wayne AI | Never Miss Another Lead Again</title>
         <meta name="description" content="Wayne AI — AI automation for local service businesses. Capture leads 24/7, book jobs automatically, and never miss another call." />
+        <link rel="icon" href="/favicon.ico?v=3" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=3" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png?v=3" />
         <link rel="canonical" href="https://wayneai.net" />
         <meta property="og:url" content="https://wayneai.net" />
       </Helmet>
+      <JsonLd data={organizationSchema} />
+      <JsonLd data={faqSchema} />
       <Navigation />
       <Hero />
       <Problem />
