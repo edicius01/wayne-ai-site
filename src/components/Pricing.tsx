@@ -11,7 +11,7 @@ interface Feature {
 interface Tier {
   name: string;
   price: number;
-  setup: number;
+  paysFor: string;
   badge: string | null;
   description: string;
   features: Feature[];
@@ -23,7 +23,7 @@ const tiers: Tier[] = [
   {
     name: 'The Solo Shield',
     price: 397,
-    setup: 697,
+    paysFor: '~1 recovered job/mo',
     badge: null,
     description: 'Stop Missing Calls',
     features: [
@@ -38,7 +38,7 @@ const tiers: Tier[] = [
   {
     name: 'The Growth Engine',
     price: 897,
-    setup: 1297,
+    paysFor: '~2 recovered jobs/mo',
     badge: 'MOST POPULAR',
     description: 'Dominate Your Market',
     features: [
@@ -54,7 +54,7 @@ const tiers: Tier[] = [
   {
     name: 'The AI Front Desk',
     price: 1497,
-    setup: 1997,
+    paysFor: '~3 recovered jobs/mo',
     badge: 'PREMIUM',
     description: 'Replace a Human Receptionist',
     features: [
@@ -81,6 +81,17 @@ export function Pricing() {
           <p className="text-lg text-[#1f2937] max-w-3xl mx-auto">
             Choose the level that fits where your business is today - you can always upgrade as you grow.
           </p>
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm font-semibold text-[#0f172a]">
+            <span className="inline-flex items-center gap-1.5">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#16a34a]" /> No setup fees
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#16a34a]" /> Month-to-month
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#16a34a]" /> 2-job guarantee
+            </span>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 lg:gap-8 px-2 md:px-0">
@@ -106,8 +117,14 @@ export function Pricing() {
                   <div className="text-5xl font-bold text-[#0f172a]">
                     ${tier.price}<span className="text-xl font-normal text-[#374151]">/mo</span>
                   </div>
-                  <p className="text-sm text-[#374151] mt-2">
-                    + ${tier.setup} Fast-Track Setup
+                  <p className="text-sm font-semibold text-[#0f172a] mt-2">
+                    No setup fee <span className="font-normal text-[#374151]">— first month due at signup</span>
+                  </p>
+                  <p className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-[#16a34a]">
+                    <svg className="h-4 w-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                    </svg>
+                    Pays for itself at {tier.paysFor}
                   </p>
                 </div>
 
@@ -132,10 +149,17 @@ export function Pricing() {
                   ))}
                 </div>
 
-                <div className="bg-[#FFF8F5] rounded-lg p-4 mb-6">
+                <div className="bg-[#FFF8F5] rounded-lg p-4 mb-4">
                   <p className="text-sm text-[#374151]">
                     <span className="font-semibold text-[#0f172a]">Best for:</span> {tier.bestFor}
                   </p>
+                </div>
+
+                <div className="mb-6 flex items-center gap-2 rounded-lg border border-[#16a34a]/30 bg-[#16a34a]/[0.06] px-3 py-2.5">
+                  <svg className="h-5 w-5 flex-shrink-0 text-[#16a34a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                  <span className="text-sm font-semibold text-[#0f172a]">2 jobs in 30 days or your money back</span>
                 </div>
 
                 <a
@@ -174,9 +198,9 @@ export function Pricing() {
 
         <div className={`mt-8 text-center transition-all duration-700 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="bg-white rounded-xl p-6 inline-block shadow-md border border-gray-200">
-            <h4 className="font-bold text-[#0f172a] mb-2">What "Fast-Track Setup" Means</h4>
+            <h4 className="font-bold text-[#0f172a] mb-2">Your Build Is Included — Done in 7 Days</h4>
             <p className="text-sm text-[#374151] max-w-2xl">
-              We custom-build your entire system in 7 days or less: calendar sync, SMS templates, review automation, website integration (or new site build), and 30 days of white-glove support. You don't waste 40+ hours trying to DIY this - we handle it, test it, and hand you a working system.
+              No setup fee. We custom-build your entire system in 7 days or less: calendar sync, SMS templates, review automation, website integration (or new site build), and 30 days of white-glove support. You don't waste 40+ hours trying to DIY this - we handle it, test it, and hand you a working system.
             </p>
           </div>
         </div>
