@@ -64,7 +64,7 @@ export function Features() {
               }`}
               style={{ transitionDelay: `${(index + 1) * 100}ms` }}
             >
-              <div className="w-14 h-14 bg-[#f97316]/10 rounded-xl flex items-center justify-center text-[#f97316] mb-6">
+              <div className="w-14 h-14 bg-[#0f172a]/5 rounded-xl flex items-center justify-center text-[#0f172a] mb-6">
                 {feature.icon}
               </div>
 
@@ -74,7 +74,7 @@ export function Features() {
               <ul className="space-y-2">
                 {feature.benefits.map((benefit, benefitIndex) => (
                   <li key={benefitIndex} className="flex items-center gap-2 text-sm text-[#1f2937]">
-                    <span className="w-1.5 h-1.5 bg-[#f97316] rounded-full flex-shrink-0" />
+                    <span className="w-1.5 h-1.5 bg-slate-400 rounded-full flex-shrink-0" />
                     {benefit}
                   </li>
                 ))}

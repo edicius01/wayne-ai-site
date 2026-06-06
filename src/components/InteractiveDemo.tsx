@@ -163,7 +163,7 @@ export function InteractiveDemo() {
     <section id="demo" ref={ref} className="bg-[#f8fafc] py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className={`mx-auto mb-10 max-w-3xl text-center transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
-          <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-[#f97316]">Missed call text-back</p>
+          <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-[#64748b]">Missed call text-back</p>
           <h2 className="mb-4 text-3xl font-bold text-[#0f172a] sm:text-4xl">
             Watch a missed call turn into a booked appointment
           </h2>

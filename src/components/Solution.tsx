@@ -49,7 +49,7 @@ export function Solution() {
         </div>
 
         <div className="relative">
-          <div className="hidden md:block absolute top-24 left-[16%] right-[16%] h-0.5 bg-[#f97316]/20" />
+          <div className="hidden md:block absolute top-24 left-[16%] right-[16%] h-0.5 bg-slate-200" />
 
           <div className="grid md:grid-cols-3 gap-8">
             {steps.map((step, index) => (
@@ -64,7 +64,7 @@ export function Solution() {
                   {step.number}
                 </div>
 
-                <div className="w-16 h-16 bg-[#f97316]/10 rounded-2xl flex items-center justify-center text-[#f97316] mb-6">
+                <div className="w-16 h-16 bg-[#0f172a]/5 rounded-2xl flex items-center justify-center text-[#0f172a] mb-6">
                   {step.icon}
                 </div>
 
