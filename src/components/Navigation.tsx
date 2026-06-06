@@ -34,12 +34,14 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto pl-5 pr-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20 md:h-24">
           {/* 1. LOGO */}
-          <Link to="/" className="flex items-center">
-            <img
-              src="/og-image-1200x630_upscayl_4x_upscayl-standard-4x.png"
-              alt="Wayne AI"
-              className={`w-[160px] md:w-[200px] h-auto transition-all duration-300 ${!isScrolled && isHomePage ? 'brightness-0 invert' : ''}`}
-            />
+          <Link to="/" className="flex items-center" aria-label="Wayne AI home">
+            <span
+              className={`text-2xl md:text-3xl font-black tracking-tight transition-colors duration-300 ${
+                !isScrolled && isHomePage ? 'text-white' : 'text-[#0f172a]'
+              }`}
+            >
+              Wayne<span className="text-[#f97316]">AI</span>
+            </span>
           </Link>
 
           {/* 2. CENTER LINKS (Desktop) */}
