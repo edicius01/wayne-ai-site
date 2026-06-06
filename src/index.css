@@ -59,6 +59,32 @@
   }
 }
 
+@keyframes spark-travel {
+  0% {
+    top: -6px;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    top: calc(100% - 6px);
+    opacity: 0;
+  }
+}
+
+@keyframes glow-drift {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(20px, -20px) scale(1.08);
+  }
+}
+
 .animate-fade-in-up {
   animation: fade-in-up 0.6s ease-out forwards;
 }
@@ -93,4 +119,12 @@
 
 .animate-slide-up {
   animation: slide-up 0.3s ease-out forwards;
+}
+
+.animate-spark {
+  animation: spark-travel 2.4s ease-in-out infinite;
+}
+
+.animate-glow-drift {
+  animation: glow-drift 14s ease-in-out infinite;
 }
