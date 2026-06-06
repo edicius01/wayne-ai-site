@@ -1,72 +1,5 @@
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
-
-// 1. Add these interfaces to define the shape of your data
-interface Feature {
-  text: string;
-  bold: boolean;
-  label?: string;   // Optional (?)
-  subtext?: string; // Optional (?)
-}
-
-interface Tier {
-  name: string;
-  price: number;
-  paysFor: string;
-  badge: string | null;
-  description: string;
-  features: Feature[];
-  bestFor: string;
-}
-
-// 2. Apply the type to the array: "const tiers: Tier[]"
-const tiers: Tier[] = [
-  {
-    name: 'The Solo Shield',
-    price: 397,
-    paysFor: '~1 recovered job/mo',
-    badge: null,
-    description: 'Stop Missing Calls',
-    features: [
-      { text: 'Missed Call Text-Back Only', bold: false },
-      { text: 'Works with existing site', bold: false },
-      { text: 'Standard Review Requests', bold: false },
-      { text: 'Basic Text Follow-Up', bold: false },
-      { text: 'N/A', bold: false, label: 'Voice AI Minutes' },
-    ],
-    bestFor: "Solo plumbers who don't want to miss another call",
-  },
-  {
-    name: 'The Growth Engine',
-    price: 897,
-    paysFor: '~2 recovered jobs/mo',
-    badge: 'MOST POPULAR',
-    description: 'Dominate Your Market',
-    features: [
-      { text: 'SMS + Unified Inbox', bold: true },
-      // This item caused the error because it was the only one with subtext
-      { text: 'Conversion Site Included', bold: true, subtext: '(or integrates with yours)' },
-      { text: 'Auto-Review Engine', bold: true },
-      { text: 'Advanced Long-Term Drip', bold: true },
-      { text: 'N/A', bold: false, label: 'Voice AI Minutes' },
-    ],
-    bestFor: '2-3 truck shops ready to scale without hiring',
-  },
-  {
-    name: 'The AI Front Desk',
-    price: 1497,
-    paysFor: '~3 recovered jobs/mo',
-    badge: 'PREMIUM',
-    description: 'Replace a Human Receptionist',
-    features: [
-      { text: 'Voice AI (Answers Phone 24/7)', bold: true },
-      { text: 'Conversion Site Included', bold: true },
-      { text: 'Auto-Review Engine', bold: true },
-      { text: 'Advanced + Voice Follow-Up', bold: true },
-      { text: '250 Mins Included*', bold: true, label: 'Voice AI Minutes' },
-    ],
-    bestFor: '4+ truck operations replacing front desk payroll',
-  },
-];
+import { pricingTiers as tiers, voiceOverageRate } from '../content/pricing';
 
 export function Pricing() {
   const { ref, isVisible } = useScrollAnimation(0.2);
@@ -206,7 +139,7 @@ export function Pricing() {
         </div>
 
         <p className="text-center text-xs text-[#6b7280] mt-6">
-          *Additional voice minutes: $0.35/min after included allowance
+          *Additional voice minutes: ${voiceOverageRate.toFixed(2)}/min after included allowance
         </p>
       </div>
     </section>
