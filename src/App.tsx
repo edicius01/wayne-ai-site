@@ -16,6 +16,7 @@ const MedSpaReactivationPage = lazy(() => import('./pages/lp/MedSpaReactivationP
 const DentalReactivationPage = lazy(() => import('./pages/lp/DentalReactivationPage').then(m => ({ default: m.DentalReactivationPage })));
 const PhysicalTherapyReactivationPage = lazy(() => import('./pages/lp/PhysicalTherapyReactivationPage').then(m => ({ default: m.PhysicalTherapyReactivationPage })));
 const ElectricianAutomationPage = lazy(() => import('./pages/lp/ElectricianAutomationPage').then(m => ({ default: m.ElectricianAutomationPage })));
+const AiAuditPage = lazy(() => import('./pages/lp/AiAuditPage').then(m => ({ default: m.AiAuditPage })));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -44,6 +45,7 @@ function App() {
         <Route path="/lp/dental-reactivation" element={<DentalReactivationPage />} />
         <Route path="/lp/physical-therapy-reactivation" element={<PhysicalTherapyReactivationPage />} />
         <Route path="/lp/electrician-automation" element={<ElectricianAutomationPage />} />
+        <Route path="/lp/ai-audit" element={<AiAuditPage />} />
       </Routes>
       </Suspense>
     </Router>

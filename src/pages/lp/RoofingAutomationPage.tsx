@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { LpGuarantee } from '../../components/LpGuarantee';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 
@@ -195,14 +196,7 @@ export function RoofingAutomationPage() {
               Roofing companies using automated lead response book 20–30% more inspections
               during storm events — and maintain a steadier pipeline in the months between them.
             </p>
-            <blockquote className="bg-[#fff7ed] border-l-4 border-[#f97316] rounded-r-xl px-8 py-6 text-left max-w-2xl mx-auto">
-              <p className="text-[#1e293b] text-lg italic leading-relaxed mb-4">
-                "After the last hailstorm I woke up with 14 inspections already on the calendar.
-                My competitor called me two days later asking if I was slammed — he was still
-                working through his callback list. That's the difference."
-              </p>
-              <p className="text-[#64748b] text-sm font-semibold">— Roofing company owner, Midwest</p>
-            </blockquote>
+            <LpGuarantee />
           </div>
         </section>
 

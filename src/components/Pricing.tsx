@@ -148,12 +148,31 @@ export function Pricing() {
                 >
                   Book Strategy Call
                 </a>
+                <p className="mt-3 text-center text-xs text-[#6b7280]">
+                  No long-term contract · Cancel anytime
+                </p>
               </div>
             </div>
           ))}
         </div>
 
-        <div className={`mt-12 text-center transition-all duration-700 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className={`mt-12 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className="mx-auto max-w-3xl rounded-2xl border-2 border-[#f97316] bg-[#FFF8F5] p-6 sm:p-8">
+            <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:text-left">
+              <svg className="h-12 w-12 flex-shrink-0 text-[#f97316]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+              <div>
+                <h3 className="text-xl font-bold text-[#0f172a] sm:text-2xl">Our 30-Day Job Guarantee</h3>
+                <p className="mt-2 text-[#374151]">
+                  If the system doesn't catch at least <span className="font-bold text-[#f97316]">2 new jobs in your first 30 days</span>, we refund your first month and part ways as friends. No long-term contract — you're month-to-month and can cancel anytime.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className={`mt-8 text-center transition-all duration-700 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="bg-white rounded-xl p-6 inline-block shadow-md border border-gray-200">
             <h4 className="font-bold text-[#0f172a] mb-2">What "Fast-Track Setup" Means</h4>
             <p className="text-sm text-[#374151] max-w-2xl">

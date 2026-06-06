@@ -31,6 +31,13 @@ export function FinalCTA() {
               Call/Text: 888-433-6516
             </a>
           </div>
+
+          <div className="mx-auto mt-12 max-w-2xl rounded-2xl border border-white/10 bg-white/5 p-6 text-left sm:p-8">
+            <p className="text-[#D1D5DB]">
+              Built and run by <span className="font-bold text-white">Wayne Dewig</span>, right here in Evansville, Indiana. When you book a call, you're talking to me — not a call center or a sales floor. I'll show you exactly how this works for your trade, and if it's not a fit, I'll tell you straight.
+            </p>
+            <p className="mt-4 font-semibold text-[#f97316]">— Wayne, founder of Wayne AI</p>
+          </div>
         </div>
       </div>
     </section>

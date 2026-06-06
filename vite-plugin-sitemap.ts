@@ -9,6 +9,7 @@ const staticRoutes: { path: string; priority: string; changefreq: string; lastmo
   { path: '/about', priority: '0.7', changefreq: 'monthly' },
   { path: '/demo', priority: '0.8', changefreq: 'monthly' },
   { path: '/blog', priority: '0.9', changefreq: 'weekly' },
+  { path: '/lp/ai-audit', priority: '0.8', changefreq: 'monthly' },
 ];
 
 export function sitemapPlugin(): Plugin {

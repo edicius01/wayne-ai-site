@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { LpGuarantee } from '../../components/LpGuarantee';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 
@@ -157,14 +158,7 @@ export function PhysicalTherapyReactivationPage() {
               discharged patients return for maintenance visits. Better outcomes for patients,
               steadier revenue for your practice.
             </p>
-            <blockquote className="bg-[#fff7ed] border-l-4 border-[#f97316] rounded-r-xl px-8 py-6 text-left max-w-2xl mx-auto">
-              <p className="text-[#1e293b] text-lg italic leading-relaxed mb-4">
-                "We were losing patients after discharge and not thinking twice about it. The
-                automated follow-up brought back 35 patients in the first two months — most of
-                them for maintenance that genuinely helped them stay healthy."
-              </p>
-              <p className="text-[#64748b] text-sm font-semibold">— Physical therapy clinic, Midwest</p>
-            </blockquote>
+            <LpGuarantee />
           </div>
         </section>
 

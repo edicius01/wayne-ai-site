@@ -56,6 +56,7 @@ function buildRouteList() {
     '/lp/dental-reactivation',
     '/lp/physical-therapy-reactivation',
     '/lp/electrician-automation',
+    '/lp/ai-audit',
   ];
 
   const postsFile = path.join(ROOT, 'src/content/blog/posts.ts');

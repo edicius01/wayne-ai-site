@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { LpGuarantee } from '../../components/LpGuarantee';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 
@@ -157,14 +158,7 @@ export function DentalReactivationPage() {
               within 60 days. On a list of 300 overdue patients, that's 60–90 hygiene
               appointments from people already in your system.
             </p>
-            <blockquote className="bg-[#fff7ed] border-l-4 border-[#f97316] rounded-r-xl px-8 py-6 text-left max-w-2xl mx-auto">
-              <p className="text-[#1e293b] text-lg italic leading-relaxed mb-4">
-                "Our hygienists used to have gaps every week. We ran reactivation on our overdue
-                list and filled 6 weeks of appointments in the first month. Our front desk didn't
-                make a single call."
-              </p>
-              <p className="text-[#64748b] text-sm font-semibold">— Dental practice, Midwest</p>
-            </blockquote>
+            <LpGuarantee />
           </div>
         </section>
 

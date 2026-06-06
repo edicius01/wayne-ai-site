@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { LpGuarantee } from '../../components/LpGuarantee';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 
@@ -195,14 +196,7 @@ export function ElectricianAutomationPage() {
               calls that would have gone to a competitor — without adding staff or changing
               how they run their day.
             </p>
-            <blockquote className="bg-[#fff7ed] border-l-4 border-[#f97316] rounded-r-xl px-8 py-6 text-left max-w-2xl mx-auto">
-              <p className="text-[#1e293b] text-lg italic leading-relaxed mb-4">
-                "I used to miss calls constantly while I was on jobs. Now the system texts back
-                right away and I come off a job to find the next one already booked. It paid for
-                itself in the first week."
-              </p>
-              <p className="text-[#64748b] text-sm font-semibold">— Independent electrician, Midwest</p>
-            </blockquote>
+            <LpGuarantee />
           </div>
         </section>
 

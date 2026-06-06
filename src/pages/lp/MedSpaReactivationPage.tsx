@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { LpGuarantee } from '../../components/LpGuarantee';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 
@@ -157,14 +158,7 @@ export function MedSpaReactivationPage() {
               rebook within 30 days. On a list of 200 lapsed clients, that's 30–50 appointments
               from people who already trust you.
             </p>
-            <blockquote className="bg-[#fff7ed] border-l-4 border-[#f97316] rounded-r-xl px-8 py-6 text-left max-w-2xl mx-auto">
-              <p className="text-[#1e293b] text-lg italic leading-relaxed mb-4">
-                "We had clients we hadn't seen in eight months. The reactivation sequence
-                brought back 40 of them in the first month. Our injector's schedule went from
-                half-full to waitlisted."
-              </p>
-              <p className="text-[#64748b] text-sm font-semibold">— Med spa owner, Southeast</p>
-            </blockquote>
+            <LpGuarantee />
           </div>
         </section>
 
