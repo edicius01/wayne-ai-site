@@ -1,42 +1,27 @@
+import { ShieldCheck, Zap, CalendarClock, Star } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const features = [
   {
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-      </svg>
-    ),
+    icon: <ShieldCheck className="w-8 h-8" strokeWidth={2} />,
     title: 'Missed-Call Safety Net',
     description: 'If you miss the call, they get a text immediately so you stay in the game and get the booking.',
     benefits: ['Zero missed opportunities', 'Responds in under 30 seconds', 'Works 24/7, even after hours'],
   },
   {
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-      </svg>
-    ),
+    icon: <Zap className="w-8 h-8" strokeWidth={2} />,
     title: 'Speed-to-Lead Follow-Up',
     description: 'New leads get an automatic sequence that prompts a reply and pushes them toward scheduling.',
     benefits: ['Beat competitors to the response', 'Automated nurture sequences', 'Higher conversion rates'],
   },
   {
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-      </svg>
-    ),
+    icon: <CalendarClock className="w-8 h-8" strokeWidth={2} />,
     title: 'Booking + Reminders',
     description: 'A clean booking flow connected to your calendar, plus confirmations and reminders to reduce no-shows.',
     benefits: ['Syncs with your existing calendar', 'Reduces no-shows by 40%+', 'Two-way text reminders'],
   },
   {
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-      </svg>
-    ),
+    icon: <Star className="w-8 h-8" strokeWidth={2} />,
     title: 'Reviews Engine',
     description: 'Review requests go out after the job, with follow-ups, so reviews become consistent instead of occasional.',
     benefits: ['Automatic timing post-job', 'More 5-star reviews', 'Better Google rankings'],
