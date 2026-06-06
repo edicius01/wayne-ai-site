@@ -10,17 +10,29 @@ import { createRequire } from 'node:module';
 
 const require = createRequire(import.meta.url);
 
-// If a Chrome is explicitly provided (e.g. local dev with Playwright's
-// chromium), respect it and skip the download entirely.
-if (process.env.PUPPETEER_EXECUTABLE_PATH && existsSync(process.env.PUPPETEER_EXECUTABLE_PATH)) {
-  console.log(`✓ Using PUPPETEER_EXECUTABLE_PATH: ${process.env.PUPPETEER_EXECUTABLE_PATH}`);
+// If a Chrome is explicitly provided — via PUPPETEER_EXECUTABLE_PATH or the
+// executablePath in .puppeteerrc.cjs (local dev points both at Playwright's
+// chromium, since puppeteer's own download is blocked here) — respect it and
+// skip the download entirely. On Netlify neither is set, so we fall through.
+function configuredExecutable() {
+  if (process.env.PUPPETEER_EXECUTABLE_PATH) return process.env.PUPPETEER_EXECUTABLE_PATH;
+  try {
+    return require('../.puppeteerrc.cjs').executablePath || '';
+  } catch {
+    return '';
+  }
+}
+
+const configured = configuredExecutable();
+if (configured && existsSync(configured)) {
+  console.log(`✓ Using configured Chrome: ${configured}`);
   process.exit(0);
 }
 
 const puppeteer = require('puppeteer');
 
 try {
-  const path = puppeteer.executablePath();
+  const path = await puppeteer.executablePath();
   if (path && existsSync(path)) {
     console.log(`✓ Chrome already installed: ${path}`);
     process.exit(0);
