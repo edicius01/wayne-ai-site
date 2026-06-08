@@ -27,6 +27,15 @@ export function Pricing() {
           </div>
         </div>
 
+        <div className={`mx-auto mb-12 max-w-3xl rounded-2xl border border-[#0f172a]/10 bg-[#0f172a] px-6 py-6 text-center sm:px-8 transition-all duration-700 delay-150 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <p className="text-lg font-semibold text-white sm:text-xl">
+            Don't compare these plans to $0. Compare them to what you're losing.
+          </p>
+          <p className="mt-3 text-[#cbd5e1]">
+            <span className="font-bold text-[#f97316]">62% of calls</span> to local service businesses go unanswered, and the first business to respond usually wins the job. At a typical miss rate that's <span className="font-bold text-[#f97316]">$2,000+ in jobs</span> walking out the door every month. Every plan below is priced to pay for itself with a single recovered job.
+          </p>
+        </div>
+
         <div className="grid md:grid-cols-3 gap-6 lg:gap-8 px-2 md:px-0">
           {tiers.map((tier, index) => (
             <div
