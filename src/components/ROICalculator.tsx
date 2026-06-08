@@ -1,18 +1,12 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { roiPresets as presets, roiDefaults, roiMonthlyCostBounds } from '../content/roi';
 
 const formatter = new Intl.NumberFormat('en-US', {
   style: 'currency',
   currency: 'USD',
   maximumFractionDigits: 0,
 });
-
-const presets = [
-  { label: 'Plumbing', jobValue: 650, missedCalls: 9, closeRate: 48, monthlyCost: 897 },
-  { label: 'HVAC', jobValue: 850, missedCalls: 7, closeRate: 42, monthlyCost: 897 },
-  { label: 'Electrical', jobValue: 700, missedCalls: 6, closeRate: 45, monthlyCost: 897 },
-  { label: 'Med Spa', jobValue: 425, missedCalls: 12, closeRate: 35, monthlyCost: 897 },
-];
 
 function MetricCard({ label, value, helper, tone = 'default' }: { label: string; value: string; helper: string; tone?: 'default' | 'accent' }) {
   return (
@@ -72,10 +66,10 @@ function SliderControl({
 
 export function ROICalculator() {
   const { ref, isVisible } = useScrollAnimation(0.2);
-  const [jobValue, setJobValue] = useState(650);
-  const [missedCalls, setMissedCalls] = useState(8);
-  const [closeRate, setCloseRate] = useState(45);
-  const [monthlyCost, setMonthlyCost] = useState(897);
+  const [jobValue, setJobValue] = useState(roiDefaults.jobValue);
+  const [missedCalls, setMissedCalls] = useState(roiDefaults.missedCalls);
+  const [closeRate, setCloseRate] = useState(roiDefaults.closeRate);
+  const [monthlyCost, setMonthlyCost] = useState(roiDefaults.monthlyCost);
   const [showForm, setShowForm] = useState(false);
 
   const results = useMemo(() => {
@@ -156,7 +150,7 @@ export function ROICalculator() {
                 <SliderControl label="Average job value" value={jobValue} min={150} max={2500} step={50} prefix="$" onChange={setJobValue} />
                 <SliderControl label="Missed or delayed leads per week" value={missedCalls} min={1} max={30} onChange={setMissedCalls} />
                 <SliderControl label="Close rate when you respond fast" value={closeRate} min={10} max={80} suffix="%" onChange={setCloseRate} />
-                <SliderControl label="Monthly system cost" value={monthlyCost} min={397} max={1497} step={100} prefix="$" onChange={setMonthlyCost} />
+                <SliderControl label="Monthly system cost" value={monthlyCost} min={roiMonthlyCostBounds.min} max={roiMonthlyCostBounds.max} step={100} prefix="$" onChange={setMonthlyCost} />
               </div>
             </div>
 

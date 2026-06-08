@@ -10,6 +10,11 @@ export function AboutPage() {
       <Helmet>
         <title>About Wayne AI — AI Automation for Local Service Businesses</title>
         <meta name="description" content="Wayne AI helps local service businesses stop losing revenue to missed calls and slow follow-up — with AI automation that works 24/7." />
+        <link rel="canonical" href="https://wayneai.net/about" />
+        <meta property="og:title" content="About Wayne AI — AI Automation for Local Service Businesses" />
+        <meta property="og:description" content="Wayne AI helps local service businesses stop losing revenue to missed calls and slow follow-up — with AI automation that works 24/7." />
+        <meta property="og:url" content="https://wayneai.net/about" />
+        <meta property="og:image" content="https://wayneai.net/og-image-1200x630.png" />
       </Helmet>
       <Navigation />
       
