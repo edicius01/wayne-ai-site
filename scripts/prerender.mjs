@@ -143,6 +143,12 @@ async function main() {
           })
           .catch(() => {});
 
+        if (route.startsWith('/blog/')) {
+          await page.waitForSelector('[data-blog-content-loaded="true"]', {
+            timeout: 45000,
+          });
+        }
+
         // The static index.html template ships generic homepage SEO tags, and
         // react-helmet-async appends route-specific ones at the end of <head>.
         // A snapshot therefore contains BOTH — and scrapers read the FIRST

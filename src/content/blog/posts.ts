@@ -1,84 +1,3 @@
-import plumberChatWidget from './the-tool-plumbers-use-to-book-jobs-while-they-sleep.html?raw';
-import whyPlumbersLoseJobsMidCall from './why-plumbers-lose-jobs-mid-call.html?raw';
-import plumbingEstimateFollowUpAutomation from './plumbing-estimate-follow-up-automation.html?raw';
-import hvacToolToBookMoreServiceCalls from './hvac-tool-to-book-more-service-calls.html?raw';
-import hvacWinterEmergencyCallsAutomatedResponse from './hvac-winter-emergency-calls-automated-response.html?raw';
-import rooferToolToCaptureStormLeads from './roofer-tool-to-capture-storm-leads.html?raw';
-import howRoofingCompaniesStayBusyBetweenStorms from './how-roofing-companies-stay-busy-between-storms.html?raw';
-import roofingReferralsGoogleReviewsAutomatedFollowUp from './roofing-referrals-google-reviews-automated-follow-up.html?raw';
-import electricianToolToBookMoreJobs from './electrician-tool-to-book-more-jobs.html?raw';
-import howElectriciansWinPanelUpgradeEvChargerJobs from './how-electricians-win-panel-upgrade-ev-charger-jobs.html?raw';
-import electricianRepeatCustomersAutomatedFollowUp from './electrician-repeat-customers-automated-follow-up.html?raw';
-import restaurantQrCodeLoyaltySystem from './restaurant-qr-code-loyalty-system.html?raw';
-import pestControlToolToBookMoreJobs from './pest-control-tool-to-book-more-jobs.html?raw';
-import lawnCareToolToBookMoreCustomers from './lawn-care-tool-to-book-more-customers.html?raw';
-import garageDoorRepairToolToBookMoreJobs from './garage-door-repair-tool-to-book-more-jobs.html?raw';
-import howMuchMissedCallsCostServiceBusiness from './how-much-missed-calls-cost-service-business.html?raw';
-import leadResponseTimeWhySpeedWinsTheJob from './lead-response-time-why-speed-wins-the-job.html?raw';
-import autoRepairShopToolToBookMoreJobs from './auto-repair-shop-tool-to-book-more-jobs.html?raw';
-import howToGetMoreGoogleReviewsServiceBusiness from './how-to-get-more-google-reviews-service-business.html?raw';
-import whatToTextCustomerAfterJobToGet5StarReview from './what-to-text-customer-after-job-to-get-5-star-review.html?raw';
-import whyCustomersDontLeaveVoicemailsAnymore from './why-customers-dont-leave-voicemails-anymore.html?raw';
-import completeGuideAiAutomationLocalServiceBusinesses from './complete-guide-ai-automation-local-service-businesses.html?raw';
-import locksmithAiToolToBookMoreJobs from './locksmith-ai-tool-to-book-more-jobs.html?raw';
-import cleaningServiceAiToolToBookMoreClients from './cleaning-service-ai-tool-to-book-more-clients.html?raw';
-import aiVsHiringReceptionistServiceBusiness from './ai-vs-hiring-receptionist-service-business.html?raw';
-import googleBusinessProfileMoreImportantThanWebsite from './google-business-profile-more-important-than-website.html?raw';
-import pressureWashingAiToolToBookMoreJobs from './pressure-washing-ai-tool-to-book-more-jobs.html?raw';
-import howToRespondToNegativeGoogleReviewsServiceBusiness from './how-to-respond-to-negative-google-reviews-service-business.html?raw';
-import howServiceBusinessesStayBusyInSlowSeason from './how-service-businesses-stay-busy-in-slow-season.html?raw';
-import howMuchShouldServiceBusinessSpendOnMarketing from './how-much-should-service-business-spend-on-marketing.html?raw';
-import whyServiceBusinessLeadsGoCold from './why-service-business-leads-go-cold.html?raw';
-import treeServiceBusinessStopLosingLeads from './tree-service-business-stop-losing-leads.html?raw';
-import aboutPageThatConvertsServiceBusiness from './about-page-that-converts-service-business.html?raw';
-import howToGetMoreReferralsServiceBusiness from './how-to-get-more-referrals-service-business.html?raw';
-import poolServiceAiToolToBookMoreJobs from './pool-service-ai-tool-to-book-more-jobs.html?raw';
-import handymanAiToolToBookMoreJobs from './handyman-ai-tool-to-book-more-jobs.html?raw';
-import paintingContractorAiToolToBookMoreJobs from './painting-contractor-ai-tool-to-book-more-jobs.html?raw';
-import howToPriceHomeServiceBusiness from './how-to-price-home-service-business.html?raw';
-import whatIsCrmServiceBusiness from './what-is-crm-service-business.html?raw';
-import windowCleaningAiToolToBookMoreJobs from './window-cleaning-ai-tool-to-book-more-jobs.html?raw';
-import flooringContractorAiToolToBookMoreJobs from './flooring-contractor-ai-tool-to-book-more-jobs.html?raw';
-import hvacTuneUpSeasonLeads from './hvac-tune-up-season-leads.html?raw';
-import howToGetRepeatCustomersServiceBusiness from './how-to-get-repeat-customers-service-business.html?raw';
-import howToDifferentiateYourServiceBusiness from './how-to-differentiate-your-service-business.html?raw';
-import howToSetUpMissedCallTextBack from './how-to-set-up-missed-call-text-back.html?raw';
-import howToAutomateGoogleReviewRequests from './how-to-automate-google-review-requests.html?raw';
-import howToBuildLeadFollowUpSequence from './how-to-build-lead-follow-up-sequence.html?raw';
-import howToAddOnlineBookingServiceBusiness from './how-to-add-online-booking-service-business.html?raw';
-import howToSetUpAppointmentReminders from './how-to-set-up-appointment-reminders.html?raw';
-import howToFollowUpAfterEstimate from './how-to-follow-up-after-estimate.html?raw';
-import howToBuildReferralProgramServiceBusiness from './how-to-build-referral-program-service-business.html?raw';
-import howToWriteServiceGuarantee from './how-to-write-service-guarantee.html?raw';
-import howToTrackLeadsServiceBusiness from './how-to-track-leads-service-business.html?raw';
-import howToHandlePriceObjections from './how-to-handle-price-objections.html?raw';
-import howAiBooksAppointmentsServiceBusiness from './how-ai-books-appointments-service-business.html?raw';
-import whatYouNeedToBuildAnAiReceptionistServiceBusiness from './what-you-need-to-build-an-ai-receptionist-service-business.html?raw';
-import doYouNeedACrmServiceBusiness from './do-you-need-a-crm-service-business.html?raw';
-import howToReactivateOldCustomers from './how-to-reactivate-old-customers.html?raw';
-import whatYourWebsiteNeedsBeforeYouRunAds from './what-your-website-needs-before-you-run-ads.html?raw';
-import fenceInstallationBusinessBookMoreJobs from './fence-installation-business-book-more-jobs.html?raw';
-import gutterCleaningBusinessBookMoreJobs from './gutter-cleaning-business-book-more-jobs.html?raw';
-import applianceRepairShopBookMoreJobs from './appliance-repair-shop-book-more-jobs.html?raw';
-import howToTurnOneTimeCustomersIntoRecurringRevenue from './how-to-turn-one-time-customers-into-recurring-revenue.html?raw';
-import whatToSayWhenCustomerSaysIllThinkAboutIt from './what-to-say-when-customer-says-ill-think-about-it.html?raw';
-import howToReactivateLapsedChiropracticPatients from './how-to-reactivate-lapsed-chiropractic-patients.html?raw';
-import howChiropractorsStopMissingNewPatientCalls from './how-chiropractors-stop-missing-new-patient-calls.html?raw';
-import howToReactivateLapsedDentalPatients from './how-to-reactivate-lapsed-dental-patients.html?raw';
-import dentalAppointmentRemindersReduceNoShows from './dental-appointment-reminders-reduce-no-shows.html?raw';
-import howToReactivateLapsedMedSpaClients from './how-to-reactivate-lapsed-med-spa-clients.html?raw';
-import medSpaConsultationFollowUpSequence from './med-spa-consultation-follow-up-sequence.html?raw';
-import howToReactivateLapsedPhysicalTherapyPatients from './how-to-reactivate-lapsed-physical-therapy-patients.html?raw';
-import howPhysicalTherapyPracticesImprovePatientAdherence from './how-physical-therapy-practices-improve-patient-adherence.html?raw';
-import howChiropractorsGetMoreGoogleReviews from './how-chiropractors-get-more-google-reviews.html?raw';
-import howDentalPracticesCaptureMoreNewPatientLeads from './how-dental-practices-capture-more-new-patient-leads.html?raw';
-import howMedSpasGetMoreGoogleReviews from './how-med-spas-get-more-google-reviews.html?raw';
-import howPhysicalTherapyPracticesCaptureNewPatientCalls from './how-physical-therapy-practices-capture-new-patient-calls.html?raw';
-import howDentalPracticesFillHygieneScheduleGaps from './how-dental-practices-fill-hygiene-schedule-gaps.html?raw';
-import howMedSpasCaptureAfterHoursLeads from './how-med-spas-capture-after-hours-leads.html?raw';
-import howChiropracticPracticesReduceCancellations from './how-chiropractic-practices-reduce-cancellations.html?raw';
-import howPhysicalTherapyPracticesIncreasePhysicianReferrals from './how-physical-therapy-practices-increase-physician-referrals.html?raw';
-
 export interface BlogPost {
   slug: string;
   title: string;
@@ -88,7 +7,6 @@ export interface BlogPost {
   tags: string[];
   featuredImage?: string;
   metaTitle?: string;
-  content: string;
 }
 
 export const posts: BlogPost[] = [
@@ -101,7 +19,6 @@ export const posts: BlogPost[] = [
     date: '2025-03-15',
     tags: ['plumbing', 'lead generation', 'automation'],
     featuredImage: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=1200&auto=format&fit=crop&q=80',
-    content: plumberChatWidget,
   },
   {
     slug: 'why-plumbers-lose-jobs-mid-call',
@@ -112,7 +29,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-18',
     tags: ['plumbing', 'missed calls', 'lead response', 'automation'],
     featuredImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&auto=format&fit=crop&q=80',
-    content: whyPlumbersLoseJobsMidCall,
   },
   {
     slug: 'plumbing-estimate-follow-up-automation',
@@ -123,7 +39,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-18',
     tags: ['plumbing', 'estimate follow-up', 'lead nurture', 'automation'],
     featuredImage: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&auto=format&fit=crop&q=80',
-    content: plumbingEstimateFollowUpAutomation,
   },
   {
     slug: 'hvac-tool-to-book-more-service-calls',
@@ -134,7 +49,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-03',
     tags: ["HVAC","lead generation","automation"],
     featuredImage: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1200&auto=format&fit=crop&q=80',
-    content: hvacToolToBookMoreServiceCalls,
   },
   {
     slug: 'roofer-tool-to-capture-storm-leads',
@@ -145,7 +59,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-02',
     tags: ["roofing","lead generation","automation"],
     featuredImage: 'https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=1200&auto=format&fit=crop&q=80',
-    content: rooferToolToCaptureStormLeads,
   },
   {
     slug: 'how-roofing-companies-stay-busy-between-storms',
@@ -156,7 +69,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-18',
     tags: ["roofing", "slow season", "lead generation", "automation"],
     featuredImage: 'https://images.unsplash.com/photo-1632823471565-1ecdf5c6da2e?w=1200&auto=format&fit=crop&q=80',
-    content: howRoofingCompaniesStayBusyBetweenStorms,
   },
   {
     slug: 'roofing-referrals-google-reviews-automated-follow-up',
@@ -167,7 +79,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-18',
     tags: ['roofing', 'referrals', 'google reviews', 'automation', 'follow-up'],
     featuredImage: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&auto=format&fit=crop&q=80',
-    content: roofingReferralsGoogleReviewsAutomatedFollowUp,
   },
   {
     slug: 'electrician-tool-to-book-more-jobs',
@@ -178,7 +89,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-02',
     tags: ["electrician","lead generation","automation"],
     featuredImage: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1200&auto=format&fit=crop&q=80',
-    content: electricianToolToBookMoreJobs,
   },
   {
     slug: 'how-electricians-win-panel-upgrade-ev-charger-jobs',
@@ -189,7 +99,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-18',
     tags: ["electrician","lead generation","EV charger","panel upgrade"],
     featuredImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&auto=format&fit=crop&q=80',
-    content: howElectriciansWinPanelUpgradeEvChargerJobs,
   },
   {
     slug: 'electrician-repeat-customers-automated-follow-up',
@@ -200,7 +109,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-18',
     tags: ['electrician', 'repeat customers', 'follow-up', 'automation', 'referrals'],
     featuredImage: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1200&auto=format&fit=crop&q=80',
-    content: electricianRepeatCustomersAutomatedFollowUp,
   },
   {
     slug: 'restaurant-qr-code-loyalty-system',
@@ -211,7 +119,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-02',
     tags: ["restaurant","loyalty","automation"],
     featuredImage: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&auto=format&fit=crop&q=80',
-    content: restaurantQrCodeLoyaltySystem,
   },
   {
     slug: 'pest-control-tool-to-book-more-jobs',
@@ -221,7 +128,6 @@ export const posts: BlogPost[] = [
     author: "Wayne AI",
     date: '2026-04-02',
     tags: ["pest control","lead generation","automation"],
-    content: pestControlToolToBookMoreJobs,
   },
   {
     slug: 'lawn-care-tool-to-book-more-customers',
@@ -231,7 +137,6 @@ export const posts: BlogPost[] = [
     author: "Wayne AI",
     date: '2026-04-02',
     tags: ["lawn care","lead generation","automation"],
-    content: lawnCareToolToBookMoreCustomers,
   },
   {
     slug: 'garage-door-repair-tool-to-book-more-jobs',
@@ -241,7 +146,6 @@ export const posts: BlogPost[] = [
     author: "Wayne AI",
     date: '2026-04-02',
     tags: ["garage door","lead generation","automation"],
-    content: garageDoorRepairToolToBookMoreJobs,
   },
   {
     slug: 'how-much-missed-calls-cost-service-business',
@@ -251,7 +155,6 @@ export const posts: BlogPost[] = [
     author: "Wayne AI",
     date: '2026-04-02',
     tags: ["lead generation","missed calls","revenue"],
-    content: howMuchMissedCallsCostServiceBusiness,
   },
   {
     slug: 'lead-response-time-why-speed-wins-the-job',
@@ -261,7 +164,6 @@ export const posts: BlogPost[] = [
     author: "Wayne AI",
     date: '2026-04-02',
     tags: ["lead generation","response time","automation"],
-    content: leadResponseTimeWhySpeedWinsTheJob,
   },
   {
     slug: 'auto-repair-shop-tool-to-book-more-jobs',
@@ -271,7 +173,6 @@ export const posts: BlogPost[] = [
     author: "Wayne AI",
     date: '2026-04-02',
     tags: ["auto repair","lead generation","automation"],
-    content: autoRepairShopToolToBookMoreJobs,
   },
   {
     slug: 'how-to-get-more-google-reviews-service-business',
@@ -281,7 +182,6 @@ export const posts: BlogPost[] = [
     author: "Wayne AI",
     date: '2026-04-02',
     tags: ["google reviews","reputation","local SEO"],
-    content: howToGetMoreGoogleReviewsServiceBusiness,
   },
   {
     slug: 'what-to-text-customer-after-job-to-get-5-star-review',
@@ -291,7 +191,6 @@ export const posts: BlogPost[] = [
     author: "Wayne AI",
     date: '2026-04-02',
     tags: ["google reviews","reputation","customer follow-up"],
-    content: whatToTextCustomerAfterJobToGet5StarReview,
   },
   {
     slug: 'why-customers-dont-leave-voicemails-anymore',
@@ -301,7 +200,6 @@ export const posts: BlogPost[] = [
     author: "Wayne AI",
     date: '2026-04-02',
     tags: ["lead generation","missed calls","customer behavior"],
-    content: whyCustomersDontLeaveVoicemailsAnymore,
   },
   {
     slug: 'complete-guide-ai-automation-local-service-businesses',
@@ -311,7 +209,6 @@ export const posts: BlogPost[] = [
     author: "Wayne AI",
     date: '2026-04-02',
     tags: ["AI automation","local service business","lead generation","guide"],
-    content: completeGuideAiAutomationLocalServiceBusinesses,
   },
   {
     slug: 'locksmith-ai-tool-to-book-more-jobs',
@@ -322,7 +219,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-02',
     tags: ["locksmith", "AI automation", "missed calls", "lead response"],
     featuredImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&auto=format&fit=crop&q=80",
-    content: locksmithAiToolToBookMoreJobs,
   },
   {
     slug: 'cleaning-service-ai-tool-to-book-more-clients',
@@ -333,7 +229,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-02',
     tags: ["cleaning service", "AI automation", "lead response", "recurring revenue"],
     featuredImage: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&auto=format&fit=crop&q=80",
-    content: cleaningServiceAiToolToBookMoreClients,
   },
   {
     slug: 'ai-vs-hiring-receptionist-service-business',
@@ -344,7 +239,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-02',
     tags: ["AI automation", "receptionist", "service business", "cost comparison"],
     featuredImage: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&auto=format&fit=crop&q=80",
-    content: aiVsHiringReceptionistServiceBusiness,
   },
   {
     slug: 'google-business-profile-more-important-than-website',
@@ -355,7 +249,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-02',
     tags: ["Google Business Profile", "local SEO", "service business", "Google Maps"],
     featuredImage: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=1200&auto=format&fit=crop&q=80",
-    content: googleBusinessProfileMoreImportantThanWebsite,
   },
   {
     slug: 'pressure-washing-ai-tool-to-book-more-jobs',
@@ -366,7 +259,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-02',
     tags: ["pressure washing", "AI automation", "missed calls", "seasonal"],
     featuredImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&auto=format&fit=crop&q=80",
-    content: pressureWashingAiToolToBookMoreJobs,
   },
   {
     slug: 'how-to-respond-to-negative-google-reviews-service-business',
@@ -377,7 +269,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-02',
     tags: ["Google reviews", "reputation management", "service business", "customer service"],
     featuredImage: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&auto=format&fit=crop&q=80",
-    content: howToRespondToNegativeGoogleReviewsServiceBusiness,
   },
   {
     slug: 'how-service-businesses-stay-busy-in-slow-season',
@@ -388,7 +279,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-02',
     tags: ["slow season", "service business", "marketing", "customer reactivation"],
     featuredImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&auto=format&fit=crop&q=80",
-    content: howServiceBusinessesStayBusyInSlowSeason,
   },
   {
     slug: 'how-much-should-service-business-spend-on-marketing',
@@ -399,7 +289,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-02',
     tags: ["marketing budget", "service business", "local marketing", "ROI"],
     featuredImage: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&auto=format&fit=crop&q=80",
-    content: howMuchShouldServiceBusinessSpendOnMarketing,
   },
   {
     slug: 'why-service-business-leads-go-cold',
@@ -410,7 +299,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-02',
     tags: ['lead follow-up', 'service business', 'lead response', 'conversion'],
     featuredImage: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200&auto=format&fit=crop&q=80',
-    content: whyServiceBusinessLeadsGoCold,
   },
   {
     slug: 'tree-service-business-stop-losing-leads',
@@ -421,7 +309,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-03',
     tags: ["tree service", "AI automation", "missed calls", "lead response"],
     featuredImage: "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?w=1200&auto=format&fit=crop&q=80",
-    content: treeServiceBusinessStopLosingLeads,
   },
   {
     slug: 'about-page-that-converts-service-business',
@@ -432,7 +319,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-03',
     tags: ["website", "conversion", "service business", "about page"],
     featuredImage: "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=1200&auto=format&fit=crop&q=80",
-    content: aboutPageThatConvertsServiceBusiness,
   },
   {
     slug: 'how-to-get-more-referrals-service-business',
@@ -443,7 +329,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-03',
     tags: ["referrals", "service business", "customer retention", "word of mouth"],
     featuredImage: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&auto=format&fit=crop&q=80",
-    content: howToGetMoreReferralsServiceBusiness,
   },
   {
     slug: 'pool-service-ai-tool-to-book-more-jobs',
@@ -454,7 +339,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-03',
     tags: ['pool service', 'AI automation', 'lead response', 'after hours'],
     featuredImage: 'https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=1200&auto=format&fit=crop&q=80',
-    content: poolServiceAiToolToBookMoreJobs,
   },
   {
     slug: 'handyman-ai-tool-to-book-more-jobs',
@@ -465,7 +349,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-03',
     tags: ['handyman', 'AI automation', 'missed calls', 'lead response'],
     featuredImage: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1200&auto=format&fit=crop&q=80',
-    content: handymanAiToolToBookMoreJobs,
   },
   {
     slug: 'painting-contractor-ai-tool-to-book-more-jobs',
@@ -476,7 +359,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-03',
     tags: ['painting contractor', 'AI automation', 'lead response', 'estimate booking'],
     featuredImage: 'https://images.unsplash.com/photo-1562259929-b4e1fd3aef09?w=1200&auto=format&fit=crop&q=80',
-    content: paintingContractorAiToolToBookMoreJobs,
   },
   {
     slug: 'how-to-price-home-service-business',
@@ -487,7 +369,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-03',
     tags: ['pricing', 'service business', 'profit margin', 'business advice'],
     featuredImage: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&auto=format&fit=crop&q=80',
-    content: howToPriceHomeServiceBusiness,
   },
   {
     slug: 'what-is-crm-service-business',
@@ -498,7 +379,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-03',
     tags: ['CRM', 'service business', 'lead management', 'automation'],
     featuredImage: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&auto=format&fit=crop&q=80',
-    content: whatIsCrmServiceBusiness,
   },
   {
     slug: 'window-cleaning-ai-tool-to-book-more-jobs',
@@ -509,7 +389,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-03',
     tags: ['window cleaning', 'AI automation', 'missed calls', 'spring season'],
     featuredImage: 'https://images.unsplash.com/photo-1563453392212-326f5e854473?w=1200&auto=format&fit=crop&q=80',
-    content: windowCleaningAiToolToBookMoreJobs,
   },
   {
     slug: 'flooring-contractor-ai-tool-to-book-more-jobs',
@@ -520,7 +399,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-03',
     tags: ['flooring contractor', 'AI automation', 'lead response', 'estimates'],
     featuredImage: 'https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=1200&auto=format&fit=crop&q=80',
-    content: flooringContractorAiToolToBookMoreJobs,
   },
   {
     slug: 'hvac-tune-up-season-leads',
@@ -531,7 +409,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-03',
     tags: ['HVAC', 'seasonal', 'AI automation', 'missed calls', 'tune-up'],
     featuredImage: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1200&auto=format&fit=crop&q=80',
-    content: hvacTuneUpSeasonLeads,
   },
   {
     slug: 'hvac-winter-emergency-calls-automated-response',
@@ -542,7 +419,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-18',
     tags: ['HVAC', 'winter', 'emergency calls', 'automation', 'no-heat'],
     featuredImage: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1200&auto=format&fit=crop&q=80',
-    content: hvacWinterEmergencyCallsAutomatedResponse,
   },
   {
     slug: 'how-to-get-repeat-customers-service-business',
@@ -553,7 +429,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-03',
     tags: ['repeat customers', 'customer retention', 'service business', 'automation'],
     featuredImage: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&auto=format&fit=crop&q=80',
-    content: howToGetRepeatCustomersServiceBusiness,
   },
   {
     slug: 'how-to-differentiate-your-service-business',
@@ -564,7 +439,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-03',
     tags: ['marketing', 'differentiation', 'service business', 'positioning'],
     featuredImage: 'https://images.unsplash.com/photo-1664575602276-acd073f104c1?w=1200&auto=format&fit=crop&q=80',
-    content: howToDifferentiateYourServiceBusiness,
   },
   {
     slug: 'how-to-set-up-missed-call-text-back',
@@ -575,7 +449,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-03',
     tags: ['automation', 'lead generation', 'missed calls', 'how-to'],
     featuredImage: 'https://images.unsplash.com/photo-1534536281715-e28d76689b4d?w=1200&auto=format&fit=crop&q=80',
-    content: howToSetUpMissedCallTextBack,
   },
   {
     slug: 'how-to-automate-google-review-requests',
@@ -586,7 +459,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-03',
     tags: ['reviews', 'automation', 'google', 'how-to'],
     featuredImage: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&auto=format&fit=crop&q=80',
-    content: howToAutomateGoogleReviewRequests,
   },
   {
     slug: 'how-to-build-lead-follow-up-sequence',
@@ -597,7 +469,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-03',
     tags: ['automation', 'lead generation', 'follow-up', 'how-to'],
     featuredImage: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop&q=80',
-    content: howToBuildLeadFollowUpSequence,
   },
   {
     slug: 'how-to-add-online-booking-service-business',
@@ -608,7 +479,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-03',
     tags: ['booking', 'automation', 'website', 'how-to'],
     featuredImage: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&auto=format&fit=crop&q=80',
-    content: howToAddOnlineBookingServiceBusiness,
   },
   {
     slug: 'how-to-set-up-appointment-reminders',
@@ -619,7 +489,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-03',
     tags: ['automation', 'appointments', 'no-shows', 'how-to'],
     featuredImage: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200&auto=format&fit=crop&q=80',
-    content: howToSetUpAppointmentReminders,
   },
   {
     slug: 'how-to-follow-up-after-estimate',
@@ -630,7 +499,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-03',
     tags: ['sales', 'estimates', 'follow-up', 'how-to'],
     featuredImage: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&auto=format&fit=crop&q=80',
-    content: howToFollowUpAfterEstimate,
   },
   {
     slug: 'how-to-build-referral-program-service-business',
@@ -641,7 +509,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-03',
     tags: ['referrals', 'marketing', 'growth', 'how-to'],
     featuredImage: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&auto=format&fit=crop&q=80',
-    content: howToBuildReferralProgramServiceBusiness,
   },
   {
     slug: 'how-to-write-service-guarantee',
@@ -652,7 +519,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-03',
     tags: ['trust', 'marketing', 'conversion', 'how-to'],
     featuredImage: 'https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=1200&auto=format&fit=crop&q=80',
-    content: howToWriteServiceGuarantee,
   },
   {
     slug: 'how-to-track-leads-service-business',
@@ -663,7 +529,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-03',
     tags: ['marketing', 'lead tracking', 'analytics', 'how-to'],
     featuredImage: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200&auto=format&fit=crop&q=80',
-    content: howToTrackLeadsServiceBusiness,
   },
   {
     slug: 'how-to-handle-price-objections',
@@ -674,7 +539,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-03',
     tags: ['sales', 'pricing', 'objections', 'how-to'],
     featuredImage: 'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=1200&auto=format&fit=crop&q=80',
-    content: howToHandlePriceObjections,
   },
   {
     slug: 'how-ai-books-appointments-service-business',
@@ -685,7 +549,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-03',
     tags: ['AI', 'automation', 'appointment booking', 'how-to'],
     featuredImage: 'https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=1200&auto=format&fit=crop&q=80',
-    content: howAiBooksAppointmentsServiceBusiness,
   },
   {
     slug: 'what-you-need-to-build-an-ai-receptionist-service-business',
@@ -696,7 +559,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-03',
     tags: ['AI', 'automation', 'receptionist', 'how-to'],
     featuredImage: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&auto=format&fit=crop&q=80',
-    content: whatYouNeedToBuildAnAiReceptionistServiceBusiness,
   },
   {
     slug: 'do-you-need-a-crm-service-business',
@@ -707,7 +569,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-03',
     tags: ['CRM', 'automation', 'software', 'how-to'],
     featuredImage: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop&q=80',
-    content: doYouNeedACrmServiceBusiness,
   },
   {
     slug: 'how-to-reactivate-old-customers',
@@ -718,7 +579,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-03',
     tags: ['customer reactivation', 'marketing', 'automation', 'how-to'],
     featuredImage: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&auto=format&fit=crop&q=80',
-    content: howToReactivateOldCustomers,
   },
   {
     slug: 'fence-installation-business-book-more-jobs',
@@ -729,7 +589,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-17',
     tags: ['fence installation', 'AI automation', 'lead response', 'missed calls'],
     featuredImage: 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=1200&auto=format&fit=crop&q=80',
-    content: fenceInstallationBusinessBookMoreJobs,
   },
   {
     slug: 'what-your-website-needs-before-you-run-ads',
@@ -740,7 +599,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-03',
     tags: ['website', 'ads', 'conversion', 'how-to'],
     featuredImage: 'https://images.unsplash.com/photo-1432888622747-4eb9a8f5f989?w=1200&auto=format&fit=crop&q=80',
-    content: whatYourWebsiteNeedsBeforeYouRunAds,
   },
   {
     slug: 'gutter-cleaning-business-book-more-jobs',
@@ -751,7 +609,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-17',
     tags: ['gutter cleaning', 'AI automation', 'seasonal', 'missed calls'],
     featuredImage: 'https://images.unsplash.com/photo-1508873699-8b57b2d4f6b7?w=1200&auto=format&fit=crop&q=80',
-    content: gutterCleaningBusinessBookMoreJobs,
   },
   {
     slug: 'appliance-repair-shop-book-more-jobs',
@@ -762,7 +619,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-17',
     tags: ['appliance repair', 'AI automation', 'missed calls', 'lead response'],
     featuredImage: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&auto=format&fit=crop&q=80',
-    content: applianceRepairShopBookMoreJobs,
   },
   {
     slug: 'how-to-turn-one-time-customers-into-recurring-revenue',
@@ -773,7 +629,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-17',
     tags: ['recurring revenue', 'customer retention', 'automation', 'how-to'],
     featuredImage: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&auto=format&fit=crop&q=80',
-    content: howToTurnOneTimeCustomersIntoRecurringRevenue,
   },
   {
     slug: 'what-to-say-when-customer-says-ill-think-about-it',
@@ -784,7 +639,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-17',
     tags: ['sales', 'objections', 'service business', 'how-to'],
     featuredImage: 'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=1200&auto=format&fit=crop&q=80',
-    content: whatToSayWhenCustomerSaysIllThinkAboutIt,
   },
   {
     slug: 'how-to-reactivate-lapsed-chiropractic-patients',
@@ -795,7 +649,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-18',
     tags: ['chiropractic', 'patient reactivation', 'healthcare', 'automation'],
     featuredImage: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&auto=format&fit=crop&q=80',
-    content: howToReactivateLapsedChiropracticPatients,
   },
   {
     slug: 'how-chiropractors-stop-missing-new-patient-calls',
@@ -806,7 +659,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-18',
     tags: ['chiropractic', 'missed calls', 'healthcare', 'automation', 'lead generation'],
     featuredImage: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1200&auto=format&fit=crop&q=80',
-    content: howChiropractorsStopMissingNewPatientCalls,
   },
   {
     slug: 'how-to-reactivate-lapsed-dental-patients',
@@ -817,7 +669,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-18',
     tags: ['dental', 'patient reactivation', 'healthcare', 'automation'],
     featuredImage: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=1200&auto=format&fit=crop&q=80',
-    content: howToReactivateLapsedDentalPatients,
   },
   {
     slug: 'dental-appointment-reminders-reduce-no-shows',
@@ -828,7 +679,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-18',
     tags: ['dental', 'no-shows', 'healthcare', 'automation', 'appointment reminders'],
     featuredImage: 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=1200&auto=format&fit=crop&q=80',
-    content: dentalAppointmentRemindersReduceNoShows,
   },
   {
     slug: 'how-to-reactivate-lapsed-med-spa-clients',
@@ -839,7 +689,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-18',
     tags: ['med spa', 'client reactivation', 'healthcare', 'automation'],
     featuredImage: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=1200&auto=format&fit=crop&q=80',
-    content: howToReactivateLapsedMedSpaClients,
   },
   {
     slug: 'med-spa-consultation-follow-up-sequence',
@@ -850,7 +699,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-18',
     tags: ['med spa', 'consultation conversion', 'healthcare', 'automation', 'follow-up'],
     featuredImage: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200&auto=format&fit=crop&q=80',
-    content: medSpaConsultationFollowUpSequence,
   },
   {
     slug: 'how-to-reactivate-lapsed-physical-therapy-patients',
@@ -861,7 +709,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-18',
     tags: ['physical therapy', 'patient reactivation', 'healthcare', 'automation'],
     featuredImage: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&auto=format&fit=crop&q=80',
-    content: howToReactivateLapsedPhysicalTherapyPatients,
   },
   {
     slug: 'how-physical-therapy-practices-improve-patient-adherence',
@@ -872,7 +719,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-18',
     tags: ['physical therapy', 'patient adherence', 'healthcare', 'automation'],
     featuredImage: 'https://images.unsplash.com/photo-1573879541250-58ae8b322b40?w=1200&auto=format&fit=crop&q=80',
-    content: howPhysicalTherapyPracticesImprovePatientAdherence,
   },
   {
     slug: 'how-chiropractors-get-more-google-reviews',
@@ -883,7 +729,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-19',
     tags: ['chiropractic', 'google reviews', 'reputation management', 'healthcare', 'automation'],
     featuredImage: 'https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=1200&auto=format&fit=crop&q=80',
-    content: howChiropractorsGetMoreGoogleReviews,
   },
   {
     slug: 'how-dental-practices-capture-more-new-patient-leads',
@@ -894,7 +739,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-19',
     tags: ['dental', 'missed calls', 'lead generation', 'healthcare', 'automation'],
     featuredImage: 'https://images.unsplash.com/photo-1609207807107-5c9d96cacc08?w=1200&auto=format&fit=crop&q=80',
-    content: howDentalPracticesCaptureMoreNewPatientLeads,
   },
   {
     slug: 'how-med-spas-get-more-google-reviews',
@@ -905,7 +749,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-19',
     tags: ['med spa', 'google reviews', 'reputation management', 'healthcare', 'automation'],
     featuredImage: 'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=1200&auto=format&fit=crop&q=80',
-    content: howMedSpasGetMoreGoogleReviews,
   },
   {
     slug: 'how-physical-therapy-practices-capture-new-patient-calls',
@@ -916,7 +759,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-19',
     tags: ['physical therapy', 'missed calls', 'lead generation', 'healthcare', 'automation'],
     featuredImage: 'https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=1200&auto=format&fit=crop&q=80',
-    content: howPhysicalTherapyPracticesCaptureNewPatientCalls,
   },
   {
     slug: 'how-dental-practices-fill-hygiene-schedule-gaps',
@@ -927,7 +769,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-25',
     tags: ['dental', 'patient recall', 'hygiene schedule', 'healthcare', 'automation'],
     featuredImage: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1200&auto=format&fit=crop&q=80',
-    content: howDentalPracticesFillHygieneScheduleGaps,
   },
   {
     slug: 'how-med-spas-capture-after-hours-leads',
@@ -938,7 +779,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-25',
     tags: ['med spa', 'lead generation', 'after-hours', 'healthcare', 'automation'],
     featuredImage: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200&auto=format&fit=crop&q=80',
-    content: howMedSpasCaptureAfterHoursLeads,
   },
   {
     slug: 'how-chiropractic-practices-reduce-cancellations',
@@ -949,7 +789,6 @@ export const posts: BlogPost[] = [
     date: '2026-04-25',
     tags: ['chiropractic', 'cancellations', 'no-shows', 'healthcare', 'automation'],
     featuredImage: 'https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=1200&auto=format&fit=crop&q=80',
-    content: howChiropracticPracticesReduceCancellations,
   },
   {
     slug: 'how-physical-therapy-practices-increase-physician-referrals',
@@ -960,6 +799,5 @@ export const posts: BlogPost[] = [
     date: '2026-04-25',
     tags: ['physical therapy', 'physician referrals', 'healthcare', 'automation', 'communication'],
     featuredImage: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&auto=format&fit=crop&q=80',
-    content: howPhysicalTherapyPracticesIncreasePhysicianReferrals,
   },
 ];

@@ -1,13 +1,31 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Navigation } from '../components/Navigation';
 import { Footer } from '../components/Footer';
 import { JsonLd } from '../components/JsonLd';
 import { posts } from '../content/blog/posts';
+import { loadPostContent } from '../content/blog/loadPostContent';
 
 export function BlogPostPage() {
   const { slug } = useParams<{ slug: string }>();
   const post = posts.find((p) => p.slug === slug);
+  const [content, setContent] = useState<string | null>(null);
+
+  useEffect(() => {
+    let isCurrent = true;
+
+    setContent(null);
+    if (post) {
+      loadPostContent(post.slug).then((html) => {
+        if (isCurrent) setContent(html ?? '');
+      });
+    }
+
+    return () => {
+      isCurrent = false;
+    };
+  }, [post?.slug]);
 
   if (!post) {
     return <Navigate to="/blog" replace />;
@@ -97,10 +115,15 @@ export function BlogPostPage() {
 
       {/* Content */}
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-        <div
-          className="prose prose-lg max-w-none prose-headings:text-[#0f172a] prose-headings:font-bold prose-p:text-[#374151] prose-a:text-[#f97316] prose-strong:text-[#0f172a] prose-blockquote:border-[#f97316] prose-blockquote:text-[#374151] prose-li:text-[#374151]"
-          dangerouslySetInnerHTML={{ __html: post.content }}
-        />
+        {content === null ? (
+          <p className="text-[#64748b]">Loading article...</p>
+        ) : (
+          <div
+            data-blog-content-loaded="true"
+            className="prose prose-lg max-w-none prose-headings:text-[#0f172a] prose-headings:font-bold prose-p:text-[#374151] prose-a:text-[#f97316] prose-strong:text-[#0f172a] prose-blockquote:border-[#f97316] prose-blockquote:text-[#374151] prose-li:text-[#374151]"
+            dangerouslySetInnerHTML={{ __html: content }}
+          />
+        )}
 
         {/* CTA */}
         <div className="mt-16 bg-[#0f172a] rounded-2xl p-8 text-center">
