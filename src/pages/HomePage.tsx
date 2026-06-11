@@ -27,6 +27,8 @@ const organizationSchema = {
   name: 'Wayne AI',
   url: 'https://wayneai.net',
   logo: 'https://wayneai.net/og-image-1200x630.png',
+  telephone: '+1-888-433-6516',
+  sameAs: ['https://www.facebook.com/wayneaiagency'],
   description:
     'AI automation for local service businesses. Capture leads 24/7, book jobs automatically, and never miss another call.',
 };
