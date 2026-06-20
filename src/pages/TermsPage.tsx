@@ -133,6 +133,7 @@ export function TermsPage() {
                 <p className="text-[#0f172a]"><strong>Wayne AI</strong></p>
                 <p className="text-[#374151]">Email: <a href="mailto:wayne@wayneai.net" className="text-[#f97316] hover:underline">wayne@wayneai.net</a></p>
                 <p className="text-[#374151]">Phone: <a href="tel:8884336516" className="text-[#f97316] hover:underline">888-433-6516</a></p>
+                <p className="text-[#374151]">Call or text: <a href="tel:8126153121" className="text-[#f97316] hover:underline">812-615-3121</a></p>
                 <p className="text-[#374151]">Location: Evansville, Indiana</p>
               </div>
             </section>
