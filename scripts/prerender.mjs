@@ -47,6 +47,7 @@ function buildRouteList() {
     '/demo',
     '/blog',
     '/privacy',
+    '/terms',
     '/booking',
     '/lp/hvac-automation',
     '/lp/plumbing-automation',

@@ -85,6 +85,12 @@ export function PrivacyPage() {
                 <li>We never sell or share customer phone numbers with third parties for marketing</li>
                 <li>Help is available by texting HELP or calling 888-433-6516</li>
               </ul>
+              <p className="text-[#374151] mt-4 font-semibold">
+                No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. All categories of information described in this policy exclude text messaging originator opt-in data and consent; text messaging opt-in data and consent will not be shared with any third parties.
+              </p>
+              <p className="text-[#374151] mt-4">
+                Wayne AI also sends one-to-one text messages in connection with our own web design services — for example, sharing a preview website we have built for a business, follow-ups on that conversation, and appointment notifications. The same opt-out (STOP), help (HELP), frequency, and rate terms above apply to those messages.
+              </p>
             </section>
 
             <section>

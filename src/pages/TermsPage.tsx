@@ -76,6 +76,21 @@ export function TermsPage() {
             </section>
 
             <section>
+              <h2 className="text-2xl font-bold text-[#0f172a] mb-4">SMS Messaging Terms (Wayne AI Messaging Program)</h2>
+              <p className="text-[#374151] mb-4">
+                Wayne AI sends one-to-one SMS text messages to business owners and prospective and current customers in connection with our web design services — sharing a preview website we have built, follow-ups in an ongoing conversation, and appointment or booking notifications.
+              </p>
+              <ul className="list-disc pl-6 space-y-2 text-[#374151]">
+                <li><strong>Opt-in:</strong> You may receive messages after engaging with us directly (by conversation, phone, web form, or requesting information about our services)</li>
+                <li><strong>Opt-out:</strong> Cancel at any time by replying STOP; we will confirm your unsubscribe status and send no further messages. Reply START to rejoin.</li>
+                <li><strong>Help:</strong> Reply HELP, or contact <a href="mailto:wayne@wayneai.net" className="text-[#f97316] hover:underline">wayne@wayneai.net</a> or 888-433-6516</li>
+                <li>Carriers are not liable for delayed or undelivered messages</li>
+                <li>Message and data rates may apply; message frequency varies</li>
+                <li>Mobile information and text messaging opt-in data are never shared with third parties for marketing purposes — see our <a href="/privacy" className="text-[#f97316] hover:underline">Privacy Policy</a></li>
+              </ul>
+            </section>
+
+            <section>
               <h2 className="text-2xl font-bold text-[#0f172a] mb-4">Messaging Compliance</h2>
               <p className="text-[#374151] mb-4">
                 Messages sent through the Services honor opt-out requests (STOP, UNSUBSCRIBE, CANCEL) immediately. You agree not to use the Services to send unsolicited messages, and you are responsible for the content of campaigns sent on your behalf at your direction. We may refuse or halt any messaging that we reasonably believe violates carrier rules or applicable law.
