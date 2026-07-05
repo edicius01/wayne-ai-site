@@ -78,6 +78,14 @@ import howDentalPracticesFillHygieneScheduleGaps from './how-dental-practices-fi
 import howMedSpasCaptureAfterHoursLeads from './how-med-spas-capture-after-hours-leads.html?raw';
 import howChiropracticPracticesReduceCancellations from './how-chiropractic-practices-reduce-cancellations.html?raw';
 import howPhysicalTherapyPracticesIncreasePhysicianReferrals from './how-physical-therapy-practices-increase-physician-referrals.html?raw';
+import garageDoorCompanyStopLosingAfterHoursCalls from './garage-door-company-stop-losing-after-hours-calls.html?raw';
+import garageDoorCompanyRepeatCustomersMaintenance from './garage-door-company-repeat-customers-maintenance.html?raw';
+import autoRepairShopStopMissingCalls from './auto-repair-shop-stop-missing-calls.html?raw';
+import autoRepairServiceReminderSystemRepeatCustomers from './auto-repair-service-reminder-system-repeat-customers.html?raw';
+import lawnCareWinSpringRushFastResponse from './lawn-care-win-spring-rush-fast-response.html?raw';
+import lawnCareRecurringRevenueRetention from './lawn-care-recurring-revenue-retention.html?raw';
+import pestControlFirstToAnswerWins from './pest-control-first-to-answer-wins.html?raw';
+import pestControlRecurringPlansPredictableRevenue from './pest-control-recurring-plans-predictable-revenue.html?raw';
 
 export interface BlogPost {
   slug: string;
@@ -92,6 +100,94 @@ export interface BlogPost {
 }
 
 export const posts: BlogPost[] = [
+  {
+    slug: 'garage-door-company-stop-losing-after-hours-calls',
+    title: "How Garage Door Companies Can Stop Losing After-Hours Repair Calls",
+    description: "Broken-spring calls cluster at night and on weekends. Here's how garage door companies answer every after-hours call — or text back instantly — and win the job.",
+    metaTitle: "Stop Losing After-Hours Garage Door Calls | Wayne AI",
+    author: "Wayne AI",
+    date: '2026-07-05',
+    tags: ["garage door", "missed calls", "automation"],
+    featuredImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&auto=format&fit=crop&q=80',
+    content: garageDoorCompanyStopLosingAfterHoursCalls,
+  },
+  {
+    slug: 'garage-door-company-repeat-customers-maintenance',
+    title: "How Garage Door Companies Turn One Repair Into Years of Business",
+    description: "Garage doors get replaced once a decade — unless you give customers a reason to return. Tune-up reminders, review requests, and referral asks that run themselves.",
+    metaTitle: "Turn One Garage Door Repair Into Years of Work | Wayne AI",
+    author: "Wayne AI",
+    date: '2026-07-05',
+    tags: ["garage door", "customer retention", "automation"],
+    featuredImage: 'https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=1200&auto=format&fit=crop&q=80',
+    content: garageDoorCompanyRepeatCustomersMaintenance,
+  },
+  {
+    slug: 'auto-repair-shop-stop-missing-calls',
+    title: "How Auto Repair Shops Can Stop Missing Calls While They're Under the Hood",
+    description: "Full bays mean missed calls — and missed calls mean customers booking elsewhere. How busy auto repair shops answer every call without hiring front-desk staff.",
+    metaTitle: "Stop Missing Calls at Your Auto Repair Shop | Wayne AI",
+    author: "Wayne AI",
+    date: '2026-07-05',
+    tags: ["auto repair", "missed calls", "automation"],
+    featuredImage: 'https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=1200&auto=format&fit=crop&q=80',
+    content: autoRepairShopStopMissingCalls,
+  },
+  {
+    slug: 'auto-repair-service-reminder-system-repeat-customers',
+    title: "The Service Reminder System That Keeps Auto Repair Bays Full Year-Round",
+    description: "Every car you've fixed is future work. How auto repair shops use service reminders, win-back messages, and review requests to keep bays full year-round.",
+    metaTitle: "Auto Repair Service Reminders That Fill Bays | Wayne AI",
+    author: "Wayne AI",
+    date: '2026-07-05',
+    tags: ["auto repair", "customer retention", "automation"],
+    featuredImage: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1200&auto=format&fit=crop&q=80',
+    content: autoRepairServiceReminderSystemRepeatCustomers,
+  },
+  {
+    slug: 'lawn-care-win-spring-rush-fast-response',
+    title: "How Lawn Care Businesses Win the Spring Rush Before Competitors Call Back",
+    description: "In spring, the first lawn company to respond usually wins the yard. Here's how to answer every quote request instantly — even from the mower seat.",
+    metaTitle: "Win the Spring Rush: Lawn Care Speed-to-Lead | Wayne AI",
+    author: "Wayne AI",
+    date: '2026-07-05',
+    tags: ["lawn care", "lead generation", "automation"],
+    featuredImage: 'https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?w=1200&auto=format&fit=crop&q=80',
+    content: lawnCareWinSpringRushFastResponse,
+  },
+  {
+    slug: 'lawn-care-recurring-revenue-retention',
+    title: "Turning One-Time Mows Into Recurring Lawn Care Revenue",
+    description: "One-time mows keep you on a treadmill. Learn how to turn first cuts into season contracts, timed upsells, and reviews that fill the whole street.",
+    metaTitle: "Turn One-Time Mows Into Recurring Revenue | Wayne AI",
+    author: "Wayne AI",
+    date: '2026-07-05',
+    tags: ["lawn care", "customer retention", "recurring revenue"],
+    featuredImage: 'https://images.unsplash.com/photo-1558904541-efa843a96f01?w=1200&auto=format&fit=crop&q=80',
+    content: lawnCareRecurringRevenueRetention,
+  },
+  {
+    slug: 'pest-control-first-to-answer-wins',
+    title: "Why the First Pest Control Company to Answer Usually Wins the Job",
+    description: "Pest emergencies go to the first company that responds. How missed-call text-back and after-hours capture stop panicked callers from dialing your competitor.",
+    metaTitle: "First Pest Control Company to Answer Wins | Wayne AI",
+    author: "Wayne AI",
+    date: '2026-07-05',
+    tags: ["pest control", "missed calls", "lead response"],
+    featuredImage: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=1200&auto=format&fit=crop&q=80',
+    content: pestControlFirstToAnswerWins,
+  },
+  {
+    slug: 'pest-control-recurring-plans-predictable-revenue',
+    title: "How Pest Control Companies Build Predictable Revenue With Recurring Plans",
+    description: "One-off jobs mean feast-or-famine. How to convert first treatments into quarterly plans, automate re-service reminders, and win back lapsed pest control accounts.",
+    metaTitle: "Recurring Revenue Plans for Pest Control | Wayne AI",
+    author: "Wayne AI",
+    date: '2026-07-05',
+    tags: ["pest control", "recurring revenue", "customer retention"],
+    featuredImage: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=1200&auto=format&fit=crop&q=80',
+    content: pestControlRecurringPlansPredictableRevenue,
+  },
   {
     slug: 'the-tool-plumbers-use-to-book-jobs-while-they-sleep',
     title: 'The One Tool Plumbers Are Quietly Adding to Their Websites That Books Jobs While They Sleep',
