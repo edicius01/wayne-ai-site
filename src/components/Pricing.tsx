@@ -9,7 +9,7 @@ export function Pricing() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-3xl sm:text-4xl font-bold text-[#0f172a] mb-4">
-            Three Ways to Work With Us
+            Four Ways to Work With Us
           </h2>
           <p className="text-lg text-[#1f2937] max-w-3xl mx-auto">
             Choose the level that fits where your business is today - you can always upgrade as you grow.
@@ -36,7 +36,7 @@ export function Pricing() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 px-2 md:px-0">
+        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6 px-2 md:px-0">
           {tiers.map((tier, index) => (
             <div
               key={index}

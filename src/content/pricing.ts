@@ -61,6 +61,21 @@ export const pricingTiers: PricingTier[] = [
     ],
     bestFor: '4+ truck operations replacing front desk payroll',
   },
+  {
+    name: 'Front Office + Growth',
+    price: 1997,
+    paysFor: '~4 recovered jobs/mo',
+    badge: 'NEW',
+    description: 'Growth Managed For You',
+    features: [
+      { text: 'Everything in The AI Front Desk', bold: true },
+      { text: 'Ad Management + Lead Generation', bold: true },
+      { text: 'Monthly Strategy Review', bold: true, subtext: 'your numbers, what to tune next' },
+      { text: 'Priority Support Line', bold: true },
+      { text: '500 Mins Included*', bold: true, label: 'Voice AI Minutes' },
+    ],
+    bestFor: 'Established operations that want growth handled end-to-end, not just calls answered',
+  },
 ];
 
 // Per-minute charge for voice AI usage beyond a tier's included allowance.
