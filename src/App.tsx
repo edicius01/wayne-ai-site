@@ -18,6 +18,10 @@ const DentalReactivationPage = lazy(() => import('./pages/lp/DentalReactivationP
 const PhysicalTherapyReactivationPage = lazy(() => import('./pages/lp/PhysicalTherapyReactivationPage').then(m => ({ default: m.PhysicalTherapyReactivationPage })));
 const ElectricianAutomationPage = lazy(() => import('./pages/lp/ElectricianAutomationPage').then(m => ({ default: m.ElectricianAutomationPage })));
 const AiAuditPage = lazy(() => import('./pages/lp/AiAuditPage').then(m => ({ default: m.AiAuditPage })));
+const GarageDoorAutomationPage = lazy(() => import('./pages/lp/GarageDoorAutomationPage').then(m => ({ default: m.GarageDoorAutomationPage })));
+const AutoRepairAutomationPage = lazy(() => import('./pages/lp/AutoRepairAutomationPage').then(m => ({ default: m.AutoRepairAutomationPage })));
+const LawnCareAutomationPage = lazy(() => import('./pages/lp/LawnCareAutomationPage').then(m => ({ default: m.LawnCareAutomationPage })));
+const PestControlAutomationPage = lazy(() => import('./pages/lp/PestControlAutomationPage').then(m => ({ default: m.PestControlAutomationPage })));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -48,6 +52,10 @@ function App() {
         <Route path="/lp/physical-therapy-reactivation" element={<PhysicalTherapyReactivationPage />} />
         <Route path="/lp/electrician-automation" element={<ElectricianAutomationPage />} />
         <Route path="/lp/ai-audit" element={<AiAuditPage />} />
+        <Route path="/lp/garage-door-automation" element={<GarageDoorAutomationPage />} />
+        <Route path="/lp/auto-repair-automation" element={<AutoRepairAutomationPage />} />
+        <Route path="/lp/lawn-care-automation" element={<LawnCareAutomationPage />} />
+        <Route path="/lp/pest-control-automation" element={<PestControlAutomationPage />} />
       </Routes>
       </Suspense>
     </Router>
