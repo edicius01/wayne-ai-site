@@ -3,6 +3,40 @@ import { useState } from 'react';
 
 const objections = [
   {
+    question: "Can't I just get one of those $49/mo AI receptionist apps?",
+    answer: (
+      <>
+        <p className="mb-4">You can — and for some businesses they're fine. But know what you're actually buying:</p>
+        <ul className="space-y-2 mb-4">
+          <li className="flex items-start gap-2">
+            <span className="text-red-500 mt-1">✗</span>
+            <span className="text-[#374151]"><span className="font-semibold">You set it up and tune it yourself</span> — owners report 5-10 hours to launch, then ongoing babysitting</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-red-500 mt-1">✗</span>
+            <span className="text-[#374151]"><span className="font-semibold">You handle carrier registration yourself</span> — US carriers block 100% of unregistered business texting. Most owners find out when their texts silently stop delivering.</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-red-500 mt-1">✗</span>
+            <span className="text-[#374151]"><span className="font-semibold">It's a point tool</span> — not wired into your calendar, reviews, follow-up sequences, or website</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-red-500 mt-1">✗</span>
+            <span className="text-[#374151]"><span className="font-semibold">Nobody guarantees you anything</span> — if it books zero jobs, that's your problem</span>
+          </li>
+        </ul>
+        <div className="bg-green-50 border-2 border-green-200 rounded-lg p-4">
+          <p className="text-[#0f172a] mb-2">
+            We're not selling you the robot. We install and run your <span className="font-bold">entire front office</span> — call capture, booking, reviews, long-term follow-up — register your texting with the carriers so messages actually land, and back it with <span className="font-bold text-green-700">2 booked jobs in 30 days or your money back</span>.
+          </p>
+          <p className="text-lg font-bold text-green-700">
+            The tool is a chore. We sell the result.
+          </p>
+        </div>
+      </>
+    ),
+  },
+  {
     question: "What if I already have a website?",
     answer: (
       <>
@@ -52,7 +86,7 @@ const objections = [
         </ul>
         <div className="bg-green-50 border-2 border-green-200 rounded-lg p-4">
           <p className="text-[#0f172a] mb-2">
-            We've spent <span className="font-bold text-green-700">1,000+ hours</span> building this specifically for plumbers. You get it installed in 7 days, and it works like you hired a full-time receptionist.
+            We've spent <span className="font-bold text-green-700">1,000+ hours</span> building this specifically for plumbers. You get it installed in 7 days, and it works like a full-time front desk — without the payroll.
           </p>
           <p className="text-lg font-bold text-green-700">
             The real question: What's your time worth?

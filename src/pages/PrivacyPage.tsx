@@ -14,7 +14,7 @@ export function PrivacyPage() {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Privacy Policy | Wayne AI</title>
-        <meta name="description" content="How Wayne AI collects, uses, and protects your information across our AI receptionist and communication services." />
+        <meta name="description" content="How Wayne AI collects, uses, and protects your information across our AI front office and communication services." />
         <link rel="canonical" href="https://wayneai.net/privacy" />
         <meta property="og:url" content="https://wayneai.net/privacy" />
       </Helmet>
@@ -33,7 +33,7 @@ export function PrivacyPage() {
             <section>
               <h2 className="text-2xl font-bold text-[#0f172a] mb-4">Introduction</h2>
               <p className="text-[#374151] mb-4">
-                Wayne AI ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our services, including our AI-powered receptionist and communication systems.
+                Wayne AI ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our services, including our AI-powered front office and communication systems.
               </p>
             </section>
 
@@ -58,7 +58,7 @@ export function PrivacyPage() {
             <section>
               <h2 className="text-2xl font-bold text-[#0f172a] mb-4">How We Use Your Information</h2>
               <ul className="list-disc pl-6 space-y-2 text-[#374151]">
-                <li>Provide and maintain our AI receptionist and automation services</li>
+                <li>Provide and maintain our AI front office and automation services</li>
                 <li>Send automated text messages and call responses on your behalf</li>
                 <li>Schedule appointments and manage your calendar</li>
                 <li>Process payments and send billing statements</li>

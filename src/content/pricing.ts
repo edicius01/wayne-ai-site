@@ -51,7 +51,7 @@ export const pricingTiers: PricingTier[] = [
     price: 1497,
     paysFor: '~3 recovered jobs/mo',
     badge: 'PREMIUM',
-    description: 'Replace a Human Receptionist',
+    description: 'Answer Every Call, 24/7',
     features: [
       { text: 'Voice AI (Answers Phone 24/7)', bold: true },
       { text: 'Conversion Site Included', bold: true },

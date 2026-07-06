@@ -56,8 +56,8 @@ export function Hero() {
             </h1>
 
             <p className="mx-auto mb-10 max-w-xl text-lg leading-relaxed text-[#94a3b8] lg:mx-0 sm:text-xl">
-              A <span className="font-semibold text-white">24/7 system</span> that answers instantly, books the
-              job, and turns missed calls into <span className="font-semibold text-[#f97316]">scheduled revenue</span> —
+              A <span className="font-semibold text-white">done-for-you front office</span> that answers instantly
+              24/7, books the job, and turns missed calls into <span className="font-semibold text-[#f97316]">scheduled revenue</span> —
               while you stay on the tools.
             </p>
 
@@ -81,6 +81,13 @@ export function Hero() {
                 Call/Text: 888-433-6516
               </a>
             </div>
+
+            <p className="mb-8 flex items-center justify-center gap-2 text-sm font-medium text-[#94a3b8] lg:justify-start">
+              <svg className="h-4 w-4 flex-shrink-0 text-[#10b981]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+              </svg>
+              <span><span className="font-semibold text-white">2 booked jobs in your first 30 days</span> — or your money back</span>
+            </p>
 
             <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 lg:justify-start">
               <span className="text-xs font-semibold uppercase tracking-wider text-[#64748b]">Trusted by pros in</span>

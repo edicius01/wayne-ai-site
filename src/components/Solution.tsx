@@ -30,10 +30,10 @@ export function Solution() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-3xl sm:text-4xl font-bold text-[#0f172a] mb-4">
-            The receptionist that never sleeps
+            The front office that never sleeps
           </h2>
           <p className="text-lg text-[#1f2937] max-w-3xl mx-auto">
-            Wayne AI responds to <span className="font-bold text-[#f97316]">every missed call</span> with an instant text, captures their information, and guides them straight into your booking calendar - automatically.
+            Wayne AI responds to <span className="font-bold text-[#f97316]">every missed call</span> with an instant text, captures their information, and guides them straight into your booking calendar - automatically. <span className="font-semibold text-[#0f172a]">We build it, integrate it, and run it for you</span> — you just show up to more booked jobs.
           </p>
         </div>
 

@@ -6,7 +6,7 @@ const features = [
     icon: <ShieldCheck className="w-8 h-8" strokeWidth={2} />,
     title: 'Missed-Call Safety Net',
     description: 'If you miss the call, they get a text immediately so you stay in the game and get the booking.',
-    benefits: ['Zero missed opportunities', 'Responds in under 30 seconds', 'Works 24/7, even after hours'],
+    benefits: ['Zero missed opportunities', 'Responds in under 30 seconds', 'Works 24/7, even after hours', 'Carrier-registered texting — your messages actually deliver'],
   },
   {
     icon: <Zap className="w-8 h-8" strokeWidth={2} />,

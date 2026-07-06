@@ -36,7 +36,7 @@ export function Tier3Callout() {
               THE AI FRONT DESK
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              🎙️ Your AI Receptionist Doesn't Just Text Back - It Answers the Phone Like a Real Person
+              🎙️ It Doesn't Just Text Back - It Answers Your Phone Like a Real Person
             </h2>
             <p className="text-xl text-gray-300">
               Here's what it does:
