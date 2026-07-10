@@ -120,20 +120,8 @@ netlify deploy --prod
 - Privacy policy is A2P 10DLC compliant
 
 ## Important: Booking Page Calendar
-The `/booking` page has a placeholder for your calendar. To embed your actual booking calendar:
-
-1. Open `src/pages/BookingPage.tsx`
-2. Find the comment that says `<!-- To embed your actual calendar -->`
-3. Replace the placeholder div with an iframe pointing to your booking URL
-
-Example:
-```tsx
-<iframe
-  src="https://book.wayneai.net/home"
-  width="100%"
-  height="600"
-  frameBorder="0"
-  title="Book a Strategy Call"
-  className="rounded-lg"
-/>
-```
+The `/booking` page embeds the Wayne CRM native booking widget
+(`/widget/booking?slug=wayneai-site` on wayne-crm-production.up.railway.app)
+plus an SMS opt-in call-back form — all consent language is prerendered into
+static HTML for A2P 10DLC CTA review. Site-wide "Book a Demo" CTAs point to
+`/booking/` (the old GHL calendar at book.wayneai.net is retired).

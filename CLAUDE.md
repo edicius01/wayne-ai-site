@@ -148,7 +148,7 @@ site/
 ## External Integrations
 
 ### GoHighLevel (GHL)
-- CRM, forms, booking calendar (`book.wayneai.net`), funnels — NOT blog
+- SMS bridge only — forms/booking/CRM cut over to Wayne CRM; `book.wayneai.net` retired, all booking CTAs point to `/booking/` (native CRM widget)
 - Location ID: `qn3C6gimURSVaujVaKiz`
 - API base: `https://services.leadconnectorhq.com/`
 - Header: `Authorization: Bearer {token}` + `Version: 2021-07-28`

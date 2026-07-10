@@ -63,7 +63,7 @@ export function Hero() {
 
             <div className="mb-10 flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
               <a
-                href="https://book.wayneai.net"
+                href="/booking/"
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#f97316] px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-[#f97316]/25 transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#ea580c] hover:shadow-xl hover:shadow-[#f97316]/30"
               >
                 <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
