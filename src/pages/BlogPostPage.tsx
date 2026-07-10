@@ -112,7 +112,7 @@ export function BlogPostPage() {
           </p>
           <p className="text-[#64748b] text-sm mb-6">No pitch. No contract. Just proof it works.</p>
           <a
-            href="https://book.wayneai.net"
+            href="/booking/"
             className="inline-flex items-center gap-2 bg-[#f97316] hover:bg-[#ea580c] text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 hover:shadow-xl hover:shadow-[#f97316]/25"
           >
             Book a Free Demo

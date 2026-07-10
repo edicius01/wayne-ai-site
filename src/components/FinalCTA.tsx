@@ -16,7 +16,7 @@ export function FinalCTA() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://book.wayneai.net"
+              href="/booking/"
               className="inline-flex items-center justify-center gap-2 bg-[#f97316] hover:bg-[#ea580c] text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all duration-200 hover:shadow-xl"
             >
               Book a Quick Fit Call

@@ -105,7 +105,7 @@ export function Pricing() {
                 </div>
 
                 <a
-                  href="https://book.wayneai.net/home"
+                  href="/booking/"
                   className={`block w-full text-center font-semibold py-4 rounded-lg transition-all duration-200 ${
                     tier.badge === 'MOST POPULAR'
                       ? 'bg-[#f97316] hover:bg-[#ea580c] text-white shadow-lg hover:shadow-xl'

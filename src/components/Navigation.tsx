@@ -63,7 +63,7 @@ export function Navigation() {
 
           {/* 3. CTA BUTTON (Desktop) */}
           <a
-            href="https://book.wayneai.net/home"
+            href="/booking/"
             className="hidden md:inline-flex bg-[#f97316] hover:bg-[#ea580c] text-white font-semibold px-6 py-2.5 rounded-lg transition-all duration-200 hover:shadow-lg"
           >
             Book a Demo
@@ -103,7 +103,7 @@ export function Navigation() {
             <Link to="/blog" className="text-left text-[#334155] font-medium py-2" onClick={() => setIsMobileMenuOpen(false)}>Blog</Link>
             
             <a
-              href="https://book.wayneai.net/home"
+              href="/booking/"
               className="block w-full bg-[#f97316] hover:bg-[#ea580c] text-white font-semibold px-6 py-3 rounded-lg text-center transition-all duration-200"
               onClick={() => setIsMobileMenuOpen(false)}
             >
