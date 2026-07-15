@@ -51,15 +51,15 @@ export const pricingTiers: PricingTier[] = [
     price: 1497,
     paysFor: '~3 recovered jobs/mo',
     badge: 'PREMIUM',
-    description: 'Replace a Human Receptionist',
+    description: 'Your Phone Line, Handled',
     features: [
-      { text: 'Voice AI (Answers Phone 24/7)', bold: true },
+      { text: 'Managed AI Phone Line (24/7 Missed-Call Capture)', bold: true },
       { text: 'Conversion Site Included', bold: true },
       { text: 'Auto-Review Engine', bold: true },
-      { text: 'Advanced + Voice Follow-Up', bold: true },
-      { text: '250 Mins Included*', bold: true, label: 'Voice AI Minutes' },
+      { text: 'Advanced Follow-Up + Monthly Call-Log Proof', bold: true },
+      { text: 'Early Access — 250 Mins at Launch*', bold: true, label: 'Voice AI Minutes' },
     ],
-    bestFor: '4+ truck operations replacing front desk payroll',
+    bestFor: '4+ truck operations that want the phone handled end to end',
   },
 ];
 
