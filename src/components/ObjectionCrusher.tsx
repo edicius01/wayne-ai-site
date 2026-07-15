@@ -52,7 +52,7 @@ const objections = [
         </ul>
         <div className="bg-green-50 border-2 border-green-200 rounded-lg p-4">
           <p className="text-[#0f172a] mb-2">
-            We've spent <span className="font-bold text-green-700">1,000+ hours</span> building this specifically for plumbers. You get it installed in 7 days, and it works like you hired a full-time receptionist.
+            We build and run this system ourselves — <span className="font-bold text-green-700">it answers our own business line</span> before it ever touches yours. You get it installed in 7 days, with a human on the hook when something needs fixing.
           </p>
           <p className="text-lg font-bold text-green-700">
             The real question: What's your time worth?
@@ -74,7 +74,7 @@ const objections = [
           <div className="bg-white rounded-lg p-4">
             <p className="font-bold text-[#0f172a] mb-2">Why we're confident:</p>
             <p className="text-[#374151]">
-              In our beta tests, the average shop caught <span className="font-bold">4-7 jobs</span> in the first 30 days. If you're getting calls and we're set up correctly, this works.
+              The jobs this catches are calls you're <span className="font-bold">already getting and already losing</span> — the system just answers them in seconds instead of never. If your phone rings and we're set up correctly, this works. That's why we can afford to put a refund behind it.
             </p>
           </div>
         </div>

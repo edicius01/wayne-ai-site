@@ -1,4 +1,4 @@
-import { PhoneCall, MessageCircleQuestion, CalendarPlus, TriangleAlert, Handshake } from 'lucide-react';
+import { PhoneCall, MessageSquareText, CalendarPlus, ClipboardCheck, Handshake } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 export function Tier3Callout() {
@@ -7,23 +7,23 @@ export function Tier3Callout() {
   const features = [
     {
       icon: <PhoneCall className="w-6 h-6" strokeWidth={2} />,
-      title: 'Picks up in under 2 rings',
-      description: '(even at 2 AM on a Sunday)',
+      title: 'Catches every missed call',
+      description: '(even at 2 AM on a Sunday — the text-back goes out in seconds)',
     },
     {
-      icon: <MessageCircleQuestion className="w-6 h-6" strokeWidth={2} />,
-      title: 'Qualifies the lead',
-      description: '"Is this an emergency? What seems to be the issue?"',
+      icon: <MessageSquareText className="w-6 h-6" strokeWidth={2} />,
+      title: 'Texts from the number they just dialed',
+      description: 'Not a third-party number your customer has never seen — your line answers',
     },
     {
       icon: <CalendarPlus className="w-6 h-6" strokeWidth={2} />,
       title: 'Books the appointment',
-      description: 'Directly into your calendar - no back-and-forth',
+      description: 'A real booking link, straight onto your calendar - no back-and-forth',
     },
     {
-      icon: <TriangleAlert className="w-6 h-6" strokeWidth={2} />,
-      title: 'Knows when to escalate',
-      description: 'Flood/gas leak/emergency → instant transfer to your cell or 911 direction',
+      icon: <ClipboardCheck className="w-6 h-6" strokeWidth={2} />,
+      title: 'Logs the proof',
+      description: 'Every call caught shows up in your dashboard — jobs saved is a number, not a vibe',
     },
   ];
 
@@ -36,10 +36,10 @@ export function Tier3Callout() {
               THE AI FRONT DESK
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              🎙️ Your AI Receptionist Doesn't Just Text Back - It Answers the Phone Like a Real Person
+              📞 Every Call You Miss Gets Answered in Seconds — By Text, From Your Own Number
             </h2>
             <p className="text-xl text-gray-300">
-              Here's what it does:
+              Here's what it does, live, today:
             </p>
           </div>
 
@@ -71,17 +71,21 @@ export function Tier3Callout() {
                 <Handshake className="w-6 h-6 text-white" strokeWidth={2} />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-white mb-2">🛡️ Human Handoff Guarantee</h3>
+                <h3 className="text-xl font-bold text-white mb-2">🛡️ Proof Over Promises</h3>
                 <p className="text-white/90">
-                  If the AI gets confused twice in a row, it doesn't trap the customer in a loop. It says:{' '}
-                  <span className="italic">"I want to make sure I get this right. Let me have [Your Name] call you back ASAP. What's the best number?"</span>
+                  Full voice answering — an AI that picks up and talks — is in development, and AI Front Desk
+                  customers get it first. We don't sell it until you can hear it. What you buy today is already
+                  running on our own business line:{' '}
+                  <a href="/demo" className="underline decoration-[#f97316] underline-offset-4 font-semibold">
+                    call it, hang up, and watch it text you back
+                  </a>.
                 </p>
               </div>
             </div>
 
             <div className="border-t border-white/20 pt-6">
               <p className="text-xl font-bold text-white">
-                Translation: You get 24/7 coverage without the risk of losing a customer to a clunky robot.
+                Translation: 24/7 coverage of every missed call — and zero risk of a half-baked robot answering for your business.
               </p>
             </div>
           </div>

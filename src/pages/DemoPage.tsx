@@ -7,16 +7,16 @@ import { InteractiveDemo } from '../components/InteractiveDemo';
 import { useState } from 'react';
 
 export function DemoPage() {
-  const [activeDemo, setActiveDemo] = useState<'missed-call' | 'web-lead' | 'voice-ai'>('missed-call');
+  const [activeDemo, setActiveDemo] = useState<'missed-call' | 'web-lead' | 'live'>('missed-call');
 
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>See Wayne AI in Action | Live Demos</title>
-        <meta name="description" content="Watch Wayne AI handle missed calls, web leads, and phone calls automatically — text-back, follow-up, and AI voice answering in real time." />
+        <meta name="description" content="Watch Wayne AI handle missed calls and web leads automatically — then call our real line and trigger the missed-call text-back yourself." />
         <link rel="canonical" href="https://wayneai.net/demo" />
         <meta property="og:title" content="See Wayne AI in Action | Live Demos" />
-        <meta property="og:description" content="Watch Wayne AI handle missed calls, web leads, and phone calls automatically — in real time." />
+        <meta property="og:description" content="Watch Wayne AI handle missed calls and web leads automatically — then call our real line and trigger it yourself." />
         <meta property="og:url" content="https://wayneai.net/demo" />
         <meta property="og:image" content="https://wayneai.net/og-image-1200x630.png" />
       </Helmet>
@@ -29,7 +29,7 @@ export function DemoPage() {
               See Wayne AI in Action
             </h1>
             <p className="text-xl text-[#374151] max-w-3xl mx-auto">
-              Watch how our system responds to missed calls, web leads, and phone calls - all automatically.
+              Watch how our system responds to missed calls and web leads - then call our real line and trigger it yourself.
             </p>
           </div>
 
@@ -56,14 +56,14 @@ export function DemoPage() {
               Web Lead → Follow-Up
             </button>
             <button
-              onClick={() => setActiveDemo('voice-ai')}
+              onClick={() => setActiveDemo('live')}
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
-                activeDemo === 'voice-ai'
+                activeDemo === 'live'
                   ? 'bg-[#f97316] text-white shadow-lg'
                   : 'bg-white text-[#0f172a] border-2 border-gray-200 hover:border-[#f97316]'
               }`}
             >
-              AI Phone Answering
+              Try It Live — Call Us
             </button>
           </div>
 
@@ -142,116 +142,53 @@ export function DemoPage() {
             </div>
           )}
 
-          {activeDemo === 'voice-ai' && (
+          {activeDemo === 'live' && (
             <div className="bg-gradient-to-br from-[#0f172a] to-[#1e293b] rounded-2xl p-8 md:p-12 text-white">
-              <h2 className="text-3xl font-bold mb-8 text-center">
-                AI Voice Receptionist (Tier 3 Only)
+              <h2 className="text-3xl font-bold mb-4 text-center">
+                Don't Watch a Demo — Trigger One
               </h2>
-              
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="w-12 h-12 bg-[#f97316] rounded-full flex items-center justify-center">
-                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                      </svg>
-                    </div>
-                    <h3 className="text-xl font-bold">Sample Call #1: Routine Inquiry</h3>
-                  </div>
+              <p className="text-xl text-gray-300 text-center mb-10 max-w-2xl mx-auto">
+                This isn't a simulation. That's our real business line, running the same missed-call
+                system you'd get.
+              </p>
 
-                  <div className="space-y-4">
-                    <div className="bg-white/5 rounded-lg p-4">
-                      <p className="text-sm text-[#f97316] mb-2">Customer:</p>
-                      <p>"Hi, I need a plumber for a leaky faucet."</p>
-                    </div>
+              <div className="text-center mb-10">
+                <a
+                  href="tel:+18126123105"
+                  className="inline-block bg-[#f97316] text-white text-3xl sm:text-4xl font-black tracking-wide px-10 py-6 rounded-2xl shadow-lg hover:bg-[#ea6c0c] transition-colors duration-200"
+                >
+                  (812) 612-3105
+                </a>
+              </div>
 
-                    <div className="bg-[#f97316]/20 rounded-lg p-4">
-                      <p className="text-sm text-[#f97316] mb-2">AI:</p>
-                      <p>"I can help with that! Is this an emergency or can we schedule it for later this week?"</p>
-                    </div>
-
-                    <div className="bg-white/5 rounded-lg p-4">
-                      <p className="text-sm text-[#f97316] mb-2">Customer:</p>
-                      <p>"It's not urgent. Maybe Thursday?"</p>
-                    </div>
-
-                    <div className="bg-[#f97316]/20 rounded-lg p-4">
-                      <p className="text-sm text-[#f97316] mb-2">AI:</p>
-                      <p>"Great! I have 10am and 2pm available Thursday. Which works better for you?"</p>
-                    </div>
-
-                    <div className="bg-green-500/20 rounded-lg p-4 border border-green-500/40">
-                      <p className="font-bold text-green-300 mb-1">✓ Appointment Booked</p>
-                      <p className="text-sm">Call duration: 1min 23sec</p>
-                    </div>
-                  </div>
+              <div className="grid md:grid-cols-3 gap-6 mb-10">
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+                  <div className="w-10 h-10 bg-[#f97316] rounded-full flex items-center justify-center text-white font-bold mx-auto mb-4">1</div>
+                  <h3 className="font-bold mb-2">Call the number</h3>
+                  <p className="text-sm text-gray-300">From your cell — the same way a customer would call you.</p>
                 </div>
-
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center">
-                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                      </svg>
-                    </div>
-                    <h3 className="text-xl font-bold">Sample Call #2: Emergency</h3>
-                  </div>
-
-                  <div className="space-y-4">
-                    <div className="bg-white/5 rounded-lg p-4">
-                      <p className="text-sm text-red-300 mb-2">Customer:</p>
-                      <p>"Help! I have water flooding my basement!"</p>
-                    </div>
-
-                    <div className="bg-red-500/20 rounded-lg p-4 border border-red-500/40">
-                      <p className="text-sm text-red-300 mb-2">AI (Emergency Detected):</p>
-                      <p className="font-bold">"That sounds like an emergency. I'm transferring you to our on-call technician right now. Please hold."</p>
-                    </div>
-
-                    <div className="flex items-center gap-3 p-4 bg-white/5 rounded-lg">
-                      <svg className="w-6 h-6 text-red-400 animate-pulse" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                      </svg>
-                      <p className="text-sm">Call transferred to your cell phone immediately</p>
-                    </div>
-
-                    <div className="bg-green-500/20 rounded-lg p-4 border border-green-500/40">
-                      <p className="font-bold text-green-300 mb-1">✓ Emergency Handled Correctly</p>
-                      <p className="text-sm">Customer connected to you in under 10 seconds</p>
-                    </div>
-                  </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+                  <div className="w-10 h-10 bg-[#f97316] rounded-full flex items-center justify-center text-white font-bold mx-auto mb-4">2</div>
+                  <h3 className="font-bold mb-2">Hang up</h3>
+                  <p className="text-sm text-gray-300">Congratulations — you're now a missed call. The thing that costs shops jobs every day.</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+                  <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-4">3</div>
+                  <h3 className="font-bold mb-2">Watch your phone</h3>
+                  <p className="text-sm text-gray-300">A text arrives in seconds — from the number you just dialed — with a live booking link.</p>
                 </div>
               </div>
 
-              <div className="mt-8 bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold mb-4">Key Features</h3>
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-[#f97316] mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <p className="text-sm">Sounds like a real person (not robotic)</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-[#f97316] mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <p className="text-sm">Detects emergencies (flood, gas, leak)</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-[#f97316] mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <p className="text-sm">Books appointments directly</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-[#f97316] mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <p className="text-sm">Transfers to you if confused (never traps customers)</p>
-                  </div>
-                </div>
+              <div className="bg-white/[0.07] border border-white/10 border-l-4 border-l-[#f97316] rounded-xl p-6 max-w-3xl mx-auto">
+                <p className="text-white/90">
+                  The text comes from the same number you called, and the booking link drops you into a real
+                  calendar. Your customers would get exactly this — on your number, with your business name.
+                </p>
               </div>
+
+              <p className="text-center text-xs text-gray-400 mt-8">
+                Standard message rates apply. Reply STOP any time to opt out.
+              </p>
             </div>
           )}
 
