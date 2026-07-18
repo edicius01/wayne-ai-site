@@ -1,100 +1,18 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Navigation } from '../components/Navigation';
 import { Footer } from '../components/Footer';
 import { ChatWidget } from '../components/ChatWidget';
 import { BackToTop } from '../components/BackToTop';
-
-const CRM_URL = 'https://wayne-crm-production.up.railway.app';
+import { LeadCallbackForm, CRM_URL } from '../components/LeadCallbackForm';
 
 /*
  * SMS consent (A2P 10DLC): this page is the public opt-in CTA cited in the
- * Twilio campaign MessageFlow. The disclosures below must stay verbatim,
+ * Twilio campaign MessageFlow. The disclosures (checkbox label inside
+ * LeadCallbackForm + the notice under the booking iframe) must stay verbatim,
  * inline (NOT inside the iframe — reviewers read the prerendered HTML), and
  * the checkbox must default to unchecked. Route must stay in prerender.mjs.
  */
-const SMS_CONSENT_LABEL =
-  'I agree to receive SMS text messages from Wayne AI at the number provided ' +
-  '(call scheduling, appointment reminders, and replies to my inquiry). ' +
-  'Message frequency varies. Message & data rates may apply. ' +
-  'Reply STOP to unsubscribe or HELP for help. Consent is not a condition of purchase.';
-
-function CallbackForm() {
-  const [state, setState] = useState<'idle' | 'sending' | 'done' | 'error'>('idle');
-
-  async function submit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    const fd = new FormData(e.currentTarget);
-    setState('sending');
-    try {
-      const res = await fetch(`${CRM_URL}/api/public/lead`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: fd.get('name'),
-          phone: fd.get('phone'),
-          email: fd.get('email'),
-          message: fd.get('message'),
-          sms_consent: fd.get('sms_consent') === 'on',
-          website2: fd.get('website2'), // honeypot
-          slug: 'wayneai-booking',
-        }),
-      });
-      if (!res.ok) throw new Error(String(res.status));
-      setState('done');
-    } catch {
-      setState('error');
-    }
-  }
-
-  if (state === 'done') {
-    return (
-      <div className="bg-green-50 border-2 border-green-200 rounded-lg p-6 text-center">
-        <p className="text-green-900 font-semibold mb-1">Got it — we'll reach out shortly.</p>
-        <p className="text-green-800 text-sm">Usually the same business day.</p>
-      </div>
-    );
-  }
-
-  const field =
-    'w-full rounded-lg border-2 border-gray-200 px-4 py-3 text-[#0f172a] outline-none transition-colors focus:border-[#f97316] placeholder:text-gray-400';
-
-  return (
-    <form onSubmit={submit} className="space-y-4">
-      <input name="name" aria-label="Your name" placeholder="Your name" className={field} />
-      <div className="grid sm:grid-cols-2 gap-4">
-        <input name="phone" type="tel" required aria-label="Phone number" placeholder="Phone number" className={field} />
-        <input name="email" type="email" aria-label="Email (optional)" placeholder="Email (optional)" className={field} />
-      </div>
-      <textarea name="message" rows={2} aria-label="What should we know?" placeholder="What should we know? (optional)" className={field} />
-      {/* Honeypot — hidden from humans */}
-      <div className="absolute -left-[9999px] top-auto" aria-hidden="true">
-        <label htmlFor="cb-web2">Website</label>
-        <input id="cb-web2" name="website2" tabIndex={-1} autoComplete="off" />
-      </div>
-      <label className="flex items-start gap-3 cursor-pointer">
-        <input type="checkbox" name="sms_consent" className="mt-1 h-4 w-4 accent-[#f97316]" />
-        <span className="text-sm text-[#374151] leading-relaxed">{SMS_CONSENT_LABEL}</span>
-      </label>
-      <p className="text-xs text-gray-500">
-        See our <a href="/privacy" className="underline text-[#374151]">Privacy Policy</a> and{' '}
-        <a href="/terms" className="underline text-[#374151]">Terms of Service</a>.
-      </p>
-      {state === 'error' && (
-        <p className="text-sm font-semibold text-red-700">
-          Something went wrong — please try again, or call us directly.
-        </p>
-      )}
-      <button
-        type="submit"
-        disabled={state === 'sending'}
-        className="w-full bg-[#f97316] hover:bg-[#ea580c] text-white font-bold px-6 py-3.5 rounded-lg transition-colors disabled:opacity-50"
-      >
-        {state === 'sending' ? 'Sending…' : 'Request a call back'}
-      </button>
-    </form>
-  );
-}
 
 export function BookingPage() {
   const calRef = useRef<HTMLIFrameElement>(null);
@@ -224,7 +142,7 @@ export function BookingPage() {
                 <p className="text-[#374151] mb-6 text-center">
                   Leave your number and we'll call or text you back.
                 </p>
-                <CallbackForm />
+                <LeadCallbackForm slug="wayneai-booking" />
               </div>
             </div>
           </div>

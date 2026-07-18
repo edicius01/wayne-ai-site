@@ -1,21 +1,13 @@
 import { Helmet } from 'react-helmet-async';
 import { LpGuarantee } from '../../components/LpGuarantee';
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
+import { LeadCallbackForm } from '../../components/LeadCallbackForm';
 
 function scrollToForm() {
   document.getElementById('lp-form')?.scrollIntoView({ behavior: 'smooth' });
 }
 
 export function DentalReactivationPage() {
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://links.wayneai.net/js/form_embed.js';
-    script.async = true;
-    document.body.appendChild(script);
-    return () => { document.body.removeChild(script); };
-  }, []);
-
   return (
     <>
       <Helmet>
@@ -174,24 +166,8 @@ export function DentalReactivationPage() {
                 works — free, no commitment.
               </p>
             </div>
-            <div className="bg-white rounded-2xl p-2 shadow-2xl">
-              <iframe
-                src="https://links.wayneai.net/widget/form/mmDnjub0Cj9Hw1YZOrIc"
-                style={{ width: '100%', height: '480px', border: 'none', borderRadius: '12px' }}
-                id="inline-mmDnjub0Cj9Hw1YZOrIc"
-                data-layout="{'id':'INLINE'}"
-                data-trigger-type="alwaysShow"
-                data-trigger-value=""
-                data-activation-type="alwaysActivated"
-                data-activation-value=""
-                data-deactivation-type="neverDeactivate"
-                data-deactivation-value=""
-                data-form-name="Chiro Reactivation LP"
-                data-height="480"
-                data-layout-iframe-id="inline-mmDnjub0Cj9Hw1YZOrIc"
-                data-form-id="mmDnjub0Cj9Hw1YZOrIc"
-                title="Dental Reactivation LP"
-              />
+            <div className="bg-white rounded-2xl p-6 shadow-2xl sm:p-8">
+              <LeadCallbackForm slug="wayneai-lp-dental" />
             </div>
             <p className="text-[#475569] text-sm text-center mt-4">No commitment. No sales pressure.</p>
           </div>

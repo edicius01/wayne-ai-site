@@ -1,6 +1,7 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { roiPresets as presets, roiDefaults, roiMonthlyCostBounds } from '../content/roi';
+import { LeadCallbackForm } from './LeadCallbackForm';
 
 const formatter = new Intl.NumberFormat('en-US', {
   style: 'currency',
@@ -90,24 +91,12 @@ export function ROICalculator() {
     };
   }, [closeRate, jobValue, missedCalls, monthlyCost]);
 
-  // GHL's embed script handles iframe resizing; load it only once the user opts in.
-  useEffect(() => {
-    if (!showForm) return;
-    if (document.querySelector('script[src="https://links.wayneai.net/js/form_embed.js"]')) return;
-    const script = document.createElement('script');
-    script.src = 'https://links.wayneai.net/js/form_embed.js';
-    script.async = true;
-    document.body.appendChild(script);
-  }, [showForm]);
-
-  const formSrc =
-    'https://links.wayneai.net/widget/form/mmDnjub0Cj9Hw1YZOrIc' +
-    `?recovered_revenue=${Math.round(results.recoveredRevenue)}` +
-    `&net_gain=${Math.round(results.netGain)}` +
-    `&job_value=${jobValue}` +
-    `&missed_leads_week=${missedCalls}` +
-    `&close_rate=${closeRate}` +
-    `&monthly_cost=${monthlyCost}`;
+  // The visitor's slider numbers ride along with the lead so the follow-up
+  // can reference their actual scenario.
+  const roiContext =
+    `[ROI calc] recovered revenue ${formatter.format(results.recoveredRevenue)}/mo, ` +
+    `net gain ${formatter.format(results.netGain)}/mo, job value $${jobValue}, ` +
+    `${missedCalls} missed calls/wk, ${closeRate}% close rate, $${monthlyCost}/mo cost`;
 
   return (
     <section ref={ref} className="border-t border-[#fed7aa] bg-white py-20">
@@ -216,22 +205,18 @@ export function ROICalculator() {
                   onClick={() => setShowForm(true)}
                   className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#f97316] px-8 py-4 font-semibold text-white transition-all duration-200 hover:bg-[#ea580c] hover:shadow-xl hover:shadow-[#f97316]/25"
                 >
-                  Email me my ROI breakdown
+                  Send me my ROI breakdown
                   <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </button>
               </>
             ) : (
-              <div className="rounded-2xl bg-white p-2 shadow-2xl">
-                <iframe
-                  src={formSrc}
-                  style={{ width: '100%', height: '480px', border: 'none', borderRadius: '12px' }}
-                  id="inline-roi-mmDnjub0Cj9Hw1YZOrIc"
-                  data-layout="{'id':'INLINE'}"
-                  data-form-id="mmDnjub0Cj9Hw1YZOrIc"
-                  data-form-name="ROI Calculator"
-                  title="Email me my ROI breakdown"
+              <div className="rounded-2xl bg-white p-6 shadow-2xl sm:p-8">
+                <LeadCallbackForm
+                  slug="wayneai-roi"
+                  context={roiContext}
+                  cta="Send me my ROI breakdown"
                 />
               </div>
             )}

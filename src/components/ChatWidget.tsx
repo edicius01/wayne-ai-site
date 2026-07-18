@@ -1,7 +1,7 @@
-// Superseded by the static GoHighLevel chat widget embedded in index.html — that
-// is the widget GHL's A2P 10DLC flow verifies on the live domain. Rendered as a
-// no-op so the existing <ChatWidget /> mounts stay put; remove once A2P is settled
-// (or if the standard GHL bubble is replaced with a custom-styled launcher again).
+// Chat is currently off: the GHL chat widget was removed at the cancel-GHL
+// gate (own A2P verified 07-13; /booking is the capture path). Kept as a no-op
+// so the existing <ChatWidget /> mounts stay valid — put a real launcher here
+// if site chat ever comes back.
 export function ChatWidget() {
   return null;
 }

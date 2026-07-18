@@ -98,7 +98,7 @@ export function PrivacyPage() {
               <p className="text-[#374151] mb-4">We do not sell your personal information. We may share your information with:</p>
               <ul className="list-disc pl-6 space-y-2 text-[#374151]">
                 <li><strong>Service Providers:</strong> Third-party companies that help us operate our services (e.g., SMS providers, payment processors, calendar integrations)</li>
-                <li><strong>Business Partners:</strong> GoHighLevel and other platforms we integrate with to provide our services</li>
+                <li><strong>Business Partners:</strong> Platforms we integrate with to provide our services, such as Twilio (text messaging), Supabase (data storage), and Google Calendar (scheduling)</li>
                 <li><strong>Legal Requirements:</strong> When required by law, subpoena, or to protect our rights and safety</li>
                 <li><strong>Business Transfers:</strong> In connection with a merger, acquisition, or sale of assets</li>
               </ul>
