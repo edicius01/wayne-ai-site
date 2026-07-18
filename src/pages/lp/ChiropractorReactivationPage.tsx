@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { Link, useSearchParams } from 'react-router-dom';
 import { useEffect } from 'react';
+import { CrmBookingEmbed } from '../../components/CrmBookingEmbed';
 
 function scrollToForm() {
   document.getElementById('lp-form')?.scrollIntoView({ behavior: 'smooth' });
@@ -13,23 +14,6 @@ export function ChiropractorReactivationPage() {
   const utmMedium = searchParams.get('utm_medium') ?? '';
   const utmCampaign = searchParams.get('utm_campaign') ?? '';
   const utmContent = searchParams.get('utm_content') ?? '';
-
-  const utmQuery = new URLSearchParams(
-    Object.fromEntries(
-      Object.entries({ utm_source: utmSource, utm_medium: utmMedium, utm_campaign: utmCampaign, utm_content: utmContent })
-        .filter(([, v]) => v !== '')
-    )
-  ).toString();
-
-  const formSrc = `https://links.wayneai.net/widget/booking/oCbAHBErrW9HMYFe91aT${utmQuery ? `?${utmQuery}` : ''}`;
-
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://links.wayneai.net/js/form_embed.js';
-    script.async = true;
-    document.body.appendChild(script);
-    return () => { document.body.removeChild(script); };
-  }, []);
 
   useEffect(() => {
     if (utmSource || utmCampaign) {
@@ -44,10 +28,13 @@ export function ChiropractorReactivationPage() {
     }
   }, [utmSource, utmMedium, utmCampaign, utmContent]);
 
-  // Listen for booking confirmation postMessage from GHL widget iframe
+  // Listen for booking confirmation postMessage from the CRM booking widget.
+  // NOTE: the widget doesn't emit a confirmation event yet — wire one
+  // (e.g. type 'crm-booking-confirmed') before launching paid traffic so the
+  // Meta 'Schedule' conversion actually fires.
   useEffect(() => {
-    function handleGhlMessage(event: MessageEvent) {
-      const allowed = ['wayneai.net', 'msgsndr.com', 'gohighlevel.com', 'leadconnectorhq.com'];
+    function handleBookingMessage(event: MessageEvent) {
+      const allowed = ['wayneai.net', 'wayne-crm-production.up.railway.app'];
       if (!allowed.some(d => event.origin.includes(d))) return;
 
       const data = event.data;
@@ -67,8 +54,8 @@ export function ChiropractorReactivationPage() {
       }
     }
 
-    window.addEventListener('message', handleGhlMessage);
-    return () => window.removeEventListener('message', handleGhlMessage);
+    window.addEventListener('message', handleBookingMessage);
+    return () => window.removeEventListener('message', handleBookingMessage);
   }, []);
 
   return (
@@ -236,13 +223,7 @@ export function ChiropractorReactivationPage() {
             </div>
 
             <div className="bg-white rounded-2xl p-2 shadow-2xl">
-              <iframe
-                src={formSrc}
-                style={{ width: '100%', height: '700px', border: 'none', borderRadius: '12px', overflow: 'hidden' }}
-                scrolling="no"
-                id="oCbAHBErrW9HMYFe91aT_1779408797999"
-                title="Book a Call — Wayne AI"
-              />
+              <CrmBookingEmbed title="Book a Call — Wayne AI" />
             </div>
 
             <p className="text-[#475569] text-sm text-center mt-4">No commitment. No sales pressure.</p>

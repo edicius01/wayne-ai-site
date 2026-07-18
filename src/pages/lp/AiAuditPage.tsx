@@ -3,6 +3,7 @@ import { Navigation } from '../../components/Navigation';
 import { Footer } from '../../components/Footer';
 import { ChatWidget } from '../../components/ChatWidget';
 import { BackToTop } from '../../components/BackToTop';
+import { CrmBookingEmbed } from '../../components/CrmBookingEmbed';
 
 export function AiAuditPage() {
   return (
@@ -200,14 +201,7 @@ export function AiAuditPage() {
             <h3 className="text-2xl font-bold text-[#0f172a] mb-6 text-center">
               Pick a Time That Works
             </h3>
-            <iframe
-              src="https://links.wayneai.net/widget/booking/oCbAHBErrW9HMYFe91aT"
-              style={{ width: '100%', border: 'none', overflow: 'hidden', minHeight: '600px' }}
-              scrolling="no"
-              id="oCbAHBErrW9HMYFe91aT_1769885007014"
-              title="Book a Strategy Call"
-              className="rounded-lg"
-            />
+            <CrmBookingEmbed />
           </div>
 
           <p className="text-[#94a3b8] text-center mt-8">
