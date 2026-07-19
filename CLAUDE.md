@@ -37,6 +37,9 @@ npm run dev
 
 **Verification standard:** `npm run build` must exit 0 with no TypeScript errors. That is the minimum bar before any commit. There are no automated tests — build success + visual check is the current standard.
 
+**A2P invariant:** the live Twilio SMS registration cites `/booking/`, `/privacy/`, `/terms/` and the "Book a Demo → /booking/" path as facts. Structural changes (nav/CTA targets, URL moves, prerender routes, consent copy) can silently falsify a LIVE registration. After any such change, run
+`bash ~/wayne_ai_workspace/projects/wayne-crm/scripts/a2p-preflight.sh` (must PASS post-deploy). Consent copy changes ALSO require a new version in wayne-crm `lib/consent.ts`. Canon: wayne-crm `docs/A2P_RUNBOOK.md`.
+
 ---
 
 ## Deploy Pipeline
