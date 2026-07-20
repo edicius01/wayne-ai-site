@@ -73,11 +73,11 @@ export function Tier3Callout() {
               <div>
                 <h3 className="text-xl font-bold text-white mb-2">🛡️ Proof Over Promises</h3>
                 <p className="text-white/90">
-                  Full voice answering — an AI that picks up and talks — is in development, and AI Front Desk
-                  customers get it first. We don't sell it until you can hear it. What you buy today is already
-                  running on our own business line:{' '}
+                  Voice answering is live — an AI that picks up, talks, and books a time. AI Front Desk
+                  customers get it on their own number first. We don't sell what you can't hear, so hear it
+                  now on our own business line:{' '}
                   <a href="/demo" className="underline decoration-[#f97316] underline-offset-4 font-semibold">
-                    call it, hang up, and watch it text you back
+                    call it — an AI answers, or hang up and it texts you back
                   </a>.
                 </p>
               </div>
@@ -85,7 +85,7 @@ export function Tier3Callout() {
 
             <div className="border-t border-white/20 pt-6">
               <p className="text-xl font-bold text-white">
-                Translation: 24/7 coverage of every missed call — and zero risk of a half-baked robot answering for your business.
+                Translation: 24/7 coverage — an AI that answers your phone and books jobs, not a half-baked robot you'd be embarrassed by. Hear it before you buy.
               </p>
             </div>
           </div>

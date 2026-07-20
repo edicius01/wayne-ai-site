@@ -148,8 +148,9 @@ export function DemoPage() {
                 Don't Watch a Demo — Trigger One
               </h2>
               <p className="text-xl text-gray-300 text-center mb-10 max-w-2xl mx-auto">
-                This isn't a simulation. That's our real business line, running the same missed-call
-                system you'd get.
+                This isn't a simulation. That's our real business line — call it and an AI answers, talks,
+                and books you a time. Hang up instead and it texts you a booking link. Same front desk your
+                customers would reach.
               </p>
 
               <div className="text-center mb-10">
@@ -169,20 +170,21 @@ export function DemoPage() {
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
                   <div className="w-10 h-10 bg-[#f97316] rounded-full flex items-center justify-center text-white font-bold mx-auto mb-4">2</div>
-                  <h3 className="font-bold mb-2">Hang up</h3>
-                  <p className="text-sm text-gray-300">Congratulations — you're now a missed call. The thing that costs shops jobs every day.</p>
+                  <h3 className="font-bold mb-2">An AI answers</h3>
+                  <p className="text-sm text-gray-300">It greets you, answers questions about the business, offers real appointment times — and books the one you pick.</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
                   <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-4">3</div>
-                  <h3 className="font-bold mb-2">Watch your phone</h3>
-                  <p className="text-sm text-gray-300">A text arrives in seconds — from the number you just dialed — with a live booking link.</p>
+                  <h3 className="font-bold mb-2">Or hang up for a text</h3>
+                  <p className="text-sm text-gray-300">Don't want to talk? Hang up and a text arrives in seconds — from the number you dialed — with a live booking link.</p>
                 </div>
               </div>
 
               <div className="bg-white/[0.07] border border-white/10 border-l-4 border-l-[#f97316] rounded-xl p-6 max-w-3xl mx-auto">
                 <p className="text-white/90">
-                  The text comes from the same number you called, and the booking link drops you into a real
-                  calendar. Your customers would get exactly this — on your number, with your business name.
+                  Book on the call or from the text — either way it drops into a real calendar with a
+                  confirmation. Your customers would get exactly this: on your number, with your business
+                  name, in your voice.
                 </p>
               </div>
 
