@@ -13,6 +13,8 @@ export interface PricingTier {
   description: string;
   features: PricingFeature[];
   bestFor: string;
+  /** Live Stripe Payment Link (monthly subscription, first month at signup). */
+  checkoutUrl: string;
 }
 
 export const pricingTiers: PricingTier[] = [
@@ -30,6 +32,7 @@ export const pricingTiers: PricingTier[] = [
       { text: 'N/A', bold: false, label: 'Voice AI Minutes' },
     ],
     bestFor: "Solo plumbers who don't want to miss another call",
+    checkoutUrl: 'https://buy.stripe.com/9B600j85c3CHgwlfv4cAo00',
   },
   {
     name: 'The Growth Engine',
@@ -45,6 +48,7 @@ export const pricingTiers: PricingTier[] = [
       { text: 'N/A', bold: false, label: 'Voice AI Minutes' },
     ],
     bestFor: '2-3 truck shops ready to scale without hiring',
+    checkoutUrl: 'https://buy.stripe.com/00w6oH0CK8X16VL3MmcAo01',
   },
   {
     name: 'The AI Front Desk',
@@ -60,6 +64,7 @@ export const pricingTiers: PricingTier[] = [
       { text: 'Early Access — 250 Mins at Launch*', bold: true, label: 'Voice AI Minutes' },
     ],
     bestFor: '4+ truck operations that want the phone handled end to end',
+    checkoutUrl: 'https://buy.stripe.com/28EaEXgBI1uzgwlaaKcAo02',
   },
 ];
 
