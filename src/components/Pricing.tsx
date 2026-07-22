@@ -105,17 +105,20 @@ export function Pricing() {
                 </div>
 
                 <a
-                  href="/booking/"
+                  href={tier.checkoutUrl}
                   className={`block w-full text-center font-semibold py-4 rounded-lg transition-all duration-200 ${
                     tier.badge === 'MOST POPULAR'
                       ? 'bg-[#f97316] hover:bg-[#ea580c] text-white shadow-lg hover:shadow-xl'
                       : 'bg-white hover:bg-gray-50 text-[#0f172a] border-2 border-gray-300 hover:border-[#f97316]'
                   }`}
                 >
-                  Book Strategy Call
+                  Start Today
                 </a>
                 <p className="mt-3 text-center text-xs text-[#6b7280]">
-                  No long-term contract · Cancel anytime
+                  No long-term contract · Cancel anytime ·{' '}
+                  <a href="/booking/" className="font-semibold text-[#0f172a] underline decoration-[#f97316] underline-offset-2 hover:text-[#f97316]">
+                    Prefer to talk first? Book a call
+                  </a>
                 </p>
               </div>
             </div>
