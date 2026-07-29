@@ -25,10 +25,9 @@ export interface PricingTier {
 // on a live line. Missed-call text-back is a FEATURE of every tier, never a
 // product — the market prices it between free-DIY and a $99 add-on.
 //
-// TODO before merge: checkoutUrl is a placeholder (/booking/) on all three
-// tiers — mint Stripe Payment Links for $149/$297/$497 monthly and swap them
-// in (the old $397/$897/$1,497 links stay live until this merges, then
-// deactivate them in the dashboard).
+// Payment Links minted 2026-07-28 (metadata source=pricing-market-reprice-2026-07,
+// amounts API-verified). The old $397/$897/$1,497 links stay live until this
+// merges — deactivate them in the Stripe dashboard AFTER merge.
 export const pricingTiers: PricingTier[] = [
   {
     name: 'The Front Door',
@@ -44,7 +43,7 @@ export const pricingTiers: PricingTier[] = [
       { text: 'N/A', bold: false, label: 'Voice AI Minutes' },
     ],
     bestFor: 'Solo operators who want every missed call caught by text',
-    checkoutUrl: '/booking/',
+    checkoutUrl: 'https://buy.stripe.com/eVq4gz7187SXfshbeOcAo03',
   },
   {
     name: 'The AI Front Desk',
@@ -60,7 +59,7 @@ export const pricingTiers: PricingTier[] = [
       { text: 'Early Access — 250 Mins Included*', bold: true, label: 'Voice AI Minutes' },
     ],
     bestFor: "1-3 truck shops that can't answer while on the job",
-    checkoutUrl: '/booking/',
+    checkoutUrl: 'https://buy.stripe.com/9B63cv1GO6OTfsh1EecAo04',
   },
   {
     name: 'The Whole Phone Line',
@@ -76,7 +75,7 @@ export const pricingTiers: PricingTier[] = [
       { text: 'Early Access — 600 Mins Included*', bold: true, label: 'Voice AI Minutes' },
     ],
     bestFor: '3+ truck operations that want the phone handled end to end',
-    checkoutUrl: '/booking/',
+    checkoutUrl: 'https://buy.stripe.com/eVq5kDfxE8X193Tgz8cAo05',
   },
 ];
 
