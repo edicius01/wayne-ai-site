@@ -152,8 +152,9 @@ export function Pricing() {
 
         <p className="text-center text-xs text-[#6b7280] mt-6">
           *Voice AI (an AI that answers your phone, talks, and books) is live — call (812) 612-3105 to hear it.
-          AI Front Desk includes it on your own number as early access, 250 minutes included, then
-          ${voiceOverageRate.toFixed(2)}/min. Prefer text? The managed line also catches every missed call by text.
+          The AI Front Desk includes it on your own number as early access (250 minutes included); The Whole
+          Phone Line includes 600 minutes. Beyond your allowance it's ${voiceOverageRate.toFixed(2)}/min.
+          Prefer text? The managed line also catches every missed call by text.
         </p>
       </div>
     </section>
