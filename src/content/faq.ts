@@ -26,7 +26,7 @@ export const faqs: FaqItem[] = [
   },
   {
     question: 'Can I upgrade or downgrade my plan later?',
-    answer: "Absolutely. Start with The Solo Shield and upgrade to The Growth Engine as you grow. Or start big with The AI Front Desk. You're in control.",
+    answer: "Absolutely. Start with The Front Door and upgrade to The AI Front Desk as you grow. Or go all in with The Whole Phone Line. You're in control.",
   },
   {
     question: 'What if I need help or have technical issues?',
