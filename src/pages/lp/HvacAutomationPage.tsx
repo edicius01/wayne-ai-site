@@ -12,6 +12,7 @@ export function HvacAutomationPage() {
     <>
       <Helmet>
         <meta name="robots" content="noindex, follow" />
+        <link rel="canonical" href="https://wayneai.net/lp/hvac-automation" />
         <title>AI Lead Response for HVAC Companies | Wayne AI</title>
         <meta
           name="description"

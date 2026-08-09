@@ -12,6 +12,7 @@ export function MedSpaReactivationPage() {
     <>
       <Helmet>
         <meta name="robots" content="noindex, follow" />
+        <link rel="canonical" href="https://wayneai.net/lp/med-spa-reactivation" />
         <title>Med Spa Client Reactivation | Wayne AI</title>
         <meta
           name="description"

@@ -12,6 +12,7 @@ export function DentalReactivationPage() {
     <>
       <Helmet>
         <meta name="robots" content="noindex, follow" />
+        <link rel="canonical" href="https://wayneai.net/lp/dental-reactivation" />
         <title>Dental Patient Reactivation | Wayne AI</title>
         <meta
           name="description"

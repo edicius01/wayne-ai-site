@@ -12,6 +12,7 @@ export function PlumbingAutomationPage() {
     <>
       <Helmet>
         <meta name="robots" content="noindex, follow" />
+        <link rel="canonical" href="https://wayneai.net/lp/plumbing-automation" />
         <title>AI Lead Response for Plumbers | Wayne AI</title>
         <meta
           name="description"

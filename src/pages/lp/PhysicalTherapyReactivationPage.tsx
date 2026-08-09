@@ -12,6 +12,7 @@ export function PhysicalTherapyReactivationPage() {
     <>
       <Helmet>
         <meta name="robots" content="noindex, follow" />
+        <link rel="canonical" href="https://wayneai.net/lp/physical-therapy-reactivation" />
         <title>Physical Therapy Patient Reactivation | Wayne AI</title>
         <meta
           name="description"
