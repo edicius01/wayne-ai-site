@@ -40,6 +40,40 @@ const MIME = {
   '.txt': 'text/plain',
 };
 
+const DOMAIN = 'https://wayneai.net';
+
+// Every prerendered route must carry a canonical pointing at ITSELF. The static
+// index.html shell ships the homepage canonical, and react-helmet-async only
+// REPLACES tags a page declares — so a page component that omits <link rel=
+// "canonical"> silently inherits "https://wayneai.net" and tells Google it is a
+// duplicate of the homepage. That is how eight /lp/* pages plus /booking ended
+// up excluded as "Alternate page with proper canonical tag" (Aug 2026); on a
+// noindex page it is worse than sloppy, because it aims the exclusion at the
+// homepage. Fail the build rather than ship it again.
+function verifyCanonicals(routes) {
+  const problems = [];
+  for (const route of routes) {
+    const file = routeToOutputFile(route);
+    if (!fs.existsSync(file)) continue;
+    const html = fs.readFileSync(file, 'utf8');
+    const found = [...html.matchAll(/<link[^>]+rel="canonical"[^>]*>/g)].map(
+      (m) => (m[0].match(/href="([^"]*)"/) || [])[1]
+    );
+    const expected = route === '/' ? DOMAIN : DOMAIN + route;
+    if (found.length === 0) problems.push(`${route} — no canonical`);
+    else if (found.length > 1) problems.push(`${route} — ${found.length} canonicals: ${found.join(', ')}`);
+    else if (found[0] !== expected) problems.push(`${route} — canonical is ${found[0]}, expected ${expected}`);
+  }
+  if (problems.length) {
+    console.error(`\n✗ canonical check failed (${problems.length}):`);
+    for (const p of problems) console.error(`    ${p}`);
+    console.error('\n  Add <link rel="canonical" href="' + DOMAIN + '<route>" /> to the page\'s <Helmet>.');
+    return false;
+  }
+  console.log(`✓ canonical check: ${routes.length} routes self-canonical`);
+  return true;
+}
+
 function buildRouteList() {
   const staticRoutes = [
     '/',
@@ -203,6 +237,8 @@ async function main() {
 
   console.log(`\n✓ prerender complete: ${ok} written, ${failed} failed`);
   if (failed > 0) process.exit(1);
+
+  if (!verifyCanonicals(routes)) process.exit(1);
 }
 
 main().catch((err) => {

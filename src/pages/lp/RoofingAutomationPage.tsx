@@ -12,6 +12,7 @@ export function RoofingAutomationPage() {
     <>
       <Helmet>
         <meta name="robots" content="noindex, follow" />
+        <link rel="canonical" href="https://wayneai.net/lp/roofing-automation" />
         <title>AI Lead Response for Roofing Companies | Wayne AI</title>
         <meta
           name="description"
