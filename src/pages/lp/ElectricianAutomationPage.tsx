@@ -178,16 +178,21 @@ export function ElectricianAutomationPage() {
           </div>
         </section>
 
-        {/* Social proof */}
+        {/* Proof + guarantee */}
         <section className="py-16 px-6 bg-[#f8fafc]">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-[#0f172a] mb-4">
-              What Electricians See
+              We Put the Risk on Our Side
             </h2>
             <p className="text-[#475569] text-lg mb-12 max-w-xl mx-auto">
-              Electrical companies using automated lead response typically recover 20–30% of
-              calls that would have gone to a competitor — without adding staff or changing
-              how they run their day.
+              We could quote you a percentage. It's more useful to let you check the thing
+              itself. Call{' '}
+              <a href="tel:+18126123105" className="font-semibold text-[#f97316] hover:underline">
+                (812) 612-3105
+              </a>{' '}
+              — an AI answers, talks, and books a time. Or call it and hang up, and watch it
+              text you back with a real booking link. That line runs on the same system you'd
+              be getting.
             </p>
             <LpGuarantee />
           </div>

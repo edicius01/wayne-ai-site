@@ -140,16 +140,20 @@ export function DentalReactivationPage() {
           </div>
         </section>
 
-        {/* Social proof */}
+        {/* Proof + guarantee */}
         <section className="py-16 px-6 bg-white">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-[#0f172a] mb-4">
-              What to Expect
+              We Put the Risk on Our Side
             </h2>
             <p className="text-[#475569] text-lg mb-12 max-w-xl mx-auto">
-              Practices running automated recall typically recover 20–30% of overdue patients
-              within 60 days. On a list of 300 overdue patients, that's 60–90 hygiene
-              appointments from people already in your system.
+              We're not going to hand you a projection off a list we've never seen. What we can
+              do is let you test the system before you ever talk to us. Call{' '}
+              <a href="tel:+18126123105" className="font-semibold text-[#f97316] hover:underline">
+                (812) 612-3105
+              </a>{' '}
+              — an AI answers, talks, and books a time. Or call it and hang up, and watch it
+              text you back with a real booking link. Then judge it on that.
             </p>
             <LpGuarantee />
           </div>

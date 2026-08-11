@@ -179,15 +179,21 @@ export function RoofingAutomationPage() {
           </div>
         </section>
 
-        {/* Social proof */}
+        {/* Proof + guarantee */}
         <section className="py-16 px-6 bg-[#f8fafc]">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-[#0f172a] mb-4">
-              What Roofing Companies See
+              We Put the Risk on Our Side
             </h2>
             <p className="text-[#475569] text-lg mb-12 max-w-xl mx-auto">
-              Roofing companies using automated lead response book 20–30% more inspections
-              during storm events — and maintain a steadier pipeline in the months between them.
+              We'd rather hand you something you can check than a number you have to take on
+              faith. Call{' '}
+              <a href="tel:+18126123105" className="font-semibold text-[#f97316] hover:underline">
+                (812) 612-3105
+              </a>{' '}
+              — an AI answers, talks, and books a time. Or call it and hang up, and watch it
+              text you back with a real booking link. That's the production system, running
+              today. Here's the promise that comes with it.
             </p>
             <LpGuarantee />
           </div>
