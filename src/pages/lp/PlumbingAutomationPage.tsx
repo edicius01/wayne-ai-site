@@ -178,16 +178,20 @@ export function PlumbingAutomationPage() {
           </div>
         </section>
 
-        {/* Social proof */}
+        {/* Proof + guarantee */}
         <section className="py-16 px-6 bg-[#f8fafc]">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-[#0f172a] mb-4">
-              What Plumbers See
+              We Put the Risk on Our Side
             </h2>
             <p className="text-[#475569] text-lg mb-12 max-w-xl mx-auto">
-              Plumbing companies using automated lead response typically recover 20–30% of
-              calls that would have gone to a competitor — without adding staff or changing
-              how they run their day.
+              Instead of quoting you an industry average, here's something you can test in the
+              next thirty seconds. Call{' '}
+              <a href="tel:+18126123105" className="font-semibold text-[#f97316] hover:underline">
+                (812) 612-3105
+              </a>{' '}
+              — an AI answers, talks, and books a time. Or call it and hang up, and watch it
+              text you back with a real booking link. That's our live system, not a demo reel.
             </p>
             <LpGuarantee />
           </div>

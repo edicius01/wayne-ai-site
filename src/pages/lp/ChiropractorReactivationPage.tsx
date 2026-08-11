@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link, useSearchParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import { CrmBookingEmbed } from '../../components/CrmBookingEmbed';
+import { LpGuarantee } from '../../components/LpGuarantee';
 
 function scrollToForm() {
   document.getElementById('lp-form')?.scrollIntoView({ behavior: 'smooth' });
@@ -184,30 +185,22 @@ export function ChiropractorReactivationPage() {
           </div>
         </section>
 
-        {/* Social proof */}
+        {/* Proof + guarantee */}
         <section className="py-16 px-6 bg-white">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl font-bold text-[#0f172a] mb-10">
-              The numbers behind patient reactivation
+            <h2 className="text-2xl font-bold text-[#0f172a] mb-4">
+              We Put the Risk on Our Side
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
-              <div className="bg-[#fff7ed] border border-[#f97316]/30 rounded-xl px-6 py-6 text-left">
-                <p className="text-4xl font-bold text-[#f97316] mb-2">35%</p>
-                <p className="text-[#1e293b] font-semibold mb-1">Reactivation rate</p>
-                <p className="text-[#475569] text-sm">
-                  Personalized, multi-touch campaigns reactivate up to 35% of lapsed patients
-                  — vs. 1–3% from a single call.
-                </p>
-              </div>
-              <div className="bg-[#fff7ed] border border-[#f97316]/30 rounded-xl px-6 py-6 text-left">
-                <p className="text-4xl font-bold text-[#f97316] mb-2">10×</p>
-                <p className="text-[#1e293b] font-semibold mb-1">More responses</p>
-                <p className="text-[#475569] text-sm">
-                  Multi-touch follow-up sequences generate 10x the response rate of a
-                  one-time outreach — run automatically after setup.
-                </p>
-              </div>
-            </div>
+            <p className="text-[#475569] text-lg mb-12 max-w-xl mx-auto">
+              We're not going to quote you a reactivation rate for a patient list we've never
+              seen. What we can do is let you test the system before you talk to us. Call{' '}
+              <a href="tel:+18126123105" className="font-semibold text-[#f97316] hover:underline">
+                (812) 612-3105
+              </a>{' '}
+              — an AI answers, talks, and books a time. Or call it and hang up, and watch it
+              text you back with a real booking link. Then judge it on that.
+            </p>
+            <LpGuarantee />
           </div>
         </section>
 
