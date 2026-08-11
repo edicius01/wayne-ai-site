@@ -18,7 +18,7 @@ const features = [
     icon: <CalendarClock className="w-8 h-8" strokeWidth={2} />,
     title: 'Booking + Reminders',
     description: 'A clean booking flow connected to your calendar, plus confirmations and reminders to reduce no-shows.',
-    benefits: ['Syncs with your existing calendar', 'Reduces no-shows by 40%+', 'Two-way text reminders'],
+    benefits: ['Syncs with your existing calendar', 'Automatic no-show reminders', 'Two-way text reminders'],
   },
   {
     icon: <Star className="w-8 h-8" strokeWidth={2} />,
