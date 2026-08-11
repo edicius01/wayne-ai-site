@@ -10,6 +10,9 @@ const staticRoutes: { path: string; priority: string; changefreq: string; lastmo
   { path: '/demo', priority: '0.8', changefreq: 'monthly' },
   { path: '/blog', priority: '0.9', changefreq: 'weekly' },
   { path: '/lp/ai-audit', priority: '0.8', changefreq: 'monthly' },
+  // Indexed LP (SEO test, Aug 2026). The other 7 /lp/* pages are noindex
+  // paid-traffic destinations and must stay OUT of the sitemap.
+  { path: '/lp/hvac-automation', priority: '0.8', changefreq: 'monthly' },
 ];
 
 export function sitemapPlugin(): Plugin {
