@@ -86,6 +86,8 @@ import lawnCareWinSpringRushFastResponse from './lawn-care-win-spring-rush-fast-
 import lawnCareRecurringRevenueRetention from './lawn-care-recurring-revenue-retention.html?raw';
 import pestControlFirstToAnswerWins from './pest-control-first-to-answer-wins.html?raw';
 import pestControlRecurringPlansPredictableRevenue from './pest-control-recurring-plans-predictable-revenue.html?raw';
+import septicServiceStopMissingEmergencyCalls from './septic-service-stop-missing-emergency-calls.html?raw';
+import towingCompanyAnswerEveryCall from './towing-company-answer-every-call.html?raw';
 
 export interface BlogPost {
   slug: string;
@@ -1067,5 +1069,27 @@ export const posts: BlogPost[] = [
     tags: ['physical therapy', 'physician referrals', 'healthcare', 'automation', 'communication'],
     featuredImage: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&auto=format&fit=crop&q=80',
     content: howPhysicalTherapyPracticesIncreasePhysicianReferrals,
+  },
+  {
+    slug: 'septic-service-stop-missing-emergency-calls',
+    title: "How Septic Companies Stop Missing Emergency Calls",
+    description: "A sewage backup never waits for business hours. Here's how septic companies answer every emergency call, even from the tank, and stop losing jobs.",
+    metaTitle: "Stop Missing Emergency Septic Calls | Wayne AI",
+    author: "Wayne AI",
+    date: '2026-08-18',
+    tags: ["septic", "missed calls", "after-hours", "automation"],
+    featuredImage: 'https://images.unsplash.com/photo-1757191462487-6c6c0fe97edd?w=1200&auto=format&fit=crop&q=80',
+    content: septicServiceStopMissingEmergencyCalls,
+  },
+  {
+    slug: 'towing-company-answer-every-call',
+    title: "How Towing Companies Can Answer Every Call, Even at 2 AM",
+    description: "Stranded drivers call whoever answers first. Here's how towing companies answer every call, even at 2 AM, and win jobs the competition never hears about.",
+    metaTitle: "Answer Every Towing Call, Even at 2 AM | Wayne AI",
+    author: "Wayne AI",
+    date: '2026-08-18',
+    tags: ["towing", "missed calls", "after-hours", "automation"],
+    featuredImage: 'https://images.unsplash.com/photo-1730514784243-f0e7f09c9f50?w=1200&auto=format&fit=crop&q=80',
+    content: towingCompanyAnswerEveryCall,
   },
 ];
