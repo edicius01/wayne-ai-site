@@ -1,13 +1,27 @@
-// Beehiiv subscribe embed. Paste the embed URL from Beehiiv:
-// Grow → Subscribe Forms → Embed → copy the https://embeds.beehiiv.com/... URL.
-// While this is empty the component renders nothing, so it is safe to ship ahead
-// of the URL.
-const BEEHIIV_EMBED_URL = '';
+import { useEffect, useRef } from 'react';
+
+// Beehiiv v3 subscribe-form embed (script loader, not the old embeds.beehiiv.com
+// iframe). Manage the form at Beehiiv → Subscribers → Subscribe forms.
+const BEEHIIV_FORM_ID = '038af92d-92fd-4430-9cfb-f26996834d4e';
+const BEEHIIV_LOADER_SRC = 'https://subscribe-forms.beehiiv.com/v3/loader.js';
 
 export function NewsletterCapture() {
-  if (!BEEHIIV_EMBED_URL) {
-    return null;
-  }
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  // The loader injects the form next to its own script tag, so the script has
+  // to live inside the container; JSX-rendered script tags never execute.
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container || container.childElementCount > 0) return;
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = BEEHIIV_LOADER_SRC;
+    script.setAttribute('data-beehiiv-form', BEEHIIV_FORM_ID);
+    container.appendChild(script);
+    return () => {
+      container.replaceChildren();
+    };
+  }, []);
 
   return (
     <div className="bg-[#f8fafc] border border-[#e2e8f0] rounded-2xl p-8 text-center">
@@ -17,14 +31,7 @@ export function NewsletterCapture() {
       <p className="text-[#64748b] text-sm mb-5 max-w-md mx-auto">
         One short email a month on winning the jobs you're currently missing. No spam, unsubscribe anytime.
       </p>
-      <iframe
-        src={BEEHIIV_EMBED_URL}
-        title="Subscribe to the Wayne AI newsletter"
-        className="w-full max-w-md mx-auto"
-        style={{ height: 52, backgroundColor: 'transparent' }}
-        frameBorder="0"
-        scrolling="no"
-      />
+      <div ref={containerRef} className="max-w-md mx-auto" />
     </div>
   );
 }
