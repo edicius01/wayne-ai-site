@@ -51,12 +51,12 @@ export function MedSpaReactivationPage() {
               For Med Spas
             </p>
             <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-6">
-              Your Lapsed Clients Are Ready to Come Back — They Just Need a Nudge
+              Your Lapsed Clients Are Ready to Come Back. They Just Need a Nudge.
             </h1>
             <p className="text-[#94a3b8] text-lg md:text-xl mb-10 max-w-2xl mx-auto">
               Most med spas lose clients not because of a bad experience, but because no one
               followed up. Wayne AI tracks treatment cycles, reaches out at exactly the right
-              moment, and fills your calendar — without your staff lifting a finger.
+              moment, and fills your calendar, without your staff lifting a finger.
             </p>
             <button
               onClick={scrollToForm}
@@ -81,7 +81,7 @@ export function MedSpaReactivationPage() {
                 },
                 {
                   stat: '3–4 mo',
-                  label: 'natural Botox/filler cycle — most clients miss it without a reminder',
+                  label: 'natural Botox/filler cycle, and most clients miss it without a reminder',
                 },
                 {
                   stat: '8×',
@@ -108,12 +108,12 @@ export function MedSpaReactivationPage() {
                 {
                   step: '01',
                   title: 'We identify clients due for their next treatment',
-                  body: 'Wayne AI connects to your records and flags clients whose last treatment was 3, 4, or 6 months ago — timed to the natural cycle of each service type.',
+                  body: 'Wayne AI connects to your records and flags clients whose last treatment was 3, 4, or 6 months ago, timed to the natural cycle of each service type.',
                 },
                 {
                   step: '02',
                   title: 'A personal, on-brand message goes out automatically',
-                  body: 'Each client receives a warm text or email referencing their last service and offering a relevant reason to rebook — seasonal specials, treatment reminders, new service announcements.',
+                  body: 'Each client receives a warm text or email referencing their last service and offering a relevant reason to rebook: seasonal specials, treatment reminders, new service announcements.',
                 },
                 {
                   step: '03',
@@ -152,7 +152,7 @@ export function MedSpaReactivationPage() {
               <a href="tel:+18126123105" className="font-semibold text-[#f97316] hover:underline">
                 (812) 612-3105
               </a>{' '}
-              — an AI answers, talks, and books a time. Or call it and hang up, and watch it
+              and an AI answers, talks, and books a time. Or call it and hang up, and watch it
               text you back with a real booking link. Then judge it on that.
             </p>
             <LpGuarantee />
@@ -167,7 +167,7 @@ export function MedSpaReactivationPage() {
                 Ready to fill your calendar from your existing client list?
               </h2>
               <p className="text-[#94a3b8] text-lg">
-                Tell us about your spa and we'll show you exactly how it works — free, no commitment.
+                Tell us about your spa and we'll show you exactly how it works. Free, no commitment.
               </p>
             </div>
             <div className="bg-white rounded-2xl p-6 shadow-2xl sm:p-8">

@@ -54,7 +54,7 @@ export function PhysicalTherapyReactivationPage() {
               Re-Engage Discharged Patients Before They End Up Back at Square One
             </h1>
             <p className="text-[#94a3b8] text-lg md:text-xl mb-10 max-w-2xl mx-auto">
-              Most PT patients discharge with the best intentions — and then stop doing their
+              Most PT patients discharge with the best intentions, and then stop doing their
               exercises. Wayne AI follows up automatically, keeps them engaged, and brings them
               back for maintenance visits before small setbacks become big problems.
             </p>
@@ -108,12 +108,12 @@ export function PhysicalTherapyReactivationPage() {
                 {
                   step: '01',
                   title: 'We track discharged and lapsed patients',
-                  body: 'Wayne AI flags patients who completed a care plan and haven\'t returned — segmented by diagnosis type, discharge date, and time elapsed.',
+                  body: 'Wayne AI flags patients who completed a care plan and haven\'t returned, segmented by diagnosis type, discharge date, and time elapsed.',
                 },
                 {
                   step: '02',
                   title: 'A personal check-in goes out at the right time',
-                  body: 'Each patient receives a warm, helpful message — a home exercise reminder at 2 weeks, a maintenance visit offer at 3 months, a check-in at 6 months. Timed to their specific discharge date.',
+                  body: 'Each patient receives a warm, helpful message: a home exercise reminder at 2 weeks, a maintenance visit offer at 3 months, a check-in at 6 months. Timed to their specific discharge date.',
                 },
                 {
                   step: '03',
@@ -152,7 +152,7 @@ export function PhysicalTherapyReactivationPage() {
               <a href="tel:+18126123105" className="font-semibold text-[#f97316] hover:underline">
                 (812) 612-3105
               </a>{' '}
-              — an AI answers, talks, and books a time. Or call it and hang up, and watch it
+              and an AI answers, talks, and books a time. Or call it and hang up, and watch it
               text you back with a real booking link. Then judge it on that.
             </p>
             <LpGuarantee />
@@ -168,7 +168,7 @@ export function PhysicalTherapyReactivationPage() {
               </h2>
               <p className="text-[#94a3b8] text-lg">
                 Tell us about your practice and we'll show you exactly how post-discharge
-                automation works — free, no commitment.
+                automation works. Free, no commitment.
               </p>
             </div>
             <div className="bg-white rounded-2xl p-6 shadow-2xl sm:p-8">

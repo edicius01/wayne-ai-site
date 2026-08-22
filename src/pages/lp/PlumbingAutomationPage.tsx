@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { LpGuarantee } from '../../components/LpGuarantee';
+import { LpAnchor } from '../../components/LpAnchor';
 import { Link } from 'react-router-dom';
 import { LeadCallbackForm } from '../../components/LeadCallbackForm';
 
@@ -13,15 +14,15 @@ export function PlumbingAutomationPage() {
       <Helmet>
         <meta name="robots" content="noindex, follow" />
         <link rel="canonical" href="https://wayneai.net/lp/plumbing-automation" />
-        <title>AI Lead Response for Plumbers | Wayne AI</title>
+        <title>Website + 24/7 Call Answering for Plumbers | Wayne AI</title>
         <meta
           name="description"
-          content="Plumbers lose emergency jobs every day to whoever answers first. Wayne AI texts back missed calls in seconds and books appointments automatically — even at 2am."
+          content="We build the site your plumbing jobs come from and answer the calls you miss, day or night. Booking on every page, missed-call text-back in seconds, from $149 a month."
         />
-        <meta property="og:title" content="AI Lead Response for Plumbers | Wayne AI" />
+        <meta property="og:title" content="Website + 24/7 Call Answering for Plumbers | Wayne AI" />
         <meta
           property="og:description"
-          content="Stop losing plumbing jobs to faster competitors. Wayne AI responds to missed calls instantly and books service appointments automatically."
+          content="Your site, your phone, handled. We build the website, answer the calls you miss, and book the job before the homeowner dials the next plumber."
         />
       </Helmet>
 
@@ -55,8 +56,9 @@ export function PlumbingAutomationPage() {
             </h1>
             <p className="text-[#94a3b8] text-lg md:text-xl mb-10 max-w-2xl mx-auto">
               A burst pipe at midnight. A backed-up drain on a Sunday. Plumbing emergencies
-              don't wait — and neither do homeowners. Wayne AI texts back missed calls in
-              seconds so you capture the job before they dial someone else.
+              don't wait, and neither do homeowners. We build the site those calls come from,
+              then answer the ones you miss in seconds, so you capture the job before they
+              dial the next plumber on the list.
             </p>
             <button
               onClick={scrollToForm}
@@ -81,7 +83,7 @@ export function PlumbingAutomationPage() {
                 },
                 {
                   stat: '2am',
-                  label: 'plumbing emergencies happen around the clock — most companies miss every after-hours call',
+                  label: 'plumbing emergencies happen around the clock, and most companies miss every after-hours call',
                 },
                 {
                   stat: '$350+',
@@ -107,13 +109,13 @@ export function PlumbingAutomationPage() {
               {[
                 {
                   step: '01',
-                  title: 'A homeowner calls — you can\'t answer',
+                  title: 'A homeowner calls and you can\'t answer',
                   body: "You're mid-job with your hands full. The phone rings, then goes to voicemail. Under the old system, that homeowner calls the next plumber on the list.",
                 },
                 {
                   step: '02',
                   title: 'Wayne AI texts them back in seconds',
-                  body: 'The moment the call is missed, Wayne AI fires an automatic text acknowledging the call and starting the conversation — before they dial anyone else.',
+                  body: 'The moment the call is missed, Wayne AI fires an automatic text acknowledging the call and starting the conversation, before they dial anyone else.',
                 },
                 {
                   step: '03',
@@ -148,13 +150,13 @@ export function PlumbingAutomationPage() {
             </h2>
             <p className="text-[#475569] text-lg text-center mb-12 max-w-xl mx-auto">
               From 2am burst pipes to routine drain calls, the same system handles every
-              missed call — automatically.
+              missed call, automatically.
             </p>
             <div className="grid md:grid-cols-2 gap-6">
               {[
                 {
                   title: 'After-hours emergencies',
-                  body: 'Burst pipes, flooding, and backups don\'t wait for 8am. Wayne AI responds instantly overnight so you wake up to booked emergency calls — not a list of missed numbers.',
+                  body: 'Burst pipes, flooding, and backups don\'t wait for 8am. Wayne AI responds instantly overnight so you wake up to booked emergency calls, not a list of missed numbers.',
                 },
                 {
                   title: 'On-the-job missed calls',
@@ -162,11 +164,11 @@ export function PlumbingAutomationPage() {
                 },
                 {
                   title: 'Website visitors after hours',
-                  body: 'A homeowner lands on your website at 9pm with a leaking water heater. The chat widget captures their info and starts the booking process — no one needs to be awake.',
+                  body: 'A homeowner lands on your website at 9pm with a leaking water heater. The chat widget captures their info and starts the booking process. No one needs to be awake.',
                 },
                 {
                   title: 'Estimate follow-up',
-                  body: 'Plumbing quotes that don\'t get followed up die in the inbox. Automated sequences check in 24, 48, and 72 hours after an estimate — without you having to remember.',
+                  body: 'Plumbing quotes that don\'t get followed up die in the inbox. Automated sequences check in 24, 48, and 72 hours after an estimate. You do not have to remember.',
                 },
               ].map(({ title, body }) => (
                 <div key={title} className="p-6 bg-[#f8fafc] rounded-xl border border-gray-100">
@@ -177,6 +179,8 @@ export function PlumbingAutomationPage() {
             </div>
           </div>
         </section>
+
+        <LpAnchor trade="plumbers" />
 
         {/* Proof + guarantee */}
         <section className="py-16 px-6 bg-[#f8fafc]">
@@ -190,7 +194,7 @@ export function PlumbingAutomationPage() {
               <a href="tel:+18126123105" className="font-semibold text-[#f97316] hover:underline">
                 (812) 612-3105
               </a>{' '}
-              — an AI answers, talks, and books a time. Or call it and hang up, and watch it
+              and an AI answers, talks, and books a time. Or call it and hang up, and watch it
               text you back with a real booking link. That's our live system, not a demo reel.
             </p>
             <LpGuarantee />
@@ -206,7 +210,7 @@ export function PlumbingAutomationPage() {
               </h2>
               <p className="text-[#94a3b8] text-lg">
                 Tell us about your plumbing business and we'll show you exactly how automated
-                lead response works — free, no commitment.
+                lead response works. Free, no commitment.
               </p>
             </div>
             <div className="bg-white rounded-2xl p-6 shadow-2xl sm:p-8">

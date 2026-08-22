@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { LpGuarantee } from '../../components/LpGuarantee';
+import { LpAnchor } from '../../components/LpAnchor';
 import { Link } from 'react-router-dom';
 import { LeadCallbackForm } from '../../components/LeadCallbackForm';
 
@@ -13,15 +14,15 @@ export function RoofingAutomationPage() {
       <Helmet>
         <meta name="robots" content="noindex, follow" />
         <link rel="canonical" href="https://wayneai.net/lp/roofing-automation" />
-        <title>AI Lead Response for Roofing Companies | Wayne AI</title>
+        <title>Website + 24/7 Call Answering for Roofing Companies | Wayne AI</title>
         <meta
           name="description"
-          content="Roofing companies lose storm jobs every day to whoever responds first. Wayne AI texts back missed calls in seconds and books inspections automatically — storm season or slow season."
+          content="We build the site your roofing leads land on and answer the calls you miss, storm season or slow season. Booking on every page, missed-call text-back in seconds, from $149 a month."
         />
-        <meta property="og:title" content="AI Lead Response for Roofing Companies | Wayne AI" />
+        <meta property="og:title" content="Website + 24/7 Call Answering for Roofing Companies | Wayne AI" />
         <meta
           property="og:description"
-          content="Stop losing roofing jobs to faster competitors. Wayne AI captures every lead the moment it comes in — storms, slow season, and everything in between."
+          content="Your site, your phone, handled. We build the website, answer the calls you miss, and book the inspection while your competitors are still returning voicemails."
         />
       </Helmet>
 
@@ -54,10 +55,10 @@ export function RoofingAutomationPage() {
               Be the First Roofer on the Roof After Every Storm
             </h1>
             <p className="text-[#94a3b8] text-lg md:text-xl mb-10 max-w-2xl mx-auto">
-              After a storm, every homeowner in your market is calling at once — and they book
-              the first company that responds. Wayne AI texts back missed calls in seconds and
-              books inspections automatically, so you're scheduled before your competitors
-              finish their callbacks.
+              After a storm, every homeowner in your market is calling at once, and they book
+              the first company that responds. We build the site those calls land on, then
+              answer the ones you miss in seconds and book the inspection, so you're scheduled
+              before your competitors finish their callbacks.
             </p>
             <button
               onClick={scrollToForm}
@@ -78,7 +79,7 @@ export function RoofingAutomationPage() {
               {[
                 {
                   stat: '48 hrs',
-                  label: 'window after a storm when most homeowners commit to a roofer — first inspection usually wins the job',
+                  label: 'window after a storm when most homeowners commit to a roofer, and the first inspection usually wins the job',
                 },
                 {
                   stat: '40–60%',
@@ -86,7 +87,7 @@ export function RoofingAutomationPage() {
                 },
                 {
                   stat: '$8–15K',
-                  label: 'average value of a full roof replacement — each missed inspection is a job that went to a competitor',
+                  label: 'average value of a full roof replacement, so each missed inspection is a job that went to a competitor',
                 },
               ].map(({ stat, label }) => (
                 <div key={stat} className="text-center p-6 bg-[#f8fafc] rounded-xl border border-gray-100">
@@ -108,18 +109,18 @@ export function RoofingAutomationPage() {
               {[
                 {
                   step: '01',
-                  title: 'A homeowner calls — you miss it',
+                  title: 'A homeowner calls and you miss it',
                   body: "Storm just hit. Your phone is ringing off the hook. You're already on the line, your crew is in the field, and a new lead hits voicemail. Under the old system, they call the next roofer.",
                 },
                 {
                   step: '02',
                   title: 'Wayne AI texts them back in seconds',
-                  body: 'The moment the call goes unanswered, an automatic text goes out — acknowledging the call and asking what\'s going on. They\'re engaged before they even think about dialing someone else.',
+                  body: 'The moment the call goes unanswered, an automatic text goes out, acknowledging the call and asking what\'s going on. They\'re engaged before they even think about dialing someone else.',
                 },
                 {
                   step: '03',
                   title: 'The AI qualifies the lead and books the inspection',
-                  body: 'The system captures their address, asks about the damage, confirms their availability, and books directly to your inspection calendar — or queues the lead for your office to confirm.',
+                  body: 'The system captures their address, asks about the damage, confirms their availability, and books directly to your inspection calendar, or queues the lead for your office to confirm.',
                 },
                 {
                   step: '04',
@@ -145,7 +146,7 @@ export function RoofingAutomationPage() {
         <section className="py-16 px-6 bg-white">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-[#0f172a] mb-4 text-center">
-              Storm Season and Slow Season — Same System
+              Storm Season and Slow Season, Same System
             </h2>
             <p className="text-[#475569] text-lg text-center mb-12 max-w-xl mx-auto">
               The same automation that handles storm surge captures the leads most roofers
@@ -155,19 +156,19 @@ export function RoofingAutomationPage() {
               {[
                 {
                   title: 'Storm surge response',
-                  body: 'When 50 leads hit in 48 hours, the system handles every one simultaneously — no hold times, no voicemail, no leads falling through the cracks while your team is overwhelmed.',
+                  body: 'When 50 leads hit in 48 hours, the system handles every one simultaneously. No hold times, no voicemail, no leads falling through the cracks while your team is overwhelmed.',
                 },
                 {
                   title: 'After-hours and weekend calls',
-                  body: 'Homeowners notice roof damage on Saturday evening and call right then. Wayne AI responds instantly so you\'re scheduled before Monday morning — before your competitors even know the lead existed.',
+                  body: 'Homeowners notice roof damage on Saturday evening and call right then. Wayne AI responds instantly so you\'re scheduled before Monday morning, before your competitors even know the lead existed.',
                 },
                 {
                   title: 'Off-season lead capture',
-                  body: 'Slow months still have leads — they just don\'t raise their hands as loudly. Automated follow-up on website inquiries and missed calls keeps your pipeline from going cold between storms.',
+                  body: 'Slow months still have leads. They just don\'t raise their hands as loudly. Automated follow-up on website inquiries and missed calls keeps your pipeline from going cold between storms.',
                 },
                 {
                   title: 'Cold estimate follow-up',
-                  body: 'Quotes that went quiet don\'t have to stay that way. Automated sequences check in 48 hours, one week, and 30 days after an estimate — recovering jobs you\'d otherwise write off.',
+                  body: 'Quotes that went quiet don\'t have to stay that way. Automated sequences check in 48 hours, one week, and 30 days after an estimate, recovering jobs you\'d otherwise write off.',
                 },
               ].map(({ title, body }) => (
                 <div key={title} className="p-6 bg-[#f8fafc] rounded-xl border border-gray-100">
@@ -178,6 +179,8 @@ export function RoofingAutomationPage() {
             </div>
           </div>
         </section>
+
+        <LpAnchor trade="roofing companies" />
 
         {/* Proof + guarantee */}
         <section className="py-16 px-6 bg-[#f8fafc]">
@@ -191,7 +194,7 @@ export function RoofingAutomationPage() {
               <a href="tel:+18126123105" className="font-semibold text-[#f97316] hover:underline">
                 (812) 612-3105
               </a>{' '}
-              — an AI answers, talks, and books a time. Or call it and hang up, and watch it
+              and an AI answers, talks, and books a time. Or call it and hang up, and watch it
               text you back with a real booking link. That's the production system, running
               today. Here's the promise that comes with it.
             </p>
@@ -208,7 +211,7 @@ export function RoofingAutomationPage() {
               </h2>
               <p className="text-[#94a3b8] text-lg">
                 Tell us about your roofing business and we'll show you exactly how automated
-                lead response works — free, no commitment.
+                lead response works. Free, no commitment.
               </p>
             </div>
             <div className="bg-white rounded-2xl p-6 shadow-2xl sm:p-8">

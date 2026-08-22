@@ -12,13 +12,13 @@ export function AiAuditPage() {
         <title>Free AI Opportunity Audit for Service Businesses | Wayne AI</title>
         <meta
           name="description"
-          content="Get a free, no-pitch AI Opportunity Audit. We show you exactly where your service business is losing leads and jobs — and which automations recover them."
+          content="Get a free, no-pitch AI Opportunity Audit. We show you exactly where your service business is losing leads and jobs, and which automations recover them."
         />
         <link rel="canonical" href="https://wayneai.net/lp/ai-audit" />
         <meta property="og:title" content="Free AI Opportunity Audit for Service Businesses | Wayne AI" />
         <meta
           property="og:description"
-          content="Get a free, no-pitch AI Opportunity Audit. We show you exactly where your service business is losing leads and jobs — and which automations recover them."
+          content="Get a free, no-pitch AI Opportunity Audit. We show you exactly where your service business is losing leads and jobs, and which automations recover them."
         />
         <meta property="og:url" content="https://wayneai.net/lp/ai-audit" />
         <meta property="og:image" content="https://wayneai.net/og-image-1200x630.png" />
@@ -44,11 +44,11 @@ export function AiAuditPage() {
             Free AI Opportunity Audit
           </p>
           <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-6">
-            See exactly where your business is leaking jobs — free.
+            See exactly where your business is leaking jobs. Free.
           </h1>
           <p className="text-[#94a3b8] text-lg md:text-xl mb-10 max-w-2xl mx-auto">
             A personalized walkthrough of where leads slip through the cracks in your
-            service business — and which automations recover them. No pitch, no
+            service business, and which automations recover them. No pitch, no
             obligation. You leave with a plan you can keep and use.
           </p>
           <a
@@ -82,7 +82,7 @@ export function AiAuditPage() {
                   />
                 ),
                 title: 'Missed & after-hours calls',
-                body: 'Calls that ring out while you\'re on a job, driving, or off the clock — and never get a callback before the caller dials someone else.',
+                body: 'Calls that ring out while you\'re on a job, driving, or off the clock, and never get a callback before the caller dials someone else.',
               },
               {
                 icon: (
@@ -94,7 +94,7 @@ export function AiAuditPage() {
                   />
                 ),
                 title: 'Slow lead follow-up',
-                body: 'Speed-to-lead gaps where a new inquiry sits for hours before anyone responds — long enough for the prospect to book with a faster competitor.',
+                body: 'Speed-to-lead gaps where a new inquiry sits for hours before anyone responds, long enough for the prospect to book with a faster competitor.',
               },
               {
                 icon: (
@@ -106,7 +106,7 @@ export function AiAuditPage() {
                   />
                 ),
                 title: 'Reviews & reputation',
-                body: 'Happy customers who would gladly leave a 5-star review — but never get asked, so your reputation isn\'t earning you new work.',
+                body: 'Happy customers who would gladly leave a 5-star review but never get asked, so your reputation isn\'t earning you new work.',
               },
               {
                 icon: (
@@ -119,6 +119,18 @@ export function AiAuditPage() {
                 ),
                 title: 'Booking friction',
                 body: 'Clunky steps between "I\'m interested" and "I\'m on the calendar" that make customers give up before they ever book.',
+              },
+              {
+                icon: (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+                  />
+                ),
+                title: 'The website itself',
+                body: 'Slow pages, no booking button, or a site that reads like a brochure. It is the first thing a caller checks and the last thing anyone updates.',
               },
             ].map(({ icon, title, body }) => (
               <div key={title} className="p-6 bg-[#f8fafc] rounded-xl border border-gray-100">
@@ -146,7 +158,7 @@ export function AiAuditPage() {
               {
                 step: '1',
                 title: 'Quick 15-minute call about your business',
-                body: 'We talk through your trade, where your leads come from, and your busiest days — so the audit is built around how you actually operate.',
+                body: 'We talk through your trade, where your leads come from, and your busiest days, so the audit is built around how you actually operate.',
               },
               {
                 step: '2',
@@ -193,7 +205,7 @@ export function AiAuditPage() {
             </h2>
             <p className="text-[#94a3b8] text-lg">
               Pick a time below and we'll show you exactly where your business is
-              losing jobs — and how to win them back.
+              losing jobs, and how to win them back.
             </p>
           </div>
 

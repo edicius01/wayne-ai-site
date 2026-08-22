@@ -9,13 +9,13 @@ export function LpGuarantee() {
           <div>
             <h3 className="text-xl font-bold text-[#0f172a]">Our 30-Day Job Guarantee</h3>
             <p className="mt-2 text-[#475569]">
-              If the system doesn't catch at least <span className="font-bold text-[#f97316]">2 new jobs in your first 30 days</span>, we refund your first month and part ways as friends. No long-term contract — you're month-to-month and can cancel anytime.
+              If the system doesn't catch at least <span className="font-bold text-[#f97316]">2 new jobs in your first 30 days</span>, we refund your first month and part ways as friends. No long-term contract. You're month-to-month and can cancel anytime.
             </p>
           </div>
         </div>
       </div>
       <p className="text-[#475569] text-center leading-relaxed">
-        Built and run by <span className="font-semibold text-[#0f172a]">Wayne Dewig</span> in Evansville, Indiana. When you reach out, you're talking to me — not a call center or a sales floor. I'll show you exactly how this works for your business, and if it's not a fit, I'll tell you straight.
+        Built and run by <span className="font-semibold text-[#0f172a]">Wayne Dewig</span> in Evansville, Indiana. When you reach out, you're talking to me, not a call center or a sales floor. I'll show you exactly how this works for your business, and if it's not a fit, I'll tell you straight.
       </p>
     </div>
   );

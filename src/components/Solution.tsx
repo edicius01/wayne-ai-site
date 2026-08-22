@@ -1,24 +1,30 @@
-import { MessageSquareReply, BotMessageSquare, BellRing } from 'lucide-react';
+import { Globe, MessageSquareReply, BotMessageSquare, BellRing } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const steps = [
   {
     number: 1,
-    icon: <MessageSquareReply className="w-8 h-8" strokeWidth={2} />,
-    title: 'Missed Call → Instant Text',
-    description: "Customer calls while you're busy? They get a text back in seconds asking how we can help and offering to book their appointment.",
+    icon: <Globe className="w-8 h-8" strokeWidth={2} />,
+    title: 'A Site Built to Book Jobs',
+    description: 'We build you a fast, mobile-first site with booking on every page, or we install the booking on the site you already have. Your call.',
   },
   {
     number: 2,
-    icon: <BotMessageSquare className="w-8 h-8" strokeWidth={2} />,
-    title: 'AI Qualifying & Booking',
-    description: 'Our AI asks the right questions, qualifies the lead, checks your calendar availability, and books them directly - no back-and-forth needed.',
+    icon: <MessageSquareReply className="w-8 h-8" strokeWidth={2} />,
+    title: 'Every Call Answered',
+    description: "Busy on a job? The line still gets answered, by voice or by text back from your own number, asking what they need and offering a time.",
   },
   {
     number: 3,
+    icon: <BotMessageSquare className="w-8 h-8" strokeWidth={2} />,
+    title: 'Booked on Your Calendar',
+    description: 'The right questions get asked, the lead gets qualified, your real availability gets checked, and the job lands on your calendar with no back-and-forth.',
+  },
+  {
+    number: 4,
     icon: <BellRing className="w-8 h-8" strokeWidth={2} />,
-    title: 'Reminders & Review Requests',
-    description: 'Automated confirmations, reminders, and post-job review requests go out automatically so you get more 5-star reviews and fewer no-shows.',
+    title: 'Reminders and Review Requests',
+    description: 'Confirmations, reminders, and post-job review requests keep going out on their own, so fewer people forget and more of them leave you a review.',
   },
 ];
 
@@ -30,17 +36,17 @@ export function Solution() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-3xl sm:text-4xl font-bold text-[#0f172a] mb-4">
-            The receptionist that never sleeps
+            The whole front of your business, built and run
           </h2>
           <p className="text-lg text-[#1f2937] max-w-3xl mx-auto">
-            Wayne AI responds to <span className="font-bold text-[#f97316]">every missed call</span> with an instant text, captures their information, and guides them straight into your booking calendar - automatically.
+            Not a tool you have to set up. We build the site, wire the booking, answer the calls you miss, and keep the follow-up running. <span className="font-bold text-[#f97316]">One price, one company on the hook.</span>
           </p>
         </div>
 
         <div className="relative">
-          <div className="hidden md:block absolute top-24 left-[16%] right-[16%] h-0.5 bg-slate-200" />
+          <div className="hidden lg:block absolute top-24 left-[12%] right-[12%] h-0.5 bg-slate-200" />
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {steps.map((step, index) => (
               <div
                 key={index}

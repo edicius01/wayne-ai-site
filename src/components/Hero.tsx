@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 
 const ACTIVITY = [
-  { t: 'Missed call — Sarah J.', s: 'Auto-text sent in 11s', tone: 'orange' },
-  { t: 'Lead qualified — clogged sink', s: 'Asked for preferred time', tone: 'orange' },
+  { t: 'Missed call from Sarah J.', s: 'Auto-text sent in 11s', tone: 'orange' },
+  { t: 'Lead qualified: clogged sink', s: 'Asked for preferred time', tone: 'orange' },
   { t: 'Calendar checked', s: 'Opening found: Thu 2:00 PM', tone: 'orange' },
-  { t: 'Job booked — $650', s: 'Confirmation + reminder sent', tone: 'green' },
+  { t: 'Job booked, $650', s: 'Confirmation + reminder sent', tone: 'green' },
 ];
 
 export function Hero() {
@@ -39,26 +39,26 @@ export function Hero() {
           <div className="text-center lg:text-left">
             <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-[#f97316]/20 bg-[#f97316]/10 px-4 py-2 text-sm font-medium text-[#fdba74]">
               <span className="h-2 w-2 animate-pulse rounded-full bg-[#f97316]" />
-              AI Front Office for Local Service Businesses
+              Websites and 24/7 Answering for Local Service Businesses
             </div>
 
             <h1 className="mb-6 text-5xl font-black leading-[1.02] tracking-tight text-white sm:text-6xl md:text-7xl">
-              Never miss
+              Your site.
               <br />
-              another{' '}
+              Your phone.
+              <br />
               <span className="relative whitespace-nowrap text-[#f97316]">
-                lead
+                Handled
                 <svg className="absolute -bottom-2 left-0 w-full" height="10" viewBox="0 0 200 10" fill="none" preserveAspectRatio="none">
                   <path d="M2 7C50 2 150 2 198 7" stroke="#f97316" strokeWidth="3" strokeLinecap="round" opacity="0.5" />
                 </svg>
-              </span>{' '}
-              again
+              </span>.
             </h1>
 
             <p className="mx-auto mb-10 max-w-xl text-lg leading-relaxed text-[#94a3b8] lg:mx-0 sm:text-xl">
-              A <span className="font-semibold text-white">24/7 system</span> that answers instantly, books the
-              job, and turns missed calls into <span className="font-semibold text-[#f97316]">scheduled revenue</span> —
-              while you stay on the tools.
+              We build the site, answer the calls you miss, and keep the follow-up running.
+              One monthly price from <span className="font-semibold text-white">$149</span>, no setup fee, and
+              <span className="font-semibold text-[#f97316]"> you stay on the tools</span>.
             </p>
 
             <div className="mb-10 flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
@@ -101,9 +101,9 @@ export function Hero() {
               <div className="flex items-center justify-between border-b border-white/[0.06] px-5 py-4">
                 <div className="flex items-center gap-2">
                   <span className="h-3 w-3 rounded-full bg-[#10b981]" />
-                  <span className="text-xs font-bold tracking-wider text-[#10b981]">LIVE — WAYNE AI</span>
+                  <span className="text-xs font-bold tracking-wider text-[#10b981]">HOW ONE MISSED CALL RUNS</span>
                 </div>
-                <span className="text-[11px] text-[#64748b]">Avg response &lt; 15s</span>
+                <span className="text-[11px] text-[#64748b]">Text-back in seconds</span>
               </div>
 
               <div className="space-y-3 p-5">
@@ -144,9 +144,9 @@ export function Hero() {
               </div>
 
               <div className="flex items-center justify-between border-t border-white/[0.06] bg-white/[0.02] px-5 py-4">
-                <span className="text-xs text-[#94a3b8]">This week</span>
+                <span className="text-xs text-[#94a3b8]">Example flow</span>
                 <span className="text-sm font-bold text-white">
-                  <span className="text-[#10b981]">+$8,450</span> recovered revenue
+                  Hear it yourself: <a href="tel:8126123105" className="text-[#10b981] underline underline-offset-4">(812) 612-3105</a>
                 </span>
               </div>
             </div>
