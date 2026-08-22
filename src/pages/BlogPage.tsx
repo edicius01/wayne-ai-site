@@ -2,6 +2,7 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Navigation } from '../components/Navigation';
 import { Footer } from '../components/Footer';
+import { NewsletterCapture } from '../components/NewsletterCapture';
 import { posts, type BlogPost } from '../content/blog/posts';
 
 type Category = {
@@ -152,6 +153,12 @@ export function BlogPage() {
               ))}
             </div>
           )}
+        </div>
+      </section>
+
+      <section className="pb-16">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <NewsletterCapture />
         </div>
       </section>
 
