@@ -17,7 +17,7 @@ const objections = [
           <div className="bg-white/50 rounded-lg p-4">
             <h4 className="font-bold text-[#0f172a] mb-2">Option 2: Let Us Build You a New One</h4>
             <p className="text-[#374151]">
-              We'll create a high-speed, high-conversion site designed to rank in Evansville/Henderson/Owensboro. Mobile-optimized, loads in under 2 seconds, and built to turn visitors into booked jobs.
+              We build you a fast, mobile-first site for your trades and your service area, with a booking button on every screen. We host it, we keep it updated, and it is included in the monthly price rather than a four-figure project on the side.
             </p>
           </div>
         </div>
@@ -28,34 +28,34 @@ const objections = [
     ),
   },
   {
-    question: "Can't I just use Google Voice or a chatbot?",
+    question: "There are $39 apps that answer the phone. Why pay more?",
     answer: (
       <>
-        <p className="mb-4">Sure. Here's what that looks like:</p>
+        <p className="mb-4">There are, and they work. Here is what you are still holding afterward:</p>
         <ul className="space-y-2 mb-4">
           <li className="flex items-start gap-2">
             <span className="text-red-500 mt-1">✗</span>
-            <span className="text-[#374151]"><span className="font-semibold">40+ hours</span> of setup (if you know what you're doing)</span>
+            <span className="text-[#374151]"><span className="font-semibold">Your website is still whatever it was.</span> Answering apps answer the phone. Not one of them builds you a site.</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-red-500 mt-1">✗</span>
-            <span className="text-[#374151]"><span className="font-semibold">Zero calendar integration</span> (you'll manually book every appointment)</span>
+            <span className="text-[#374151]"><span className="font-semibold">You wire it up.</span> Calendar, booking flow, message templates, and the site it all points at are your evening project.</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-red-500 mt-1">✗</span>
-            <span className="text-[#374151]"><span className="font-semibold">Robotic responses</span> that make customers hang up</span>
+            <span className="text-[#374151]"><span className="font-semibold">Your texts may never arrive.</span> US carriers filter business texting that isn't registered. We register yours so the messages actually land.</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-red-500 mt-1">✗</span>
-            <span className="text-[#374151]"><span className="font-semibold">No support</span> when it breaks</span>
+            <span className="text-[#374151]"><span className="font-semibold">No one is on the hook.</span> When it breaks at 6pm on a Friday, you are the support team.</span>
           </li>
         </ul>
         <div className="bg-green-50 border-2 border-green-200 rounded-lg p-4">
           <p className="text-[#0f172a] mb-2">
-            We build and run this system ourselves — <span className="font-bold text-green-700">it answers our own business line</span> before it ever touches yours. You get it installed in 7 days, with a human on the hook when something needs fixing.
+            We build and run this system ourselves. <span className="font-bold text-green-700">It answers our own business line</span> before it ever touches yours. You get the site and the phone installed in 7 days, with a human on the hook when something needs fixing.
           </p>
           <p className="text-lg font-bold text-green-700">
-            The real question: What's your time worth?
+            The real question: who is building the site those calls come from?
           </p>
         </div>
       </>
@@ -74,7 +74,7 @@ const objections = [
           <div className="bg-white rounded-lg p-4">
             <p className="font-bold text-[#0f172a] mb-2">Why we're confident:</p>
             <p className="text-[#374151]">
-              The jobs this catches are calls you're <span className="font-bold">already getting and already losing</span> — the system just answers them in seconds instead of never. If your phone rings and we're set up correctly, this works. That's why we can afford to put a refund behind it.
+              The jobs this catches are calls you're <span className="font-bold">already getting and already losing</span>. The system answers them in seconds instead of never. If your phone rings and we're set up correctly, this works. That's why we can afford to put a refund behind it.
             </p>
           </div>
         </div>

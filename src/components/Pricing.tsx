@@ -9,14 +9,14 @@ export function Pricing() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-3xl sm:text-4xl font-bold text-[#0f172a] mb-4">
-            Three Ways to Work With Us
+            Three Plans. The Website Is in All Three.
           </h2>
           <p className="text-lg text-[#1f2937] max-w-3xl mx-auto">
-            Choose the level that fits where your business is today - you can always upgrade as you grow.
+            Every plan includes your site, built and hosted by us, or the booking installed on the site you already have. What changes is how much of the phone we take off your hands.
           </p>
           <div className="mt-5 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm font-semibold text-[#0f172a]">
             <span className="inline-flex items-center gap-1.5">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#16a34a]" /> No setup fees
+              <span className="h-1.5 w-1.5 rounded-full bg-[#16a34a]" /> Website included
             </span>
             <span className="inline-flex items-center gap-1.5">
               <span className="h-1.5 w-1.5 rounded-full bg-[#16a34a]" /> Month-to-month
@@ -60,7 +60,7 @@ export function Pricing() {
                     ${tier.price}<span className="text-xl font-normal text-[#374151]">/mo</span>
                   </div>
                   <p className="text-sm font-semibold text-[#0f172a] mt-2">
-                    No setup fee <span className="font-normal text-[#374151]">— first month due at signup</span>
+                    No setup fee <span className="font-normal text-[#374151]">(first month due at signup)</span>
                   </p>
                   <p className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-[#16a34a]">
                     <svg className="h-4 w-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -134,7 +134,7 @@ export function Pricing() {
               <div>
                 <h3 className="text-xl font-bold text-[#0f172a] sm:text-2xl">Our 30-Day Job Guarantee</h3>
                 <p className="mt-2 text-[#374151]">
-                  If the system doesn't catch at least <span className="font-bold text-[#f97316]">2 new jobs in your first 30 days</span>, we refund your first month and part ways as friends. No long-term contract — you're month-to-month and can cancel anytime.
+                  If the system doesn't catch at least <span className="font-bold text-[#f97316]">2 new jobs in your first 30 days</span>, we refund your first month and part ways as friends. No long-term contract. You're month-to-month and can cancel anytime.
                 </p>
               </div>
             </div>
@@ -143,18 +143,19 @@ export function Pricing() {
 
         <div className={`mt-8 text-center transition-all duration-700 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="bg-white rounded-xl p-6 inline-block shadow-md border border-gray-200">
-            <h4 className="font-bold text-[#0f172a] mb-2">Your Build Is Included — Done in 7 Days</h4>
+            <h4 className="font-bold text-[#0f172a] mb-2">Your Build Is Included, Done in 7 Days</h4>
             <p className="text-sm text-[#374151] max-w-2xl">
-              No setup fee. We custom-build your entire system in 7 days or less: calendar sync, SMS templates, review automation, website integration (or new site build), and 30 days of white-glove support. You don't waste 40+ hours trying to DIY this - we handle it, test it, and hand you a working system.
+              No setup fee. We build the whole thing in 7 days or less: your site, calendar sync, SMS templates, review automation, and 30 days of white-glove support. A web shop alone quotes four figures for the site and then leaves you to answer the phone. Here it is one build, one bill, and a working system handed to you.
             </p>
           </div>
         </div>
 
         <p className="text-center text-xs text-[#6b7280] mt-6">
-          *Voice AI (an AI that answers your phone, talks, and books) is live — call (812) 612-3105 to hear it.
+          *Voice AI (an AI that answers your phone, talks, and books) is live. Call (812) 612-3105 to hear it.
           The AI Front Desk includes it on your own number as early access (250 minutes included); The Whole
-          Phone Line includes 600 minutes. Beyond your allowance it's ${voiceOverageRate.toFixed(2)}/min.
-          Prefer text? The managed line also catches every missed call by text.
+          Phone Line includes 600 minutes. Beyond your allowance it's ${voiceOverageRate.toFixed(2)}/min, against
+          the $3 to $5 a minute the human answering services charge. Prefer text? The managed line also catches
+          every missed call by text.
         </p>
       </div>
     </section>

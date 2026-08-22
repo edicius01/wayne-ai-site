@@ -1,0 +1,41 @@
+{
+  "_comment": "Sanctioned numeric claims. A flagged line is cleared if it contains any 'match' string below. Keep this list SHORT and every entry justified — it is the escape hatch, and a long allowlist means the gate has stopped meaning anything. Canon: vault Reference/Wayne AI Positioning 2026.md.",
+  "allow": [
+    {
+      "match": "62% of calls",
+      "why": "Canon messaging hierarchy #1 — the sanctioned missed-call hook stat. Market/problem stat, not a Wayne AI results claim."
+    },
+    {
+      "match": "2 new jobs in your first 30 days",
+      "why": "The guarantee. A promise we choose, not a result we measured — the canon's prescribed replacement for results stats."
+    },
+    {
+      "match": "at least 2 new jobs",
+      "why": "Guarantee phrasing variant."
+    },
+    {
+      "match": "7 days or less",
+      "why": "Delivery commitment, already public site copy (Pricing, ObjectionCrusher). Not an outcome claim."
+    },
+    {
+      "match": "250 Mins Included",
+      "why": "Product spec — included voice minutes on the AI Front Desk tier."
+    },
+    {
+      "match": "600 Mins Included",
+      "why": "Product spec — included voice minutes on The Whole Phone Line tier."
+    },
+    {
+      "match": "$149 to $497",
+      "why": "Live pricing from content/pricing.ts."
+    },
+    {
+      "match": "100% secure",
+      "why": "Privacy-policy boilerplate disclaiming security guarantees. Not a marketing claim."
+    },
+    {
+      "match": "10% of what you actually need",
+      "why": "Rhetorical figure on the About page, not a measured stat."
+    }
+  ]
+}

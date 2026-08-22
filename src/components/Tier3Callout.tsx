@@ -8,22 +8,22 @@ export function Tier3Callout() {
     {
       icon: <PhoneCall className="w-6 h-6" strokeWidth={2} />,
       title: 'Catches every missed call',
-      description: '(even at 2 AM on a Sunday — the text-back goes out in seconds)',
+      description: '(even at 2 AM on a Sunday, the text-back goes out in seconds)',
     },
     {
       icon: <MessageSquareText className="w-6 h-6" strokeWidth={2} />,
       title: 'Texts from the number they just dialed',
-      description: 'Not a third-party number your customer has never seen — your line answers',
+      description: 'Not a third-party number your customer has never seen. Your line answers.',
     },
     {
       icon: <CalendarPlus className="w-6 h-6" strokeWidth={2} />,
       title: 'Books the appointment',
-      description: 'A real booking link, straight onto your calendar - no back-and-forth',
+      description: 'A real booking link, straight onto your calendar, no back-and-forth',
     },
     {
       icon: <ClipboardCheck className="w-6 h-6" strokeWidth={2} />,
       title: 'Logs the proof',
-      description: 'Every call caught shows up in your dashboard — jobs saved is a number, not a vibe',
+      description: 'Every call caught shows up in your dashboard. Jobs saved is a number, not a vibe.',
     },
   ];
 
@@ -33,10 +33,10 @@ export function Tier3Callout() {
         <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="text-center mb-12">
             <div className="inline-block bg-[#f97316] text-white text-sm font-bold px-4 py-2 rounded-full mb-4">
-              THE AI FRONT DESK
+              PROOF, NOT PROMISES
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              📞 Every Call You Miss Gets Answered in Seconds — By Text, From Your Own Number
+              📞 The site brings them in. This is what happens when they call.
             </h2>
             <p className="text-xl text-gray-300">
               Here's what it does, live, today:
@@ -73,11 +73,11 @@ export function Tier3Callout() {
               <div>
                 <h3 className="text-xl font-bold text-white mb-2">🛡️ Proof Over Promises</h3>
                 <p className="text-white/90">
-                  Voice answering is live — an AI that picks up, talks, and books a time. AI Front Desk
+                  Voice answering is live. An AI picks up, talks, and books a time. AI Front Desk
                   customers get it on their own number first. We don't sell what you can't hear, so hear it
                   now on our own business line:{' '}
                   <a href="/demo" className="underline decoration-[#f97316] underline-offset-4 font-semibold">
-                    call it — an AI answers, or hang up and it texts you back
+                    call it. An AI answers, or hang up and it texts you back
                   </a>.
                 </p>
               </div>
@@ -85,7 +85,7 @@ export function Tier3Callout() {
 
             <div className="border-t border-white/20 pt-6">
               <p className="text-xl font-bold text-white">
-                Translation: 24/7 coverage — an AI that answers your phone and books jobs, not a half-baked robot you'd be embarrassed by. Hear it before you buy.
+                Translation: the phone is covered around the clock, by an AI that answers and books, not a half-baked robot you'd be embarrassed by. Hear it before you buy.
               </p>
             </div>
           </div>

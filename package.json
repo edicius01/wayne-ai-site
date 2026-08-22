@@ -5,9 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build && node scripts/install-chrome.mjs && node scripts/prerender.mjs",
+    "build": "tsc -b && node scripts/lint-claims.mjs && vite build && node scripts/install-chrome.mjs && node scripts/prerender.mjs",
     "prerender": "node scripts/prerender.mjs",
     "lint": "eslint .",
+    "lint:claims": "node scripts/lint-claims.mjs",
+    "lint:claims:blog": "node scripts/lint-claims.mjs --blog",
     "preview": "vite preview"
   },
   "dependencies": {
