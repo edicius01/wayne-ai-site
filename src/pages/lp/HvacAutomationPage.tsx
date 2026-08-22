@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { LpGuarantee } from '../../components/LpGuarantee';
+import { LpAnchor } from '../../components/LpAnchor';
 import { Link } from 'react-router-dom';
 import { LeadCallbackForm } from '../../components/LeadCallbackForm';
 import { JsonLd } from '../../components/JsonLd';
@@ -22,7 +23,7 @@ const faqs = [
   {
     question: 'Does it actually answer the phone, or does it only send texts?',
     answer:
-      'Both. Missed-call text-back is live on every tier: the moment a call goes unanswered, the caller gets a text from the same number they dialed, with a real booking link. Voice AI that answers, holds a conversation, and books an appointment is live on our own line right now — call (812) 612-3105 and hear it. On your own business number, voice is early access, with 250 or 600 included minutes depending on tier.',
+      'Both. Missed-call text-back is live on every tier: the moment a call goes unanswered, the caller gets a text from the same number they dialed, with a real booking link. Voice AI that answers, holds a conversation, and books an appointment is live on our own line right now. Call (812) 612-3105 and hear it. On your own business number, voice is early access, with 250 or 600 included minutes depending on tier.',
   },
   {
     question: 'What happens when the AI cannot answer a question?',
@@ -42,7 +43,7 @@ const faqs = [
   {
     question: 'How long does setup take, and what do we have to do?',
     answer:
-      'Seven days or less, and the build is on us — calendar sync, SMS templates, review automation, and website integration. This is done-for-you rather than a login and a tutorial. If the system does not catch at least 2 new jobs in your first 30 days, we refund your first month.',
+      'Seven days or less, and the build is on us: calendar sync, SMS templates, review automation, and website integration. This is done-for-you rather than a login and a tutorial. If the system does not catch at least 2 new jobs in your first 30 days, we refund your first month.',
   },
 ];
 
@@ -76,6 +77,11 @@ export function HvacAutomationPage() {
     <>
       <Helmet>
         <link rel="canonical" href="https://wayneai.net/lp/hvac-automation" />
+        {/* Title, description and H1 are FROZEN until the SEO test reads ~2026-10-05.
+            This is the one indexed /lp/* page (PR #24, noindex removed 08-10), so the
+            ranked surface must not move mid-test. That includes the em dash below: it
+            stays despite the no-em-dash rule, deliberately, until the test result is in.
+            Body copy was repositioned 08-21; the ranked surface was not. */}
         <title>AI Receptionist for HVAC Companies — Answers &amp; Books 24/7 | Wayne AI</title>
         <meta
           name="description"
@@ -124,7 +130,7 @@ export function HvacAutomationPage() {
               Looking for an AI Receptionist for Your HVAC Company?
             </h1>
             <p className="text-[#94a3b8] text-lg md:text-xl mb-10 max-w-2xl mx-auto">
-              What most HVAC owners actually need isn't a receptionist app — it's a front office
+              What most HVAC owners actually need isn't a receptionist app. It's a front office
               that runs without them. Wayne AI installs and runs the whole thing: missed calls
               texted back in seconds, jobs booked on your real calendar, and follow-up that
               happens whether or not anyone remembers. When an AC dies at 6pm, homeowners call
@@ -144,7 +150,7 @@ export function HvacAutomationPage() {
         <section className="bg-[#f97316] py-8 px-6">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-white text-lg font-semibold mb-2">
-              Don't take our word for it — test it on our own line.
+              Don't take our word for it. Test it on our own line.
             </p>
             <p className="text-white/90 leading-relaxed">
               Call{' '}
@@ -174,7 +180,7 @@ export function HvacAutomationPage() {
             <p className="text-[#475569] text-lg leading-relaxed">
               The job doesn't go to the cheapest company or the best-reviewed one. It goes to
               whoever responded first. That's the whole contest, and it's decided in the minutes
-              after a call you couldn't take — which is exactly the window an automated front
+              after a call you couldn't take, which is exactly the window an automated front
               office is built to cover.
             </p>
           </div>
@@ -194,7 +200,7 @@ export function HvacAutomationPage() {
               second job layered on top of the first one.
             </p>
             <p className="text-[#475569] text-lg leading-relaxed mb-6">
-              The real alternative to hiring someone isn't buying software — it's becoming your
+              The real alternative to hiring someone isn't buying software. It's becoming your
               own systems integrator. We'd rather do that part. We build the system, connect it
               to your calendar and your website, register your texting with the carriers, run
               it, and fix it when it needs fixing. You get a working front office in seven days
@@ -205,19 +211,22 @@ export function HvacAutomationPage() {
                 <h3 className="font-bold text-[#0f172a] mb-2">A $49 app gives you</h3>
                 <p className="text-[#475569] text-sm leading-relaxed">
                   A dashboard, a free trial, and a list of things you now have to configure,
-                  monitor, and repair yourself.
+                  monitor, and repair yourself. Your website stays exactly as it was, because
+                  answering apps answer the phone and nothing else.
                 </p>
               </div>
               <div className="p-6 bg-white rounded-xl border-2 border-[#f97316]">
                 <h3 className="font-bold text-[#0f172a] mb-2">Wayne AI gives you</h3>
                 <p className="text-[#475569] text-sm leading-relaxed">
-                  An installed, integrated, carrier-registered front office that someone else
-                  runs — with a guarantee attached to whether it actually books jobs.
+                  Your website built and run, plus an installed, integrated, carrier-registered
+                  front office behind it, with a guarantee attached to whether it books jobs.
                 </p>
               </div>
             </div>
           </div>
         </section>
+
+        <LpAnchor trade="HVAC companies" />
 
         {/* How it works */}
         <section className="py-16 px-6 bg-white">
@@ -227,13 +236,13 @@ export function HvacAutomationPage() {
               {[
                 {
                   step: '01',
-                  title: 'A lead calls — you miss it',
+                  title: 'A lead calls and you miss it',
                   body: "You're on a job. The phone rings. You can't answer. Under the old system, that lead calls your competitor next and you never even learn the job existed.",
                 },
                 {
                   step: '02',
                   title: 'Wayne AI responds in seconds',
-                  body: 'The moment a call goes unanswered, an automatic text goes out from the same number the homeowner dialed — so it reads as you, not as a stranger. On the AI Front Desk tier, the phone gets answered by a voice AI that can hold the conversation instead of letting it go to voicemail.',
+                  body: 'The moment a call goes unanswered, an automatic text goes out from the same number the homeowner dialed, so it reads as you, not as a stranger. On the AI Front Desk tier, the phone gets answered by a voice AI that can hold the conversation instead of letting it go to voicemail.',
                 },
                 {
                   step: '03',
@@ -243,7 +252,7 @@ export function HvacAutomationPage() {
                 {
                   step: '04',
                   title: 'You show up to a booked job, not a callback list',
-                  body: "No more end-of-day callback roulette. Every caught call is logged, so at the end of the month the jobs you recovered are a number you can count — not a feeling about whether the thing is working.",
+                  body: "No more end-of-day callback roulette. Every caught call is logged, so at the end of the month the jobs you recovered are a number you can count, not a feeling about whether the thing is working.",
                 },
               ].map(({ step, title, body }) => (
                 <div key={step} className="flex gap-6 items-start">
@@ -282,7 +291,7 @@ export function HvacAutomationPage() {
                 },
                 {
                   title: 'On-the-job missed calls',
-                  body: "You can't stop a service call to answer the phone, and you shouldn't have to. Every missed call gets an instant response that holds the lead until you're free — from your number, so it doesn't read as spam.",
+                  body: "You can't stop a service call to answer the phone, and you shouldn't have to. Every missed call gets an instant response that holds the lead until you're free, sent from your number so it doesn't read as spam.",
                 },
                 {
                   title: 'Estimate follow-up',
@@ -306,7 +315,7 @@ export function HvacAutomationPage() {
             </h2>
             <p className="text-[#475569] text-lg leading-relaxed mb-6">
               US carriers block business texting from numbers that aren't registered. Not
-              flagged, not delayed — blocked. The messages leave your system, the dashboard
+              flagged. Not delayed, blocked. The messages leave your system, the dashboard
               shows them as sent, and they never reach anyone's phone. Most owners who set this
               up themselves discover it weeks later, after wondering why an automation that
               "works" isn't producing a single reply.
@@ -314,7 +323,7 @@ export function HvacAutomationPage() {
             <p className="text-[#475569] text-lg leading-relaxed">
               We register your business and your texting campaign with the carriers as part of
               onboarding, because a missed-call text that doesn't deliver is worse than no
-              system at all — it's the same lost job plus a monthly bill. This is unglamorous,
+              system at all. It's the same lost job plus a monthly bill. This is unglamorous,
               genuinely annoying work, and it's the difference between a front office that
               books jobs and one that just looks busy.
             </p>
@@ -330,7 +339,7 @@ export function HvacAutomationPage() {
             <p className="text-[#475569] text-lg mb-12 max-w-xl mx-auto">
               We don't have a wall of HVAC testimonials, because we'd rather show you something
               you can verify than something you have to take on faith. So here's the promise
-              instead — and the live line above, which you can test right now.
+              instead, and the live line above, which you can test right now.
             </p>
             <LpGuarantee />
           </div>
@@ -391,7 +400,7 @@ export function HvacAutomationPage() {
               </h2>
               <p className="text-[#94a3b8] text-lg">
                 Tell us about your HVAC business and we'll show you exactly how the front office
-                works — free, no commitment.
+                works. Free, no commitment.
               </p>
             </div>
             <div className="bg-white rounded-2xl p-6 shadow-2xl sm:p-8">

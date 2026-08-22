@@ -102,19 +102,19 @@ export function ChiropractorReactivationPage() {
               For Chiropractors
             </p>
             <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-6">
-              Win Back Lapsed Patients — Without Lifting a Finger
+              Win Back Lapsed Patients Without Lifting a Finger
             </h1>
             <p className="text-[#94a3b8] text-lg md:text-xl mb-8 max-w-2xl mx-auto">
               Most chiropractic offices have hundreds of patients who came in once or twice and
               never returned. Wayne AI identifies them, sends a warm personalized message at
-              exactly the right time, and books the appointment — automatically.
+              exactly the right time, and books the appointment, automatically.
             </p>
             {/* Quick proof bullets */}
             <ul className="text-left max-w-md mx-auto space-y-2 mb-10">
               {[
                 '60%+ of new patients never return after their first visit',
                 'Reactivation costs 5–7× less than acquiring a new patient',
-                'Set up once — runs on every patient you\'ve ever seen',
+                'Set up once, then it runs on every patient you\'ve ever seen',
               ].map((point) => (
                 <li key={point} className="flex items-start gap-3 text-[#cbd5e1] text-sm">
                   <span className="text-[#f97316] font-bold mt-0.5 flex-shrink-0">✓</span>
@@ -142,7 +142,7 @@ export function ChiropractorReactivationPage() {
                 {
                   step: '01',
                   title: 'We identify your lapsed patients',
-                  body: "You share a simple export of your patient list — names, last visit date, contact info. Wayne AI flags anyone who hasn't been in for 3, 6, or 12 months, whatever threshold fits your practice.",
+                  body: "You share a simple export of your patient list: names, last visit date, contact info. Wayne AI flags anyone who hasn't been in for 3, 6, or 12 months, whatever threshold fits your practice.",
                 },
                 {
                   step: '02',
@@ -152,7 +152,7 @@ export function ChiropractorReactivationPage() {
                 {
                   step: '03',
                   title: 'Replies get handled and appointments get booked',
-                  body: 'When a patient responds, the system qualifies them and books directly to your calendar — or hands off to your front desk for high-touch cases.',
+                  body: 'When a patient responds, the system qualifies them and books directly to your calendar, or hands off to your front desk for high-touch cases.',
                 },
                 {
                   step: '04',
@@ -197,7 +197,7 @@ export function ChiropractorReactivationPage() {
               <a href="tel:+18126123105" className="font-semibold text-[#f97316] hover:underline">
                 (812) 612-3105
               </a>{' '}
-              — an AI answers, talks, and books a time. Or call it and hang up, and watch it
+              and an AI answers, talks, and books a time. Or call it and hang up, and watch it
               text you back with a real booking link. Then judge it on that.
             </p>
             <LpGuarantee />
@@ -209,7 +209,7 @@ export function ChiropractorReactivationPage() {
           <div className="max-w-xl mx-auto">
             <div className="text-center mb-8">
               <h2 className="text-2xl md:text-3xl font-extrabold text-white mb-3">
-                See it live in 20 minutes — free
+                See it live in 20 minutes, free
               </h2>
               <p className="text-[#94a3b8]">
                 Pick a time and we'll show you exactly how it works for your practice.
@@ -217,7 +217,7 @@ export function ChiropractorReactivationPage() {
             </div>
 
             <div className="bg-white rounded-2xl p-2 shadow-2xl">
-              <CrmBookingEmbed title="Book a Call — Wayne AI" />
+              <CrmBookingEmbed title="Book a Call with Wayne AI" />
             </div>
 
             <p className="text-[#475569] text-sm text-center mt-4">No commitment. No sales pressure.</p>

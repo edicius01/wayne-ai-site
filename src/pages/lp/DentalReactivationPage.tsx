@@ -56,7 +56,7 @@ export function DentalReactivationPage() {
             <p className="text-[#94a3b8] text-lg md:text-xl mb-10 max-w-2xl mx-auto">
               Every dental practice has hundreds of patients who are overdue for their cleaning
               and simply haven't been reminded. Wayne AI tracks hygiene cycles and sends the
-              right message at the right time — automatically booking them back in.
+              right message at the right time, automatically booking them back in.
             </p>
             <button
               onClick={scrollToForm}
@@ -81,7 +81,7 @@ export function DentalReactivationPage() {
                 },
                 {
                   stat: '6 mo',
-                  label: 'recommended recall cycle — most patients miss it without a personal reminder',
+                  label: 'recommended recall cycle, and most patients miss it without a personal reminder',
                 },
                 {
                   stat: '$200–600',
@@ -108,12 +108,12 @@ export function DentalReactivationPage() {
                 {
                   step: '01',
                   title: 'We identify overdue patients automatically',
-                  body: 'Wayne AI flags every patient whose last hygiene visit was 6, 9, or 12+ months ago — segmented by recall interval so high-risk patients get priority outreach.',
+                  body: 'Wayne AI flags every patient whose last hygiene visit was 6, 9, or 12+ months ago, segmented by recall interval so high-risk patients get priority outreach.',
                 },
                 {
                   step: '02',
                   title: 'A personal reminder goes out at the right time',
-                  body: "Each patient gets a short, friendly text or email referencing their last visit and making it easy to schedule. It reads like it came from your front desk — not a mass reminder blast.",
+                  body: "Each patient gets a short, friendly text or email referencing their last visit and making it easy to schedule. It reads like it came from your front desk, not a mass reminder blast.",
                 },
                 {
                   step: '03',
@@ -152,7 +152,7 @@ export function DentalReactivationPage() {
               <a href="tel:+18126123105" className="font-semibold text-[#f97316] hover:underline">
                 (812) 612-3105
               </a>{' '}
-              — an AI answers, talks, and books a time. Or call it and hang up, and watch it
+              and an AI answers, talks, and books a time. Or call it and hang up, and watch it
               text you back with a real booking link. Then judge it on that.
             </p>
             <LpGuarantee />
@@ -168,7 +168,7 @@ export function DentalReactivationPage() {
               </h2>
               <p className="text-[#94a3b8] text-lg">
                 Tell us about your practice and we'll show you exactly how recall automation
-                works — free, no commitment.
+                works. Free, no commitment.
               </p>
             </div>
             <div className="bg-white rounded-2xl p-6 shadow-2xl sm:p-8">

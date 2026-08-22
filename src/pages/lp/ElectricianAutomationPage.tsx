@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { LpGuarantee } from '../../components/LpGuarantee';
+import { LpAnchor } from '../../components/LpAnchor';
 import { Link } from 'react-router-dom';
 import { LeadCallbackForm } from '../../components/LeadCallbackForm';
 
@@ -13,15 +14,15 @@ export function ElectricianAutomationPage() {
       <Helmet>
         <meta name="robots" content="noindex, follow" />
         <link rel="canonical" href="https://wayneai.net/lp/electrician-automation" />
-        <title>AI Lead Response for Electricians | Wayne AI</title>
+        <title>Website + 24/7 Call Answering for Electricians | Wayne AI</title>
         <meta
           name="description"
-          content="Electricians lose jobs every day to whoever answers first. Wayne AI texts back missed calls in seconds and books appointments automatically — even at 2am."
+          content="We build the site your electrical jobs come from and answer the calls you miss, day or night. Booking on every page, missed-call text-back in seconds, from $149 a month."
         />
-        <meta property="og:title" content="AI Lead Response for Electricians | Wayne AI" />
+        <meta property="og:title" content="Website + 24/7 Call Answering for Electricians | Wayne AI" />
         <meta
           property="og:description"
-          content="Stop losing electrical jobs to faster competitors. Wayne AI responds to missed calls instantly and books service appointments automatically."
+          content="Your site, your phone, handled. We build the website, answer the calls you miss, and book the job before the homeowner dials the next electrician."
         />
       </Helmet>
 
@@ -55,8 +56,9 @@ export function ElectricianAutomationPage() {
             </h1>
             <p className="text-[#94a3b8] text-lg md:text-xl mb-10 max-w-2xl mx-auto">
               A tripped breaker at midnight. No power on a holiday weekend. Electrical
-              emergencies don't wait — and neither do homeowners. Wayne AI texts back missed
-              calls in seconds so you capture the job before they dial someone else.
+              emergencies don't wait, and neither do homeowners. We build the site those calls
+              come from, then answer the ones you miss in seconds, so you capture the job
+              before they dial the next electrician.
             </p>
             <button
               onClick={scrollToForm}
@@ -81,7 +83,7 @@ export function ElectricianAutomationPage() {
                 },
                 {
                   stat: '2am',
-                  label: 'electrical emergencies happen around the clock — most companies miss every after-hours call',
+                  label: 'electrical emergencies happen around the clock, and most companies miss every after-hours call',
                 },
                 {
                   stat: '$400+',
@@ -107,13 +109,13 @@ export function ElectricianAutomationPage() {
               {[
                 {
                   step: '01',
-                  title: 'A homeowner calls — you can\'t answer',
+                  title: 'A homeowner calls and you can\'t answer',
                   body: "You're mid-job in a crawlspace or up on a ladder. The phone rings, then goes to voicemail. Under the old system, that homeowner calls the next electrician on the list.",
                 },
                 {
                   step: '02',
                   title: 'Wayne AI texts them back in seconds',
-                  body: 'The moment the call is missed, Wayne AI fires an automatic text acknowledging the call and starting the conversation — before they dial anyone else.',
+                  body: 'The moment the call is missed, Wayne AI fires an automatic text acknowledging the call and starting the conversation, before they dial anyone else.',
                 },
                 {
                   step: '03',
@@ -148,13 +150,13 @@ export function ElectricianAutomationPage() {
             </h2>
             <p className="text-[#475569] text-lg text-center mb-12 max-w-xl mx-auto">
               From 2am power outages to panel upgrades and EV charger installs, the same
-              system handles every missed call — automatically.
+              system handles every missed call, automatically.
             </p>
             <div className="grid md:grid-cols-2 gap-6">
               {[
                 {
                   title: 'After-hours emergencies',
-                  body: 'Power outages, tripped breakers, and sparking outlets don\'t wait for 8am. Wayne AI responds instantly overnight so you wake up to booked emergency calls — not a list of missed numbers.',
+                  body: 'Power outages, tripped breakers, and sparking outlets don\'t wait for 8am. Wayne AI responds instantly overnight so you wake up to booked emergency calls, not a list of missed numbers.',
                 },
                 {
                   title: 'On-the-job missed calls',
@@ -166,7 +168,7 @@ export function ElectricianAutomationPage() {
                 },
                 {
                   title: 'Estimate follow-up',
-                  body: 'Electrical quotes that don\'t get followed up die in the inbox. Automated sequences check in 24, 48, and 72 hours after an estimate — without you having to remember.',
+                  body: 'Electrical quotes that don\'t get followed up die in the inbox. Automated sequences check in 24, 48, and 72 hours after an estimate. You do not have to remember.',
                 },
               ].map(({ title, body }) => (
                 <div key={title} className="p-6 bg-[#f8fafc] rounded-xl border border-gray-100">
@@ -177,6 +179,8 @@ export function ElectricianAutomationPage() {
             </div>
           </div>
         </section>
+
+        <LpAnchor trade="electricians" />
 
         {/* Proof + guarantee */}
         <section className="py-16 px-6 bg-[#f8fafc]">
@@ -190,7 +194,7 @@ export function ElectricianAutomationPage() {
               <a href="tel:+18126123105" className="font-semibold text-[#f97316] hover:underline">
                 (812) 612-3105
               </a>{' '}
-              — an AI answers, talks, and books a time. Or call it and hang up, and watch it
+              and an AI answers, talks, and books a time. Or call it and hang up, and watch it
               text you back with a real booking link. That line runs on the same system you'd
               be getting.
             </p>
@@ -207,7 +211,7 @@ export function ElectricianAutomationPage() {
               </h2>
               <p className="text-[#94a3b8] text-lg">
                 Tell us about your electrical business and we'll show you exactly how automated
-                lead response works — free, no commitment.
+                lead response works. Free, no commitment.
               </p>
             </div>
             <div className="bg-white rounded-2xl p-6 shadow-2xl sm:p-8">
