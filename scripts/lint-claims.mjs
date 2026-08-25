@@ -101,6 +101,71 @@ const BLOCK_RULES = [
   },
 ];
 
+// FATAL — claims that assert our customer base exists, what it experiences, or that
+// the system pays back. Unlike an industry rate, these have no legitimate long-form
+// use, so they are fatal in blog prose too.
+//
+// Added 2026-08-25 after a decorrelated read of the blog corpus found ten of them
+// live, including a fabricated client testimonial. Every one was invisible to the
+// rules above: NUM requires a percent sign, so a results claim stated in words
+// ("pays for itself within the first month", "most clients are fully live in under
+// two weeks") carries no number to match and passed clean.
+const FATAL_RULES = [
+  {
+    id: 'our-clients',
+    // First person only. "clients" alone is ambiguous: in the med spa, salon, and
+    // lawn care posts it means the READER'S clients, which is why this rule requires
+    // "our" plus a claim verb rather than matching the noun on its own.
+    re: /\bour\s+(?:clients?|customers?)\b[^.!?]{0,40}?\b(?:see|report|recover|stay|renew|say|average|get)\b/i,
+    hint: 'A claim about what our clients achieve. Never-say until a real win exists.',
+  },
+  {
+    id: 'client-goes-live',
+    // "most clients are fully live in under two weeks" — only we make a client live.
+    re: /\b(?:our|most|all|every)\s+clients?\b[^.!?]{0,30}?\b(?:are|go)\s+(?:fully\s+)?live\b/i,
+    hint: 'Asserts a client base and a delivery record. Zero clients are on record.',
+  },
+  {
+    id: 'client-at-wayne-ai',
+    re: /\b(?:clients?|customers?)\b[^.!?]{0,40}?\bat Wayne AI\b/i,
+    hint: 'Names clients of Wayne AI. Zero are on record.',
+  },
+  {
+    id: 'payback-promise',
+    // "pays for itself" is fine as conditional arithmetic ("Pays for itself at less
+    // than 1 recovered job/mo", "if it closes one extra job, it pays for itself").
+    // It is a promise when a speed or magnitude rides on it.
+    re: /\bpays?\s+for\s+itself\s+(?:fast|quick|immediately|many times over|within|in the first|the first time|from day one)/i,
+    hint: 'A payback promise. Keep the arithmetic conditional on the reader\'s own numbers.',
+  },
+  {
+    id: 'population-experiences',
+    // "Most HVAC companies see the system pay for itself with a single captured job"
+    // The verb must take an object and must not be negated: "most owners don't see,
+    // because they think they followed up" is narration, not a claim.
+    re: /\b(?:most|many|the average)\s+(?:\w+\s+){0,3}?(?:compan(?:y|ies)|businesses|shops|practices|clinics|contractors|owners|operators)\b[^.!?]{0,50}?(?<!\b(?:don't|doesn't|do not|does not|never|won't|cannot|can't)\s)\b(?:see|report|recover|experience|average)\s+(?:a|an|the|their|its|measurable|significant|more|better|fewer|higher|lower|\d)\b/i,
+    hint: 'Attributes an experience of our system to a population of businesses.',
+  },
+  {
+    id: 'adopters-see',
+    // "Practices that implement a solid reminder sequence consistently report..."
+    re: /\b(?:businesses|practices|shops|clinics|compan(?:y|ies)|owners|operators)\s+(?:that|who)\s+(?:implement|run|use|install|adopt)\b[^.!?]{0,60}?\b(?:see|report|get|recover|average)\b/i,
+    hint: 'An efficacy claim about the mechanism we sell, attributed to adopters.',
+  },
+  {
+    id: 'running-x-see',
+    // "For most pool service companies running regular lead volume, the ROI shows up"
+    re: /\b(?:most|many|for most)\s+(?:\w+\s+){0,3}?(?:practices|shops|businesses|clinics|offices|compan(?:y|ies))\s+running\b[^.!?]{0,60}?\b(?:see|report|recover|get|shows? up)\b/i,
+    hint: 'An efficacy claim dressed as an industry observation.',
+  },
+  {
+    id: 'testimonial-attribution',
+    // Quoted speech attributed to a business rather than a research source.
+    re: /["”]\s*[—–-]\s*(?!.{0,40}?(?:Stud|Research|Report|Journal|University|Harvard|MIT|Institute))[A-Z][^<.\n]{0,70}?\b(?:practice|shop|clinic|owner|contractor|company|business|spa|salon|office|customer|client)\b/,
+    hint: 'A testimonial attributed to a customer. Never-say until a real client agrees to be quoted.',
+  },
+];
+
 // WARN — a bare percentage in prose. Market/problem stats live here.
 const WARN_RE = new RegExp(NUM, 'i');
 
@@ -116,6 +181,10 @@ function stripNonCopy(text, isHtml) {
   if (!isHtml) {
     t = t.replace(/^\s*import\s.+$/gm, '');
   }
+  // A heading or list item ends a sentence even without punctuation. Without this,
+  // stripping tags glues "...Not Minutes" onto "The average response time..." and the
+  // [^.!?] guards in the rules above read straight across the seam into a false match.
+  t = t.replace(/<\/(?:h[1-6]|p|li|blockquote|td|th|div)>/gi, ' . ');
   t = t
     .replace(/className\s*=\s*(?:"[^"]*"|'[^']*'|\{`[^`]*`\})/g, '')
     .replace(/class\s*=\s*"[^"]*"/g, '')
@@ -142,7 +211,10 @@ const targets = [
   ...collect(path.join(SRC, 'pages'), ['.tsx']),
   ...collect(path.join(SRC, 'components'), ['.tsx']),
   path.join(SRC, 'content', 'pricing.ts'),
-  ...(INCLUDE_BLOG ? collect(path.join(SRC, 'content', 'blog'), ['.html', '.ts']) : []),
+  // Blog is always scanned, but see the loop below: without --blog only the FATAL
+  // rules are applied to it. Those have no legitimate long-form use, so they gate
+  // every build. The lower-precision BLOCK rules stay opt-in.
+  ...collect(path.join(SRC, 'content', 'blog'), ['.html', '.ts']),
 ].filter((p) => fs.existsSync(p));
 
 const blocks = [];
@@ -165,6 +237,17 @@ for (const file of targets) {
       .replace(/\s+/g, ' ')
       .trim();
     if (!window || isAllowed(window)) continue;
+
+    // FATAL first: these bite everywhere, blog included.
+    const fatal = FATAL_RULES.find((r) => r.re.test(window));
+    if (fatal) {
+      const already = blocks.some((b) => b.file === rel && Math.abs(b.line - (i + 1)) < 3);
+      if (!already) blocks.push({ file: rel, line: i + 1, rule: fatal.id, hint: fatal.hint, text: window.slice(0, 150) });
+      continue;
+    }
+
+    // Without --blog, blog files are held to the FATAL rules only.
+    if (isBlog(rel) && !INCLUDE_BLOG) continue;
 
     const hit = BLOCK_RULES.find((r) => r.re.test(window));
     if (hit) {
