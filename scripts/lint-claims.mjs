@@ -33,6 +33,14 @@ const STRICT = args.includes('--strict');
 const INCLUDE_BLOG = args.includes('--blog') || STRICT;
 const QUIET = args.includes('--quiet');
 
+// --files <path...> lints exactly the paths given and nothing else, so other channels
+// (the Facebook queue, outreach templates) can be held to the same claim boundary
+// without a second copy of these rules drifting out of sync in another language.
+// Explicit files are treated as marketing copy: BLOCK bites, no blog downgrade.
+const filesIdx = args.indexOf('--files');
+const EXPLICIT_FILES =
+  filesIdx === -1 ? [] : args.slice(filesIdx + 1).filter((a) => !a.startsWith('--'));
+
 const allowlist = JSON.parse(
   fs.readFileSync(path.join(__dirname, 'claims-allowlist.json'), 'utf8')
 ).allow;
@@ -207,7 +215,7 @@ function collect(dir, exts, out = []) {
   return out;
 }
 
-const targets = [
+const targets = EXPLICIT_FILES.length ? EXPLICIT_FILES.filter((p) => fs.existsSync(p)) : [
   ...collect(path.join(SRC, 'pages'), ['.tsx']),
   ...collect(path.join(SRC, 'components'), ['.tsx']),
   path.join(SRC, 'content', 'pricing.ts'),
@@ -220,7 +228,7 @@ const targets = [
 const blocks = [];
 const warns = [];
 const blogReview = [];
-const isBlog = (rel) => rel.includes(path.join('content', 'blog'));
+const isBlog = (rel) => !EXPLICIT_FILES.length && rel.includes(path.join('content', 'blog'));
 
 for (const file of targets) {
   const isHtml = file.endsWith('.html');
