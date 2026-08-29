@@ -156,7 +156,7 @@ export function RoofingAutomationPage() {
               {[
                 {
                   title: 'Storm surge response',
-                  body: 'When 50 leads hit in 48 hours, the system handles every one simultaneously. No hold times, no voicemail, no leads falling through the cracks while your team is overwhelmed.',
+                  body: 'When 50 leads hit in 48 hours, the system handles every one simultaneously. No hold times, and every caller gets a way to book while your team is overwhelmed.',
                 },
                 {
                   title: 'After-hours and weekend calls',
