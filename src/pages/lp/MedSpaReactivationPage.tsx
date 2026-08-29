@@ -16,7 +16,7 @@ export function MedSpaReactivationPage() {
         <title>Med Spa Client Reactivation | Wayne AI</title>
         <meta
           name="description"
-          content="Automatically reactivate lapsed med spa clients with personalized text and email sequences timed to their treatment cycle. Set it up once, fill your calendar on autopilot."
+          content="Automatically reactivate lapsed med spa clients with personalized text and email sequences timed to their treatment cycle. Set it up once and the follow-up runs on its own."
         />
         <meta property="og:title" content="Med Spa Client Reactivation | Wayne AI" />
         <meta

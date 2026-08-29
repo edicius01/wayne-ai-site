@@ -67,7 +67,7 @@ export function ChiropractorReactivationPage() {
         <title>Chiropractic Patient Reactivation | Wayne AI</title>
         <meta
           name="description"
-          content="Automatically reactivate lapsed chiropractic patients with personalized text and email sequences. Set it up once, get booked appointments on autopilot."
+          content="Automatically reactivate lapsed chiropractic patients with personalized text and email sequences. Set it up once and the follow-up runs on its own."
         />
         <meta property="og:title" content="Chiropractic Patient Reactivation | Wayne AI" />
         <meta
@@ -90,7 +90,7 @@ export function ChiropractorReactivationPage() {
               onClick={scrollToForm}
               className="bg-[#f97316] hover:bg-[#ea580c] text-white font-semibold px-5 py-2 rounded-lg text-sm transition-colors"
             >
-              Book a Free Demo
+              Book a Free Demo →
             </button>
           </div>
         </header>
