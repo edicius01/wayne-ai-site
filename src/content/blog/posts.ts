@@ -88,6 +88,10 @@ import pestControlFirstToAnswerWins from './pest-control-first-to-answer-wins.ht
 import pestControlRecurringPlansPredictableRevenue from './pest-control-recurring-plans-predictable-revenue.html?raw';
 import septicServiceStopMissingEmergencyCalls from './septic-service-stop-missing-emergency-calls.html?raw';
 import towingCompanyAnswerEveryCall from './towing-company-answer-every-call.html?raw';
+import waterDamageRestorationAnswerEveryEmergencyCall from './water-damage-restoration-answer-every-emergency-call.html?raw';
+import chimneySweepBookTheFallRush from './chimney-sweep-book-the-fall-rush.html?raw';
+import snowRemovalPresellSeasonalContracts from './snow-removal-presell-seasonal-contracts.html?raw';
+import junkRemovalStopLosingSameDayJobs from './junk-removal-stop-losing-same-day-jobs.html?raw';
 
 export interface BlogPost {
   slug: string;
@@ -1091,5 +1095,49 @@ export const posts: BlogPost[] = [
     tags: ["towing", "missed calls", "after-hours", "automation"],
     featuredImage: 'https://images.unsplash.com/photo-1730514784243-f0e7f09c9f50?w=1200&auto=format&fit=crop&q=80',
     content: towingCompanyAnswerEveryCall,
+  },
+  {
+    slug: 'water-damage-restoration-answer-every-emergency-call',
+    title: 'How Restoration Companies Answer Every Emergency Water Call',
+    description: 'A flooded basement caller hires the first company that responds. Build a response path that captures the job before the insurance call starts.',
+    metaTitle: 'Answer Every Emergency Water Call | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-08-21',
+    tags: ['water damage restoration', 'emergency calls', 'missed calls', 'lead response', 'automation'],
+    featuredImage: 'https://images.unsplash.com/photo-1657069343971-1276c3b175e1?w=1200&auto=format&fit=crop&q=80',
+    content: waterDamageRestorationAnswerEveryEmergencyCall,
+  },
+  {
+    slug: 'chimney-sweep-book-the-fall-rush',
+    title: 'How Chimney Sweeps Book the Fall Rush Without Missing Calls',
+    description: 'Follow one fall chimney service caller from missed ring to lost booking, then fix the response gaps before the seasonal rush fills your calendar.',
+    metaTitle: 'Book More Fall Chimney Calls | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-08-21',
+    tags: ['chimney sweep', 'fireplace service', 'seasonal rush', 'missed calls', 'automation'],
+    featuredImage: 'https://images.unsplash.com/photo-1594560225349-7d4541d32e87?w=1200&auto=format&fit=crop&q=80',
+    content: chimneySweepBookTheFallRush,
+  },
+  {
+    slug: 'snow-removal-presell-seasonal-contracts',
+    title: 'How Snow Removal Companies Presell Seasonal Contracts',
+    description: 'Seasonal snow contracts are won before the first storm. Fix three phone and follow-up mistakes that leave good properties off your winter route.',
+    metaTitle: 'Presell Snow Removal Contracts | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-08-21',
+    tags: ['snow removal', 'seasonal contracts', 'estimate follow-up', 'lead response', 'automation'],
+    featuredImage: 'https://images.unsplash.com/photo-1676903826883-cbbd7703f2f4?w=1200&auto=format&fit=crop&q=80',
+    content: snowRemovalPresellSeasonalContracts,
+  },
+  {
+    slug: 'junk-removal-stop-losing-same-day-jobs',
+    title: 'How Junk Removal Companies Stop Losing Same-Day Jobs',
+    description: 'Same-day junk removal callers keep dialing when nobody answers. Handle the common objections and build a simple response path that keeps the job alive.',
+    metaTitle: 'Stop Losing Same-Day Junk Jobs | Wayne AI',
+    author: 'Wayne AI',
+    date: '2026-08-21',
+    tags: ['junk removal', 'same-day jobs', 'missed calls', 'lead response', 'automation'],
+    featuredImage: 'https://images.unsplash.com/photo-1772544376426-6a42f1dfa74a?w=1200&auto=format&fit=crop&q=80',
+    content: junkRemovalStopLosingSameDayJobs,
   },
 ];
