@@ -156,7 +156,7 @@ export function PlumbingAutomationPage() {
               {[
                 {
                   title: 'After-hours emergencies',
-                  body: 'Burst pipes, flooding, and backups don\'t wait for 8am. Wayne AI responds instantly overnight so you wake up to booked emergency calls, not a list of missed numbers.',
+                  body: 'Burst pipes, flooding, and backups don\'t wait for 8am. Wayne AI responds instantly overnight, so an emergency caller can book a time instead of leaving a voicemail.',
                 },
                 {
                   title: 'On-the-job missed calls',

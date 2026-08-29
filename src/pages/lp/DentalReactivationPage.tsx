@@ -16,7 +16,7 @@ export function DentalReactivationPage() {
         <title>Dental Patient Reactivation | Wayne AI</title>
         <meta
           name="description"
-          content="Automatically reactivate overdue dental patients with personalized reminders timed to their hygiene cycle. Fill your hygiene schedule without manual follow-up."
+          content="Automatically reactivate overdue dental patients with personalized reminders timed to their hygiene cycle. No manual follow-up to run."
         />
         <meta property="og:title" content="Dental Patient Reactivation | Wayne AI" />
         <meta

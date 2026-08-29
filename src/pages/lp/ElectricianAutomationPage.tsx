@@ -156,7 +156,7 @@ export function ElectricianAutomationPage() {
               {[
                 {
                   title: 'After-hours emergencies',
-                  body: 'Power outages, tripped breakers, and sparking outlets don\'t wait for 8am. Wayne AI responds instantly overnight so you wake up to booked emergency calls, not a list of missed numbers.',
+                  body: 'Power outages, tripped breakers, and sparking outlets don\'t wait for 8am. Wayne AI responds instantly overnight, so an emergency caller can book a time instead of leaving a voicemail.',
                 },
                 {
                   title: 'On-the-job missed calls',
