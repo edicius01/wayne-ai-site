@@ -15,7 +15,7 @@ export function BlogPostPage() {
   }
 
   const relatedPosts = posts.filter((p) => p.slug !== slug).slice(0, 3);
-  const postUrl = `https://wayneai.net/blog/${post.slug}`;
+  const postUrl = `https://wayneai.net/blog/${post.slug}/`;
 
   const articleSchema = {
     '@context': 'https://schema.org',
@@ -38,8 +38,8 @@ export function BlogPostPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://wayneai.net' },
-      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://wayneai.net/blog' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://wayneai.net/' },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://wayneai.net/blog/' },
       { '@type': 'ListItem', position: 3, name: post.title, item: postUrl },
     ],
   };
@@ -53,8 +53,8 @@ export function BlogPostPage() {
         <meta property="og:description" content={post.description} />
         {post.featuredImage && <meta property="og:image" content={post.featuredImage} />}
         <meta property="og:type" content="article" />
-        <meta property="og:url" content={`https://wayneai.net/blog/${post.slug}`} />
-        <link rel="canonical" href={`https://wayneai.net/blog/${post.slug}`} />
+        <meta property="og:url" content={`https://wayneai.net/blog/${post.slug}/`} />
+        <link rel="canonical" href={`https://wayneai.net/blog/${post.slug}/`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={post.metaTitle || post.title} />
         <meta name="twitter:description" content={post.description} />

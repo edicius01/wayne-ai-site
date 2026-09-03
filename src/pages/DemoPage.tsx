@@ -14,10 +14,10 @@ export function DemoPage() {
       <Helmet>
         <title>See Wayne AI in Action | Live Demos</title>
         <meta name="description" content="Watch Wayne AI handle missed calls and web leads automatically — then call our real line and trigger the missed-call text-back yourself." />
-        <link rel="canonical" href="https://wayneai.net/demo" />
+        <link rel="canonical" href="https://wayneai.net/demo/" />
         <meta property="og:title" content="See Wayne AI in Action | Live Demos" />
         <meta property="og:description" content="Watch Wayne AI handle missed calls and web leads automatically — then call our real line and trigger it yourself." />
-        <meta property="og:url" content="https://wayneai.net/demo" />
+        <meta property="og:url" content="https://wayneai.net/demo/" />
         <meta property="og:image" content="https://wayneai.net/og-image-1200x630.png" />
       </Helmet>
       <Navigation />
