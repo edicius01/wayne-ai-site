@@ -42,7 +42,7 @@ export function sitemapPlugin(): Plugin {
 ${allRoutes
   .map(
     (r) => `  <url>
-    <loc>${DOMAIN}${r.path}</loc>
+    <loc>${DOMAIN}${r.path === '/' ? '/' : r.path + '/'}</loc>
     <lastmod>${r.lastmod || today}</lastmod>
     <changefreq>${r.changefreq}</changefreq>
     <priority>${r.priority}</priority>

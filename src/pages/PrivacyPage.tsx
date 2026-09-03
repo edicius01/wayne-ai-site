@@ -15,8 +15,8 @@ export function PrivacyPage() {
       <Helmet>
         <title>Privacy Policy | Wayne AI</title>
         <meta name="description" content="How Wayne AI collects, uses, and protects your information across our AI receptionist and communication services." />
-        <link rel="canonical" href="https://wayneai.net/privacy" />
-        <meta property="og:url" content="https://wayneai.net/privacy" />
+        <link rel="canonical" href="https://wayneai.net/privacy/" />
+        <meta property="og:url" content="https://wayneai.net/privacy/" />
       </Helmet>
       <Navigation />
       

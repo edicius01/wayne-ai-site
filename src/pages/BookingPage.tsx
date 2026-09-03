@@ -32,7 +32,7 @@ export function BookingPage() {
         <title>Book a 15-Minute Strategy Call | Wayne AI</title>
         <meta name="description" content="Book a free 15-minute call. We'll show you live how Wayne AI turns your missed calls into booked revenue — no pitch, no contract." />
         <meta name="robots" content="noindex, follow" />
-        <link rel="canonical" href="https://wayneai.net/booking" />
+        <link rel="canonical" href="https://wayneai.net/booking/" />
       </Helmet>
       <Navigation />
       

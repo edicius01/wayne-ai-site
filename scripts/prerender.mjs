@@ -59,7 +59,9 @@ function verifyCanonicals(routes) {
     const found = [...html.matchAll(/<link[^>]+rel="canonical"[^>]*>/g)].map(
       (m) => (m[0].match(/href="([^"]*)"/) || [])[1]
     );
-    const expected = route === '/' ? DOMAIN : DOMAIN + route;
+    // Netlify serves every prerendered route at its trailing-slash URL (and 301s
+    // the bare form to it), so the canonical must carry the slash too.
+    const expected = route === '/' ? DOMAIN + '/' : DOMAIN + route + '/';
     if (found.length === 0) problems.push(`${route} — no canonical`);
     else if (found.length > 1) problems.push(`${route} — ${found.length} canonicals: ${found.join(', ')}`);
     else if (found[0] !== expected) problems.push(`${route} — canonical is ${found[0]}, expected ${expected}`);
@@ -67,7 +69,7 @@ function verifyCanonicals(routes) {
   if (problems.length) {
     console.error(`\n✗ canonical check failed (${problems.length}):`);
     for (const p of problems) console.error(`    ${p}`);
-    console.error('\n  Add <link rel="canonical" href="' + DOMAIN + '<route>" /> to the page\'s <Helmet>.');
+    console.error('\n  Add <link rel="canonical" href="' + DOMAIN + '<route>/" /> to the page\'s <Helmet>.');
     return false;
   }
   console.log(`✓ canonical check: ${routes.length} routes self-canonical`);

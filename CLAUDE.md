@@ -13,15 +13,6 @@ Full operating rules and agent personas are in `/home/wayne77/wayne_ai_workspace
 
 ---
 
-## Bootstrap (run these first in a fresh environment)
-
-```bash
-cd /home/wayne77/wayne_ai_workspace/site
-npm install
-```
-
----
-
 ## Build & Verify
 
 ```bash
@@ -52,44 +43,15 @@ git push
 → Netlify auto-deploys to wayneai.net (~2 min)
 ```
 
-- Build command: `npm run build`
-- Publish dir: `dist`
-- SPA routing: `public/_redirects`
 - **Never force push to main**
 - **Never skip commit hooks (`--no-verify`)**
 - **Always run `npm run build` locally before pushing if there's any doubt**
 
 ---
 
-## Stack
+## Stack gotcha
 
-- Vite + React 19 + TypeScript + Tailwind CSS 4
 - react-helmet-async (SEO — every page must have a `<Helmet>` block or favicons drop)
-- @tailwindcss/typography (blog post rendering)
-- react-router-dom (SPA routing)
-
----
-
-## Project Structure
-
-```
-site/
-├── src/
-│   ├── components/          — reusable UI components
-│   ├── pages/
-│   │   ├── lp/              — landing pages (/lp/<vertical>-<use-case>)
-│   │   └── BlogPostPage.tsx — individual blog post renderer
-│   ├── content/
-│   │   └── blog/
-│   │       ├── posts.ts     — blog post metadata registry
-│   │       └── *.html       — one HTML file per post (imported via ?raw)
-│   └── App.tsx
-├── public/
-│   ├── _redirects           — Netlify SPA routing rules
-│   └── robots.txt
-├── vite.config.ts
-└── vite-plugin-sitemap.ts   — auto-generates sitemap at build time
-```
 
 ---
 
@@ -100,16 +62,6 @@ site/
 - **Hero pattern:** Dot-grid texture + radial glow
 - **Nav:** White text on dark hero (unscrolled) → dark text when scrolled or on interior pages
 - **Do not** introduce new color tokens or override these without explicit instruction
-
----
-
-## File Edit Rules
-
-- Read a file before editing it
-- Use targeted edits (Edit tool / patch) — not full rewrites unless the task requires it
-- Do not create new files unless explicitly required
-- Do not add features, abstractions, or refactors beyond what was asked
-- Do not add comments that describe what the code does — only add them when the WHY is non-obvious
 
 ---
 

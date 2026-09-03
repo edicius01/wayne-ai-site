@@ -76,7 +76,7 @@ export function HvacAutomationPage() {
   return (
     <>
       <Helmet>
-        <link rel="canonical" href="https://wayneai.net/lp/hvac-automation" />
+        <link rel="canonical" href="https://wayneai.net/lp/hvac-automation/" />
         {/* Title, description and H1 are FROZEN until the SEO test reads ~2026-10-05.
             This is the one indexed /lp/* page (PR #24, noindex removed 08-10), so the
             ranked surface must not move mid-test. That includes the em dash below: it
@@ -95,7 +95,7 @@ export function HvacAutomationPage() {
           property="og:description"
           content="A done-for-you AI front office for HVAC companies. Missed calls texted back in seconds, jobs booked on your calendar, and texts registered to actually deliver."
         />
-        <meta property="og:url" content="https://wayneai.net/lp/hvac-automation" />
+        <meta property="og:url" content="https://wayneai.net/lp/hvac-automation/" />
         <meta property="og:image" content="https://wayneai.net/og-image-1200x630.png" />
         <meta property="og:type" content="website" />
       </Helmet>

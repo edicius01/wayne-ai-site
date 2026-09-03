@@ -52,9 +52,9 @@ export function BlogPage() {
         <meta property="og:title" content={activeCategory === 'All' ? 'Blog | Wayne AI' : `${activeCategory} | Wayne AI Blog`} />
         <meta property="og:description" content="Practical guides for local service businesses on AI, automation, and getting more leads." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://wayneai.net/blog" />
+        <meta property="og:url" content="https://wayneai.net/blog/" />
         <meta property="og:image" content="https://wayneai.net/og-image-1200x630.png" />
-        <link rel="canonical" href={activeCategory === 'All' ? 'https://wayneai.net/blog' : `https://wayneai.net/blog?category=${encodeURIComponent(activeCategory)}`} />
+        <link rel="canonical" href={activeCategory === 'All' ? 'https://wayneai.net/blog/' : `https://wayneai.net/blog/?category=${encodeURIComponent(activeCategory)}`} />
       </Helmet>
       <Navigation />
 
