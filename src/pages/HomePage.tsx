@@ -46,7 +46,7 @@ const faqSchema = {
 
 export function HomePage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen overflow-x-clip bg-white pb-20 md:pb-0">
       <Helmet>
         <title>Wayne AI | Website, Booking, and 24/7 Answering for Service Businesses</title>
         <meta name="description" content="We build the website and answer the phone for local service businesses. A booking site, missed-call text-back, and 24/7 call answering in one price from $149/mo. Built in Evansville, Indiana." />

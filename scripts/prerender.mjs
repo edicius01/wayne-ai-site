@@ -94,6 +94,10 @@ function buildRouteList() {
     '/lp/physical-therapy-reactivation',
     '/lp/electrician-automation',
     '/lp/ai-audit',
+    '/industries/plumbers',
+    '/industries/electricians',
+    '/industries/roofers',
+    '/404',
   ];
 
   const postsFile = path.join(ROOT, 'src/content/blog/posts.ts');
@@ -129,6 +133,7 @@ function startStaticServer() {
 
 function routeToOutputFile(route) {
   if (route === '/') return path.join(DIST, 'index.html');
+  if (route === '/404') return path.join(DIST, '404.html');
   return path.join(DIST, route.replace(/^\//, ''), 'index.html');
 }
 
@@ -170,15 +175,13 @@ async function main() {
           { timeout: 45000 }
         );
 
-        // react-helmet-async applies its route-specific <head> in a post-mount
-        // effect (a Helmet'd page ends up with a SECOND, Helmet-owned <title>
-        // ahead of the static shell title). Wait for that, but don't require it
-        // — a few pages legitimately have no <Helmet> and keep the shell tags.
-        await page
-          .waitForFunction(() => document.head.querySelectorAll('title').length >= 2, {
-            timeout: 4000,
-          })
-          .catch(() => {});
+        // Helmet may replace the title instead of adding a second element.
+        // The route's canonical is the reliable signal that its head is ready.
+        await page.waitForFunction(
+          (expected) => [...document.head.querySelectorAll('link[rel="canonical"]')].at(-1)?.href === expected,
+          { timeout: 10000 },
+          route === '/' ? DOMAIN + '/' : DOMAIN + route + '/'
+        );
 
         // The static index.html template ships generic homepage SEO tags, and
         // react-helmet-async appends route-specific ones at the end of <head>.
