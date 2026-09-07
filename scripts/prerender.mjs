@@ -59,7 +59,9 @@ function verifyCanonicals(routes) {
     const found = [...html.matchAll(/<link[^>]+rel="canonical"[^>]*>/g)].map(
       (m) => (m[0].match(/href="([^"]*)"/) || [])[1]
     );
-    const expected = route === '/' ? DOMAIN : DOMAIN + route;
+    // Netlify serves every prerendered route at its trailing-slash URL (and 301s
+    // the bare form to it), so the canonical must carry the slash too.
+    const expected = route === '/' ? DOMAIN + '/' : DOMAIN + route + '/';
     if (found.length === 0) problems.push(`${route} — no canonical`);
     else if (found.length > 1) problems.push(`${route} — ${found.length} canonicals: ${found.join(', ')}`);
     else if (found[0] !== expected) problems.push(`${route} — canonical is ${found[0]}, expected ${expected}`);
@@ -67,7 +69,7 @@ function verifyCanonicals(routes) {
   if (problems.length) {
     console.error(`\n✗ canonical check failed (${problems.length}):`);
     for (const p of problems) console.error(`    ${p}`);
-    console.error('\n  Add <link rel="canonical" href="' + DOMAIN + '<route>" /> to the page\'s <Helmet>.');
+    console.error('\n  Add <link rel="canonical" href="' + DOMAIN + '<route>/" /> to the page\'s <Helmet>.');
     return false;
   }
   console.log(`✓ canonical check: ${routes.length} routes self-canonical`);
@@ -92,6 +94,10 @@ function buildRouteList() {
     '/lp/physical-therapy-reactivation',
     '/lp/electrician-automation',
     '/lp/ai-audit',
+    '/industries/plumbers',
+    '/industries/electricians',
+    '/industries/roofers',
+    '/404',
   ];
 
   const postsFile = path.join(ROOT, 'src/content/blog/posts.ts');
@@ -127,6 +133,7 @@ function startStaticServer() {
 
 function routeToOutputFile(route) {
   if (route === '/') return path.join(DIST, 'index.html');
+  if (route === '/404') return path.join(DIST, '404.html');
   return path.join(DIST, route.replace(/^\//, ''), 'index.html');
 }
 
@@ -154,6 +161,18 @@ async function main() {
     for (const route of routes) {
       const page = await browser.newPage();
       try {
+        // Static HTML only needs our built assets. Analytics, fonts, and CRM
+        // embeds can keep networkidle0 pending on CI; leave their markup in the
+        // snapshot so they still load normally for real visitors.
+        await page.setRequestInterception(true);
+        page.on('request', (request) => {
+          const url = new URL(request.url());
+          if (url.origin === `http://localhost:${PORT}` || ['data:', 'blob:'].includes(url.protocol)) {
+            request.continue();
+          } else {
+            request.abort();
+          }
+        });
         await page.goto(`http://localhost:${PORT}${route}`, {
           waitUntil: 'networkidle0',
           timeout: 45000,
@@ -168,15 +187,13 @@ async function main() {
           { timeout: 45000 }
         );
 
-        // react-helmet-async applies its route-specific <head> in a post-mount
-        // effect (a Helmet'd page ends up with a SECOND, Helmet-owned <title>
-        // ahead of the static shell title). Wait for that, but don't require it
-        // — a few pages legitimately have no <Helmet> and keep the shell tags.
-        await page
-          .waitForFunction(() => document.head.querySelectorAll('title').length >= 2, {
-            timeout: 4000,
-          })
-          .catch(() => {});
+        // Helmet may replace the title instead of adding a second element.
+        // The route's canonical is the reliable signal that its head is ready.
+        await page.waitForFunction(
+          (expected) => [...document.head.querySelectorAll('link[rel="canonical"]')].at(-1)?.href === expected,
+          { timeout: 10000 },
+          route === '/' ? DOMAIN + '/' : DOMAIN + route + '/'
+        );
 
         // The static index.html template ships generic homepage SEO tags, and
         // react-helmet-async appends route-specific ones at the end of <head>.

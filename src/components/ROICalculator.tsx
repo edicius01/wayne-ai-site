@@ -1,5 +1,4 @@
 import { useMemo, useState } from 'react';
-import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { roiPresets as presets, roiDefaults, roiMonthlyCostBounds } from '../content/roi';
 import { LeadCallbackForm } from './LeadCallbackForm';
 
@@ -66,7 +65,6 @@ function SliderControl({
 }
 
 export function ROICalculator() {
-  const { ref, isVisible } = useScrollAnimation(0.2);
   const [jobValue, setJobValue] = useState(roiDefaults.jobValue);
   const [missedCalls, setMissedCalls] = useState(roiDefaults.missedCalls);
   const [closeRate, setCloseRate] = useState(roiDefaults.closeRate);
@@ -99,16 +97,16 @@ export function ROICalculator() {
     `${missedCalls} missed calls/wk, ${closeRate}% close rate, $${monthlyCost}/mo cost`;
 
   return (
-    <section ref={ref} className="border-t border-[#fed7aa] bg-white py-20">
+    <section id="roi" className="border-t border-[#fed7aa] bg-white py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className={`transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+        <div>
           <div className="mx-auto mb-12 max-w-3xl text-center">
             <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-[#64748b]">Interactive ROI</p>
             <h2 className="mb-4 text-3xl font-bold text-[#0f172a] sm:text-4xl">
               See what slow follow-up is costing you
             </h2>
             <p className="text-lg text-[#475569]">
-              Adjust the numbers for your business. The goal is simple: prove how many recovered jobs it takes before the system pays for itself.
+              Adjust the assumptions for your business to estimate how many additional jobs would cover the monthly cost. This is a scenario, not a forecast or a customer result.
             </p>
           </div>
 
@@ -201,7 +199,10 @@ export function ROICalculator() {
                   We'll send a personalized version and show you exactly where your follow-up is leaking jobs — free, no pitch.
                 </p>
                 <button
+                  id="roi-request"
                   type="button"
+                  aria-controls="roi-request-form"
+                  aria-expanded={showForm}
                   onClick={() => setShowForm(true)}
                   className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#f97316] px-8 py-4 font-semibold text-white transition-all duration-200 hover:bg-[#ea580c] hover:shadow-xl hover:shadow-[#f97316]/25"
                 >
@@ -212,7 +213,7 @@ export function ROICalculator() {
                 </button>
               </>
             ) : (
-              <div className="rounded-2xl bg-white p-6 shadow-2xl sm:p-8">
+              <div id="roi-request-form" className="rounded-2xl bg-white p-6 shadow-2xl sm:p-8">
                 <LeadCallbackForm
                   slug="wayneai-roi"
                   context={roiContext}

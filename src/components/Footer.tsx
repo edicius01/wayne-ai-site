@@ -63,20 +63,20 @@ export function Footer() {
           <div>
             <h3 className="font-semibold text-white mb-4">Solutions</h3>
             <div className="space-y-2 text-sm">
-              <Link to="/lp/electrician-automation" className="block text-[#9CA3AF] hover:text-[#f97316] transition-colors">
-                Electrician Automation
+              <Link to="/industries/plumbers/" className="block text-[#9CA3AF] hover:text-[#f97316] transition-colors">
+                Websites & Call Capture for Plumbers
               </Link>
-              <Link to="/lp/chiropractor-reactivation" className="block text-[#9CA3AF] hover:text-[#f97316] transition-colors">
-                Chiropractic Reactivation
+              <Link to="/lp/hvac-automation/" className="block text-[#9CA3AF] hover:text-[#f97316] transition-colors">
+                HVAC Websites & Call Answering
               </Link>
-              <Link to="/lp/med-spa-reactivation" className="block text-[#9CA3AF] hover:text-[#f97316] transition-colors">
-                Med Spa Reactivation
+              <Link to="/industries/electricians/" className="block text-[#9CA3AF] hover:text-[#f97316] transition-colors">
+                Websites & Call Capture for Electricians
               </Link>
-              <Link to="/lp/dental-reactivation" className="block text-[#9CA3AF] hover:text-[#f97316] transition-colors">
-                Dental Patient Reactivation
+              <Link to="/industries/roofers/" className="block text-[#9CA3AF] hover:text-[#f97316] transition-colors">
+                Websites & Call Capture for Roofers
               </Link>
-              <Link to="/lp/physical-therapy-reactivation" className="block text-[#9CA3AF] hover:text-[#f97316] transition-colors">
-                Physical Therapy Reactivation
+              <Link to="/lp/ai-audit/" className="block text-[#9CA3AF] hover:text-[#f97316] transition-colors">
+                Free AI Opportunity Audit
               </Link>
             </div>
           </div>
@@ -103,4 +103,3 @@ export function Footer() {
     </footer>
   );
 }
-  

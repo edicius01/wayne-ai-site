@@ -1,1 +1,4 @@
-/*  /index.html  200
+# /home is not a route; it was being indexed as a duplicate of the homepage
+/home   /  301
+/home/  /  301
+/*  /404.html  404

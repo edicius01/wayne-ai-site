@@ -10,6 +10,7 @@
     "lint": "eslint .",
     "lint:claims": "node scripts/lint-claims.mjs",
     "lint:claims:blog": "node scripts/lint-claims.mjs --blog",
+    "test:site": "node scripts/check-site.mjs",
     "preview": "vite preview"
   },
   "dependencies": {

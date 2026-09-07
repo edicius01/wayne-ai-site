@@ -32,25 +32,25 @@ export function BookingPage() {
         <title>Book a 15-Minute Strategy Call | Wayne AI</title>
         <meta name="description" content="Book a free 15-minute call. We'll show you live how Wayne AI turns your missed calls into booked revenue — no pitch, no contract." />
         <meta name="robots" content="noindex, follow" />
-        <link rel="canonical" href="https://wayneai.net/booking" />
+        <link rel="canonical" href="https://wayneai.net/booking/" />
       </Helmet>
       <Navigation />
       
       <div className="pt-32 pb-20 bg-gradient-to-b from-[#F8F9FA] to-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h1 className="text-4xl sm:text-5xl font-bold text-[#0f172a] mb-6">
               Book Your 15-Minute Strategy Call
             </h1>
             <p className="text-xl text-[#374151] max-w-3xl mx-auto">
-              Let's talk about how Wayne AI can turn your missed calls into booked revenue. 
-              No sales pitch - just a quick walkthrough of exactly how it works for your business.
+              Pick a time for a free walkthrough with Wayne. See the website,
+              call answering, and booking setup for your business.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Left Column - Benefits */}
-            <div className="space-y-8">
+            <div className="order-2 space-y-8 lg:order-1">
               <div className="bg-white rounded-2xl shadow-lg p-8 border-2 border-gray-200">
                 <h2 className="text-2xl font-bold text-[#0f172a] mb-6">
                   What Happens on the Call
@@ -112,8 +112,8 @@ export function BookingPage() {
             </div>
 
             {/* Right Column - Calendar + SMS opt-in call-back form */}
-            <div className="space-y-8">
-              <div className="bg-white rounded-2xl shadow-lg p-8 border-2 border-gray-200">
+            <div className="order-1 space-y-8 lg:order-2">
+              <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-8 border-2 border-gray-200">
                 <h2 className="text-2xl font-bold text-[#0f172a] mb-6 text-center">
                   Pick a Time That Works
                 </h2>

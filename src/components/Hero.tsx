@@ -83,7 +83,7 @@ export function Hero() {
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 lg:justify-start">
-              <span className="text-xs font-semibold uppercase tracking-wider text-[#64748b]">Trusted by pros in</span>
+              <span className="text-xs font-semibold uppercase tracking-wider text-[#64748b]">Built for</span>
               <div className="flex flex-wrap gap-2">
                 {['Plumbing', 'HVAC', 'Electrical', 'Roofing'].map((t) => (
                   <span key={t} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-[#cbd5e1]">
@@ -94,7 +94,7 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Live activity card */}
+          {/* Example activity card */}
           <div className="relative mx-auto w-full max-w-md lg:mr-0 lg:ml-auto">
             <div className="absolute -inset-6 rounded-[2rem] bg-[#f97316]/10 blur-3xl" aria-hidden="true" />
             <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#0d1424]/90 shadow-2xl shadow-black/50 backdrop-blur-xl">

@@ -14,13 +14,13 @@ export function AiAuditPage() {
           name="description"
           content="Get a free, no-pitch AI Opportunity Audit. We show you exactly where your service business is losing leads and jobs, and which automations recover them."
         />
-        <link rel="canonical" href="https://wayneai.net/lp/ai-audit" />
+        <link rel="canonical" href="https://wayneai.net/lp/ai-audit/" />
         <meta property="og:title" content="Free AI Opportunity Audit for Service Businesses | Wayne AI" />
         <meta
           property="og:description"
           content="Get a free, no-pitch AI Opportunity Audit. We show you exactly where your service business is losing leads and jobs, and which automations recover them."
         />
-        <meta property="og:url" content="https://wayneai.net/lp/ai-audit" />
+        <meta property="og:url" content="https://wayneai.net/lp/ai-audit/" />
         <meta property="og:image" content="https://wayneai.net/og-image-1200x630.png" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />

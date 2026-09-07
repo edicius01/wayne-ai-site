@@ -26,7 +26,7 @@ const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'Wayne AI',
-  url: 'https://wayneai.net',
+  url: 'https://wayneai.net/',
   logo: 'https://wayneai.net/og-image-1200x630.png',
   telephone: '+1-888-433-6516',
   sameAs: ['https://www.facebook.com/wayneaiagency'],
@@ -46,15 +46,15 @@ const faqSchema = {
 
 export function HomePage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen overflow-x-clip bg-white pb-20 md:pb-0">
       <Helmet>
         <title>Wayne AI | Website, Booking, and 24/7 Answering for Service Businesses</title>
         <meta name="description" content="We build the website and answer the phone for local service businesses. A booking site, missed-call text-back, and 24/7 call answering in one price from $149/mo. Built in Evansville, Indiana." />
         <link rel="icon" href="/favicon.ico?v=3" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=3" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png?v=3" />
-        <link rel="canonical" href="https://wayneai.net" />
-        <meta property="og:url" content="https://wayneai.net" />
+        <link rel="canonical" href="https://wayneai.net/" />
+        <meta property="og:url" content="https://wayneai.net/" />
       </Helmet>
       <JsonLd data={organizationSchema} />
       <JsonLd data={faqSchema} />

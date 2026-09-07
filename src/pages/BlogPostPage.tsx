@@ -1,4 +1,5 @@
-import { useParams, Link, Navigate } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
+import { NotFoundPage } from './NotFoundPage';
 import { Helmet } from 'react-helmet-async';
 import { Navigation } from '../components/Navigation';
 import { Footer } from '../components/Footer';
@@ -11,11 +12,17 @@ export function BlogPostPage() {
   const post = posts.find((p) => p.slug === slug);
 
   if (!post) {
-    return <Navigate to="/blog" replace />;
+    return <NotFoundPage />;
   }
 
   const relatedPosts = posts.filter((p) => p.slug !== slug).slice(0, 3);
-  const postUrl = `https://wayneai.net/blog/${post.slug}`;
+  const postUrl = `https://wayneai.net/blog/${post.slug}/`;
+  const service = [
+    { tag: 'plumbing', href: '/industries/plumbers/', label: 'Website and call capture for plumbers' },
+    { tag: 'hvac', href: '/lp/hvac-automation/', label: 'Website and call answering for HVAC companies' },
+    { tag: 'electrician', href: '/industries/electricians/', label: 'Website and call capture for electricians' },
+    { tag: 'roofing', href: '/industries/roofers/', label: 'Website and call capture for roofers' },
+  ].find((item) => post.tags.some((tag) => tag.toLowerCase() === item.tag));
 
   const articleSchema = {
     '@context': 'https://schema.org',
@@ -38,8 +45,8 @@ export function BlogPostPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://wayneai.net' },
-      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://wayneai.net/blog' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://wayneai.net/' },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://wayneai.net/blog/' },
       { '@type': 'ListItem', position: 3, name: post.title, item: postUrl },
     ],
   };
@@ -53,8 +60,8 @@ export function BlogPostPage() {
         <meta property="og:description" content={post.description} />
         {post.featuredImage && <meta property="og:image" content={post.featuredImage} />}
         <meta property="og:type" content="article" />
-        <meta property="og:url" content={`https://wayneai.net/blog/${post.slug}`} />
-        <link rel="canonical" href={`https://wayneai.net/blog/${post.slug}`} />
+        <meta property="og:url" content={`https://wayneai.net/blog/${post.slug}/`} />
+        <link rel="canonical" href={`https://wayneai.net/blog/${post.slug}/`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={post.metaTitle || post.title} />
         <meta name="twitter:description" content={post.description} />
@@ -103,6 +110,13 @@ export function BlogPostPage() {
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
 
+        {service && (
+          <p className="mt-8 text-[#475569]">
+            Explore the setup for your trade:{' '}
+            <Link to={service.href} className="font-semibold text-[#0f172a] underline decoration-[#f97316] underline-offset-4">{service.label} →</Link>
+          </p>
+        )}
+
         {/* CTA */}
         <div className="mt-16 bg-[#0f172a] rounded-2xl p-8 text-center">
           <h3 className="text-2xl font-bold text-white mb-3">
@@ -121,6 +135,10 @@ export function BlogPostPage() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </a>
+          <p className="mt-6 text-[#cbd5e1]">
+            Want to review your current setup first?{' '}
+            <Link to="/lp/ai-audit/" className="font-semibold text-white underline decoration-[#f97316] underline-offset-4">Get a free AI opportunity audit</Link>.
+          </p>
         </div>
 
         {/* Related posts */}

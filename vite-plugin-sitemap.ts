@@ -13,6 +13,9 @@ const staticRoutes: { path: string; priority: string; changefreq: string; lastmo
   // Indexed LP (SEO test, Aug 2026). The other 7 /lp/* pages are noindex
   // paid-traffic destinations and must stay OUT of the sitemap.
   { path: '/lp/hvac-automation', priority: '0.8', changefreq: 'monthly' },
+  { path: '/industries/plumbers', priority: '0.8', changefreq: 'monthly' },
+  { path: '/industries/electricians', priority: '0.8', changefreq: 'monthly' },
+  { path: '/industries/roofers', priority: '0.8', changefreq: 'monthly' },
 ];
 
 export function sitemapPlugin(): Plugin {
@@ -42,7 +45,7 @@ export function sitemapPlugin(): Plugin {
 ${allRoutes
   .map(
     (r) => `  <url>
-    <loc>${DOMAIN}${r.path}</loc>
+    <loc>${DOMAIN}${r.path === '/' ? '/' : r.path + '/'}</loc>
     <lastmod>${r.lastmod || today}</lastmod>
     <changefreq>${r.changefreq}</changefreq>
     <priority>${r.priority}</priority>

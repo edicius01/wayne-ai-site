@@ -13,7 +13,7 @@ export function ElectricianAutomationPage() {
     <>
       <Helmet>
         <meta name="robots" content="noindex, follow" />
-        <link rel="canonical" href="https://wayneai.net/lp/electrician-automation" />
+        <link rel="canonical" href="https://wayneai.net/lp/electrician-automation/" />
         <title>Website + 24/7 Call Answering for Electricians | Wayne AI</title>
         <meta
           name="description"

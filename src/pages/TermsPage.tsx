@@ -15,8 +15,8 @@ export function TermsPage() {
       <Helmet>
         <title>Terms of Service | Wayne AI</title>
         <meta name="description" content="Terms of service for Wayne AI's automation, lead capture, and booking services for local service businesses." />
-        <link rel="canonical" href="https://wayneai.net/terms" />
-        <meta property="og:url" content="https://wayneai.net/terms" />
+        <link rel="canonical" href="https://wayneai.net/terms/" />
+        <meta property="og:url" content="https://wayneai.net/terms/" />
       </Helmet>
       <Navigation />
 

@@ -5,11 +5,18 @@ export function MobileStickyCTA() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsVisible(window.scrollY > window.innerHeight);
+      const roi = document.getElementById('roi')?.getBoundingClientRect();
+      const isUsingCalculator = roi && roi.top < window.innerHeight && roi.bottom > 0;
+      setIsVisible(window.scrollY > window.innerHeight && !isUsingCalculator);
     };
 
+    handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+    };
   }, []);
 
   if (!isVisible) return null;
@@ -17,7 +24,7 @@ export function MobileStickyCTA() {
   return (
     <div className="md:hidden fixed bottom-4 left-4 right-4 z-50">
       <a
-        href="#contact"
+        href="/booking/"
         className="block w-full bg-[#f97316] hover:bg-[#ea580c] text-white font-semibold py-3 rounded-lg text-center shadow-lg transition-all duration-200"
       >
         Book Now
