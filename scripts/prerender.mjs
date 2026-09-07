@@ -161,6 +161,18 @@ async function main() {
     for (const route of routes) {
       const page = await browser.newPage();
       try {
+        // Static HTML only needs our built assets. Analytics, fonts, and CRM
+        // embeds can keep networkidle0 pending on CI; leave their markup in the
+        // snapshot so they still load normally for real visitors.
+        await page.setRequestInterception(true);
+        page.on('request', (request) => {
+          const url = new URL(request.url());
+          if (url.origin === `http://localhost:${PORT}` || ['data:', 'blob:'].includes(url.protocol)) {
+            request.continue();
+          } else {
+            request.abort();
+          }
+        });
         await page.goto(`http://localhost:${PORT}${route}`, {
           waitUntil: 'networkidle0',
           timeout: 45000,
